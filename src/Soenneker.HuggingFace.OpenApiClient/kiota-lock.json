@@ -1,0 +1,35 @@
+{
+  "descriptionHash": "974A642E4AD25D3A60EE8ED451654BD6D4C2F75CE4902D34EBBFF122AB4F29430AAAACAE3C401576BEC2985BE3C0704B8D4C17E2BED0DE1876AF9740AF23CD01",
+  "descriptionLocation": "../../openapi.fixed.json",
+  "lockFileVersion": "1.0.0",
+  "kiotaVersion": "1.36.1",
+  "clientClassName": "HuggingFaceOpenApiClient",
+  "typeAccessModifier": "Public",
+  "clientNamespaceName": "Soenneker.HuggingFace.OpenApiClient",
+  "language": "CSharp",
+  "usesBackingStore": false,
+  "excludeBackwardCompatible": true,
+  "includeAdditionalData": true,
+  "disableSSLValidation": false,
+  "serializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Text.TextSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Form.FormSerializationWriterFactory",
+    "Microsoft.Kiota.Serialization.Multipart.MultipartSerializationWriterFactory"
+  ],
+  "deserializers": [
+    "Microsoft.Kiota.Serialization.Json.JsonParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Text.TextParseNodeFactory",
+    "Microsoft.Kiota.Serialization.Form.FormParseNodeFactory"
+  ],
+  "structuredMimeTypes": [
+    "application/json",
+    "text/plain;q=0.9",
+    "application/x-www-form-urlencoded;q=0.2",
+    "multipart/form-data;q=0.1"
+  ],
+  "includePatterns": [],
+  "excludePatterns": [],
+  "disabledValidationRules": [],
+  "allowedExternalOrigins": []
+}
