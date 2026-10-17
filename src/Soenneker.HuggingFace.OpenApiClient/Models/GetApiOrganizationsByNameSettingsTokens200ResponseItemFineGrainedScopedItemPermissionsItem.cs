@@ -68,6 +68,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         RepoContributeWrite,
         #pragma warning restore CS1591
+        [EnumMember(Value = "repo.delete.write")]
+        #pragma warning disable CS1591
+        RepoDeleteWrite,
+        #pragma warning restore CS1591
         [EnumMember(Value = "repo.write")]
         #pragma warning disable CS1591
         RepoWrite,
