@@ -760,6 +760,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         Saelens,
         #pragma warning restore CS1591
+        [EnumMember(Value = "sage-music")]
+        #pragma warning disable CS1591
+        SageMusic,
+        #pragma warning restore CS1591
         [EnumMember(Value = "scail-2")]
         #pragma warning disable CS1591
         Scail2,

@@ -34,7 +34,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserA
         {
         }
         /// <summary>
-        /// Grant access to a user for a gated repository
+        /// Grant access to a user for a gated repository.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserAccessRequest.Grant.GrantPostResponse"/></returns>
         /// <param name="body">The user to grant access to either by userId or user</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserA
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserAccessRequest.Grant.GrantPostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserAccessRequest.Grant.GrantPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Grant access to a user for a gated repository
+        /// Grant access to a user for a gated repository.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The user to grant access to either by userId or user</param>

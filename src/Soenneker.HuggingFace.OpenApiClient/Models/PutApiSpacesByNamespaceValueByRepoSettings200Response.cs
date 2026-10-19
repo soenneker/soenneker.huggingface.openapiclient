@@ -34,6 +34,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #endif
         /// <summary>The gatedNotificationsMode property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedNotificationsMode? GatedNotificationsMode { get; set; }
+        /// <summary>What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedProfileSharing? GatedProfileSharing { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedProfileSharing GatedProfileSharing { get; set; }
+#endif
         /// <summary>If true, members of the owning org (except admins) must also go through the gated access-request flow.</summary>
         public bool? OrgMembersGated { get; set; }
         /// <summary>The private property</summary>
@@ -63,6 +71,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "gated", n => { Gated = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGated>(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGated.CreateFromDiscriminatorValue); } },
                 { "gatedNotificationsEmail", n => { GatedNotificationsEmail = n.GetStringValue(); } },
                 { "gatedNotificationsMode", n => { GatedNotificationsMode = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedNotificationsMode>(); } },
+                { "gatedProfileSharing", n => { GatedProfileSharing = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedProfileSharing>(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedProfileSharing.CreateFromDiscriminatorValue); } },
                 { "orgMembersGated", n => { OrgMembersGated = n.GetBoolValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
                 { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseVisibility>(); } },
@@ -80,6 +89,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGated>("gated", Gated);
             writer.WriteStringValue("gatedNotificationsEmail", GatedNotificationsEmail);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedNotificationsMode>("gatedNotificationsMode", GatedNotificationsMode);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedProfileSharing>("gatedProfileSharing", GatedProfileSharing);
             writer.WriteBoolValue("orgMembersGated", OrgMembersGated);
             writer.WriteBoolValue("private", Private);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettings200ResponseVisibility>("visibility", Visibility);

@@ -14,7 +14,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     {
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Either userId or user must be provided</summary>
+        /// <summary>Id of the request as returned by the listing endpoint; the only identifier when the requester&apos;s profile is not shared</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RequestId { get; set; }
+#nullable restore
+#else
+        public string RequestId { get; set; }
+#endif
+        /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? User { get; set; }
@@ -22,7 +30,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public string User { get; set; }
 #endif
-        /// <summary>Either userId or user must be provided</summary>
+        /// <summary>The userId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }
@@ -55,6 +63,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
@@ -66,6 +75,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("user", User);
             writer.WriteStringValue("userId", UserId);
             writer.WriteAdditionalData(AdditionalData);

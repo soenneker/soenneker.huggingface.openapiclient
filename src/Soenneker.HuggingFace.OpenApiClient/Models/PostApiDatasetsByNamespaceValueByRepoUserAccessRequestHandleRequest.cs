@@ -22,6 +22,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public string RejectionReason { get; set; }
 #endif
+        /// <summary>Id of the request as returned by the listing endpoint; the only identifier when the requester&apos;s profile is not shared</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RequestId { get; set; }
+#nullable restore
+#else
+        public string RequestId { get; set; }
+#endif
         /// <summary>The resetReason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -32,7 +40,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #endif
         /// <summary>The status property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestHandleRequestStatus? Status { get; set; }
-        /// <summary>Either userId or user must be provided</summary>
+        /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? User { get; set; }
@@ -40,7 +48,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public string User { get; set; }
 #endif
-        /// <summary>Either userId or user must be provided</summary>
+        /// <summary>The userId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? UserId { get; set; }
@@ -74,6 +82,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "rejectionReason", n => { RejectionReason = n.GetStringValue(); } },
+                { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "resetReason", n => { ResetReason = n.GetStringValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestHandleRequestStatus>(); } },
                 { "user", n => { User = n.GetStringValue(); } },
@@ -88,6 +97,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("rejectionReason", RejectionReason);
+            writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("resetReason", ResetReason);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestHandleRequestStatus>("status", Status);
             writer.WriteStringValue("user", User);

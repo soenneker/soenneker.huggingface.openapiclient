@@ -28,13 +28,21 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy GrantedBy { get; set; }
 #endif
+        /// <summary>Id of the request, usable to accept/reject it even when the requester identity is not shared</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RequestId { get; set; }
+#nullable restore
+#else
+        public string RequestId { get; set; }
+#endif
         /// <summary>The reviewedAt property</summary>
         public DateTimeOffset? ReviewedAt { get; set; }
         /// <summary>The status property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemStatus? Status { get; set; }
         /// <summary>The timestamp property</summary>
         public DateTimeOffset? Timestamp { get; set; }
-        /// <summary>The user property</summary>
+        /// <summary>Absent when the requester&apos;s profile is not shared</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser? User { get; set; }
@@ -62,6 +70,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields.CreateFromDiscriminatorValue); } },
                 { "grantedBy", n => { GrantedBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy.CreateFromDiscriminatorValue); } },
+                { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "reviewedAt", n => { ReviewedAt = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemStatus>(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
@@ -77,6 +86,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields>("fields", Fields);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy>("grantedBy", GrantedBy);
+            writer.WriteStringValue("requestId", RequestId);
             writer.WriteDateTimeOffsetValue("reviewedAt", ReviewedAt);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);

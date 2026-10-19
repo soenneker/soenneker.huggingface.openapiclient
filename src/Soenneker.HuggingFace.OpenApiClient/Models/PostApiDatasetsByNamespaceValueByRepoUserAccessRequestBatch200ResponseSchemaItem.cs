@@ -16,6 +16,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatch200ResponseItemError? Error { get; set; }
         /// <summary>The ok property</summary>
         public bool? Ok { get; set; }
+        /// <summary>The requestId property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? RequestId { get; set; }
+#nullable restore
+#else
+        public string RequestId { get; set; }
+#endif
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -52,6 +60,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "error", n => { Error = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatch200ResponseItemError>(); } },
                 { "ok", n => { Ok = n.GetBoolValue(); } },
+                { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "user", n => { User = n.GetStringValue(); } },
                 { "userId", n => { UserId = n.GetStringValue(); } },
             };
@@ -65,6 +74,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatch200ResponseItemError>("error", Error);
             writer.WriteBoolValue("ok", Ok);
+            writer.WriteStringValue("requestId", RequestId);
             writer.WriteStringValue("user", User);
             writer.WriteStringValue("userId", UserId);
         }

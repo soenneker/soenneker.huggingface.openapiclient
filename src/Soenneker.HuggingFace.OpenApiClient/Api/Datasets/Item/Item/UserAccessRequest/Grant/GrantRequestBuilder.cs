@@ -34,7 +34,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Datasets.Item.Item.UserAccessR
         {
         }
         /// <summary>
-        /// Grant access to a user for a gated repository
+        /// Grant access to a user for a gated repository.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Api.Datasets.Item.Item.UserAccessRequest.Grant.GrantPostResponse"/></returns>
         /// <param name="body">The user to grant access to either by userId or user</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Datasets.Item.Item.UserAccessR
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Datasets.Item.Item.UserAccessRequest.Grant.GrantPostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Datasets.Item.Item.UserAccessRequest.Grant.GrantPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Grant access to a user for a gated repository
+        /// Grant access to a user for a gated repository.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The user to grant access to either by userId or user</param>

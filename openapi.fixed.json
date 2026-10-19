@@ -5159,7 +5159,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-16T21:01:26.655Z"
+              "default": "2026-10-19T16:13:30.325Z"
             }
           }
         ],
@@ -5211,7 +5211,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-16T21:01:26.656Z"
+              "default": "2026-10-19T16:13:30.326Z"
             }
           }
         ],
@@ -5263,7 +5263,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-16T21:01:26.656Z"
+              "default": "2026-10-19T16:13:30.326Z"
             }
           },
           {
@@ -5421,7 +5421,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-16T21:01:26.656Z"
+              "default": "2026-10-19T16:13:30.326Z"
             }
           }
         ],
@@ -15668,7 +15668,7 @@
           "models"
         ],
         "summary": "Grant access",
-        "description": "Grant access to a user for a gated repository",
+        "description": "Grant access to a user for a gated repository.",
         "operationId": "PostApiModelsByNamespaceValueByRepoUserAccessRequestGrant",
         "parameters": [
           {
@@ -15719,7 +15719,7 @@
           "datasets"
         ],
         "summary": "Grant access",
-        "description": "Grant access to a user for a gated repository",
+        "description": "Grant access to a user for a gated repository.",
         "operationId": "PostApiDatasetsByNamespaceValueByRepoUserAccessRequestGrant",
         "parameters": [
           {
@@ -26874,6 +26874,9 @@
             "type": "boolean",
             "description": "If true, members of the owning org (except admins) must also go through the gated access-request flow."
           },
+          "gatedProfileSharing": {
+            "$ref": "#/components/schemas/PutApiModelsByNamespaceValueByRepoSettingsRequestGatedProfileSharing"
+          },
           "gatedNotificationsEmail": {
             "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_\u0027\u002B\\-\\.]*)[A-Za-z0-9_\u002B-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)\u002B[A-Za-z]{2,}$",
             "type": "string",
@@ -26906,6 +26909,9 @@
           "orgMembersGated": {
             "type": "boolean",
             "description": "If true, members of the owning org (except admins) must also go through the gated access-request flow."
+          },
+          "gatedProfileSharing": {
+            "$ref": "#/components/schemas/PutApiModelsByNamespaceValueByRepoSettings200ResponseGatedProfileSharing"
           },
           "gatedNotificationsEmail": {
             "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_\u0027\u002B\\-\\.]*)[A-Za-z0-9_\u002B-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)\u002B[A-Za-z]{2,}$",
@@ -26941,6 +26947,9 @@
             "type": "boolean",
             "description": "If true, members of the owning org (except admins) must also go through the gated access-request flow."
           },
+          "gatedProfileSharing": {
+            "$ref": "#/components/schemas/PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedProfileSharing"
+          },
           "gatedNotificationsEmail": {
             "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_\u0027\u002B\\-\\.]*)[A-Za-z0-9_\u002B-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)\u002B[A-Za-z]{2,}$",
             "type": "string",
@@ -26973,6 +26982,9 @@
           "orgMembersGated": {
             "type": "boolean",
             "description": "If true, members of the owning org (except admins) must also go through the gated access-request flow."
+          },
+          "gatedProfileSharing": {
+            "$ref": "#/components/schemas/PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedProfileSharing"
           },
           "gatedNotificationsEmail": {
             "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_\u0027\u002B\\-\\.]*)[A-Za-z0-9_\u002B-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)\u002B[A-Za-z]{2,}$",
@@ -27008,6 +27020,9 @@
             "type": "boolean",
             "description": "If true, members of the owning org (except admins) must also go through the gated access-request flow."
           },
+          "gatedProfileSharing": {
+            "$ref": "#/components/schemas/PutApiDatasetsByNamespaceValueByRepoSettingsRequestGatedProfileSharing"
+          },
           "gatedNotificationsEmail": {
             "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_\u0027\u002B\\-\\.]*)[A-Za-z0-9_\u002B-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)\u002B[A-Za-z]{2,}$",
             "type": "string",
@@ -27040,6 +27055,9 @@
           "orgMembersGated": {
             "type": "boolean",
             "description": "If true, members of the owning org (except admins) must also go through the gated access-request flow."
+          },
+          "gatedProfileSharing": {
+            "$ref": "#/components/schemas/PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharing"
           },
           "gatedNotificationsEmail": {
             "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_\u0027\u002B\\-\\.]*)[A-Za-z0-9_\u002B-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)\u002B[A-Za-z]{2,}$",
@@ -29318,17 +29336,6 @@
         ],
         "type": "object",
         "properties": {
-          "userId": {
-            "maxLength": 24,
-            "minLength": 24,
-            "pattern": "^[0-9a-fA-F]{24}$",
-            "type": "string",
-            "description": "Either userId or user must be provided"
-          },
-          "user": {
-            "type": "string",
-            "description": "Either userId or user must be provided"
-          },
           "status": {
             "$ref": "#/components/schemas/PostApiModelsByNamespaceValueByRepoUserAccessRequestHandleRequestStatus"
           },
@@ -29338,6 +29345,22 @@
           },
           "resetReason": {
             "maxLength": 200,
+            "type": "string"
+          },
+          "requestId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-fA-F]{24}$",
+            "type": "string",
+            "description": "Id of the request as returned by the listing endpoint; the only identifier when the requester\u0027s profile is not shared"
+          },
+          "userId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-fA-F]{24}$",
+            "type": "string"
+          },
+          "user": {
             "type": "string"
           }
         }
@@ -29349,17 +29372,6 @@
         ],
         "type": "object",
         "properties": {
-          "userId": {
-            "maxLength": 24,
-            "minLength": 24,
-            "pattern": "^[0-9a-fA-F]{24}$",
-            "type": "string",
-            "description": "Either userId or user must be provided"
-          },
-          "user": {
-            "type": "string",
-            "description": "Either userId or user must be provided"
-          },
           "status": {
             "$ref": "#/components/schemas/PostApiDatasetsByNamespaceValueByRepoUserAccessRequestHandleRequestStatus"
           },
@@ -29369,6 +29381,22 @@
           },
           "resetReason": {
             "maxLength": 200,
+            "type": "string"
+          },
+          "requestId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-fA-F]{24}$",
+            "type": "string",
+            "description": "Id of the request as returned by the listing endpoint; the only identifier when the requester\u0027s profile is not shared"
+          },
+          "userId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-fA-F]{24}$",
+            "type": "string"
+          },
+          "user": {
             "type": "string"
           }
         }
@@ -35291,6 +35319,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlugId200ResponseGatingAnyOf2AnyOf2ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35307,6 +35338,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlugId200ResponseGatingAnyOf2AnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlugId200ResponseGatingAnyOf2AnyOf3ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35319,6 +35353,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf2ProfileSharing"
           }
         }
       },
@@ -35334,6 +35371,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing"
           }
         }
       },
@@ -35345,6 +35385,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGatingAnyOf2AnyOf2ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35361,6 +35404,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGatingAnyOf2AnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGatingAnyOf2AnyOf3ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35373,6 +35419,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlug200ResponseGatingAnyOf2AnyOf2ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35389,6 +35438,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlug200ResponseGatingAnyOf2AnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlug200ResponseGatingAnyOf2AnyOf3ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35401,6 +35453,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2ProfileSharing"
           }
         }
       },
@@ -35416,6 +35471,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3ProfileSharing"
           }
         }
       },
@@ -35427,6 +35485,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlug200ResponseDataGatingAnyOf2AnyOf2ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35443,6 +35504,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlug200ResponseDataGatingAnyOf2AnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlug200ResponseDataGatingAnyOf2AnyOf3ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35455,6 +35519,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseGatingAnyOf2AnyOf2ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35471,6 +35538,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseGatingAnyOf2AnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseGatingAnyOf2AnyOf3ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35483,6 +35553,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugItems200ResponseGatingAnyOf2AnyOf2ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35499,6 +35572,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugItems200ResponseGatingAnyOf2AnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugItems200ResponseGatingAnyOf2AnyOf3ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35511,6 +35587,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PostApiCollections200ResponseGatingAnyOf2AnyOf2ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35527,6 +35606,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/PostApiCollections200ResponseGatingAnyOf2AnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/PostApiCollections200ResponseGatingAnyOf2AnyOf3ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35592,6 +35674,9 @@
         "properties": {
           "mode": {
             "$ref": "#/components/schemas/AutoMode"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/GetApiCollections200ResponseAnyOf1ItemGatingAnyOf2AnyOf2ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -35608,6 +35693,9 @@
           },
           "notifications": {
             "$ref": "#/components/schemas/GetApiCollections200ResponseAnyOf1ItemGatingAnyOf2AnyOf3Notifications"
+          },
+          "profileSharing": {
+            "$ref": "#/components/schemas/GetApiCollections200ResponseAnyOf1ItemGatingAnyOf2AnyOf3ProfileSharing"
           }
         },
         "additionalProperties": false
@@ -41847,6 +41935,114 @@
         },
         "additionalProperties": false
       },
+      "PutApiModelsByNamespaceValueByRepoSettingsRequestGatedProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PutApiModelsByNamespaceValueByRepoSettings200ResponseGatedProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PutApiSpacesByNamespaceValueByRepoSettings200ResponseGatedProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PutApiDatasetsByNamespaceValueByRepoSettingsRequestGatedProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
       "GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseItem": {
         "required": [
           "type",
@@ -43571,11 +43767,19 @@
       },
       "GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItem": {
         "required": [
+          "requestId",
           "status",
           "timestamp"
         ],
         "type": "object",
         "properties": {
+          "requestId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "Id of the request, usable to accept/reject it even when the requester identity is not shared"
+          },
           "user": {
             "$ref": "#/components/schemas/GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser"
           },
@@ -43603,11 +43807,19 @@
       },
       "GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItem": {
         "required": [
+          "requestId",
           "status",
           "timestamp"
         ],
         "type": "object",
         "properties": {
+          "requestId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "Id of the request, usable to accept/reject it even when the requester identity is not shared"
+          },
           "user": {
             "$ref": "#/components/schemas/GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser"
           },
@@ -43636,16 +43848,21 @@
       "PostApiModelsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem": {
         "type": "object",
         "properties": {
-          "userId": {
+          "requestId": {
             "maxLength": 24,
             "minLength": 24,
             "pattern": "^[0-9a-fA-F]{24}$",
             "type": "string",
-            "description": "Either userId or user must be provided"
+            "description": "Id of the request as returned by the listing endpoint; the only identifier when the requester\u0027s profile is not shared"
+          },
+          "userId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-fA-F]{24}$",
+            "type": "string"
           },
           "user": {
-            "type": "string",
-            "description": "Either userId or user must be provided"
+            "type": "string"
           }
         }
       },
@@ -43655,6 +43872,9 @@
         ],
         "type": "object",
         "properties": {
+          "requestId": {
+            "type": "string"
+          },
           "userId": {
             "type": "string"
           },
@@ -43673,16 +43893,21 @@
       "PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem": {
         "type": "object",
         "properties": {
-          "userId": {
+          "requestId": {
             "maxLength": 24,
             "minLength": 24,
             "pattern": "^[0-9a-fA-F]{24}$",
             "type": "string",
-            "description": "Either userId or user must be provided"
+            "description": "Id of the request as returned by the listing endpoint; the only identifier when the requester\u0027s profile is not shared"
+          },
+          "userId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-fA-F]{24}$",
+            "type": "string"
           },
           "user": {
-            "type": "string",
-            "description": "Either userId or user must be provided"
+            "type": "string"
           }
         }
       },
@@ -43692,6 +43917,9 @@
         ],
         "type": "object",
         "properties": {
+          "requestId": {
+            "type": "string"
+          },
           "userId": {
             "type": "string"
           },
@@ -51095,11 +51323,19 @@
       },
       "GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItem": {
         "required": [
+          "requestId",
           "status",
           "timestamp"
         ],
         "type": "object",
         "properties": {
+          "requestId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "Id of the request, usable to accept/reject it even when the requester identity is not shared"
+          },
           "user": {
             "$ref": "#/components/schemas/GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser"
           },
@@ -51127,11 +51363,19 @@
       },
       "GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItem": {
         "required": [
+          "requestId",
           "status",
           "timestamp"
         ],
         "type": "object",
         "properties": {
+          "requestId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "Id of the request, usable to accept/reject it even when the requester identity is not shared"
+          },
           "user": {
             "$ref": "#/components/schemas/GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser"
           },
@@ -51163,6 +51407,9 @@
         ],
         "type": "object",
         "properties": {
+          "requestId": {
+            "type": "string"
+          },
           "userId": {
             "type": "string"
           },
@@ -51184,6 +51431,9 @@
         ],
         "type": "object",
         "properties": {
+          "requestId": {
+            "type": "string"
+          },
           "userId": {
             "type": "string"
           },
@@ -52188,6 +52438,24 @@
         "additionalProperties": false,
         "description": "Set when the user is a service account"
       },
+      "GetApiCollectionsByNamespaceValueBySlugId200ResponseGatingAnyOf2AnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
       "GetApiCollectionsByNamespaceValueBySlugId200ResponseGatingAnyOf2AnyOf3Notifications": {
         "required": [
           "mode"
@@ -52203,6 +52471,42 @@
         },
         "additionalProperties": false
       },
+      "GetApiCollectionsByNamespaceValueBySlugId200ResponseGatingAnyOf2AnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
       "PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications": {
         "required": [
           "mode"
@@ -52216,6 +52520,42 @@
             "type": "string"
           }
         }
+      },
+      "PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGatingAnyOf2AnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
       },
       "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGatingAnyOf2AnyOf3Notifications": {
         "required": [
@@ -52232,6 +52572,42 @@
         },
         "additionalProperties": false
       },
+      "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGatingAnyOf2AnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "GetApiCollectionsByNamespaceValueBySlug200ResponseGatingAnyOf2AnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
       "GetApiCollectionsByNamespaceValueBySlug200ResponseGatingAnyOf2AnyOf3Notifications": {
         "required": [
           "mode"
@@ -52247,6 +52623,42 @@
         },
         "additionalProperties": false
       },
+      "GetApiCollectionsByNamespaceValueBySlug200ResponseGatingAnyOf2AnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
       "PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3Notifications": {
         "required": [
           "mode"
@@ -52260,6 +52672,42 @@
             "type": "string"
           }
         }
+      },
+      "PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataGatingAnyOf2AnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
       },
       "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataGatingAnyOf2AnyOf3Notifications": {
         "required": [
@@ -52276,6 +52724,42 @@
         },
         "additionalProperties": false
       },
+      "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataGatingAnyOf2AnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseGatingAnyOf2AnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
       "PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseGatingAnyOf2AnyOf3Notifications": {
         "required": [
           "mode"
@@ -52290,6 +52774,42 @@
           }
         },
         "additionalProperties": false
+      },
+      "PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseGatingAnyOf2AnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PostApiCollectionsByNamespaceValueBySlugItems200ResponseGatingAnyOf2AnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
       },
       "PostApiCollectionsByNamespaceValueBySlugItems200ResponseGatingAnyOf2AnyOf3Notifications": {
         "required": [
@@ -52306,6 +52826,42 @@
         },
         "additionalProperties": false
       },
+      "PostApiCollectionsByNamespaceValueBySlugItems200ResponseGatingAnyOf2AnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "PostApiCollections200ResponseGatingAnyOf2AnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
       "PostApiCollections200ResponseGatingAnyOf2AnyOf3Notifications": {
         "required": [
           "mode"
@@ -52321,6 +52877,42 @@
         },
         "additionalProperties": false
       },
+      "PostApiCollections200ResponseGatingAnyOf2AnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "GetApiCollections200ResponseAnyOf1ItemGatingAnyOf2AnyOf2ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
       "GetApiCollections200ResponseAnyOf1ItemGatingAnyOf2AnyOf3Notifications": {
         "required": [
           "mode"
@@ -52335,6 +52927,24 @@
           }
         },
         "additionalProperties": false
+      },
+      "GetApiCollections200ResponseAnyOf1ItemGatingAnyOf2AnyOf3ProfileSharing": {
+        "required": [
+          "username",
+          "email"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "const": null,
+            "type": "boolean",
+            "default": true
+          },
+          "email": {
+            "type": "boolean"
+          }
+        },
+        "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
       },
       "GetApiNotifications200ResponseNotificationsItemPaper": {
         "required": [
@@ -56371,7 +56981,8 @@
             }
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Absent when the requester\u0027s profile is not shared"
       },
       "GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields": {
         "propertyNames": {
@@ -56483,7 +57094,8 @@
             }
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "description": "Absent when the requester\u0027s profile is not shared"
       },
       "GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields": {
         "propertyNames": {
@@ -79655,6 +80267,7 @@
           "routee-powertrain",
           "rwkv",
           "saelens",
+          "sage-music",
           "scail-2",
           "sam2",
           "sam-3d-body",
@@ -80486,6 +81099,10 @@
             {
               "value": "saelens",
               "name": "Saelens"
+            },
+            {
+              "value": "sage-music",
+              "name": "SageMusic"
             },
             {
               "value": "scail-2",
@@ -117733,6 +118350,7 @@
           "routee-powertrain",
           "rwkv",
           "saelens",
+          "sage-music",
           "scail-2",
           "sam2",
           "sam-3d-body",
@@ -118564,6 +119182,10 @@
             {
               "value": "saelens",
               "name": "Saelens"
+            },
+            {
+              "value": "sage-music",
+              "name": "SageMusic"
             },
             {
               "value": "scail-2",
@@ -120447,6 +121069,7 @@
           "routee-powertrain",
           "rwkv",
           "saelens",
+          "sage-music",
           "scail-2",
           "sam2",
           "sam-3d-body",
@@ -121278,6 +121901,10 @@
             {
               "value": "saelens",
               "name": "Saelens"
+            },
+            {
+              "value": "sage-music",
+              "name": "SageMusic"
             },
             {
               "value": "scail-2",

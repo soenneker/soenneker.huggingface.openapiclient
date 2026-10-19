@@ -24,6 +24,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications Notifications { get; set; }
 #endif
+        /// <summary>What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing? ProfileSharing { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing ProfileSharing { get; set; }
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3"/> and sets the default values.
         /// </summary>
@@ -51,6 +59,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ManualMode>(); } },
                 { "notifications", n => { Notifications = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications.CreateFromDiscriminatorValue); } },
+                { "profileSharing", n => { ProfileSharing = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -62,6 +71,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ManualMode>("mode", Mode);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications>("notifications", Notifications);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing>("profileSharing", ProfileSharing);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -7,10 +7,11 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Absent when the requester&apos;s profile is not shared
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
     public partial class GetApiDatasetsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser : IParsable
-    #pragma warning restore CS1591
     {
         /// <summary>The avatarUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
