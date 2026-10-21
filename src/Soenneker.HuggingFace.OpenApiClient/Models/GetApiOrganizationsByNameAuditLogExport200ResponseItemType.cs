@@ -84,6 +84,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         OrgChangeRole,
         #pragma warning restore CS1591
+        [EnumMember(Value = "org.change_account_type")]
+        #pragma warning disable CS1591
+        OrgChangeAccountType,
+        #pragma warning restore CS1591
         [EnumMember(Value = "org.create")]
         #pragma warning disable CS1591
         OrgCreate,
@@ -408,6 +412,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         ResourceGroupDelete,
         #pragma warning restore CS1591
+        [EnumMember(Value = "resource_group.invite_user")]
+        #pragma warning disable CS1591
+        ResourceGroupInviteUser,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "resource_group.invite.revoke")]
+        #pragma warning disable CS1591
+        ResourceGroupInviteRevoke,
+        #pragma warning restore CS1591
         [EnumMember(Value = "jobs.create")]
         #pragma warning disable CS1591
         JobsCreate,
@@ -475,6 +487,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         [EnumMember(Value = "org.service_account.token.update")]
         #pragma warning disable CS1591
         OrgServiceAccountTokenUpdate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "org.service_account.token.s3_credential.create")]
+        #pragma warning disable CS1591
+        OrgServiceAccountTokenS3CredentialCreate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "org.service_account.token.s3_credential.delete")]
+        #pragma warning disable CS1591
+        OrgServiceAccountTokenS3CredentialDelete,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth.token")]
         #pragma warning disable CS1591

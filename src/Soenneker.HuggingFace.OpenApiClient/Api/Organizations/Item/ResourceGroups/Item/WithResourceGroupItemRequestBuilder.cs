@@ -3,6 +3,9 @@
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invitation;
+using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invitations;
+using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invite;
 using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Settings;
 using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Users;
 using Soenneker.HuggingFace.OpenApiClient.Models;
@@ -19,6 +22,21 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class WithResourceGroupItemRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The invitation property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invitation.InvitationRequestBuilder Invitation
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invitation.InvitationRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The invitations property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invitations.InvitationsRequestBuilder Invitations
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invitations.InvitationsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The invite property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invite.InviteRequestBuilder Invite
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Invite.InviteRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The settings property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGroups.Item.Settings.SettingsRequestBuilder Settings
         {

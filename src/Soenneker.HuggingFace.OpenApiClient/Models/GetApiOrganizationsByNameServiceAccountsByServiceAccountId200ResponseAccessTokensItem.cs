@@ -76,6 +76,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #endif
         /// <summary>The role property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole? Role { get; set; }
+        /// <summary>The s3AccessKey property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? S3AccessKey { get; set; }
+#nullable restore
+#else
+        public string S3AccessKey { get; set; }
+#endif
         /// <summary>The skipNetworkSecurity property</summary>
         public bool? SkipNetworkSecurity { get; set; }
         /// <summary>
@@ -107,6 +115,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "repoIds", n => { RepoIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "repoPermissions", n => { RepoPermissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem>()?.AsList(); } },
                 { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole>(); } },
+                { "s3AccessKey", n => { S3AccessKey = n.GetStringValue(); } },
                 { "skipNetworkSecurity", n => { SkipNetworkSecurity = n.GetBoolValue(); } },
             };
         }
@@ -128,6 +137,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("repoIds", RepoIds);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem>("repoPermissions", RepoPermissions);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole>("role", Role);
+            writer.WriteStringValue("s3AccessKey", S3AccessKey);
             writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);
         }
     }

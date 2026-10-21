@@ -44,6 +44,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public string Id { get; set; }
 #endif
+        /// <summary>Whether the user is an external collaborator of the organization</summary>
+        public bool? IsExternalCollaborator { get; set; }
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -88,6 +90,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "avatarUrl", n => { AvatarUrl = n.GetStringValue(); } },
                 { "fullname", n => { Fullname = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
+                { "isExternalCollaborator", n => { IsExternalCollaborator = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "orgRole", n => { OrgRole = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemOrgRole>(); } },
                 { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemRole>(); } },
@@ -106,6 +109,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("avatarUrl", AvatarUrl);
             writer.WriteStringValue("fullname", Fullname);
             writer.WriteStringValue("_id", Id);
+            writer.WriteBoolValue("isExternalCollaborator", IsExternalCollaborator);
             writer.WriteStringValue("name", Name);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemOrgRole>("orgRole", OrgRole);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemRole>("role", Role);
