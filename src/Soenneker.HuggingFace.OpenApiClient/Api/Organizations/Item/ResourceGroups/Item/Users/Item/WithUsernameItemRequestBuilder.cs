@@ -52,7 +52,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user&apos;s SCIM groups.Requires the org to have a Team plan or higher.
+        /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user&apos;s SCIM groups.Use the `inherit` role to give the member the same role they have in the organization, following it when it changes.Requires the org to have a Team plan or higher.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -91,7 +91,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
             return requestInfo;
         }
         /// <summary>
-        /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user&apos;s SCIM groups.Requires the org to have a Team plan or higher.
+        /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user&apos;s SCIM groups.Use the `inherit` role to give the member the same role they have in the organization, following it when it changes.Requires the org to have a Team plan or higher.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

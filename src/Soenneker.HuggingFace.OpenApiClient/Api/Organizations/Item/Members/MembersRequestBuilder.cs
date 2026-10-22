@@ -35,7 +35,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/organizations/{name}/members{?cursor*,email*,limit*,search*}", pathParameters)
+        public MembersRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/organizations/{name}/members{?cursor*,email*,includeExternal*,limit*,search*}", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/organizations/{name}/members{?cursor*,email*,limit*,search*}", rawUrl)
+        public MembersRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/organizations/{name}/members{?cursor*,email*,includeExternal*,limit*,search*}", rawUrl)
         {
         }
         /// <summary>
@@ -123,6 +123,19 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members
             #pragma warning disable CS1591
             [QueryParameter("email")]
             public string Email { get; set; }
+            #pragma warning restore CS1591
+#endif
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("includeExternal")]
+            public string? IncludeExternal { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("includeExternal")]
+            public string IncludeExternal { get; set; }
             #pragma warning restore CS1591
 #endif
             #pragma warning disable CS1591

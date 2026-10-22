@@ -47,7 +47,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
         {
         }
         /// <summary>
-        /// Add one or more organization members to a resource group.Requires the org to have a Team plan or higher.
+        /// Add one or more organization members to a resource group.Use the `inherit` role to give a member the same role they have in the organization, following it when it changes.Requires the org to have a Team plan or higher.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -67,7 +67,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Add one or more organization members to a resource group.Requires the org to have a Team plan or higher.
+        /// Add one or more organization members to a resource group.Use the `inherit` role to give a member the same role they have in the organization, following it when it changes.Requires the org to have a Team plan or higher.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>

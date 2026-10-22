@@ -12,6 +12,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     public partial class GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem : IParsable
     #pragma warning restore CS1591
     {
+        /// <summary>The assignedRole property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItemAssignedRole? AssignedRole { get; set; }
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -50,6 +52,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "assignedRole", n => { AssignedRole = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItemAssignedRole>(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "numUsers", n => { NumUsers = n.GetDoubleValue(); } },
@@ -63,6 +66,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItemAssignedRole>("assignedRole", AssignedRole);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("numUsers", NumUsers);

@@ -1486,7 +1486,7 @@
           "resource-groups"
         ],
         "summary": "Add users",
-        "description": "Add one or more organization members to a resource group.\n\nRequires the org to have a Team plan or higher.",
+        "description": "Add one or more organization members to a resource group.\n\nUse the \u0060inherit\u0060 role to give a member the same role they have in the organization, following it when it changes.\n\nRequires the org to have a Team plan or higher.",
         "operationId": "PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers",
         "parameters": [
           {
@@ -1873,7 +1873,7 @@
           "resource-groups"
         ],
         "summary": "Change user role",
-        "description": "Change the role of a user in a resource group. In a SCIM-managed resource group, pass \u0060resetToScimRole\u0060 to undo a manual role change and restore the role mapped from the user\u0027s SCIM groups.\n\nRequires the org to have a Team plan or higher.",
+        "description": "Change the role of a user in a resource group. In a SCIM-managed resource group, pass \u0060resetToScimRole\u0060 to undo a manual role change and restore the role mapped from the user\u0027s SCIM groups.\n\nUse the \u0060inherit\u0060 role to give the member the same role they have in the organization, following it when it changes.\n\nRequires the org to have a Team plan or higher.",
         "operationId": "PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername",
         "parameters": [
           {
@@ -2812,6 +2812,14 @@
               "minimum": 10,
               "type": "integer",
               "default": 500
+            }
+          },
+          {
+            "name": "includeExternal",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "description": "Include external collaborators. Only honored for org admins."
             }
           }
         ],
@@ -5591,7 +5599,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-21T15:22:58.536Z"
+              "default": "2026-10-22T17:46:37.017Z"
             }
           }
         ],
@@ -5643,7 +5651,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-21T15:22:58.537Z"
+              "default": "2026-10-22T17:46:37.017Z"
             }
           }
         ],
@@ -5695,7 +5703,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-21T15:22:58.537Z"
+              "default": "2026-10-22T17:46:37.018Z"
             }
           },
           {
@@ -5853,7 +5861,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-21T15:22:58.537Z"
+              "default": "2026-10-22T17:46:37.017Z"
             }
           }
         ],
@@ -17270,6 +17278,47 @@
         }
       }
     },
+    "/api/papers/{paperId}/media": {
+      "post": {
+        "tags": [
+          "papers"
+        ],
+        "summary": "Update paper media",
+        "description": "Replace the media shown on a Daily Papers submission. Requires the requester to be the paper author, the Daily Papers submitter, or a papers admin.",
+        "operationId": "PostApiPapersByPaperIdMedia",
+        "parameters": [
+          {
+            "name": "paperId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiPapersByPaperIdMediaRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Paper media updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiPapersByPaperIdMedia200ResponseSchema"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/posts/{username}/{postSlug}": {
       "delete": {
         "tags": [
@@ -19002,6 +19051,56 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/PutApiContainersByNamespaceValueByRepoSettings200Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/containers/{namespaceValue}/{repo}/tags/{tag}": {
+      "delete": {
+        "tags": [
+          "containers"
+        ],
+        "summary": "Delete tag",
+        "description": "Deletes a single tag from a container image. The underlying image data is untouched.",
+        "operationId": "DeleteApiContainersByNamespaceValueByRepoTagsByTag",
+        "parameters": [
+          {
+            "name": "namespaceValue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tag",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
                 }
               }
             }
@@ -30467,6 +30566,27 @@
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "object"
       },
+      "PostApiPapersByPaperIdMediaRequest": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "mediaUrls"
+        ],
+        "type": "object",
+        "properties": {
+          "mediaUrls": {
+            "type": "array",
+            "items": {
+              "pattern": "(^https:\\/\\/s3\\.amazonaws\\.com\\/hf-hub-cdn-uploads\\/.*\\.(gif|jpeg|jpg|mov|mp3|mp4|mpga|png|qt|wav|webm|webp)$)|(^https:\\/\\/cdn-uploads\\.huggingface\\.co\\/.*\\.(gif|jpeg|jpg|mov|mp3|mp4|mpga|png|qt|wav|webm|webp)$)",
+              "type": "string"
+            },
+            "description": "Media URLs, in display order"
+          }
+        }
+      },
+      "PostApiPapersByPaperIdMedia200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object"
+      },
       "PostApiPostsByUsernameByPostSlugCommentRequest": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "required": [
@@ -34144,6 +34264,9 @@
       "PostApiPapersByPaperIdLinks200ResponseSchema": {
         "type": "object"
       },
+      "PostApiPapersByPaperIdMedia200ResponseSchema": {
+        "type": "object"
+      },
       "PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestRequestBody": {
         "type": "array",
         "items": {
@@ -37311,6 +37434,7 @@
           "name",
           "avatarUrl",
           "role",
+          "assignedRole",
           "orgRole"
         ],
         "type": "object",
@@ -37336,6 +37460,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemAssignedRole"
           },
           "orgRole": {
             "$ref": "#/components/schemas/PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemOrgRole"
@@ -37447,6 +37574,7 @@
           "name",
           "avatarUrl",
           "role",
+          "assignedRole",
           "orgRole"
         ],
         "type": "object",
@@ -37472,6 +37600,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemAssignedRole"
           },
           "orgRole": {
             "$ref": "#/components/schemas/GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemOrgRole"
@@ -37600,6 +37731,7 @@
           "name",
           "avatarUrl",
           "role",
+          "assignedRole",
           "orgRole"
         ],
         "type": "object",
@@ -37625,6 +37757,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettings200ResponseUsersItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettings200ResponseUsersItemAssignedRole"
           },
           "orgRole": {
             "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettings200ResponseUsersItemOrgRole"
@@ -37753,6 +37888,7 @@
           "name",
           "avatarUrl",
           "role",
+          "assignedRole",
           "orgRole"
         ],
         "type": "object",
@@ -37778,6 +37914,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseUsersItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseUsersItemAssignedRole"
           },
           "orgRole": {
             "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseUsersItemOrgRole"
@@ -38346,6 +38485,7 @@
           "name",
           "avatarUrl",
           "role",
+          "assignedRole",
           "orgRole"
         ],
         "type": "object",
@@ -38371,6 +38511,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole"
           },
           "orgRole": {
             "$ref": "#/components/schemas/DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemOrgRole"
@@ -38482,6 +38625,7 @@
           "name",
           "avatarUrl",
           "role",
+          "assignedRole",
           "orgRole"
         ],
         "type": "object",
@@ -38507,6 +38651,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole"
           },
           "orgRole": {
             "$ref": "#/components/schemas/PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemOrgRole"
@@ -38699,6 +38846,7 @@
           "name",
           "avatarUrl",
           "role",
+          "assignedRole",
           "orgRole"
         ],
         "type": "object",
@@ -38724,6 +38872,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroups200ResponseUsersItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroups200ResponseUsersItemAssignedRole"
           },
           "orgRole": {
             "$ref": "#/components/schemas/PostApiOrganizationsByNameResourceGroups200ResponseUsersItemOrgRole"
@@ -55522,6 +55673,7 @@
           "name",
           "avatarUrl",
           "role",
+          "assignedRole",
           "orgRole"
         ],
         "type": "object",
@@ -55547,6 +55699,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemAssignedRole"
           },
           "orgRole": {
             "$ref": "#/components/schemas/GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemOrgRole"
@@ -55605,7 +55760,8 @@
           "name",
           "id",
           "numUsers",
-          "role"
+          "role",
+          "assignedRole"
         ],
         "type": "object",
         "properties": {
@@ -55620,6 +55776,9 @@
           },
           "role": {
             "$ref": "#/components/schemas/GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItemRole"
+          },
+          "assignedRole": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItemAssignedRole"
           }
         },
         "additionalProperties": false
@@ -74232,7 +74391,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -74259,6 +74419,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -85642,7 +85806,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -85669,6 +85834,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -85728,6 +85897,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -85817,7 +86028,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -85844,6 +86056,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -85903,6 +86119,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -85992,7 +86250,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86019,6 +86278,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86051,7 +86314,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86078,6 +86342,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86137,6 +86405,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettings200ResponseUsersItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettings200ResponseUsersItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86226,7 +86536,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86253,6 +86564,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86263,7 +86578,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86290,6 +86606,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86349,6 +86669,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseUsersItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseUsersItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86520,7 +86882,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86547,6 +86910,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86606,6 +86973,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86695,7 +87104,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86722,6 +87132,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86781,6 +87195,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86870,7 +87326,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86897,6 +87354,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86907,7 +87368,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86934,6 +87396,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -86966,7 +87432,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -86993,6 +87460,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -87052,6 +87523,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameResourceGroups200ResponseUsersItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameResourceGroups200ResponseUsersItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -87314,7 +87827,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -87341,6 +87855,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -94040,7 +94558,8 @@
           "write",
           "contributor",
           "read",
-          "no_access"
+          "no_access",
+          "inherit"
         ],
         "type": "string",
         "additionalProperties": false,
@@ -94067,6 +94586,10 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -94126,6 +94649,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }
@@ -94242,6 +94807,48 @@
             {
               "value": "no_access",
               "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItemAssignedRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access",
+          "inherit"
+        ],
+        "type": "string",
+        "additionalProperties": false,
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItemAssignedRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            },
+            {
+              "value": "inherit",
+              "name": "Inherit"
             }
           ]
         }

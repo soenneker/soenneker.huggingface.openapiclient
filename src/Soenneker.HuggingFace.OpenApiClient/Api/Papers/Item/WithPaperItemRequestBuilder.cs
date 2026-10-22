@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.Comment;
 using Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.Links;
+using Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.Media;
 using Soenneker.HuggingFace.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -28,6 +29,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.Links.LinksRequestBuilder Links
         {
             get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.Links.LinksRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The media property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.Media.MediaRequestBuilder Media
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.Media.MediaRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.WithPaperItemRequestBuilder"/> and sets the default values.

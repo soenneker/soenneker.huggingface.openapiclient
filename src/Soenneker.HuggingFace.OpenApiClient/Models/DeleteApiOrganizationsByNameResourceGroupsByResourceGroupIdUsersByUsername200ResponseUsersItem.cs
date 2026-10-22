@@ -20,6 +20,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public string AddedBy { get; set; }
 #endif
+        /// <summary>The assignedRole property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole? AssignedRole { get; set; }
         /// <summary>The avatarUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -87,6 +89,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "addedBy", n => { AddedBy = n.GetStringValue(); } },
+                { "assignedRole", n => { AssignedRole = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole>(); } },
                 { "avatarUrl", n => { AvatarUrl = n.GetStringValue(); } },
                 { "fullname", n => { Fullname = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
@@ -106,6 +109,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("addedBy", AddedBy);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseUsersItemAssignedRole>("assignedRole", AssignedRole);
             writer.WriteStringValue("avatarUrl", AvatarUrl);
             writer.WriteStringValue("fullname", Fullname);
             writer.WriteStringValue("_id", Id);

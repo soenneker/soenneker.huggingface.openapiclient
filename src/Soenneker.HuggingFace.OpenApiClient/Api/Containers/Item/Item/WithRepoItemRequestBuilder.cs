@@ -6,6 +6,7 @@ using Microsoft.Kiota.Abstractions;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Batch;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.PathsInfo;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Settings;
+using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tags;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tree;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.XetReadToken;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.XetWriteToken;
@@ -37,6 +38,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Settings.SettingsRequestBuilder Settings
         {
             get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The tags property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tags.TagsRequestBuilder Tags
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tags.TagsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The tree property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tree.TreeRequestBuilder Tree

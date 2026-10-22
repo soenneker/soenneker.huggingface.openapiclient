@@ -28,5 +28,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         NoAccess,
         #pragma warning restore CS1591
+        [EnumMember(Value = "inherit")]
+        #pragma warning disable CS1591
+        Inherit,
+        #pragma warning restore CS1591
     }
 }
