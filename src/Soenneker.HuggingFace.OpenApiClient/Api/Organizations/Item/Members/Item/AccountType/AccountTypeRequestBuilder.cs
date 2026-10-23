@@ -34,7 +34,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Ite
         {
         }
         /// <summary>
-        /// Convert a member into an external collaborator, who isn&apos;t required to sign in with SSO, or back into a member. Need a paid plan.
+        /// Convert a member into an external collaborator, who isn&apos;t required to sign in with SSO, or back into a member. Need a paid plan. Doesn&apos;t affect the role, which must be changed separately.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Item.AccountType.AccountTypePutResponse"/></returns>
         /// <param name="body">The request body</param>
@@ -54,7 +54,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Ite
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Item.AccountType.AccountTypePutResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Item.AccountType.AccountTypePutResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Convert a member into an external collaborator, who isn&apos;t required to sign in with SSO, or back into a member. Need a paid plan.
+        /// Convert a member into an external collaborator, who isn&apos;t required to sign in with SSO, or back into a member. Need a paid plan. Doesn&apos;t affect the role, which must be changed separately.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
