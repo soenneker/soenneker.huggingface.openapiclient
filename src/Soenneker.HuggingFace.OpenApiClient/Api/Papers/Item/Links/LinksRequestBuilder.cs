@@ -36,22 +36,22 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Papers.Item.Links
         /// <summary>
         /// Update the project page, GitHub repository, or submitting organization for a paper. Requires the requester to be the paper author, the Daily Papers submitter, or a papers admin.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200ResponseSchema"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200ResponseSchema?> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinksRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200Response?> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinksRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200ResponseSchema> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinksRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200Response> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinksRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200ResponseSchema>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200ResponseSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdLinks200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the project page, GitHub repository, or submitting organization for a paper. Requires the requester to be the paper author, the Daily Papers submitter, or a papers admin.

@@ -15,20 +15,20 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The author property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemAuthor? Author { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemAuthor? Author { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemAuthor Author { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemAuthor Author { get; set; }
 #endif
         /// <summary>The createdAt property</summary>
         public DateTimeOffset? CreatedAt { get; set; }
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemData? Data { get; set; }
+        public UntypedNode? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemData Data { get; set; }
+        public UntypedNode Data { get; set; }
 #endif
         /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -49,10 +49,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The location property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemLocation? Location { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemLocation? Location { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemLocation Location { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemLocation Location { get; set; }
 #endif
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -65,18 +65,18 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The oauth property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemOAuth? Oauth { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemOAuth? Oauth { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemOAuth Oauth { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemOAuth Oauth { get; set; }
 #endif
         /// <summary>The token property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemToken? Token { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemToken? Token { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemToken Token { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemToken Token { get; set; }
 #endif
         /// <summary>The type property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemType? Type { get; set; }
@@ -106,15 +106,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "author", n => { Author = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemAuthor>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemAuthor.CreateFromDiscriminatorValue); } },
+                { "author", n => { Author = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemAuthor>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemAuthor.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemData>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemData.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "ip", n => { Ip = n.GetStringValue(); } },
-                { "location", n => { Location = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemLocation>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemLocation.CreateFromDiscriminatorValue); } },
+                { "location", n => { Location = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemLocation>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemLocation.CreateFromDiscriminatorValue); } },
                 { "message", n => { Message = n.GetStringValue(); } },
-                { "oauth", n => { Oauth = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemOAuth>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemOAuth.CreateFromDiscriminatorValue); } },
-                { "token", n => { Token = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemToken>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemToken.CreateFromDiscriminatorValue); } },
+                { "oauth", n => { Oauth = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemOAuth>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemOAuth.CreateFromDiscriminatorValue); } },
+                { "token", n => { Token = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemToken>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemToken.CreateFromDiscriminatorValue); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemType>(); } },
                 { "userAgent", n => { UserAgent = n.GetStringValue(); } },
             };
@@ -126,15 +126,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemAuthor>("author", Author);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemAuthor>("author", Author);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemData>("data", Data);
+            writer.WriteObjectValue<UntypedNode>("data", Data);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("ip", Ip);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemLocation>("location", Location);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemLocation>("location", Location);
             writer.WriteStringValue("message", Message);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemOAuth>("oauth", Oauth);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemToken>("token", Token);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemOAuth>("oauth", Oauth);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseSchemaItemToken>("token", Token);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameAuditLogExport200ResponseItemType>("type", Type);
             writer.WriteStringValue("userAgent", UserAgent);
         }

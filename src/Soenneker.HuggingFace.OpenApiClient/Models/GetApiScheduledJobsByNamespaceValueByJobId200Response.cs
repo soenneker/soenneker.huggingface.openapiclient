@@ -75,7 +75,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string SuspendReason { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.ScheduledJobType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValueByJobId200ResponseType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -104,7 +104,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "status", n => { Status = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValueByJobId200ResponseStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValueByJobId200ResponseStatus.CreateFromDiscriminatorValue); } },
                 { "suspend", n => { Suspend = n.GetBoolValue(); } },
                 { "suspendReason", n => { SuspendReason = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ScheduledJobType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValueByJobId200ResponseType>(); } },
             };
         }
         /// <summary>
@@ -124,7 +124,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValueByJobId200ResponseStatus>("status", Status);
             writer.WriteBoolValue("suspend", Suspend);
             writer.WriteStringValue("suspendReason", SuspendReason);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ScheduledJobType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValueByJobId200ResponseType>("type", Type);
         }
     }
 }

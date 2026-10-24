@@ -27,26 +27,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The initiator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemInitiator? Initiator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemInitiator? Initiator { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemInitiator Initiator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemInitiator Initiator { get; set; }
 #endif
         /// <summary>The jobSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemJobSpec? JobSpec { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemJobSpec? JobSpec { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemJobSpec JobSpec { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemJobSpec JobSpec { get; set; }
 #endif
         /// <summary>The owner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemOwner? Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemOwner? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemOwner Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemOwner Owner { get; set; }
 #endif
         /// <summary>The schedule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,10 +59,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemStatus? Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemStatus? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemStatus Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemStatus Status { get; set; }
 #endif
         /// <summary>The suspend property</summary>
         public bool? Suspend { get; set; }
@@ -75,7 +75,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string SuspendReason { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.ScheduledJobType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -97,14 +97,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "concurrency", n => { Concurrency = n.GetBoolValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "initiator", n => { Initiator = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemInitiator>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemInitiator.CreateFromDiscriminatorValue); } },
-                { "jobSpec", n => { JobSpec = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemJobSpec>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemJobSpec.CreateFromDiscriminatorValue); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemOwner>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemOwner.CreateFromDiscriminatorValue); } },
+                { "initiator", n => { Initiator = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemInitiator>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemInitiator.CreateFromDiscriminatorValue); } },
+                { "jobSpec", n => { JobSpec = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemJobSpec>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemJobSpec.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemOwner>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemOwner.CreateFromDiscriminatorValue); } },
                 { "schedule", n => { Schedule = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemStatus.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemStatus.CreateFromDiscriminatorValue); } },
                 { "suspend", n => { Suspend = n.GetBoolValue(); } },
                 { "suspendReason", n => { SuspendReason = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ScheduledJobType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemType>(); } },
             };
         }
         /// <summary>
@@ -117,14 +117,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("concurrency", Concurrency);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemInitiator>("initiator", Initiator);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemJobSpec>("jobSpec", JobSpec);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemOwner>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemInitiator>("initiator", Initiator);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemJobSpec>("jobSpec", JobSpec);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemOwner>("owner", Owner);
             writer.WriteStringValue("schedule", Schedule);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseSchemaItemStatus>("status", Status);
             writer.WriteBoolValue("suspend", Suspend);
             writer.WriteStringValue("suspendReason", SuspendReason);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ScheduledJobType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiScheduledJobsByNamespaceValue200ResponseItemType>("type", Type);
         }
     }
 }

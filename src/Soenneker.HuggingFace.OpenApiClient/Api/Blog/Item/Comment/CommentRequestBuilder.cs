@@ -13,7 +13,7 @@ using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Comment
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\blog\{namespaceValue-id}\comment
+    /// Builds and executes requests for operations under \api\blog\{slug}\comment
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class CommentRequestBuilder : BaseRequestBuilder
@@ -35,7 +35,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Comment
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CommentRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{namespaceValue%2Did}/comment", pathParameters)
+        public CommentRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{slug}/comment", pathParameters)
         {
         }
         /// <summary>
@@ -43,7 +43,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Comment
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public CommentRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{namespaceValue%2Did}/comment", rawUrl)
+        public CommentRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{slug}/comment", rawUrl)
         {
         }
         /// <summary>

@@ -16,7 +16,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Composed type representation for type <see cref="int"/></summary>
         public int? Integer { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
         public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2? PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2 PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,9 +36,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 result.Integer = integerValue;
             }
-            else if(parseNode.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2>() is global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2 postApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2Value)
-            {
-                result.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2 = postApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2Value;
+            else {
+                result.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2();
             }
             return result;
         }
@@ -42,6 +47,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
+            if(PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2 != null)
+            {
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2);
+            }
             return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
@@ -55,9 +64,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 writer.WriteIntValue(null, Integer);
             }
-            else if(PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2 != null)
-            {
-                writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2>(null, PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2);
+            else {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2>(null, PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestSleepTimeSecondsAnyOf2);
             }
         }
     }

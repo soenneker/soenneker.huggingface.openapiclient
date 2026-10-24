@@ -35,10 +35,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The createdBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemCreatedBy? CreatedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemCreatedBy? CreatedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemCreatedBy CreatedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemCreatedBy CreatedBy { get; set; }
 #endif
         /// <summary>The dockerImage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -51,26 +51,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The durations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemDurations? Durations { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemDurations? Durations { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemDurations Durations { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemDurations Durations { get; set; }
 #endif
         /// <summary>The environment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemEnvironment? Environment { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemEnvironment? Environment { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemEnvironment Environment { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemEnvironment Environment { get; set; }
 #endif
         /// <summary>Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemExpose? Expose { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemExpose? Expose { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemExpose Expose { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemExpose Expose { get; set; }
 #endif
         /// <summary>The finishedAt property</summary>
         public DateTimeOffset? FinishedAt { get; set; }
@@ -79,10 +79,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The hfToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemHfToken? HfToken { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemHfToken? HfToken { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemHfToken HfToken { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemHfToken HfToken { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -103,34 +103,34 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemLabels? Labels { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemLabels? Labels { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemLabels Labels { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemLabels Labels { get; set; }
 #endif
         /// <summary>Network group the job belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemNetwork? Network { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemNetwork? Network { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemNetwork Network { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemNetwork Network { get; set; }
 #endif
         /// <summary>The owner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemOwner? Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemOwner? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemOwner Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemOwner Owner { get; set; }
 #endif
         /// <summary>The resourceGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemResourceGroup? ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemResourceGroup? ResourceGroup { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemResourceGroup ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemResourceGroup ResourceGroup { get; set; }
 #endif
         /// <summary>The resourceGroupId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -163,15 +163,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatus? Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemStatus? Status { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatus Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemStatus Status { get; set; }
 #endif
         /// <summary>The timeout property</summary>
         public double? Timeout { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.JobType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemType? Type { get; set; }
         /// <summary>The volumes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -202,28 +202,28 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "arguments", n => { Arguments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "command", n => { Command = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemCreatedBy>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemCreatedBy.CreateFromDiscriminatorValue); } },
+                { "createdBy", n => { CreatedBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemCreatedBy>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemCreatedBy.CreateFromDiscriminatorValue); } },
                 { "dockerImage", n => { DockerImage = n.GetStringValue(); } },
-                { "durations", n => { Durations = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemDurations>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemDurations.CreateFromDiscriminatorValue); } },
-                { "environment", n => { Environment = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemEnvironment>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemEnvironment.CreateFromDiscriminatorValue); } },
-                { "expose", n => { Expose = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemExpose>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemExpose.CreateFromDiscriminatorValue); } },
+                { "durations", n => { Durations = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemDurations>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemDurations.CreateFromDiscriminatorValue); } },
+                { "environment", n => { Environment = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemEnvironment>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemEnvironment.CreateFromDiscriminatorValue); } },
+                { "expose", n => { Expose = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemExpose>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemExpose.CreateFromDiscriminatorValue); } },
                 { "finishedAt", n => { FinishedAt = n.GetDateTimeOffsetValue(); } },
                 { "flavor", n => { Flavor = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemFlavor>(); } },
-                { "hfToken", n => { HfToken = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemHfToken>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemHfToken.CreateFromDiscriminatorValue); } },
+                { "hfToken", n => { HfToken = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemHfToken>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemHfToken.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "initiator", n => { Initiator = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiator>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiator.CreateFromDiscriminatorValue); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemLabels>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemLabels.CreateFromDiscriminatorValue); } },
-                { "network", n => { Network = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemNetwork>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemNetwork.CreateFromDiscriminatorValue); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemOwner>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemOwner.CreateFromDiscriminatorValue); } },
-                { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemResourceGroup.CreateFromDiscriminatorValue); } },
+                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemLabels>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemLabels.CreateFromDiscriminatorValue); } },
+                { "network", n => { Network = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemNetwork>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemNetwork.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemOwner>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemOwner.CreateFromDiscriminatorValue); } },
+                { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemResourceGroup.CreateFromDiscriminatorValue); } },
                 { "resourceGroupId", n => { ResourceGroupId = n.GetStringValue(); } },
                 { "retry", n => { Retry = n.GetDoubleValue(); } },
                 { "secrets", n => { Secrets = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "spaceId", n => { SpaceId = n.GetStringValue(); } },
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
-                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatus.CreateFromDiscriminatorValue); } },
+                { "status", n => { Status = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemStatus.CreateFromDiscriminatorValue); } },
                 { "timeout", n => { Timeout = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.JobType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemType>(); } },
                 { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemVolumesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemVolumesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -238,28 +238,28 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("arguments", Arguments);
             writer.WriteCollectionOfPrimitiveValues<string>("command", Command);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemCreatedBy>("createdBy", CreatedBy);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemCreatedBy>("createdBy", CreatedBy);
             writer.WriteStringValue("dockerImage", DockerImage);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemDurations>("durations", Durations);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemEnvironment>("environment", Environment);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemExpose>("expose", Expose);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemDurations>("durations", Durations);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemEnvironment>("environment", Environment);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemExpose>("expose", Expose);
             writer.WriteDateTimeOffsetValue("finishedAt", FinishedAt);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemFlavor>("flavor", Flavor);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemHfToken>("hfToken", HfToken);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemHfToken>("hfToken", HfToken);
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiator>("initiator", Initiator);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemLabels>("labels", Labels);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemNetwork>("network", Network);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemOwner>("owner", Owner);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemResourceGroup>("resourceGroup", ResourceGroup);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemLabels>("labels", Labels);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemNetwork>("network", Network);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemOwner>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemResourceGroup>("resourceGroup", ResourceGroup);
             writer.WriteStringValue("resourceGroupId", ResourceGroupId);
             writer.WriteDoubleValue("retry", Retry);
             writer.WriteCollectionOfPrimitiveValues<string>("secrets", Secrets);
             writer.WriteStringValue("spaceId", SpaceId);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatus>("status", Status);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseSchemaItemStatus>("status", Status);
             writer.WriteDoubleValue("timeout", Timeout);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.JobType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemType>("type", Type);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemVolumesItem>("volumes", Volumes);
         }
     }

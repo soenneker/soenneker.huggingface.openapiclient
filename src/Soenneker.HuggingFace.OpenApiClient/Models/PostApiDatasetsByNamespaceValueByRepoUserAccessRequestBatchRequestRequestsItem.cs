@@ -7,44 +7,36 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Id of the request as returned by the listing endpoint; the only identifier when the requester&apos;s profile is not shared</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RequestId { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1? PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1 { get; set; }
 #nullable restore
 #else
-        public string RequestId { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1 PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1 { get; set; }
 #endif
-        /// <summary>The user property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? User { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2? PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2 { get; set; }
 #nullable restore
 #else
-        public string User { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2 PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2 { get; set; }
 #endif
-        /// <summary>The userId property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UserId { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3? PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3 { get; set; }
 #nullable restore
 #else
-        public string UserId { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3 PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem"/> and sets the default values.
-        /// </summary>
-        public PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -53,7 +45,21 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItem();
+            if("PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1();
+            }
+            else if("PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2();
+            }
+            else if("PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,12 +67,19 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1 != null)
             {
-                { "requestId", n => { RequestId = n.GetStringValue(); } },
-                { "user", n => { User = n.GetStringValue(); } },
-                { "userId", n => { UserId = n.GetStringValue(); } },
-            };
+                return PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1.GetFieldDeserializers();
+            }
+            else if(PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2 != null)
+            {
+                return PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2.GetFieldDeserializers();
+            }
+            else if(PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3 != null)
+            {
+                return PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -75,10 +88,18 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("requestId", RequestId);
-            writer.WriteStringValue("user", User);
-            writer.WriteStringValue("userId", UserId);
-            writer.WriteAdditionalData(AdditionalData);
+            if(PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1>(null, PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf1);
+            }
+            else if(PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2>(null, PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf2);
+            }
+            else if(PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3>(null, PostApiDatasetsByNamespaceValueByRepoUserAccessRequestBatchRequestRequestsItemOneOf3);
+            }
         }
     }
 }

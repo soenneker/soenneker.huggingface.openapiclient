@@ -69,7 +69,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string RoleSetBy { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.UserType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -98,7 +98,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "orgRole", n => { OrgRole = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemOrgRole>(); } },
                 { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemRole>(); } },
                 { "roleSetBy", n => { RoleSetBy = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UserType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemType>(); } },
             };
         }
         /// <summary>
@@ -118,7 +118,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemOrgRole>("orgRole", OrgRole);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemRole>("role", Role);
             writer.WriteStringValue("roleSetBy", RoleSetBy);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UserType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemType>("type", Type);
         }
     }
 }

@@ -7,52 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiPartnersByProviderModelsRequest : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiPartnersByProviderModelsRequest : IComposedTypeWrapper, IParsable
     {
-        /// <summary>The adapterType property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.LoraAdapterType? AdapterType { get; set; }
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The hfModel property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HfModel { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1? PostApiPartnersByProviderModelsRequestAnyOf1 { get; set; }
 #nullable restore
 #else
-        public string HfModel { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1 PostApiPartnersByProviderModelsRequestAnyOf1 { get; set; }
 #endif
-        /// <summary>The providerModel property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderModel { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf2? PostApiPartnersByProviderModelsRequestAnyOf2 { get; set; }
 #nullable restore
 #else
-        public string ProviderModel { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf2 PostApiPartnersByProviderModelsRequestAnyOf2 { get; set; }
 #endif
-        /// <summary>The status property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestStatus? Status { get; set; }
-        /// <summary>The tags property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? Tags { get; set; }
-#nullable restore
-#else
-        public List<string> Tags { get; set; }
-#endif
-        /// <summary>The task property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestTask? Task { get; set; }
-        /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequest"/> and sets the default values.
-        /// </summary>
-        public PostApiPartnersByProviderModelsRequest()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -61,7 +37,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequest();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequest();
+            result.PostApiPartnersByProviderModelsRequestAnyOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1();
+            result.PostApiPartnersByProviderModelsRequestAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,16 +48,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiPartnersByProviderModelsRequestAnyOf1 != null || PostApiPartnersByProviderModelsRequestAnyOf2 != null)
             {
-                { "adapterType", n => { AdapterType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.LoraAdapterType>(); } },
-                { "hfModel", n => { HfModel = n.GetStringValue(); } },
-                { "providerModel", n => { ProviderModel = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestStatus>(); } },
-                { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "task", n => { Task = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestTask>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType>(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostApiPartnersByProviderModelsRequestAnyOf1, PostApiPartnersByProviderModelsRequestAnyOf2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -87,14 +61,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.LoraAdapterType>("adapterType", AdapterType);
-            writer.WriteStringValue("hfModel", HfModel);
-            writer.WriteStringValue("providerModel", ProviderModel);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestStatus>("status", Status);
-            writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestTask>("task", Task);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1>(null, PostApiPartnersByProviderModelsRequestAnyOf1, PostApiPartnersByProviderModelsRequestAnyOf2);
         }
     }
 }

@@ -7,30 +7,36 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf2"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GetApiTrending200ResponseRecentlyTrendingItem : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GetApiTrending200ResponseRecentlyTrendingItem : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The repoData property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemRepoData? RepoData { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf1? GetApiTrending200ResponseRecentlyTrendingItemOneOf1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemRepoData RepoData { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf1 GetApiTrending200ResponseRecentlyTrendingItemOneOf1 { get; set; }
 #endif
-        /// <summary>The repoType property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.DatasetRepoType? RepoType { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItem"/> and sets the default values.
-        /// </summary>
-        public GetApiTrending200ResponseRecentlyTrendingItem()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf2? GetApiTrending200ResponseRecentlyTrendingItemOneOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf2 GetApiTrending200ResponseRecentlyTrendingItemOneOf2 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3? GetApiTrending200ResponseRecentlyTrendingItemOneOf3 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3 GetApiTrending200ResponseRecentlyTrendingItemOneOf3 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -39,7 +45,21 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItem();
+            var mappingValue = parseNode.GetChildNode("repoType")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItem();
+            if("dataset".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiTrending200ResponseRecentlyTrendingItemOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf1();
+            }
+            else if("model".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiTrending200ResponseRecentlyTrendingItemOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf2();
+            }
+            else if("space".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiTrending200ResponseRecentlyTrendingItemOneOf3 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -47,11 +67,19 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GetApiTrending200ResponseRecentlyTrendingItemOneOf1 != null)
             {
-                { "repoData", n => { RepoData = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemRepoData>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemRepoData.CreateFromDiscriminatorValue); } },
-                { "repoType", n => { RepoType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DatasetRepoType>(); } },
-            };
+                return GetApiTrending200ResponseRecentlyTrendingItemOneOf1.GetFieldDeserializers();
+            }
+            else if(GetApiTrending200ResponseRecentlyTrendingItemOneOf2 != null)
+            {
+                return GetApiTrending200ResponseRecentlyTrendingItemOneOf2.GetFieldDeserializers();
+            }
+            else if(GetApiTrending200ResponseRecentlyTrendingItemOneOf3 != null)
+            {
+                return GetApiTrending200ResponseRecentlyTrendingItemOneOf3.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -60,9 +88,18 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemRepoData>("repoData", RepoData);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DatasetRepoType>("repoType", RepoType);
-            writer.WriteAdditionalData(AdditionalData);
+            if(GetApiTrending200ResponseRecentlyTrendingItemOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf1>(null, GetApiTrending200ResponseRecentlyTrendingItemOneOf1);
+            }
+            else if(GetApiTrending200ResponseRecentlyTrendingItemOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf2>(null, GetApiTrending200ResponseRecentlyTrendingItemOneOf2);
+            }
+            else if(GetApiTrending200ResponseRecentlyTrendingItemOneOf3 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3>(null, GetApiTrending200ResponseRecentlyTrendingItemOneOf3);
+            }
         }
     }
 }

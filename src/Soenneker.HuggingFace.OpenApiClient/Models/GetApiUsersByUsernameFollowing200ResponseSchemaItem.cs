@@ -99,13 +99,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Set when the user is a service account</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemServiceAccount? ServiceAccount { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseSchemaItemServiceAccount? ServiceAccount { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemServiceAccount ServiceAccount { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseSchemaItemServiceAccount ServiceAccount { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.UserType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemType? Type { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -153,8 +153,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "orgs", n => { Orgs = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemOrgsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemOrgsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "primaryOrgAvatarUrl", n => { PrimaryOrgAvatarUrl = n.GetStringValue(); } },
                 { "reasonToFollow", n => { ReasonToFollow = n.GetStringValue(); } },
-                { "serviceAccount", n => { ServiceAccount = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemServiceAccount>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemServiceAccount.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UserType>(); } },
+                { "serviceAccount", n => { ServiceAccount = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseSchemaItemServiceAccount>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseSchemaItemServiceAccount.CreateFromDiscriminatorValue); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemType>(); } },
                 { "user", n => { User = n.GetStringValue(); } },
             };
         }
@@ -186,8 +186,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemOrgsItem>("orgs", Orgs);
             writer.WriteStringValue("primaryOrgAvatarUrl", PrimaryOrgAvatarUrl);
             writer.WriteStringValue("reasonToFollow", ReasonToFollow);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemServiceAccount>("serviceAccount", ServiceAccount);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UserType>("type", Type);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseSchemaItemServiceAccount>("serviceAccount", ServiceAccount);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowing200ResponseItemType>("type", Type);
             writer.WriteStringValue("user", User);
         }
     }

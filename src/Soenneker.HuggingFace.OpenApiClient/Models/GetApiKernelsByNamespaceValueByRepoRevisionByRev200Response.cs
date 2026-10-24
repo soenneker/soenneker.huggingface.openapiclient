@@ -71,7 +71,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The private property</summary>
         public bool? Private { get; set; }
         /// <summary>The repoType property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.KernelRepoType? RepoType { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernelsByNamespaceValueByRepoRevisionByRev200ResponseRepoType? RepoType { get; set; }
         /// <summary>The resourceGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -127,7 +127,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "lastModified", n => { LastModified = n.GetDateTimeOffsetValue(); } },
                 { "likes", n => { Likes = n.GetDoubleValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
-                { "repoType", n => { RepoType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.KernelRepoType>(); } },
+                { "repoType", n => { RepoType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernelsByNamespaceValueByRepoRevisionByRev200ResponseRepoType>(); } },
                 { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernelsByNamespaceValueByRepoRevisionByRev200ResponseResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernelsByNamespaceValueByRepoRevisionByRev200ResponseResourceGroup.CreateFromDiscriminatorValue); } },
                 { "sha", n => { Sha = n.GetStringValue(); } },
                 { "supportedDriverFamilies", n => { SupportedDriverFamilies = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernelsByNamespaceValueByRepoRevisionByRev200ResponseSupportedDriverFamiliesItem>()?.AsList(); } },
@@ -152,7 +152,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastModified", LastModified);
             writer.WriteDoubleValue("likes", Likes);
             writer.WriteBoolValue("private", Private);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.KernelRepoType>("repoType", RepoType);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernelsByNamespaceValueByRepoRevisionByRev200ResponseRepoType>("repoType", RepoType);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernelsByNamespaceValueByRepoRevisionByRev200ResponseResourceGroup>("resourceGroup", ResourceGroup);
             writer.WriteStringValue("sha", Sha);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernelsByNamespaceValueByRepoRevisionByRev200ResponseSupportedDriverFamiliesItem>("supportedDriverFamilies", SupportedDriverFamilies);

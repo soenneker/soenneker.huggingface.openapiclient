@@ -21,6 +21,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Collections
         /// <summary>Gets an item from the Soenneker.HuggingFace.OpenApiClient.api.collections.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
         /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Api.Collections.Item.WithNamespaceValueItemRequestBuilder"/></returns>
+        [global::System.Runtime.CompilerServices.IndexerName("ItemByKey")]
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Collections.Item.WithNamespaceValueItemRequestBuilder this[string position]
         {
             get

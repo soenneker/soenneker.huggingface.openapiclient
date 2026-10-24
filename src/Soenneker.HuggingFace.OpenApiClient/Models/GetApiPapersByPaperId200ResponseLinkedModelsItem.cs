@@ -75,7 +75,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The private property</summary>
         public bool? Private { get; set; }
         /// <summary>The repoType property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.ModelRepoType? RepoType { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemRepoType? RepoType { get; set; }
         /// <summary>The resourceGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -130,7 +130,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "numParameters", n => { NumParameters = n.GetDoubleValue(); } },
                 { "pipeline_tag", n => { PipelineTag = n.GetStringValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
-                { "repoType", n => { RepoType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ModelRepoType>(); } },
+                { "repoType", n => { RepoType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemRepoType>(); } },
                 { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemResourceGroup.CreateFromDiscriminatorValue); } },
                 { "widgetOutputUrls", n => { WidgetOutputUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -155,7 +155,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDoubleValue("numParameters", NumParameters);
             writer.WriteStringValue("pipeline_tag", PipelineTag);
             writer.WriteBoolValue("private", Private);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ModelRepoType>("repoType", RepoType);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemRepoType>("repoType", RepoType);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemResourceGroup>("resourceGroup", ResourceGroup);
             writer.WriteCollectionOfPrimitiveValues<string>("widgetOutputUrls", WidgetOutputUrls);
         }

@@ -15,7 +15,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The mode property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.ManualMode? Mode { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Mode? Mode { get; set; }
         /// <summary>The notifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -57,7 +57,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ManualMode>(); } },
+                { "mode", n => { Mode = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Mode>(); } },
                 { "notifications", n => { Notifications = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications.CreateFromDiscriminatorValue); } },
                 { "profileSharing", n => { ProfileSharing = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing.CreateFromDiscriminatorValue); } },
             };
@@ -69,7 +69,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.ManualMode>("mode", Mode);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Mode>("mode", Mode);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications>("notifications", Notifications);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing>("profileSharing", ProfileSharing);
             writer.WriteAdditionalData(AdditionalData);

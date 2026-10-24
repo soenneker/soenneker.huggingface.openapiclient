@@ -207,7 +207,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ScimProvisi
         {
             #pragma warning disable CS1591
             [QueryParameter("excludedAttributes")]
-            public global::Soenneker.HuggingFace.OpenApiClient.Models.MembersExcludedAttributes? ExcludedAttributes { get; set; }
+            public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2GroupsByGroupIdExcludedAttributesParameter? ExcludedAttributes { get; set; }
             #pragma warning restore CS1591
         }
     }

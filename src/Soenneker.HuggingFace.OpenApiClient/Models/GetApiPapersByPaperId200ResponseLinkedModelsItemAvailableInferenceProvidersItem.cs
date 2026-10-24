@@ -13,7 +13,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning restore CS1591
     {
         /// <summary>The adapterType property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.LoraAdapterType? AdapterType { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemAdapterType? AdapterType { get; set; }
         /// <summary>The adapterWeightsPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -76,7 +76,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "adapterType", n => { AdapterType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.LoraAdapterType>(); } },
+                { "adapterType", n => { AdapterType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemAdapterType>(); } },
                 { "adapterWeightsPath", n => { AdapterWeightsPath = n.GetStringValue(); } },
                 { "features", n => { Features = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemFeatures>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemFeatures.CreateFromDiscriminatorValue); } },
                 { "freeUntil", n => { FreeUntil = n.GetDateTimeOffsetValue(); } },
@@ -99,7 +99,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.LoraAdapterType>("adapterType", AdapterType);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemAdapterType>("adapterType", AdapterType);
             writer.WriteStringValue("adapterWeightsPath", AdapterWeightsPath);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemFeatures>("features", Features);
             writer.WriteDateTimeOffsetValue("freeUntil", FreeUntil);

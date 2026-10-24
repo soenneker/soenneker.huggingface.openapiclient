@@ -55,20 +55,20 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Settings.Webhooks.Item
         /// <summary>
         /// Delete webhook
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200ResponseSchema"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200ResponseSchema?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response?> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200ResponseSchema> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response> DeleteAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200ResponseSchema>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200ResponseSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get webhook

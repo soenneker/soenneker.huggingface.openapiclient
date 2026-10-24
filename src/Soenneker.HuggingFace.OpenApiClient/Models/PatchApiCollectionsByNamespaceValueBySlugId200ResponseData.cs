@@ -21,13 +21,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string Description { get; set; }
 #endif
         /// <summary>The gating property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGating? Gating { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGating Gating { get; set; }
-#endif
+        public bool? Gating { get; set; }
         /// <summary>The isUpvotedByUser property</summary>
         public bool? IsUpvotedByUser { get; set; }
         /// <summary>The items property</summary>
@@ -107,7 +101,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "gating", n => { Gating = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGating>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGating.CreateFromDiscriminatorValue); } },
+                { "gating", n => { Gating = n.GetBoolValue(); } },
                 { "isUpvotedByUser", n => { IsUpvotedByUser = n.GetBoolValue(); } },
                 { "items", n => { Items = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "lastUpdated", n => { LastUpdated = n.GetDateTimeOffsetValue(); } },
@@ -130,7 +124,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataGating>("gating", Gating);
+            writer.WriteBoolValue("gating", Gating);
             writer.WriteBoolValue("isUpvotedByUser", IsUpvotedByUser);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItem>("items", Items);
             writer.WriteDateTimeOffsetValue("lastUpdated", LastUpdated);

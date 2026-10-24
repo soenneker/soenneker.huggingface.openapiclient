@@ -71,7 +71,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Scim.V2.Use
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
-        /// <exception cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimV2Users409ResponseSchema">When receiving a 409 status code</exception>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimV2Users201Response?> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimV2UsersRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
@@ -83,11 +82,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Scim.V2.Use
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
-            {
-                { "409", global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimV2Users409ResponseSchema.CreateFromDiscriminatorValue },
-            };
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimV2Users201Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimV2Users201Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimV2Users201Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimV2Users201Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a paginated list of all organization members who have been set up, including disabled users. If you provide the filter parameter, the resources for all matching members are returned.

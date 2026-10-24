@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Item.Comment.Item.Reply
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\blog\{namespaceValue-id}\{slug}\comment\{commentId}\reply
+    /// Builds and executes requests for operations under \api\blog\{slug}\{slug2}\comment\{commentId}\reply
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ReplyRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Item.Comment.Item.Re
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReplyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{namespaceValue%2Did}/{slug}/comment/{commentId}/reply", pathParameters)
+        public ReplyRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{slug}/{slug2}/comment/{commentId}/reply", pathParameters)
         {
         }
         /// <summary>
@@ -30,28 +30,28 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Item.Comment.Item.Re
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ReplyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{namespaceValue%2Did}/{slug}/comment/{commentId}/reply", rawUrl)
+        public ReplyRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{slug}/{slug2}/comment/{commentId}/reply", rawUrl)
         {
         }
         /// <summary>
         /// Create comment
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReply201Response"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReply201Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReply201Response?> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReplyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReply201Response?> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReplyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReply201Response> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReplyRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReply201Response> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReplyRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReply201Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReply201Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReply201Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReply201Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Create comment
@@ -61,11 +61,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Item.Comment.Item.Re
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReplyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReplyRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugCommentByCommentIdReplyRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2CommentByCommentIdReplyRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

@@ -7,82 +7,44 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf3"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf4"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GetApiNotifications200ResponseNotificationsItem : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GetApiNotifications200ResponseNotificationsItem : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The blog property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemBlog? Blog { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf1? GetApiNotifications200ResponseNotificationsItemOneOf1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemBlog Blog { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf1 GetApiNotifications200ResponseNotificationsItemOneOf1 { get; set; }
 #endif
-        /// <summary>The discussion property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemDiscussion? Discussion { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2? GetApiNotifications200ResponseNotificationsItemOneOf2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemDiscussion Discussion { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2 GetApiNotifications200ResponseNotificationsItemOneOf2 { get; set; }
 #endif
-        /// <summary>The discussionEventId property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscussionEventId { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf3? GetApiNotifications200ResponseNotificationsItemOneOf3 { get; set; }
 #nullable restore
 #else
-        public string DiscussionEventId { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf3 GetApiNotifications200ResponseNotificationsItemOneOf3 { get; set; }
 #endif
-        /// <summary>The paper property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf4"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaper? Paper { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf4? GetApiNotifications200ResponseNotificationsItemOneOf4 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaper Paper { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf4 GetApiNotifications200ResponseNotificationsItemOneOf4 { get; set; }
 #endif
-        /// <summary>The paperDiscussion property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaperDiscussion? PaperDiscussion { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaperDiscussion PaperDiscussion { get; set; }
-#endif
-        /// <summary>The post property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPost? Post { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPost Post { get; set; }
-#endif
-        /// <summary>The read property</summary>
-        public bool? Read { get; set; }
-        /// <summary>The repo property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId? Repo { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId Repo { get; set; }
-#endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PaperType? Type { get; set; }
-        /// <summary>The updatedAt property</summary>
-        public DateTimeOffset? UpdatedAt { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItem"/> and sets the default values.
-        /// </summary>
-        public GetApiNotifications200ResponseNotificationsItem()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -91,7 +53,25 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItem();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItem();
+            if("paper".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiNotifications200ResponseNotificationsItemOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf1();
+            }
+            else if("repo".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiNotifications200ResponseNotificationsItemOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2();
+            }
+            else if("post".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiNotifications200ResponseNotificationsItemOneOf3 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf3();
+            }
+            else if("community_blog".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiNotifications200ResponseNotificationsItemOneOf4 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf4();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -99,19 +79,23 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GetApiNotifications200ResponseNotificationsItemOneOf1 != null)
             {
-                { "blog", n => { Blog = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemBlog>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemBlog.CreateFromDiscriminatorValue); } },
-                { "discussion", n => { Discussion = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemDiscussion>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemDiscussion.CreateFromDiscriminatorValue); } },
-                { "discussionEventId", n => { DiscussionEventId = n.GetStringValue(); } },
-                { "paper", n => { Paper = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaper>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaper.CreateFromDiscriminatorValue); } },
-                { "paperDiscussion", n => { PaperDiscussion = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaperDiscussion>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaperDiscussion.CreateFromDiscriminatorValue); } },
-                { "post", n => { Post = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPost>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPost.CreateFromDiscriminatorValue); } },
-                { "read", n => { Read = n.GetBoolValue(); } },
-                { "repo", n => { Repo = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId>(global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PaperType>(); } },
-                { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
-            };
+                return GetApiNotifications200ResponseNotificationsItemOneOf1.GetFieldDeserializers();
+            }
+            else if(GetApiNotifications200ResponseNotificationsItemOneOf2 != null)
+            {
+                return GetApiNotifications200ResponseNotificationsItemOneOf2.GetFieldDeserializers();
+            }
+            else if(GetApiNotifications200ResponseNotificationsItemOneOf3 != null)
+            {
+                return GetApiNotifications200ResponseNotificationsItemOneOf3.GetFieldDeserializers();
+            }
+            else if(GetApiNotifications200ResponseNotificationsItemOneOf4 != null)
+            {
+                return GetApiNotifications200ResponseNotificationsItemOneOf4.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -120,17 +104,22 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemBlog>("blog", Blog);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemDiscussion>("discussion", Discussion);
-            writer.WriteStringValue("discussionEventId", DiscussionEventId);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaper>("paper", Paper);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPaperDiscussion>("paperDiscussion", PaperDiscussion);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemPost>("post", Post);
-            writer.WriteBoolValue("read", Read);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId>("repo", Repo);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PaperType>("type", Type);
-            writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);
-            writer.WriteAdditionalData(AdditionalData);
+            if(GetApiNotifications200ResponseNotificationsItemOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf1>(null, GetApiNotifications200ResponseNotificationsItemOneOf1);
+            }
+            else if(GetApiNotifications200ResponseNotificationsItemOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2>(null, GetApiNotifications200ResponseNotificationsItemOneOf2);
+            }
+            else if(GetApiNotifications200ResponseNotificationsItemOneOf3 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf3>(null, GetApiNotifications200ResponseNotificationsItemOneOf3);
+            }
+            else if(GetApiNotifications200ResponseNotificationsItemOneOf4 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf4>(null, GetApiNotifications200ResponseNotificationsItemOneOf4);
+            }
         }
     }
 }

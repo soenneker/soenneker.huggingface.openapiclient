@@ -23,18 +23,18 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Build metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadata? BuildMetadata { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata? BuildMetadata { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadata BuildMetadata { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata BuildMetadata { get; set; }
 #endif
         /// <summary>Kernel card metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemCardData? CardData { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData? CardData { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemCardData CardData { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData CardData { get; set; }
 #endif
         /// <summary>Creation timestamp</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -85,10 +85,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Resource group information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemResourceGroup? ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup? ResourceGroup { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemResourceGroup ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup ResourceGroup { get; set; }
 #endif
         /// <summary>Current commit SHA</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -135,8 +135,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "author", n => { Author = n.GetStringValue(); } },
-                { "buildMetadata", n => { BuildMetadata = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadata>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadata.CreateFromDiscriminatorValue); } },
-                { "cardData", n => { CardData = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemCardData>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemCardData.CreateFromDiscriminatorValue); } },
+                { "buildMetadata", n => { BuildMetadata = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata.CreateFromDiscriminatorValue); } },
+                { "cardData", n => { CardData = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "disabled", n => { Disabled = n.GetBoolValue(); } },
                 { "downloads", n => { Downloads = n.GetIntValue(); } },
@@ -148,7 +148,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "lastModified", n => { LastModified = n.GetDateTimeOffsetValue(); } },
                 { "likes", n => { Likes = n.GetIntValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
-                { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemResourceGroup.CreateFromDiscriminatorValue); } },
+                { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup.CreateFromDiscriminatorValue); } },
                 { "sha", n => { Sha = n.GetStringValue(); } },
                 { "supportedDriverFamilies", n => { SupportedDriverFamilies = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem>()?.AsList(); } },
                 { "tags", n => { Tags = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -163,8 +163,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("author", Author);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadata>("buildMetadata", BuildMetadata);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemCardData>("cardData", CardData);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata>("buildMetadata", BuildMetadata);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData>("cardData", CardData);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteBoolValue("disabled", Disabled);
             writer.WriteIntValue("downloads", Downloads);
@@ -176,7 +176,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("lastModified", LastModified);
             writer.WriteIntValue("likes", Likes);
             writer.WriteBoolValue("private", Private);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemResourceGroup>("resourceGroup", ResourceGroup);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup>("resourceGroup", ResourceGroup);
             writer.WriteStringValue("sha", Sha);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem>("supportedDriverFamilies", SupportedDriverFamilies);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);

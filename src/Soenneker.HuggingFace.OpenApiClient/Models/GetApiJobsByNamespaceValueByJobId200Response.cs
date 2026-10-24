@@ -171,7 +171,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The timeout property</summary>
         public double? Timeout { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.JobType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseType? Type { get; set; }
         /// <summary>The volumes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -223,7 +223,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "startedAt", n => { StartedAt = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseStatus.CreateFromDiscriminatorValue); } },
                 { "timeout", n => { Timeout = n.GetDoubleValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.JobType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseType>(); } },
                 { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseVolumesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseVolumesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -259,7 +259,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseStatus>("status", Status);
             writer.WriteDoubleValue("timeout", Timeout);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.JobType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseType>("type", Type);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValueByJobId200ResponseVolumesItem>("volumes", Volumes);
         }
     }

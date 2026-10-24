@@ -15,10 +15,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The accelerator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseItemAccelerator? Accelerator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseSchemaItemAccelerator? Accelerator { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseItemAccelerator Accelerator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseSchemaItemAccelerator Accelerator { get; set; }
 #endif
         /// <summary>The cpu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -82,7 +82,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accelerator", n => { Accelerator = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseItemAccelerator>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseItemAccelerator.CreateFromDiscriminatorValue); } },
+                { "accelerator", n => { Accelerator = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseSchemaItemAccelerator>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseSchemaItemAccelerator.CreateFromDiscriminatorValue); } },
                 { "cpu", n => { Cpu = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "prettyName", n => { PrettyName = n.GetStringValue(); } },
@@ -99,7 +99,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseItemAccelerator>("accelerator", Accelerator);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesHardware200ResponseSchemaItemAccelerator>("accelerator", Accelerator);
             writer.WriteStringValue("cpu", Cpu);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("prettyName", PrettyName);

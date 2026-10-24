@@ -81,7 +81,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The spendLimitReached property</summary>
         public bool? SpendLimitReached { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -113,7 +113,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "roleInOrg", n => { RoleInOrg = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemRoleInOrg>(); } },
                 { "securityRestrictions", n => { SecurityRestrictions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem>()?.AsList(); } },
                 { "spendLimitReached", n => { SpendLimitReached = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemType>(); } },
             };
         }
         /// <summary>
@@ -136,7 +136,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemRoleInOrg>("roleInOrg", RoleInOrg);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem>("securityRestrictions", SecurityRestrictions);
             writer.WriteBoolValue("spendLimitReached", SpendLimitReached);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemType>("type", Type);
         }
     }
 }

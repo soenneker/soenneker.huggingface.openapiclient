@@ -15,10 +15,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Where the token stands in the organization&apos;s approval flow. Reported by organizations that require administrator approval of member tokens, and on any token whose access has been revoked</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorization? Authorization { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization? Authorization { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorization Authorization { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization Authorization { get; set; }
 #endif
         /// <summary>Date the token was created, or the date it was last rotated</summary>
         public DateTimeOffset? CreatedAt { get; set; }
@@ -33,10 +33,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Permissions carried by a `fineGrained` token, narrowed to those that bear on the organization. Absent on `read` and `write` tokens, whose access is not expressed as a permission list, and never covering the account-wide permissions the token may hold elsewhere</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrained? FineGrained { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained? FineGrained { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrained FineGrained { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained FineGrained { get; set; }
 #endif
         /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -59,10 +59,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Organization member the token belongs to</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemOwner? Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemOwner? Owner { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemOwner Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemOwner Owner { get; set; }
 #endif
         /// <summary>Kind of access the token carries. `read` and `write` reach everything their owner can reach, while `fineGrained` is limited to the permissions listed under `fineGrained`</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemRole? Role { get; set; }
@@ -84,14 +84,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "authorization", n => { Authorization = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorization>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorization.CreateFromDiscriminatorValue); } },
+                { "authorization", n => { Authorization = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
-                { "fineGrained", n => { FineGrained = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrained>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrained.CreateFromDiscriminatorValue); } },
+                { "fineGrained", n => { FineGrained = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "last4", n => { Last4 = n.GetStringValue(); } },
                 { "lastUsedAt", n => { LastUsedAt = n.GetDateTimeOffsetValue(); } },
-                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemOwner>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemOwner.CreateFromDiscriminatorValue); } },
+                { "owner", n => { Owner = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemOwner>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemOwner.CreateFromDiscriminatorValue); } },
                 { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemRole>(); } },
             };
         }
@@ -102,14 +102,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorization>("authorization", Authorization);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization>("authorization", Authorization);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("displayName", DisplayName);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrained>("fineGrained", FineGrained);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained>("fineGrained", FineGrained);
             writer.WriteStringValue("_id", Id);
             writer.WriteStringValue("last4", Last4);
             writer.WriteDateTimeOffsetValue("lastUsedAt", LastUsedAt);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemOwner>("owner", Owner);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemOwner>("owner", Owner);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemRole>("role", Role);
         }
     }

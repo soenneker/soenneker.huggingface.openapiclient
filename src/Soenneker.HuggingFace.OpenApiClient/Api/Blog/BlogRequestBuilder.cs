@@ -23,14 +23,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog
         }
         /// <summary>Gets an item from the Soenneker.HuggingFace.OpenApiClient.api.blog.item collection</summary>
         /// <param name="position">Unique identifier of the item</param>
-        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.NamespaceValueItemRequestBuilder"/></returns>
-        public global::Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.NamespaceValueItemRequestBuilder this[string position]
+        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.WithSlugItemRequestBuilder"/></returns>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.WithSlugItemRequestBuilder this[string position]
         {
             get
             {
                 var urlTplParams = new Dictionary<string, object>(PathParameters);
-                urlTplParams.Add("namespaceValue%2Did", position);
-                return new global::Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.NamespaceValueItemRequestBuilder(urlTplParams, RequestAdapter);
+                urlTplParams.Add("slug", position);
+                return new global::Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.WithSlugItemRequestBuilder(urlTplParams, RequestAdapter);
             }
         }
         /// <summary>

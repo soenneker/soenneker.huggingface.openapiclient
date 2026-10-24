@@ -16,10 +16,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The user who issued the invitation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemAuthor? Author { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemAuthor? Author { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemAuthor Author { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemAuthor Author { get; set; }
 #endif
         /// <summary>The expiresAt property</summary>
         public DateTimeOffset? ExpiresAt { get; set; }
@@ -36,18 +36,18 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The invitee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemInvitee? Invitee { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemInvitee? Invitee { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemInvitee Invitee { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemInvitee Invitee { get; set; }
 #endif
         /// <summary>Set when the invitation only grants access to one resource group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemResourceGroup? ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemResourceGroup? ResourceGroup { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemResourceGroup ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemResourceGroup ResourceGroup { get; set; }
 #endif
         /// <summary>Organization role the invitee joins with</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemRole? Role { get; set; }
@@ -69,12 +69,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "author", n => { Author = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemAuthor>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemAuthor.CreateFromDiscriminatorValue); } },
+                { "author", n => { Author = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemAuthor>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemAuthor.CreateFromDiscriminatorValue); } },
                 { "expiresAt", n => { ExpiresAt = n.GetDateTimeOffsetValue(); } },
                 { "externalCollaborator", n => { ExternalCollaborator = n.GetBoolValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "invitee", n => { Invitee = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemInvitee>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemInvitee.CreateFromDiscriminatorValue); } },
-                { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemResourceGroup.CreateFromDiscriminatorValue); } },
+                { "invitee", n => { Invitee = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemInvitee>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemInvitee.CreateFromDiscriminatorValue); } },
+                { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemResourceGroup.CreateFromDiscriminatorValue); } },
                 { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemRole>(); } },
             };
         }
@@ -85,12 +85,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemAuthor>("author", Author);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemAuthor>("author", Author);
             writer.WriteDateTimeOffsetValue("expiresAt", ExpiresAt);
             writer.WriteBoolValue("externalCollaborator", ExternalCollaborator);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemInvitee>("invitee", Invitee);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemResourceGroup>("resourceGroup", ResourceGroup);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemInvitee>("invitee", Invitee);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseSchemaItemResourceGroup>("resourceGroup", ResourceGroup);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitations200ResponseItemRole>("role", Role);
         }
     }

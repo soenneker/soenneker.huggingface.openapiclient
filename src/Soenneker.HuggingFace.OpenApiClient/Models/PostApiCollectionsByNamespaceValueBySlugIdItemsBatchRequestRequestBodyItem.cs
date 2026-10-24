@@ -19,10 +19,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The data property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestItemData? Data { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestRequestBodyItemData? Data { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestItemData Data { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestRequestBodyItemData Data { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -58,7 +58,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "action", n => { Action = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UpdateAction>(); } },
-                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestItemData>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestItemData.CreateFromDiscriminatorValue); } },
+                { "data", n => { Data = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestRequestBodyItemData>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestRequestBodyItemData.CreateFromDiscriminatorValue); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
             };
         }
@@ -70,7 +70,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UpdateAction>("action", Action);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestItemData>("data", Data);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugIdItemsBatchRequestRequestBodyItemData>("data", Data);
             writer.WriteStringValue("_id", Id);
             writer.WriteAdditionalData(AdditionalData);
         }

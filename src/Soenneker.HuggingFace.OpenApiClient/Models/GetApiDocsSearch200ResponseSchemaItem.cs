@@ -103,10 +103,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The vectors property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseItemVectors? Vectors { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseSchemaItemVectors? Vectors { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseItemVectors Vectors { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseSchemaItemVectors Vectors { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -137,7 +137,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "source_page_url", n => { SourcePageUrl = n.GetStringValue(); } },
                 { "text", n => { Text = n.GetStringValue(); } },
                 { "text_plain", n => { TextPlain = n.GetStringValue(); } },
-                { "_vectors", n => { Vectors = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseItemVectors>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseItemVectors.CreateFromDiscriminatorValue); } },
+                { "_vectors", n => { Vectors = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseSchemaItemVectors>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseSchemaItemVectors.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -158,7 +158,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("source_page_url", SourcePageUrl);
             writer.WriteStringValue("text", Text);
             writer.WriteStringValue("text_plain", TextPlain);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseItemVectors>("_vectors", Vectors);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearch200ResponseSchemaItemVectors>("_vectors", Vectors);
         }
     }
 }

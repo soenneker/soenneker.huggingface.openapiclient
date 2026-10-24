@@ -7,25 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequest : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequest : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The resetToScimRole property</summary>
-        public bool? ResetToScimRole { get; set; }
-        /// <summary>The role property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestRole? Role { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequest"/> and sets the default values.
-        /// </summary>
-        public PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequest()
-        {
-            AdditionalData = new Dictionary<string, object>();
-            ResetToScimRole = true;
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1? PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1 PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2? PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2 PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -34,7 +37,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequest();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequest();
+            result.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1();
+            result.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -42,11 +48,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1 != null || PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2 != null)
             {
-                { "resetToScimRole", n => { ResetToScimRole = n.GetBoolValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestRole>(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1, PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -55,9 +61,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("resetToScimRole", ResetToScimRole);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestRole>("role", Role);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1>(null, PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf1, PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsernameRequestAnyOf2);
         }
     }
 }

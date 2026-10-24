@@ -25,10 +25,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Available if expand includes formatted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseItemFormatted? Formatted { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseSchemaItemFormatted? Formatted { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseItemFormatted Formatted { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseSchemaItemFormatted Formatted { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -74,7 +74,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "authors", n => { Authors = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseItemAuthorsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseItemAuthorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "date", n => { Date = n.GetDateTimeOffsetValue(); } },
-                { "formatted", n => { Formatted = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseItemFormatted>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseItemFormatted.CreateFromDiscriminatorValue); } },
+                { "formatted", n => { Formatted = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseSchemaItemFormatted>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseSchemaItemFormatted.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -89,7 +89,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseItemAuthorsItem>("authors", Authors);
             writer.WriteDateTimeOffsetValue("date", Date);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseItemFormatted>("formatted", Formatted);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoCommitsByRev200ResponseSchemaItemFormatted>("formatted", Formatted);
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("title", Title);

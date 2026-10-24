@@ -55,10 +55,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The spendLimits property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemSpendLimits? SpendLimits { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseSchemaItemSpendLimits? SpendLimits { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemSpendLimits SpendLimits { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseSchemaItemSpendLimits SpendLimits { get; set; }
 #endif
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -91,7 +91,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "id", n => { Id = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "resources", n => { Resources = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "spendLimits", n => { SpendLimits = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemSpendLimits>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemSpendLimits.CreateFromDiscriminatorValue); } },
+                { "spendLimits", n => { SpendLimits = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseSchemaItemSpendLimits>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseSchemaItemSpendLimits.CreateFromDiscriminatorValue); } },
                 { "users", n => { Users = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -107,7 +107,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteStringValue("name", Name);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItem>("resources", Resources);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemSpendLimits>("spendLimits", SpendLimits);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseSchemaItemSpendLimits>("spendLimits", SpendLimits);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItem>("users", Users);
         }
     }

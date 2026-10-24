@@ -89,10 +89,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Comma-separated or array of pipeline types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelines? Pipelines { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item?>? Pipelines { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelines Pipelines { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item?> Pipelines { get; set; }
 #endif
         /// <summary>The q property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -176,7 +176,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "limit", n => { Limit = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit.CreateFromDiscriminatorValue); } },
                 { "namespace", n => { Namespace = n.GetStringValue(); } },
                 { "orgsFilter", n => { OrgsFilter = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter.CreateFromDiscriminatorValue); } },
-                { "pipelines", n => { Pipelines = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelines>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelines.CreateFromDiscriminatorValue); } },
+                { "pipelines", n => { Pipelines = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item>()?.AsList(); } },
                 { "q", n => { Q = n.GetStringValue(); } },
                 { "repoName", n => { RepoName = n.GetStringValue(); } },
                 { "repoType", n => { RepoType = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType.CreateFromDiscriminatorValue); } },
@@ -201,7 +201,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit>("limit", Limit);
             writer.WriteStringValue("namespace", Namespace);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter>("orgsFilter", OrgsFilter);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelines>("pipelines", Pipelines);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item>("pipelines", Pipelines);
             writer.WriteStringValue("q", Q);
             writer.WriteStringValue("repoName", RepoName);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestReposFilter>("reposFilter", ReposFilter);

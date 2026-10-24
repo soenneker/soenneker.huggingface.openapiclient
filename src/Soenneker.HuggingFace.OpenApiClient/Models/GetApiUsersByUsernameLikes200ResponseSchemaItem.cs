@@ -17,10 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The repo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseItemRepo? Repo { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseSchemaItemRepo? Repo { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseItemRepo Repo { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseSchemaItemRepo Repo { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -41,7 +41,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "repo", n => { Repo = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseItemRepo>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseItemRepo.CreateFromDiscriminatorValue); } },
+                { "repo", n => { Repo = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseSchemaItemRepo>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseSchemaItemRepo.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -52,7 +52,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseItemRepo>("repo", Repo);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameLikes200ResponseSchemaItemRepo>("repo", Repo);
         }
     }
 }

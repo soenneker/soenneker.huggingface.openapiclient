@@ -7,76 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwner : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwner : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The avatarUrl property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvatarUrl { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1? PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1 { get; set; }
 #nullable restore
 #else
-        public string AvatarUrl { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1 PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1 { get; set; }
 #endif
-        /// <summary>The followerCount property</summary>
-        public double? FollowerCount { get; set; }
-        /// <summary>The fullname property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fullname { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2? PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2 { get; set; }
 #nullable restore
 #else
-        public string Fullname { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2 PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2 { get; set; }
 #endif
-        /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
-        /// <summary>The isHf property</summary>
-        public bool? IsHf { get; set; }
-        /// <summary>The isHfAdmin property</summary>
-        public bool? IsHfAdmin { get; set; }
-        /// <summary>The isMod property</summary>
-        public bool? IsMod { get; set; }
-        /// <summary>The isPro property</summary>
-        public bool? IsPro { get; set; }
-        /// <summary>The isUserFollowing property</summary>
-        public bool? IsUserFollowing { get; set; }
-        /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
-        /// <summary>The plan property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerPlan? Plan { get; set; }
-        /// <summary>The primaryOrg property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerPrimaryOrg? PrimaryOrg { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerPrimaryOrg PrimaryOrg { get; set; }
-#endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwner"/> and sets the default values.
-        /// </summary>
-        public PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwner()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -85,7 +37,17 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwner CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwner();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwner();
+            if("org".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1();
+            }
+            else if("user".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,22 +55,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1 != null)
             {
-                { "avatarUrl", n => { AvatarUrl = n.GetStringValue(); } },
-                { "followerCount", n => { FollowerCount = n.GetDoubleValue(); } },
-                { "fullname", n => { Fullname = n.GetStringValue(); } },
-                { "_id", n => { Id = n.GetStringValue(); } },
-                { "isHf", n => { IsHf = n.GetBoolValue(); } },
-                { "isHfAdmin", n => { IsHfAdmin = n.GetBoolValue(); } },
-                { "isMod", n => { IsMod = n.GetBoolValue(); } },
-                { "isPro", n => { IsPro = n.GetBoolValue(); } },
-                { "isUserFollowing", n => { IsUserFollowing = n.GetBoolValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "plan", n => { Plan = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerPlan>(); } },
-                { "primaryOrg", n => { PrimaryOrg = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerPrimaryOrg>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerPrimaryOrg.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>(); } },
-            };
+                return PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1.GetFieldDeserializers();
+            }
+            else if(PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2 != null)
+            {
+                return PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -117,20 +72,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("avatarUrl", AvatarUrl);
-            writer.WriteDoubleValue("followerCount", FollowerCount);
-            writer.WriteStringValue("fullname", Fullname);
-            writer.WriteStringValue("_id", Id);
-            writer.WriteBoolValue("isHf", IsHf);
-            writer.WriteBoolValue("isHfAdmin", IsHfAdmin);
-            writer.WriteBoolValue("isMod", IsMod);
-            writer.WriteBoolValue("isPro", IsPro);
-            writer.WriteBoolValue("isUserFollowing", IsUserFollowing);
-            writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerPlan>("plan", Plan);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerPrimaryOrg>("primaryOrg", PrimaryOrg);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1>(null, PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf1);
+            }
+            else if(PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2>(null, PostApiCollectionsByNamespaceValueBySlugItems200ResponseOwnerOneOf2);
+            }
         }
     }
 }

@@ -8,11 +8,13 @@ using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
     /// <summary>
-    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1"/>
+    /// Composed type wrapper for classes <see cref="bool"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3"/>
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PatchApiCollectionsByNamespaceValueBySlugRequestGating : IComposedTypeWrapper, IParsable
     {
+        /// <summary>Composed type representation for type <see cref="bool"/></summary>
+        public bool? Boolean { get; set; }
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -29,14 +31,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3 PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3 { get; set; }
 #endif
-        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1"/></summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1? PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1 { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1 PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1 { get; set; }
-#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -46,9 +40,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGating();
-            result.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2();
-            result.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3();
-            result.PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1();
+            if(parseNode.GetBoolValue() is bool booleanValue)
+            {
+                result.Boolean = booleanValue;
+            }
+            else {
+                result.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2();
+                result.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3();
+            }
             return result;
         }
         /// <summary>
@@ -57,9 +56,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            if(PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2 != null || PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3 != null || PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1 != null)
+            if(PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2 != null || PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3 != null)
             {
-                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2, PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3, PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1);
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2, PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3);
             }
             return new Dictionary<string, Action<IParseNode>>();
         }
@@ -70,7 +69,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2>(null, PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2, PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3, PatchApiCollectionsByNamespaceValueBySlugRequestGatingBranch1);
+            if(Boolean != null)
+            {
+                writer.WriteBoolValue(null, Boolean);
+            }
+            else {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2>(null, PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf2, PatchApiCollectionsByNamespaceValueBySlugRequestGatingAnyOf3);
+            }
         }
     }
 }

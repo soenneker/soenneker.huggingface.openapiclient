@@ -7,64 +7,52 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItem : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItem : IComposedTypeWrapper, IParsable
     {
-        /// <summary>The addedBy property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1? DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1 { get; set; }
 #nullable restore
 #else
-        public string AddedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1 DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1 { get; set; }
 #endif
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2? DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2 { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2 DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2 { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3? DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3 { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3 DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3 { get; set; }
 #endif
-        /// <summary>The private property</summary>
-        public bool? Private { get; set; }
-        /// <summary>The slug property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Slug { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4? DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4 { get; set; }
 #nullable restore
 #else
-        public string Slug { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4 DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4 { get; set; }
 #endif
-        /// <summary>The title property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5? DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5 { get; set; }
 #nullable restore
 #else
-        public string Title { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5 DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5 { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItem"/> and sets the default values.
-        /// </summary>
-        public DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItem()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -73,7 +61,29 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItem();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItem();
+            if("DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1();
+            }
+            else if("DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2();
+            }
+            else if("DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3 = new global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3();
+            }
+            else if("DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4 = new global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4();
+            }
+            else if("DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5 = new global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -81,16 +91,27 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1 != null)
             {
-                { "addedBy", n => { AddedBy = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "private", n => { Private = n.GetBoolValue(); } },
-                { "slug", n => { Slug = n.GetStringValue(); } },
-                { "title", n => { Title = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemType>(); } },
-            };
+                return DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1.GetFieldDeserializers();
+            }
+            else if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2 != null)
+            {
+                return DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2.GetFieldDeserializers();
+            }
+            else if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3 != null)
+            {
+                return DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3.GetFieldDeserializers();
+            }
+            else if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4 != null)
+            {
+                return DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4.GetFieldDeserializers();
+            }
+            else if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5 != null)
+            {
+                return DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -99,14 +120,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("addedBy", AddedBy);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("name", Name);
-            writer.WriteBoolValue("private", Private);
-            writer.WriteStringValue("slug", Slug);
-            writer.WriteStringValue("title", Title);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1>(null, DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1);
+            }
+            else if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2>(null, DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2);
+            }
+            else if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3>(null, DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3);
+            }
+            else if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4>(null, DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4);
+            }
+            else if(DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5>(null, DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5);
+            }
         }
     }
 }

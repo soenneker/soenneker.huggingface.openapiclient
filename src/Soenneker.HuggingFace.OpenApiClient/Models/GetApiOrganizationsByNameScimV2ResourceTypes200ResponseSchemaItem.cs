@@ -39,10 +39,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The meta property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseItemMeta? Meta { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseSchemaItemMeta? Meta { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseItemMeta Meta { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseSchemaItemMeta Meta { get; set; }
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +89,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "endpoint", n => { Endpoint = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseItemMeta>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseItemMeta.CreateFromDiscriminatorValue); } },
+                { "meta", n => { Meta = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseSchemaItemMeta>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseSchemaItemMeta.CreateFromDiscriminatorValue); } },
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "schema", n => { Schema = n.GetStringValue(); } },
                 { "schemas", n => { Schemas = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
@@ -105,7 +105,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("description", Description);
             writer.WriteStringValue("endpoint", Endpoint);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseItemMeta>("meta", Meta);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2ResourceTypes200ResponseSchemaItemMeta>("meta", Meta);
             writer.WriteStringValue("name", Name);
             writer.WriteStringValue("schema", Schema);
             writer.WriteCollectionOfPrimitiveValues<string>("schemas", Schemas);

@@ -41,10 +41,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The pusher property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseItemPusher? Pusher { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseSchemaItemPusher? Pusher { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseItemPusher Pusher { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseSchemaItemPusher Pusher { get; set; }
 #endif
         /// <summary>The ref property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -86,7 +86,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "filename", n => { Filename = n.GetStringValue(); } },
                 { "oid", n => { Oid = n.GetStringValue(); } },
                 { "pushedAt", n => { PushedAt = n.GetDateTimeOffsetValue(); } },
-                { "pusher", n => { Pusher = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseItemPusher>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseItemPusher.CreateFromDiscriminatorValue); } },
+                { "pusher", n => { Pusher = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseSchemaItemPusher>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseSchemaItemPusher.CreateFromDiscriminatorValue); } },
                 { "ref", n => { Ref = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
                 { "xetHash", n => { XetHash = n.GetStringValue(); } },
@@ -103,7 +103,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("fileOid", FileOid);
             writer.WriteStringValue("oid", Oid);
             writer.WriteDateTimeOffsetValue("pushedAt", PushedAt);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseItemPusher>("pusher", Pusher);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoLfsFiles200ResponseSchemaItemPusher>("pusher", Pusher);
             writer.WriteStringValue("ref", Ref);
             writer.WriteDoubleValue("size", Size);
             writer.WriteStringValue("xetHash", XetHash);

@@ -7,125 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiScheduledJobsByNamespaceValueRequestJobSpec : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiScheduledJobsByNamespaceValueRequestJobSpec : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The arch property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecArch? Arch { get; set; }
-        /// <summary>The arguments property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Arguments { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1? PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1 { get; set; }
 #nullable restore
 #else
-        public List<string> Arguments { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1 PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1 { get; set; }
 #endif
-        /// <summary>Max number of attempts to make. For example, if you set this to 3, the job will be retried up to 2 times if it fails.</summary>
-        public int? Attempts { get; set; }
-        /// <summary>The command property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Command { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2? PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2 { get; set; }
 #nullable restore
 #else
-        public List<string> Command { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2 PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2 { get; set; }
 #endif
-        /// <summary>The dockerImage property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DockerImage { get; set; }
-#nullable restore
-#else
-        public string DockerImage { get; set; }
-#endif
-        /// <summary>The environment property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecEnvironment? Environment { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecEnvironment Environment { get; set; }
-#endif
-        /// <summary>Ports to expose publicly through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.&lt;jobs-public-domain&gt;`. Access requires a HF token with read access to the job&apos;s namespace, except for ports also listed in `portsPublic`.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecExpose? Expose { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecExpose Expose { get; set; }
-#endif
-        /// <summary>The flavor property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecFlavor? Flavor { get; set; }
-        /// <summary>Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dashes, and underscores.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecLabels? Labels { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecLabels Labels { get; set; }
-#endif
-        /// <summary>Opt-in network group. Jobs of the same owner and resource group sharing a group are placed together and reach each other on every port. Two environment variables are set in the container: `HF_NETWORK_GROUP_HOSTNAME`, a hostname resolving to every member of the group, and `HF_NETWORK_GROUP_PREFIX`, to which an alias is appended to get that alias&apos; hostname.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecNetwork? Network { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecNetwork Network { get; set; }
-#endif
-        /// <summary>The resourceGroupId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ResourceGroupId { get; set; }
-#nullable restore
-#else
-        public string ResourceGroupId { get; set; }
-#endif
-        /// <summary>The secrets property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSecrets? Secrets { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSecrets Secrets { get; set; }
-#endif
-        /// <summary>The spaceId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SpaceId { get; set; }
-#nullable restore
-#else
-        public string SpaceId { get; set; }
-#endif
-        /// <summary>When `enabled`, the job&apos;s container is reachable over SSH at `ssh &lt;job_id&gt;@ssh.hf.jobs`. Only the job&apos;s owner is allowed in, authenticated by an SSH public key registered on the Hub.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSsh? Ssh { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSsh Ssh { get; set; }
-#endif
-        /// <summary>The timeoutSeconds property</summary>
-        public int? TimeoutSeconds { get; set; }
-        /// <summary>HuggingFace Buckets or Repos to mount as volumes in the job container.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecVolumesItem>? Volumes { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecVolumesItem> Volumes { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpec"/> and sets the default values.
-        /// </summary>
-        public PostApiScheduledJobsByNamespaceValueRequestJobSpec()
-        {
-            AdditionalData = new Dictionary<string, object>();
-            Attempts = 1;
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -134,7 +37,17 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpec CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpec();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpec();
+            if("PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1();
+            }
+            else if("PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -142,25 +55,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1 != null)
             {
-                { "arch", n => { Arch = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecArch>(); } },
-                { "arguments", n => { Arguments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "attempts", n => { Attempts = n.GetIntValue(); } },
-                { "command", n => { Command = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "dockerImage", n => { DockerImage = n.GetStringValue(); } },
-                { "environment", n => { Environment = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecEnvironment>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecEnvironment.CreateFromDiscriminatorValue); } },
-                { "expose", n => { Expose = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecExpose>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecExpose.CreateFromDiscriminatorValue); } },
-                { "flavor", n => { Flavor = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecFlavor>(); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecLabels>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecLabels.CreateFromDiscriminatorValue); } },
-                { "network", n => { Network = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecNetwork>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecNetwork.CreateFromDiscriminatorValue); } },
-                { "resourceGroupId", n => { ResourceGroupId = n.GetStringValue(); } },
-                { "secrets", n => { Secrets = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSecrets>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSecrets.CreateFromDiscriminatorValue); } },
-                { "spaceId", n => { SpaceId = n.GetStringValue(); } },
-                { "ssh", n => { Ssh = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSsh>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSsh.CreateFromDiscriminatorValue); } },
-                { "timeoutSeconds", n => { TimeoutSeconds = n.GetIntValue(); } },
-                { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecVolumesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecVolumesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-            };
+                return PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1.GetFieldDeserializers();
+            }
+            else if(PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2 != null)
+            {
+                return PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -169,23 +72,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecArch>("arch", Arch);
-            writer.WriteCollectionOfPrimitiveValues<string>("arguments", Arguments);
-            writer.WriteIntValue("attempts", Attempts);
-            writer.WriteCollectionOfPrimitiveValues<string>("command", Command);
-            writer.WriteStringValue("dockerImage", DockerImage);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecEnvironment>("environment", Environment);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecExpose>("expose", Expose);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecFlavor>("flavor", Flavor);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecLabels>("labels", Labels);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecNetwork>("network", Network);
-            writer.WriteStringValue("resourceGroupId", ResourceGroupId);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSecrets>("secrets", Secrets);
-            writer.WriteStringValue("spaceId", SpaceId);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecSsh>("ssh", Ssh);
-            writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecVolumesItem>("volumes", Volumes);
-            writer.WriteAdditionalData(AdditionalData);
+            if(PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1>(null, PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf1);
+            }
+            else if(PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2>(null, PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2);
+            }
         }
     }
 }

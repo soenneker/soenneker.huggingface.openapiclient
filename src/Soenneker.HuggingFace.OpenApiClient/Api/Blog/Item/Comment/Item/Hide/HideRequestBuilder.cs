@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Comment.Item.Hide
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\blog\{namespaceValue-id}\comment\{commentId}\hide
+    /// Builds and executes requests for operations under \api\blog\{slug}\comment\{commentId}\hide
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class HideRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Comment.Item.Hide
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public HideRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{namespaceValue%2Did}/comment/{commentId}/hide", pathParameters)
+        public HideRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{slug}/comment/{commentId}/hide", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Comment.Item.Hide
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public HideRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{namespaceValue%2Did}/comment/{commentId}/hide", rawUrl)
+        public HideRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{slug}/comment/{commentId}/hide", rawUrl)
         {
         }
         /// <summary>

@@ -36,22 +36,22 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Settings.Ss
         /// <summary>
         /// Update SSO credentials of the organization&apos;s SSO configuration. SSO stays enabled and does not need to be re-tested, so rotation causes no downtime. Requires a paid plan.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentials200ResponseSchema"/></returns>
+        /// <returns>A <see cref="UntypedNode"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentials200ResponseSchema?> PutAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentialsRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<UntypedNode?> PutAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentialsRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentials200ResponseSchema> PutAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentialsRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<UntypedNode> PutAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentialsRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentials200ResponseSchema>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameSettingsSsoCredentials200ResponseSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<UntypedNode>(requestInfo, UntypedNode.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update SSO credentials of the organization&apos;s SSO configuration. SSO stays enabled and does not need to be re-tested, so rotation causes no downtime. Requires a paid plan.

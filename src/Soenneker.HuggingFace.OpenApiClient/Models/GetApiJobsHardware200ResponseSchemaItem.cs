@@ -15,10 +15,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The accelerator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseItemAccelerator? Accelerator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator? Accelerator { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseItemAccelerator Accelerator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator Accelerator { get; set; }
 #endif
         /// <summary>The cpu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -90,7 +90,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "accelerator", n => { Accelerator = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseItemAccelerator>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseItemAccelerator.CreateFromDiscriminatorValue); } },
+                { "accelerator", n => { Accelerator = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator.CreateFromDiscriminatorValue); } },
                 { "cpu", n => { Cpu = n.GetStringValue(); } },
                 { "ephemeralStorage", n => { EphemeralStorage = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -108,7 +108,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseItemAccelerator>("accelerator", Accelerator);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator>("accelerator", Accelerator);
             writer.WriteStringValue("cpu", Cpu);
             writer.WriteStringValue("ephemeralStorage", EphemeralStorage);
             writer.WriteStringValue("name", Name);

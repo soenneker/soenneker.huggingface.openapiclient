@@ -55,7 +55,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The plan property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgPlan? Plan { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgType? Type { get; set; }
         /// <summary>The userRole property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgUserRole? UserRole { get; set; }
         /// <summary>
@@ -85,7 +85,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "name", n => { Name = n.GetStringValue(); } },
                 { "numUsers", n => { NumUsers = n.GetDoubleValue(); } },
                 { "plan", n => { Plan = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgPlan>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgType>(); } },
                 { "userRole", n => { UserRole = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgUserRole>(); } },
             };
         }
@@ -105,7 +105,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteDoubleValue("numUsers", NumUsers);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgPlan>("plan", Plan);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgType>("type", Type);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLfsFiles200ResponseItemPusherPrimaryOrgUserRole>("userRole", UserRole);
         }
     }

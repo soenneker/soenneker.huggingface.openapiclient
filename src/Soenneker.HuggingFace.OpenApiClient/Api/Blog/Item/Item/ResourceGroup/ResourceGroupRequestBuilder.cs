@@ -12,7 +12,7 @@ using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Item.ResourceGroup
 {
     /// <summary>
-    /// Builds and executes requests for operations under \api\blog\{namespaceValue-id}\{slug}\resource-group
+    /// Builds and executes requests for operations under \api\blog\{slug}\{slug2}\resource-group
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class ResourceGroupRequestBuilder : BaseRequestBuilder
@@ -22,7 +22,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Item.ResourceGroup
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResourceGroupRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{namespaceValue%2Did}/{slug}/resource-group", pathParameters)
+        public ResourceGroupRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{slug}/{slug2}/resource-group", pathParameters)
         {
         }
         /// <summary>
@@ -30,46 +30,46 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Item.ResourceGroup
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public ResourceGroupRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{namespaceValue%2Did}/{slug}/resource-group", rawUrl)
+        public ResourceGroupRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/blog/{slug}/{slug2}/resource-group", rawUrl)
         {
         }
         /// <summary>
         /// Blog resource group
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogByNamespaceValueBySlugResourceGroup200Response"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogBySlugBySlug2ResourceGroup200Response"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogByNamespaceValueBySlugResourceGroup200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogBySlugBySlug2ResourceGroup200Response?> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogByNamespaceValueBySlugResourceGroup200Response> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogBySlugBySlug2ResourceGroup200Response> GetAsync(Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogByNamespaceValueBySlugResourceGroup200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogByNamespaceValueBySlugResourceGroup200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogBySlugBySlug2ResourceGroup200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiBlogBySlugBySlug2ResourceGroup200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Assign, move, or unassign an organization-owned blog to a resource group. Pass null to unassign. User-owned blogs are not eligible.
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroup200Response"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroup200Response"/></returns>
         /// <param name="body">The request body</param>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroup200Response?> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroup200Response?> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroup200Response> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroup200Response> PostAsync(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroup200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroup200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroup200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroup200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Blog resource group
@@ -98,11 +98,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Blog.Item.Item.ResourceGroup
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>>? requestConfiguration = default)
         {
 #nullable restore
 #else
-        public RequestInformation ToPostRequestInformation(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogByNamespaceValueBySlugResourceGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
+        public RequestInformation ToPostRequestInformation(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2ResourceGroupRequest body, Action<RequestConfiguration<DefaultQueryParameters>> requestConfiguration = default)
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));

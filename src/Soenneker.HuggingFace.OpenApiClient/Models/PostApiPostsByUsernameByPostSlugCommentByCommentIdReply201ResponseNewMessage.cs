@@ -39,7 +39,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string Id { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.CommentType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPostsByUsernameByPostSlugCommentByCommentIdReply201ResponseNewMessageType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -62,7 +62,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "data", n => { Data = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPostsByUsernameByPostSlugCommentByCommentIdReply201ResponseNewMessageData>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPostsByUsernameByPostSlugCommentByCommentIdReply201ResponseNewMessageData.CreateFromDiscriminatorValue); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.CommentType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPostsByUsernameByPostSlugCommentByCommentIdReply201ResponseNewMessageType>(); } },
             };
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPostsByUsernameByPostSlugCommentByCommentIdReply201ResponseNewMessageData>("data", Data);
             writer.WriteStringValue("id", Id);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.CommentType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPostsByUsernameByPostSlugCommentByCommentIdReply201ResponseNewMessageType>("type", Type);
         }
     }
 }

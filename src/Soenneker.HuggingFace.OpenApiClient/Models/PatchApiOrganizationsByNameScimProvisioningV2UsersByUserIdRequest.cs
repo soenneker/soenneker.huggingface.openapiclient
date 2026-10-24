@@ -25,10 +25,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The schemas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonPatchOpItem?>? Schemas { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserIdRequestSchemasItem?>? Schemas { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonPatchOpItem?> Schemas { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserIdRequestSchemasItem?> Schemas { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserIdRequest"/> and sets the default values.
@@ -56,7 +56,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "Operations", n => { Operations = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserIdRequestOperationsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserIdRequestOperationsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "schemas", n => { Schemas = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonPatchOpItem>()?.AsList(); } },
+                { "schemas", n => { Schemas = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserIdRequestSchemasItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserIdRequestOperationsItem>("Operations", Operations);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonPatchOpItem>("schemas", Schemas);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserIdRequestSchemasItem>("schemas", Schemas);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

@@ -55,10 +55,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The source property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseItemSource? Source { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseSchemaItemSource? Source { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseItemSource Source { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseSchemaItemSource Source { get; set; }
 #endif
         /// <summary>The value property</summary>
         public double? Value { get; set; }
@@ -90,7 +90,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "num_parameters", n => { NumParameters = n.GetDoubleValue(); } },
                 { "pullRequest", n => { PullRequest = n.GetDoubleValue(); } },
                 { "rank", n => { Rank = n.GetDoubleValue(); } },
-                { "source", n => { Source = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseItemSource>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseItemSource.CreateFromDiscriminatorValue); } },
+                { "source", n => { Source = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseSchemaItemSource>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseSchemaItemSource.CreateFromDiscriminatorValue); } },
                 { "value", n => { Value = n.GetDoubleValue(); } },
                 { "verified", n => { Verified = n.GetBoolValue(); } },
             };
@@ -110,7 +110,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDoubleValue("num_parameters", NumParameters);
             writer.WriteDoubleValue("pullRequest", PullRequest);
             writer.WriteDoubleValue("rank", Rank);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseItemSource>("source", Source);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoLeaderboard200ResponseSchemaItemSource>("source", Source);
             writer.WriteDoubleValue("value", Value);
             writer.WriteBoolValue("verified", Verified);
         }

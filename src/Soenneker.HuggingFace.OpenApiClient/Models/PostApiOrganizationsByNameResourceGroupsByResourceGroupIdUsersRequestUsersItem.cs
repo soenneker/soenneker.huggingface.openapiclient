@@ -7,38 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItem : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItem : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The name property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1? PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1 { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1 PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1 { get; set; }
 #endif
-        /// <summary>The role property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemRole? Role { get; set; }
-        /// <summary>The user property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? User { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2? PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2 { get; set; }
 #nullable restore
 #else
-        public string User { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2 PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2 { get; set; }
 #endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItem"/> and sets the default values.
-        /// </summary>
-        public PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItem()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -47,7 +37,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItem();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItem();
+            result.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1();
+            result.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -55,12 +48,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1 != null || PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2 != null)
             {
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemRole>(); } },
-                { "user", n => { User = n.GetStringValue(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1, PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -69,10 +61,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemRole>("role", Role);
-            writer.WriteStringValue("user", User);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1>(null, PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf1, PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersRequestUsersItemAnyOf2);
         }
     }
 }

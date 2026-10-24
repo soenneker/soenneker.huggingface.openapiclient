@@ -15,18 +15,18 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The fields property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields? Fields { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemFields? Fields { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields Fields { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemFields Fields { get; set; }
 #endif
         /// <summary>The grantedBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy? GrantedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedByAnyOf1? GrantedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy GrantedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedByAnyOf1 GrantedBy { get; set; }
 #endif
         /// <summary>Id of the request, usable to accept/reject it even when the requester identity is not shared</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -45,10 +45,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Absent when the requester&apos;s profile is not shared</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser? User { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemUser? User { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser User { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemUser User { get; set; }
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -68,13 +68,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields.CreateFromDiscriminatorValue); } },
-                { "grantedBy", n => { GrantedBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy.CreateFromDiscriminatorValue); } },
+                { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemFields>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemFields.CreateFromDiscriminatorValue); } },
+                { "grantedBy", n => { GrantedBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedByAnyOf1>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedByAnyOf1.CreateFromDiscriminatorValue); } },
                 { "requestId", n => { RequestId = n.GetStringValue(); } },
                 { "reviewedAt", n => { ReviewedAt = n.GetDateTimeOffsetValue(); } },
                 { "status", n => { Status = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemStatus>(); } },
                 { "timestamp", n => { Timestamp = n.GetDateTimeOffsetValue(); } },
-                { "user", n => { User = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser.CreateFromDiscriminatorValue); } },
+                { "user", n => { User = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemUser>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemUser.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -84,13 +84,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemFields>("fields", Fields);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedBy>("grantedBy", GrantedBy);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemFields>("fields", Fields);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedByAnyOf1>("grantedBy", GrantedBy);
             writer.WriteStringValue("requestId", RequestId);
             writer.WriteDateTimeOffsetValue("reviewedAt", ReviewedAt);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemStatus>("status", Status);
             writer.WriteDateTimeOffsetValue("timestamp", Timestamp);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemUser>("user", User);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemUser>("user", User);
         }
     }
 }

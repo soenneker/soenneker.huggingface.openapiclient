@@ -15,18 +15,18 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The lastCommit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLastCommit? LastCommit { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit? LastCommit { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLastCommit LastCommit { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit LastCommit { get; set; }
 #endif
         /// <summary>The lfs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLfs? Lfs { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs? Lfs { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLfs Lfs { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs Lfs { get; set; }
 #endif
         /// <summary>The oid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -39,10 +39,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The securityFileStatus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatus? SecurityFileStatus { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus? SecurityFileStatus { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatus SecurityFileStatus { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus SecurityFileStatus { get; set; }
 #endif
         /// <summary>If the file is a LFS pointer, it&apos;ll return the size of the remote file</summary>
         public int? Size { get; set; }
@@ -74,10 +74,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "lastCommit", n => { LastCommit = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLastCommit>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLastCommit.CreateFromDiscriminatorValue); } },
-                { "lfs", n => { Lfs = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLfs>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLfs.CreateFromDiscriminatorValue); } },
+                { "lastCommit", n => { LastCommit = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit.CreateFromDiscriminatorValue); } },
+                { "lfs", n => { Lfs = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs.CreateFromDiscriminatorValue); } },
                 { "oid", n => { Oid = n.GetStringValue(); } },
-                { "securityFileStatus", n => { SecurityFileStatus = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatus.CreateFromDiscriminatorValue); } },
+                { "securityFileStatus", n => { SecurityFileStatus = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus.CreateFromDiscriminatorValue); } },
                 { "size", n => { Size = n.GetIntValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemType>(); } },
                 { "xetHash", n => { XetHash = n.GetStringValue(); } },
@@ -90,10 +90,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLastCommit>("lastCommit", LastCommit);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLfs>("lfs", Lfs);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit>("lastCommit", LastCommit);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs>("lfs", Lfs);
             writer.WriteStringValue("oid", Oid);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatus>("securityFileStatus", SecurityFileStatus);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus>("securityFileStatus", SecurityFileStatus);
             writer.WriteIntValue("size", Size);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemType>("type", Type);
             writer.WriteStringValue("xetHash", XetHash);

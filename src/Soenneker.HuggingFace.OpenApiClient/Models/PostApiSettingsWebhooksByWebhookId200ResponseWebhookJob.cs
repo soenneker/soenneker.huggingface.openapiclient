@@ -7,80 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiSettingsWebhooksByWebhookId200ResponseWebhookJob : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiSettingsWebhooksByWebhookId200ResponseWebhookJob : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The arguments property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Arguments { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1? PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1 { get; set; }
 #nullable restore
 #else
-        public List<string> Arguments { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1 PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1 { get; set; }
 #endif
-        /// <summary>The command property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Command { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2? PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2 { get; set; }
 #nullable restore
 #else
-        public List<string> Command { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2 PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2 { get; set; }
 #endif
-        /// <summary>The dockerImage property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DockerImage { get; set; }
-#nullable restore
-#else
-        public string DockerImage { get; set; }
-#endif
-        /// <summary>The environment property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobEnvironment? Environment { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobEnvironment Environment { get; set; }
-#endif
-        /// <summary>The flavor property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobFlavor? Flavor { get; set; }
-        /// <summary>Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dashes, and underscores.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobLabels? Labels { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobLabels Labels { get; set; }
-#endif
-        /// <summary>The secrets property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<string>? Secrets { get; set; }
-#nullable restore
-#else
-        public List<string> Secrets { get; set; }
-#endif
-        /// <summary>The spaceId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SpaceId { get; set; }
-#nullable restore
-#else
-        public string SpaceId { get; set; }
-#endif
-        /// <summary>The timeoutSeconds property</summary>
-        public int? TimeoutSeconds { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJob"/> and sets the default values.
-        /// </summary>
-        public PostApiSettingsWebhooksByWebhookId200ResponseWebhookJob()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -89,7 +37,17 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJob CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJob();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJob();
+            if("PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1();
+            }
+            else if("PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -97,18 +55,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1 != null)
             {
-                { "arguments", n => { Arguments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "command", n => { Command = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "dockerImage", n => { DockerImage = n.GetStringValue(); } },
-                { "environment", n => { Environment = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobEnvironment>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobEnvironment.CreateFromDiscriminatorValue); } },
-                { "flavor", n => { Flavor = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobFlavor>(); } },
-                { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobLabels>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobLabels.CreateFromDiscriminatorValue); } },
-                { "secrets", n => { Secrets = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "spaceId", n => { SpaceId = n.GetStringValue(); } },
-                { "timeoutSeconds", n => { TimeoutSeconds = n.GetIntValue(); } },
-            };
+                return PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1.GetFieldDeserializers();
+            }
+            else if(PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2 != null)
+            {
+                return PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -117,16 +72,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfPrimitiveValues<string>("arguments", Arguments);
-            writer.WriteCollectionOfPrimitiveValues<string>("command", Command);
-            writer.WriteStringValue("dockerImage", DockerImage);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobEnvironment>("environment", Environment);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobFlavor>("flavor", Flavor);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobLabels>("labels", Labels);
-            writer.WriteCollectionOfPrimitiveValues<string>("secrets", Secrets);
-            writer.WriteStringValue("spaceId", SpaceId);
-            writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);
-            writer.WriteAdditionalData(AdditionalData);
+            if(PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1>(null, PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1);
+            }
+            else if(PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2>(null, PostApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf2);
+            }
         }
     }
 }

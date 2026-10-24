@@ -28,20 +28,20 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Paper data with metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemPaper? Paper { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemPaper? Paper { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemPaper Paper { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemPaper Paper { get; set; }
 #endif
         /// <summary>The publishedAt property</summary>
         public DateTimeOffset? PublishedAt { get; set; }
         /// <summary>User overview information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemSubmittedBy? SubmittedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemSubmittedBy? SubmittedBy { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemSubmittedBy SubmittedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemSubmittedBy SubmittedBy { get; set; }
 #endif
         /// <summary>The summary property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -88,9 +88,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "isAuthorParticipating", n => { IsAuthorParticipating = n.GetBoolValue(); } },
                 { "mediaUrls", n => { MediaUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "numComments", n => { NumComments = n.GetDoubleValue(); } },
-                { "paper", n => { Paper = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemPaper>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemPaper.CreateFromDiscriminatorValue); } },
+                { "paper", n => { Paper = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemPaper>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemPaper.CreateFromDiscriminatorValue); } },
                 { "publishedAt", n => { PublishedAt = n.GetDateTimeOffsetValue(); } },
-                { "submittedBy", n => { SubmittedBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemSubmittedBy>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemSubmittedBy.CreateFromDiscriminatorValue); } },
+                { "submittedBy", n => { SubmittedBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemSubmittedBy>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemSubmittedBy.CreateFromDiscriminatorValue); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
                 { "thumbnail", n => { Thumbnail = n.GetStringValue(); } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -106,9 +106,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("isAuthorParticipating", IsAuthorParticipating);
             writer.WriteCollectionOfPrimitiveValues<string>("mediaUrls", MediaUrls);
             writer.WriteDoubleValue("numComments", NumComments);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemPaper>("paper", Paper);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemPaper>("paper", Paper);
             writer.WriteDateTimeOffsetValue("publishedAt", PublishedAt);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseItemSubmittedBy>("submittedBy", SubmittedBy);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDailyPapers200ResponseSchemaItemSubmittedBy>("submittedBy", SubmittedBy);
             writer.WriteStringValue("summary", Summary);
             writer.WriteStringValue("thumbnail", Thumbnail);
             writer.WriteStringValue("title", Title);

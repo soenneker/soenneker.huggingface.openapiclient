@@ -73,7 +73,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string ReasonToFollow { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowingOrgs200ResponseItemType? Type { get; set; }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -104,7 +104,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "orgType", n => { OrgType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowingOrgs200ResponseItemOrgType>(); } },
                 { "plan", n => { Plan = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowingOrgs200ResponseItemPlan>(); } },
                 { "reasonToFollow", n => { ReasonToFollow = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowingOrgs200ResponseItemType>(); } },
             };
         }
         /// <summary>
@@ -126,7 +126,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowingOrgs200ResponseItemOrgType>("orgType", OrgType);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowingOrgs200ResponseItemPlan>("plan", Plan);
             writer.WriteStringValue("reasonToFollow", ReasonToFollow);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowingOrgs200ResponseItemType>("type", Type);
         }
     }
 }

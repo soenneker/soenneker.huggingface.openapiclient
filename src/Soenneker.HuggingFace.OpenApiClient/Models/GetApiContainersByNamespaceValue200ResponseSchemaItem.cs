@@ -50,10 +50,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The disabled property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemDisabled? Disabled { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemDisabled? Disabled { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemDisabled Disabled { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemDisabled Disabled { get; set; }
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -78,10 +78,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The resourceGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemResourceGroup? ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemResourceGroup? ResourceGroup { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemResourceGroup ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemResourceGroup ResourceGroup { get; set; }
 #endif
         /// <summary>The amount of storage used by the bucket in bytes</summary>
         public double? Size { get; set; }
@@ -112,12 +112,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "cdnRegions", n => { CdnRegions = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemCdnRegionsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemCdnRegionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "description", n => { Description = n.GetStringValue(); } },
-                { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemDisabled>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemDisabled.CreateFromDiscriminatorValue); } },
+                { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemDisabled>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemDisabled.CreateFromDiscriminatorValue); } },
                 { "id", n => { GetApiContainersByNamespaceValue200ResponseSchemaItemId = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
                 { "repoType", n => { RepoType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemRepoType>(); } },
-                { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemResourceGroup.CreateFromDiscriminatorValue); } },
+                { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemResourceGroup.CreateFromDiscriminatorValue); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
                 { "totalFiles", n => { TotalFiles = n.GetDoubleValue(); } },
                 { "updatedAt", n => { UpdatedAt = n.GetDateTimeOffsetValue(); } },
@@ -135,12 +135,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemCdnRegionsItem>("cdnRegions", CdnRegions);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteStringValue("description", Description);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemDisabled>("disabled", Disabled);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemDisabled>("disabled", Disabled);
             writer.WriteStringValue("id", GetApiContainersByNamespaceValue200ResponseSchemaItemId);
             writer.WriteStringValue("_id", Id);
             writer.WriteBoolValue("private", Private);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemRepoType>("repoType", RepoType);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseItemResourceGroup>("resourceGroup", ResourceGroup);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValue200ResponseSchemaItemResourceGroup>("resourceGroup", ResourceGroup);
             writer.WriteDoubleValue("size", Size);
             writer.WriteDoubleValue("totalFiles", TotalFiles);
             writer.WriteDateTimeOffsetValue("updatedAt", UpdatedAt);

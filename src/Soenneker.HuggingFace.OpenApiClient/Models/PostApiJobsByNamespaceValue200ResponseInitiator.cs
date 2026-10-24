@@ -7,46 +7,44 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiJobsByNamespaceValue200ResponseInitiator : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiJobsByNamespaceValue200ResponseInitiator : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The avatarUrl property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvatarUrl { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1? PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1 { get; set; }
 #nullable restore
 #else
-        public string AvatarUrl { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1 PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1 { get; set; }
 #endif
-        /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2? PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2 { get; set; }
 #nullable restore
 #else
-        public string Id { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2 PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2 { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3? PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3 { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3 PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3 { get; set; }
 #endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiator"/> and sets the default values.
-        /// </summary>
-        public PostApiJobsByNamespaceValue200ResponseInitiator()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4? PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4 PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -55,7 +53,25 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiator CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiator();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiator();
+            if("PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1();
+            }
+            else if("PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2();
+            }
+            else if("PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3();
+            }
+            else if("PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,13 +79,23 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1 != null)
             {
-                { "avatarUrl", n => { AvatarUrl = n.GetStringValue(); } },
-                { "id", n => { Id = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorType>(); } },
-            };
+                return PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1.GetFieldDeserializers();
+            }
+            else if(PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2 != null)
+            {
+                return PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2.GetFieldDeserializers();
+            }
+            else if(PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3 != null)
+            {
+                return PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3.GetFieldDeserializers();
+            }
+            else if(PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4 != null)
+            {
+                return PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -78,11 +104,22 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("avatarUrl", AvatarUrl);
-            writer.WriteStringValue("id", Id);
-            writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1>(null, PostApiJobsByNamespaceValue200ResponseInitiatorOneOf1);
+            }
+            else if(PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2>(null, PostApiJobsByNamespaceValue200ResponseInitiatorOneOf2);
+            }
+            else if(PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3>(null, PostApiJobsByNamespaceValue200ResponseInitiatorOneOf3);
+            }
+            else if(PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4>(null, PostApiJobsByNamespaceValue200ResponseInitiatorOneOf4);
+            }
         }
     }
 }

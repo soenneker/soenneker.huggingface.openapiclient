@@ -7,27 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The enabled property</summary>
-        public bool? Enabled { get; set; }
-        /// <summary>The role property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinRole? Role { get; set; }
-        /// <summary>The scope property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinScope? Scope { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin"/> and sets the default values.
-        /// </summary>
-        public PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin()
-        {
-            AdditionalData = new Dictionary<string, object>();
-            Enabled = true;
-        }
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1? PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 { get; set; }
+#endif
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2"/></summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2? PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 { get; set; }
+#nullable restore
+#else
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -36,7 +37,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin();
+            result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1();
+            result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2();
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -44,12 +48,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 != null || PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 != null)
             {
-                { "enabled", n => { Enabled = n.GetBoolValue(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinRole>(); } },
-                { "scope", n => { Scope = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinScope>(); } },
-            };
+                return ParseNodeHelper.MergeDeserializersForIntersectionWrapper(PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1, PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2);
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -58,10 +61,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("enabled", Enabled);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinRole>("role", Role);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinScope>("scope", Scope);
-            writer.WriteAdditionalData(AdditionalData);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1>(null, PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1, PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2);
         }
     }
 }

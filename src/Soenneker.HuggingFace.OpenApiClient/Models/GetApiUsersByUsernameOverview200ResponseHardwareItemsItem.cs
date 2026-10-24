@@ -21,10 +21,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Hardware SKU as [type, vendor, model]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameOverview200ResponseHardwareItemsItemSkuItem>? Sku { get; set; }
+        public UntypedNode? Sku { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameOverview200ResponseHardwareItemsItemSkuItem> Sku { get; set; }
+        public UntypedNode Sku { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameOverview200ResponseHardwareItemsItem"/> and sets the default values.
@@ -54,7 +54,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "isPrimary", n => { IsPrimary = n.GetBoolValue(); } },
                 { "mem", n => { Mem = n.GetDoubleValue(); } },
                 { "num", n => { Num = n.GetDoubleValue(); } },
-                { "sku", n => { Sku = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameOverview200ResponseHardwareItemsItemSkuItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameOverview200ResponseHardwareItemsItemSkuItem.CreateFromDiscriminatorValue)?.AsList(); } },
+                { "sku", n => { Sku = n.GetObjectValue<UntypedNode>(UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +67,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("isPrimary", IsPrimary);
             writer.WriteDoubleValue("mem", Mem);
             writer.WriteDoubleValue("num", Num);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameOverview200ResponseHardwareItemsItemSkuItem>("sku", Sku);
+            writer.WriteObjectValue<UntypedNode>("sku", Sku);
         }
     }
 }

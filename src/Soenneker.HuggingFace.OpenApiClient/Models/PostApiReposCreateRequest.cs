@@ -7,140 +7,44 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf2"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf3"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class PostApiReposCreateRequest : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class PostApiReposCreateRequest : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The devModeEnabled property</summary>
-        public bool? DevModeEnabled { get; set; }
-        /// <summary>The files property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestFilesItem>? Files { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf1? PostApiReposCreateRequestOneOf1 { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestFilesItem> Files { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf1 PostApiReposCreateRequestOneOf1 { get; set; }
 #endif
-        /// <summary>The hardware flavor of the space. If you select &apos;zero-a10g&apos; or &apos;zerogpu&apos;, the SDK must be Gradio.</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestHardware? Hardware { get; set; }
-        /// <summary>The license of the repository. You can select &apos;Other&apos; if your license is not in the list</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestLicense? License { get; set; }
-        /// <summary>The license_link property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestLicenseLink? LicenseLink { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf2? PostApiReposCreateRequestOneOf2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestLicenseLink LicenseLink { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf2 PostApiReposCreateRequestOneOf2 { get; set; }
 #endif
-        /// <summary>The license_name property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf3"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LicenseName { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf3? PostApiReposCreateRequestOneOf3 { get; set; }
 #nullable restore
 #else
-        public string LicenseName { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf3 PostApiReposCreateRequestOneOf3 { get; set; }
 #endif
-        /// <summary>The name property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4? PostApiReposCreateRequestOneOf4 { get; set; }
 #nullable restore
 #else
-        public string Name { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4 PostApiReposCreateRequestOneOf4 { get; set; }
 #endif
-        /// <summary>The organization property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Organization { get; set; }
-#nullable restore
-#else
-        public string Organization { get; set; }
-#endif
-        /// <summary>Repository visibility. Defaults to public. Cannot be specified along with visibility.</summary>
-        public bool? Private { get; set; }
-        /// <summary>The region where the repository is hosted.</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestRegion? Region { get; set; }
-        /// <summary>The resourceGroupId property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ResourceGroupId { get; set; }
-#nullable restore
-#else
-        public string ResourceGroupId { get; set; }
-#endif
-        /// <summary>The Space SDK. `static` is free for everyone. `gradio` and `docker` run on compute: on the free `cpu-basic` flavor they require a subscription (PRO for users, Team/Enterprise for orgs), while paid hardware only requires billing (a payment method and prepaid credits).</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSdk? Sdk { get; set; }
-        /// <summary>The sdkVersion property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? SdkVersion { get; set; }
-#nullable restore
-#else
-        public string SdkVersion { get; set; }
-#endif
-        /// <summary>The secrets property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSecretsItem>? Secrets { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSecretsItem> Secrets { get; set; }
-#endif
-        /// <summary>The short_description property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? ShortDescription { get; set; }
-#nullable restore
-#else
-        public string ShortDescription { get; set; }
-#endif
-        /// <summary>The sleepTimeSeconds property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSleepTimeSeconds? SleepTimeSeconds { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSleepTimeSeconds SleepTimeSeconds { get; set; }
-#endif
-        /// <summary>The template property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Template { get; set; }
-#nullable restore
-#else
-        public string Template { get; set; }
-#endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.DatasetType? Type { get; set; }
-        /// <summary>The variables property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVariablesItem>? Variables { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVariablesItem> Variables { get; set; }
-#endif
-        /// <summary>Repository visibility. `protected` is only supported for Spaces. Cannot be specified along with private.</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVisibility? Visibility { get; set; }
-        /// <summary>HuggingFace Buckets or Repos to mount as volumes in the Space container.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVolumesItem>? Volumes { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVolumesItem> Volumes { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequest"/> and sets the default values.
-        /// </summary>
-        public PostApiReposCreateRequest()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -149,7 +53,25 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequest();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequest();
+            if("dataset".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiReposCreateRequestOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf1();
+            }
+            else if("model".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiReposCreateRequestOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf2();
+            }
+            else if("kernel".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiReposCreateRequestOneOf3 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf3();
+            }
+            else if("space".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.PostApiReposCreateRequestOneOf4 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -157,30 +79,23 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(PostApiReposCreateRequestOneOf1 != null)
             {
-                { "devModeEnabled", n => { DevModeEnabled = n.GetBoolValue(); } },
-                { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestFilesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestFilesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "hardware", n => { Hardware = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestHardware>(); } },
-                { "license", n => { License = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestLicense>(); } },
-                { "license_link", n => { LicenseLink = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestLicenseLink>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestLicenseLink.CreateFromDiscriminatorValue); } },
-                { "license_name", n => { LicenseName = n.GetStringValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "organization", n => { Organization = n.GetStringValue(); } },
-                { "private", n => { Private = n.GetBoolValue(); } },
-                { "region", n => { Region = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestRegion>(); } },
-                { "resourceGroupId", n => { ResourceGroupId = n.GetStringValue(); } },
-                { "sdk", n => { Sdk = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSdk>(); } },
-                { "sdkVersion", n => { SdkVersion = n.GetStringValue(); } },
-                { "secrets", n => { Secrets = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSecretsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSecretsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "short_description", n => { ShortDescription = n.GetStringValue(); } },
-                { "sleepTimeSeconds", n => { SleepTimeSeconds = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSleepTimeSeconds>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSleepTimeSeconds.CreateFromDiscriminatorValue); } },
-                { "template", n => { Template = n.GetStringValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DatasetType>(); } },
-                { "variables", n => { Variables = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVariablesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVariablesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "visibility", n => { Visibility = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVisibility>(); } },
-                { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVolumesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVolumesItem.CreateFromDiscriminatorValue)?.AsList(); } },
-            };
+                return PostApiReposCreateRequestOneOf1.GetFieldDeserializers();
+            }
+            else if(PostApiReposCreateRequestOneOf2 != null)
+            {
+                return PostApiReposCreateRequestOneOf2.GetFieldDeserializers();
+            }
+            else if(PostApiReposCreateRequestOneOf3 != null)
+            {
+                return PostApiReposCreateRequestOneOf3.GetFieldDeserializers();
+            }
+            else if(PostApiReposCreateRequestOneOf4 != null)
+            {
+                return PostApiReposCreateRequestOneOf4.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -189,28 +104,22 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("devModeEnabled", DevModeEnabled);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestFilesItem>("files", Files);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestHardware>("hardware", Hardware);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestLicense>("license", License);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestLicenseLink>("license_link", LicenseLink);
-            writer.WriteStringValue("license_name", LicenseName);
-            writer.WriteStringValue("name", Name);
-            writer.WriteStringValue("organization", Organization);
-            writer.WriteBoolValue("private", Private);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestRegion>("region", Region);
-            writer.WriteStringValue("resourceGroupId", ResourceGroupId);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSdk>("sdk", Sdk);
-            writer.WriteStringValue("sdkVersion", SdkVersion);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSecretsItem>("secrets", Secrets);
-            writer.WriteStringValue("short_description", ShortDescription);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestSleepTimeSeconds>("sleepTimeSeconds", SleepTimeSeconds);
-            writer.WriteStringValue("template", Template);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.DatasetType>("type", Type);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVariablesItem>("variables", Variables);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVisibility>("visibility", Visibility);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestVolumesItem>("volumes", Volumes);
-            writer.WriteAdditionalData(AdditionalData);
+            if(PostApiReposCreateRequestOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf1>(null, PostApiReposCreateRequestOneOf1);
+            }
+            else if(PostApiReposCreateRequestOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf2>(null, PostApiReposCreateRequestOneOf2);
+            }
+            else if(PostApiReposCreateRequestOneOf3 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf3>(null, PostApiReposCreateRequestOneOf3);
+            }
+            else if(PostApiReposCreateRequestOneOf4 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4>(null, PostApiReposCreateRequestOneOf4);
+            }
         }
     }
 }

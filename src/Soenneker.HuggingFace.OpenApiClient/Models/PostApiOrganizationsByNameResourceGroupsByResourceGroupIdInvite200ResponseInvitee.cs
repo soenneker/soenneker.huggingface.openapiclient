@@ -105,7 +105,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvite200ResponseInviteeServiceAccount ServiceAccount { get; set; }
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.UserType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvite200ResponseInviteeType? Type { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -154,7 +154,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "primaryOrgAvatarUrl", n => { PrimaryOrgAvatarUrl = n.GetStringValue(); } },
                 { "reasonToFollow", n => { ReasonToFollow = n.GetStringValue(); } },
                 { "serviceAccount", n => { ServiceAccount = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvite200ResponseInviteeServiceAccount>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvite200ResponseInviteeServiceAccount.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UserType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvite200ResponseInviteeType>(); } },
                 { "user", n => { User = n.GetStringValue(); } },
             };
         }
@@ -187,7 +187,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("primaryOrgAvatarUrl", PrimaryOrgAvatarUrl);
             writer.WriteStringValue("reasonToFollow", ReasonToFollow);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvite200ResponseInviteeServiceAccount>("serviceAccount", ServiceAccount);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UserType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvite200ResponseInviteeType>("type", Type);
             writer.WriteStringValue("user", User);
         }
     }

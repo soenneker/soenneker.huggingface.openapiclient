@@ -55,7 +55,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The twoFaEnabled property</summary>
         public bool? TwoFaEnabled { get; set; }
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.UserType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemType? Type { get; set; }
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -99,7 +99,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "resourceGroups", n => { ResourceGroups = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemRole>(); } },
                 { "twoFaEnabled", n => { TwoFaEnabled = n.GetBoolValue(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UserType>(); } },
+                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemType>(); } },
                 { "user", n => { User = n.GetStringValue(); } },
                 { "verifiedEmail", n => { VerifiedEmail = n.GetStringValue(); } },
             };
@@ -120,7 +120,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem>("resourceGroups", ResourceGroups);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemRole>("role", Role);
             writer.WriteBoolValue("twoFaEnabled", TwoFaEnabled);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.UserType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemType>("type", Type);
             writer.WriteStringValue("user", User);
             writer.WriteStringValue("verifiedEmail", VerifiedEmail);
         }

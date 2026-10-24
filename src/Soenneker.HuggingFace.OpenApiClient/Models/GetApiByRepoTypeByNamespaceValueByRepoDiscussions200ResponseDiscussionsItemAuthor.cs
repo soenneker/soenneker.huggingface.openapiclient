@@ -7,76 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthor : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthor : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The avatarUrl property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvatarUrl { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1? GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1 { get; set; }
 #nullable restore
 #else
-        public string AvatarUrl { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1 GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1 { get; set; }
 #endif
-        /// <summary>The followerCount property</summary>
-        public double? FollowerCount { get; set; }
-        /// <summary>The fullname property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fullname { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2? GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2 { get; set; }
 #nullable restore
 #else
-        public string Fullname { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2 GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2 { get; set; }
 #endif
-        /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
-        /// <summary>The isHf property</summary>
-        public bool? IsHf { get; set; }
-        /// <summary>The isHfAdmin property</summary>
-        public bool? IsHfAdmin { get; set; }
-        /// <summary>The isMod property</summary>
-        public bool? IsMod { get; set; }
-        /// <summary>The isPro property</summary>
-        public bool? IsPro { get; set; }
-        /// <summary>The isUserFollowing property</summary>
-        public bool? IsUserFollowing { get; set; }
-        /// <summary>The name property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Name { get; set; }
-#nullable restore
-#else
-        public string Name { get; set; }
-#endif
-        /// <summary>The plan property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorPlan? Plan { get; set; }
-        /// <summary>The primaryOrg property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorPrimaryOrg? PrimaryOrg { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorPrimaryOrg PrimaryOrg { get; set; }
-#endif
-        /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType? Type { get; set; }
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthor"/> and sets the default values.
-        /// </summary>
-        public GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthor()
-        {
-            AdditionalData = new Dictionary<string, object>();
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -85,7 +37,17 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthor CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthor();
+            var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthor();
+            if("org".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1();
+            }
+            else if("user".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,22 +55,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1 != null)
             {
-                { "avatarUrl", n => { AvatarUrl = n.GetStringValue(); } },
-                { "followerCount", n => { FollowerCount = n.GetDoubleValue(); } },
-                { "fullname", n => { Fullname = n.GetStringValue(); } },
-                { "_id", n => { Id = n.GetStringValue(); } },
-                { "isHf", n => { IsHf = n.GetBoolValue(); } },
-                { "isHfAdmin", n => { IsHfAdmin = n.GetBoolValue(); } },
-                { "isMod", n => { IsMod = n.GetBoolValue(); } },
-                { "isPro", n => { IsPro = n.GetBoolValue(); } },
-                { "isUserFollowing", n => { IsUserFollowing = n.GetBoolValue(); } },
-                { "name", n => { Name = n.GetStringValue(); } },
-                { "plan", n => { Plan = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorPlan>(); } },
-                { "primaryOrg", n => { PrimaryOrg = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorPrimaryOrg>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorPrimaryOrg.CreateFromDiscriminatorValue); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>(); } },
-            };
+                return GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1.GetFieldDeserializers();
+            }
+            else if(GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2 != null)
+            {
+                return GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -117,20 +72,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteStringValue("avatarUrl", AvatarUrl);
-            writer.WriteDoubleValue("followerCount", FollowerCount);
-            writer.WriteStringValue("fullname", Fullname);
-            writer.WriteStringValue("_id", Id);
-            writer.WriteBoolValue("isHf", IsHf);
-            writer.WriteBoolValue("isHfAdmin", IsHfAdmin);
-            writer.WriteBoolValue("isMod", IsMod);
-            writer.WriteBoolValue("isPro", IsPro);
-            writer.WriteBoolValue("isUserFollowing", IsUserFollowing);
-            writer.WriteStringValue("name", Name);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorPlan>("plan", Plan);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorPrimaryOrg>("primaryOrg", PrimaryOrg);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.OrgType>("type", Type);
-            writer.WriteAdditionalData(AdditionalData);
+            if(GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1>(null, GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf1);
+            }
+            else if(GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2>(null, GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2);
+            }
         }
     }
 }

@@ -41,10 +41,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The schemas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonSchemasColonCoreColon20ColonGroupItem?>? Schemas { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimV2GroupsByGroupIdRequestSchemasItem?>? Schemas { get; set; }
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonSchemasColonCoreColon20ColonGroupItem?> Schemas { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimV2GroupsByGroupIdRequestSchemasItem?> Schemas { get; set; }
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimV2GroupsByGroupIdRequest"/> and sets the default values.
@@ -74,7 +74,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "externalId", n => { ExternalId = n.GetStringValue(); } },
                 { "members", n => { Members = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimV2GroupsByGroupIdRequestMembersItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimV2GroupsByGroupIdRequestMembersItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "schemas", n => { Schemas = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonSchemasColonCoreColon20ColonGroupItem>()?.AsList(); } },
+                { "schemas", n => { Schemas = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimV2GroupsByGroupIdRequestSchemasItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -87,7 +87,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteStringValue("externalId", ExternalId);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimV2GroupsByGroupIdRequestMembersItem>("members", Members);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonSchemasColonCoreColon20ColonGroupItem>("schemas", Schemas);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimV2GroupsByGroupIdRequestSchemasItem>("schemas", Schemas);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

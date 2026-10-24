@@ -47,10 +47,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The organization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseItemOrganization? Organization { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseSchemaItemOrganization? Organization { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseItemOrganization Organization { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseSchemaItemOrganization Organization { get; set; }
 #endif
         /// <summary>The projectPage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -110,7 +110,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "authors", n => { Authors = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseItemAuthorsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseItemAuthorsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "githubRepo", n => { GithubRepo = n.GetStringValue(); } },
                 { "id", n => { Id = n.GetStringValue(); } },
-                { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseItemOrganization>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseItemOrganization.CreateFromDiscriminatorValue); } },
+                { "organization", n => { Organization = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseSchemaItemOrganization>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseSchemaItemOrganization.CreateFromDiscriminatorValue); } },
                 { "projectPage", n => { ProjectPage = n.GetStringValue(); } },
                 { "publishedAt", n => { PublishedAt = n.GetDateTimeOffsetValue(); } },
                 { "summary", n => { Summary = n.GetStringValue(); } },
@@ -130,7 +130,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseItemAuthorsItem>("authors", Authors);
             writer.WriteStringValue("githubRepo", GithubRepo);
             writer.WriteStringValue("id", Id);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseItemOrganization>("organization", Organization);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapers200ResponseSchemaItemOrganization>("organization", Organization);
             writer.WriteStringValue("projectPage", ProjectPage);
             writer.WriteDateTimeOffsetValue("publishedAt", PublishedAt);
             writer.WriteStringValue("summary", Summary);

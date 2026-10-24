@@ -7,109 +7,28 @@ using System.IO;
 using System;
 namespace Soenneker.HuggingFace.OpenApiClient.Models
 {
+    /// <summary>
+    /// Composed type wrapper for classes <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1"/>, <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2"/>
+    /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
-    #pragma warning disable CS1591
-    public partial class GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200Response : IAdditionalDataHolder, IParsable
-    #pragma warning restore CS1591
+    public partial class GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200Response : IComposedTypeWrapper, IParsable
     {
-        /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
-        public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The author property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseAuthor? Author { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1? GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseAuthor Author { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1 GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1 { get; set; }
 #endif
-        /// <summary>The changes property</summary>
+        /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseChanges? Changes { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2? GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2 { get; set; }
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseChanges Changes { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2 GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2 { get; set; }
 #endif
-        /// <summary>The collection property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseCollection? Collection { get; set; }
-        /// <summary>The createdAt property</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
-        /// <summary>The diffUrl property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? DiffUrl { get; set; }
-#nullable restore
-#else
-        public string DiffUrl { get; set; }
-#endif
-        /// <summary>The events property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseEventsItem>? Events { get; set; }
-#nullable restore
-#else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseEventsItem> Events { get; set; }
-#endif
-        /// <summary>The list of files with conflicts. `true` means there are conflicts but we cannot list them.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseFilesWithConflicts? FilesWithConflicts { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseFilesWithConflicts FilesWithConflicts { get; set; }
-#endif
-        /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Id { get; set; }
-#nullable restore
-#else
-        public string Id { get; set; }
-#endif
-        /// <summary>The isPullRequest property</summary>
-        public bool? IsPullRequest { get; set; }
-        /// <summary>The isReport property</summary>
-        public bool? IsReport { get; set; }
-        /// <summary>The locked property</summary>
-        public bool? Locked { get; set; }
-        /// <summary>The num property</summary>
-        public double? Num { get; set; }
-        /// <summary>The org property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOrg? Org { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOrg Org { get; set; }
-#endif
-        /// <summary>The pinned property</summary>
-        public bool? Pinned { get; set; }
-        /// <summary>The repo property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId? Repo { get; set; }
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId Repo { get; set; }
-#endif
-        /// <summary>The status property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseStatus? Status { get; set; }
-        /// <summary>The title property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public string? Title { get; set; }
-#nullable restore
-#else
-        public string Title { get; set; }
-#endif
-        /// <summary>
-        /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200Response"/> and sets the default values.
-        /// </summary>
-        public GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200Response()
-        {
-            AdditionalData = new Dictionary<string, object>();
-            IsPullRequest = false;
-        }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -118,7 +37,17 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200Response();
+            var mappingValue = parseNode.GetChildNode("")?.GetStringValue();
+            var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200Response();
+            if("GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1();
+            }
+            else if("GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2".Equals(mappingValue, StringComparison.OrdinalIgnoreCase))
+            {
+                result.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2();
+            }
+            return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -126,26 +55,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            if(GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1 != null)
             {
-                { "author", n => { Author = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseAuthor>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseAuthor.CreateFromDiscriminatorValue); } },
-                { "changes", n => { Changes = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseChanges>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseChanges.CreateFromDiscriminatorValue); } },
-                { "collection", n => { Collection = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseCollection>(); } },
-                { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
-                { "diffUrl", n => { DiffUrl = n.GetStringValue(); } },
-                { "events", n => { Events = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseEventsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseEventsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "filesWithConflicts", n => { FilesWithConflicts = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseFilesWithConflicts>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseFilesWithConflicts.CreateFromDiscriminatorValue); } },
-                { "_id", n => { Id = n.GetStringValue(); } },
-                { "isPullRequest", n => { IsPullRequest = n.GetBoolValue(); } },
-                { "isReport", n => { IsReport = n.GetBoolValue(); } },
-                { "locked", n => { Locked = n.GetBoolValue(); } },
-                { "num", n => { Num = n.GetDoubleValue(); } },
-                { "org", n => { Org = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOrg>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOrg.CreateFromDiscriminatorValue); } },
-                { "pinned", n => { Pinned = n.GetBoolValue(); } },
-                { "repo", n => { Repo = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId>(global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId.CreateFromDiscriminatorValue); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseStatus>(); } },
-                { "title", n => { Title = n.GetStringValue(); } },
-            };
+                return GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1.GetFieldDeserializers();
+            }
+            else if(GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2 != null)
+            {
+                return GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2.GetFieldDeserializers();
+            }
+            return new Dictionary<string, Action<IParseNode>>();
         }
         /// <summary>
         /// Serializes information the current object
@@ -154,24 +72,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseAuthor>("author", Author);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseChanges>("changes", Changes);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseCollection>("collection", Collection);
-            writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
-            writer.WriteStringValue("diffUrl", DiffUrl);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseEventsItem>("events", Events);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseFilesWithConflicts>("filesWithConflicts", FilesWithConflicts);
-            writer.WriteStringValue("_id", Id);
-            writer.WriteBoolValue("isPullRequest", IsPullRequest);
-            writer.WriteBoolValue("isReport", IsReport);
-            writer.WriteBoolValue("locked", Locked);
-            writer.WriteDoubleValue("num", Num);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOrg>("org", Org);
-            writer.WriteBoolValue("pinned", Pinned);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.RepoId>("repo", Repo);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseStatus>("status", Status);
-            writer.WriteStringValue("title", Title);
-            writer.WriteAdditionalData(AdditionalData);
+            if(GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1>(null, GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1);
+            }
+            else if(GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2 != null)
+            {
+                writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2>(null, GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2);
+            }
         }
     }
 }
