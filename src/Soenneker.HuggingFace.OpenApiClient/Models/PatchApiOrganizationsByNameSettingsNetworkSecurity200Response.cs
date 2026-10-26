@@ -52,6 +52,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #endif
         /// <summary>The keepReposMetadataVisible property</summary>
         public bool? KeepReposMetadataVisible { get; set; }
+        /// <summary>The admin-validated CIDR ranges</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ValidatedIpRanges { get; set; }
+#nullable restore
+#else
+        public List<string> ValidatedIpRanges { get; set; }
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -78,6 +86,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "highRateLimits", n => { HighRateLimits = n.GetBoolValue(); } },
                 { "ipRanges", n => { IpRanges = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "keepReposMetadataVisible", n => { KeepReposMetadataVisible = n.GetBoolValue(); } },
+                { "validatedIpRanges", n => { ValidatedIpRanges = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -95,6 +104,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("highRateLimits", HighRateLimits);
             writer.WriteCollectionOfPrimitiveValues<string>("ipRanges", IpRanges);
             writer.WriteBoolValue("keepReposMetadataVisible", KeepReposMetadataVisible);
+            writer.WriteCollectionOfPrimitiveValues<string>("validatedIpRanges", ValidatedIpRanges);
         }
     }
 }
