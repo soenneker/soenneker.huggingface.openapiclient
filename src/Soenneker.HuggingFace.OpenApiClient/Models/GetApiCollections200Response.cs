@@ -38,11 +38,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200Response();
-            if(parseNode.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1Item>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1Item> getApiCollections200ResponseAnyOf1ItemValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1Item>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1Item> getApiCollections200ResponseAnyOf1ItemValue)
             {
                 result.GetApiCollections200ResponseAnyOf1Item = getApiCollections200ResponseAnyOf1ItemValue;
             }
-            else if(parseNode.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf2Item>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf2Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf2Item> getApiCollections200ResponseAnyOf2ItemValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf2Item>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf2Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf2Item> getApiCollections200ResponseAnyOf2ItemValue)
             {
                 result.GetApiCollections200ResponseAnyOf2Item = getApiCollections200ResponseAnyOf2ItemValue;
             }

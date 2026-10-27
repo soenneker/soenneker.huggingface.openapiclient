@@ -38,11 +38,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter();
-            if(parseNode.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilterAnyOf1Item>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilterAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilterAnyOf1Item> postApiQuicksearchRequestOrgsFilterAnyOf1ItemValue)
+            if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilterAnyOf1Item>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilterAnyOf1Item.CreateFromDiscriminatorValue)?.AsList() is List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilterAnyOf1Item> postApiQuicksearchRequestOrgsFilterAnyOf1ItemValue)
             {
                 result.PostApiQuicksearchRequestOrgsFilterAnyOf1Item = postApiQuicksearchRequestOrgsFilterAnyOf1ItemValue;
             }
-            else if(parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
+            else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedArray && parseNode.GetCollectionOfPrimitiveValues<string>()?.AsList() is List<string> stringValue)
             {
                 result.String = stringValue;
             }
