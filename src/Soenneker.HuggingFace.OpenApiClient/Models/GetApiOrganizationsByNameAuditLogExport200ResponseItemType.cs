@@ -500,5 +500,29 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         OAuthToken,
         #pragma warning restore CS1591
+        [EnumMember(Value = "oauth.app.create")]
+        #pragma warning disable CS1591
+        OAuthAppCreate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "oauth.app.update")]
+        #pragma warning disable CS1591
+        OAuthAppUpdate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "oauth.app.secret.rotate")]
+        #pragma warning disable CS1591
+        OAuthAppSecretRotate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "oauth.app.secret.delete")]
+        #pragma warning disable CS1591
+        OAuthAppSecretDelete,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "oauth.app.secret.expire")]
+        #pragma warning disable CS1591
+        OAuthAppSecretExpire,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "oauth.app.delete")]
+        #pragma warning disable CS1591
+        OAuthAppDelete,
+        #pragma warning restore CS1591
     }
 }
