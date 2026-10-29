@@ -26,6 +26,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #endif
         /// <summary>Whether the email is verified</summary>
         public bool? EmailVerified { get; set; }
+        /// <summary>Names of the organizations the user belongs to, as a list of strings for OIDC clients syncing groups from a claim</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? Groups { get; set; }
+#nullable restore
+#else
+        public List<string> Groups { get; set; }
+#endif
         /// <summary>The user&apos;s hardware items, if the `profile` scope is granted and the user did not set them as private</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -114,6 +122,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "canPay", n => { CanPay = n.GetBoolValue(); } },
                 { "email", n => { Email = n.GetStringValue(); } },
                 { "email_verified", n => { EmailVerified = n.GetBoolValue(); } },
+                { "groups", n => { Groups = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "hardwareItems", n => { HardwareItems = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetOAuthUserinfo200ResponseHardwareItemsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetOAuthUserinfo200ResponseHardwareItemsItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "isPro", n => { IsPro = n.GetBoolValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -136,6 +145,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("canPay", CanPay);
             writer.WriteStringValue("email", Email);
             writer.WriteBoolValue("email_verified", EmailVerified);
+            writer.WriteCollectionOfPrimitiveValues<string>("groups", Groups);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetOAuthUserinfo200ResponseHardwareItemsItem>("hardwareItems", HardwareItems);
             writer.WriteBoolValue("isPro", IsPro);
             writer.WriteStringValue("name", Name);

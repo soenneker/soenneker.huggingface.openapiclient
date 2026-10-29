@@ -248,6 +248,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         Edsnlp,
         #pragma warning restore CS1591
+        [EnumMember(Value = "egohand")]
+        #pragma warning disable CS1591
+        Egohand,
+        #pragma warning restore CS1591
         [EnumMember(Value = "elm")]
         #pragma warning disable CS1591
         Elm,
@@ -751,6 +755,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         [EnumMember(Value = "routee-powertrain")]
         #pragma warning disable CS1591
         RouteePowertrain,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "rt-detr-hand-detector-v1")]
+        #pragma warning disable CS1591
+        RtDetrHandDetectorV1,
         #pragma warning restore CS1591
         [EnumMember(Value = "rwkv")]
         #pragma warning disable CS1591

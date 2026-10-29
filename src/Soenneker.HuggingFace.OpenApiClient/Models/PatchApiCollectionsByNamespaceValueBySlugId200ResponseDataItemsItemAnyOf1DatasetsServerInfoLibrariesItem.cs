@@ -76,5 +76,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         Agentenv,
         #pragma warning restore CS1591
+        [EnumMember(Value = "lerobot")]
+        #pragma warning disable CS1591
+        Lerobot,
+        #pragma warning restore CS1591
     }
 }

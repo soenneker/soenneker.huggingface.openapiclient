@@ -5599,7 +5599,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-28T16:29:14.404Z"
+              "default": "2026-10-29T19:27:25.953Z"
             }
           }
         ],
@@ -5651,7 +5651,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-28T16:29:14.405Z"
+              "default": "2026-10-29T19:27:25.954Z"
             }
           }
         ],
@@ -5703,7 +5703,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-28T16:29:14.405Z"
+              "default": "2026-10-29T19:27:25.955Z"
             }
           },
           {
@@ -5861,7 +5861,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-28T16:29:14.405Z"
+              "default": "2026-10-29T19:27:25.954Z"
             }
           }
         ],
@@ -24870,6 +24870,7 @@
         "required": [
           "sub",
           "isPro",
+          "groups",
           "orgs"
         ],
         "type": "object",
@@ -24927,6 +24928,13 @@
           "billingMode": {
             "$ref": "#/components/schemas/GetOAuthUserinfo200ResponseBillingMode"
           },
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Names of the organizations the user belongs to, as a list of strings for OIDC clients syncing groups from a claim"
+          },
           "orgs": {
             "type": "array",
             "items": {
@@ -24941,6 +24949,7 @@
         "required": [
           "sub",
           "isPro",
+          "groups",
           "orgs"
         ],
         "type": "object",
@@ -24997,6 +25006,13 @@
           },
           "billingMode": {
             "$ref": "#/components/schemas/PostOAuthUserinfo200ResponseBillingMode"
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Names of the organizations the user belongs to, as a list of strings for OIDC clients syncing groups from a claim"
           },
           "orgs": {
             "type": "array",
@@ -104987,6 +105003,7 @@
           "doctr",
           "drinkme",
           "edsnlp",
+          "egohand",
           "elm",
           "encoderfile",
           "ensomi",
@@ -105113,6 +105130,7 @@
           "rkllm",
           "robo-orchard-lab",
           "routee-powertrain",
+          "rt-detr-hand-detector-v1",
           "rwkv",
           "saelens",
           "sage-music",
@@ -105434,6 +105452,10 @@
             {
               "value": "edsnlp",
               "name": "Edsnlp"
+            },
+            {
+              "value": "egohand",
+              "name": "Egohand"
             },
             {
               "value": "elm",
@@ -105938,6 +105960,10 @@
             {
               "value": "routee-powertrain",
               "name": "RouteePowertrain"
+            },
+            {
+              "value": "rt-detr-hand-detector-v1",
+              "name": "RtDetrHandDetectorV1"
             },
             {
               "value": "rwkv",
@@ -125472,7 +125498,8 @@
           "oauth.app.secret.rotate",
           "oauth.app.secret.delete",
           "oauth.app.secret.expire",
-          "oauth.app.delete"
+          "oauth.app.delete",
+          "oauth.app.move"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -125994,6 +126021,10 @@
             {
               "value": "oauth.app.delete",
               "name": "OAuthAppDelete"
+            },
+            {
+              "value": "oauth.app.move",
+              "name": "OAuthAppMove"
             }
           ]
         }
@@ -134462,7 +134493,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -134536,6 +134568,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -135431,7 +135467,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -135505,6 +135542,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -136379,7 +136420,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -136453,6 +136495,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -137348,7 +137394,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -137422,6 +137469,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -138296,7 +138347,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -138370,6 +138422,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -139244,7 +139300,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -139318,6 +139375,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -140192,7 +140253,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -140266,6 +140328,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -141490,7 +141556,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -141564,6 +141631,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -148832,7 +148903,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -148906,6 +148978,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -149816,7 +149892,8 @@
           "verifiers",
           "openenv",
           "nemo-gym",
-          "agentenv"
+          "agentenv",
+          "lerobot"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -149890,6 +149967,10 @@
             {
               "value": "agentenv",
               "name": "Agentenv"
+            },
+            {
+              "value": "lerobot",
+              "name": "Lerobot"
             }
           ]
         }
@@ -161305,6 +161386,7 @@
           "doctr",
           "drinkme",
           "edsnlp",
+          "egohand",
           "elm",
           "encoderfile",
           "ensomi",
@@ -161431,6 +161513,7 @@
           "rkllm",
           "robo-orchard-lab",
           "routee-powertrain",
+          "rt-detr-hand-detector-v1",
           "rwkv",
           "saelens",
           "sage-music",
@@ -161752,6 +161835,10 @@
             {
               "value": "edsnlp",
               "name": "Edsnlp"
+            },
+            {
+              "value": "egohand",
+              "name": "Egohand"
             },
             {
               "value": "elm",
@@ -162256,6 +162343,10 @@
             {
               "value": "routee-powertrain",
               "name": "RouteePowertrain"
+            },
+            {
+              "value": "rt-detr-hand-detector-v1",
+              "name": "RtDetrHandDetectorV1"
             },
             {
               "value": "rwkv",
@@ -164017,6 +164108,7 @@
           "doctr",
           "drinkme",
           "edsnlp",
+          "egohand",
           "elm",
           "encoderfile",
           "ensomi",
@@ -164143,6 +164235,7 @@
           "rkllm",
           "robo-orchard-lab",
           "routee-powertrain",
+          "rt-detr-hand-detector-v1",
           "rwkv",
           "saelens",
           "sage-music",
@@ -164464,6 +164557,10 @@
             {
               "value": "edsnlp",
               "name": "Edsnlp"
+            },
+            {
+              "value": "egohand",
+              "name": "Egohand"
             },
             {
               "value": "elm",
@@ -164968,6 +165065,10 @@
             {
               "value": "routee-powertrain",
               "name": "RouteePowertrain"
+            },
+            {
+              "value": "rt-detr-hand-detector-v1",
+              "name": "RtDetrHandDetectorV1"
             },
             {
               "value": "rwkv",

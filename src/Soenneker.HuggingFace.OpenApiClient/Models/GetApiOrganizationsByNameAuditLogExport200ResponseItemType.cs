@@ -524,5 +524,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         OAuthAppDelete,
         #pragma warning restore CS1591
+        [EnumMember(Value = "oauth.app.move")]
+        #pragma warning disable CS1591
+        OAuthAppMove,
+        #pragma warning restore CS1591
     }
 }
