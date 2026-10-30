@@ -11,43 +11,66 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatus : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cancelReason") is { } nullNodeCancelReason && nullNodeCancelReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelReason = null;
+            if (parseNode.GetChildNode("exposeUrls") is { } nullNodeExposeUrls && nullNodeExposeUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExposeUrls = null;
+            if (parseNode.GetChildNode("failureCount") is { } nullNodeFailureCount && nullNodeFailureCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureCount = null;
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("sshUrl") is { } nullNodeSshUrl && nullNodeSshUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SshUrl = null;
+            if (parseNode.GetChildNode("stage") is { } nullNodeStage && nullNodeStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stage = null;
+        }
+
         /// <summary>The cancelReason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusCancelReason? CancelReason { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusCancelReason? CancelReason { get => _explicitNullValueCancelReason; set { _explicitNullValueCancelReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelReason"); else _explicitNullProperties?.Remove("cancelReason"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusCancelReason? _explicitNullValueCancelReason = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusCancelReason CancelReason { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusCancelReason CancelReason { get => _explicitNullValueCancelReason; set { _explicitNullValueCancelReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelReason"); else _explicitNullProperties?.Remove("cancelReason"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusCancelReason _explicitNullValueCancelReason = default!;
 #endif
         /// <summary>One reachable URL per port declared in `expose.ports`, in the same order (e.g. `https://&lt;job_id&gt;--8000.hf.jobs`). Absent when the job is not exposed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ExposeUrls { get; set; }
+        public List<string>? ExposeUrls { get => _explicitNullValueExposeUrls; set { _explicitNullValueExposeUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exposeUrls"); else _explicitNullProperties?.Remove("exposeUrls"); } }
+        private List<string>? _explicitNullValueExposeUrls = default!;
 #nullable restore
 #else
-        public List<string> ExposeUrls { get; set; }
+        public List<string> ExposeUrls { get => _explicitNullValueExposeUrls; set { _explicitNullValueExposeUrls = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exposeUrls"); else _explicitNullProperties?.Remove("exposeUrls"); } }
+        private List<string> _explicitNullValueExposeUrls = default!;
 #endif
         /// <summary>The failureCount property</summary>
-        public double? FailureCount { get; set; }
+        public double? FailureCount { get => _explicitNullValueFailureCount; set { _explicitNullValueFailureCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failureCount"); else _explicitNullProperties?.Remove("failureCount"); } }
+        private double? _explicitNullValueFailureCount = default!;
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>SSH endpoint for the job (e.g. `ssh://&lt;job_id&gt;@ssh.hf.jobs`). Only present when `ssh.enabled`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SshUrl { get; set; }
+        public string? SshUrl { get => _explicitNullValueSshUrl; set { _explicitNullValueSshUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sshUrl"); else _explicitNullProperties?.Remove("sshUrl"); } }
+        private string? _explicitNullValueSshUrl = default!;
 #nullable restore
 #else
-        public string SshUrl { get; set; }
+        public string SshUrl { get => _explicitNullValueSshUrl; set { _explicitNullValueSshUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sshUrl"); else _explicitNullProperties?.Remove("sshUrl"); } }
+        private string _explicitNullValueSshUrl = default!;
 #endif
         /// <summary>The stage property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusStage? Stage { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusStage? Stage { get => _explicitNullValueStage; set { _explicitNullValueStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage"); else _explicitNullProperties?.Remove("stage"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusStage? _explicitNullValueStage = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -56,7 +79,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatus CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatus();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatus(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -86,7 +109,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDoubleValue("failureCount", FailureCount);
             writer.WriteStringValue("message", Message);
             writer.WriteStringValue("sshUrl", SshUrl);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusStage>("stage", Stage);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdDuplicate200ResponseStatusStage>("stage", Stage);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

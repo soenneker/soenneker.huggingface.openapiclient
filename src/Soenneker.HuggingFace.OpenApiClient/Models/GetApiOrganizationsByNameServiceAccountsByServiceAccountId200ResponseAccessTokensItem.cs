@@ -11,81 +11,122 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("endpointPatterns") is { } nullNodeEndpointPatterns && nullNodeEndpointPatterns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointPatterns = null;
+            if (parseNode.GetChildNode("expiration") is { } nullNodeExpiration && nullNodeExpiration.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expiration = null;
+            if (parseNode.GetChildNode("_id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("last4") is { } nullNodeLast4 && nullNodeLast4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Last4 = null;
+            if (parseNode.GetChildNode("lastUsedAt") is { } nullNodeLastUsedAt && nullNodeLastUsedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastUsedAt = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("repoIds") is { } nullNodeRepoIds && nullNodeRepoIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoIds = null;
+            if (parseNode.GetChildNode("repoPermissions") is { } nullNodeRepoPermissions && nullNodeRepoPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPermissions = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("s3AccessKey") is { } nullNodeS3AccessKey && nullNodeS3AccessKey.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) S3AccessKey = null;
+            if (parseNode.GetChildNode("skipNetworkSecurity") is { } nullNodeSkipNetworkSecurity && nullNodeSkipNetworkSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipNetworkSecurity = null;
+        }
+
         /// <summary>The createdAt property</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The displayName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>The endpointPatterns property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EndpointPatterns { get; set; }
+        public List<string>? EndpointPatterns { get => _explicitNullValueEndpointPatterns; set { _explicitNullValueEndpointPatterns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointPatterns"); else _explicitNullProperties?.Remove("endpointPatterns"); } }
+        private List<string>? _explicitNullValueEndpointPatterns = default!;
 #nullable restore
 #else
-        public List<string> EndpointPatterns { get; set; }
+        public List<string> EndpointPatterns { get => _explicitNullValueEndpointPatterns; set { _explicitNullValueEndpointPatterns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointPatterns"); else _explicitNullProperties?.Remove("endpointPatterns"); } }
+        private List<string> _explicitNullValueEndpointPatterns = default!;
 #endif
         /// <summary>The expiration property</summary>
-        public DateTimeOffset? Expiration { get; set; }
+        public DateTimeOffset? Expiration { get => _explicitNullValueExpiration; set { _explicitNullValueExpiration = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiration"); else _explicitNullProperties?.Remove("expiration"); } }
+        private DateTimeOffset? _explicitNullValueExpiration = default!;
         /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The last4 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Last4 { get; set; }
+        public string? Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
+        private string? _explicitNullValueLast4 = default!;
 #nullable restore
 #else
-        public string Last4 { get; set; }
+        public string Last4 { get => _explicitNullValueLast4; set { _explicitNullValueLast4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("last4"); else _explicitNullProperties?.Remove("last4"); } }
+        private string _explicitNullValueLast4 = default!;
 #endif
         /// <summary>The lastUsedAt property</summary>
-        public DateTimeOffset? LastUsedAt { get; set; }
+        public DateTimeOffset? LastUsedAt { get => _explicitNullValueLastUsedAt; set { _explicitNullValueLastUsedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastUsedAt"); else _explicitNullProperties?.Remove("lastUsedAt"); } }
+        private DateTimeOffset? _explicitNullValueLastUsedAt = default!;
         /// <summary>The permissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemPermissionsItem?>? Permissions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemPermissionsItem?>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemPermissionsItem?>? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemPermissionsItem?> Permissions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemPermissionsItem?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemPermissionsItem?> _explicitNullValuePermissions = default!;
 #endif
         /// <summary>The repoIds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RepoIds { get; set; }
+        public List<string>? RepoIds { get => _explicitNullValueRepoIds; set { _explicitNullValueRepoIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoIds"); else _explicitNullProperties?.Remove("repoIds"); } }
+        private List<string>? _explicitNullValueRepoIds = default!;
 #nullable restore
 #else
-        public List<string> RepoIds { get; set; }
+        public List<string> RepoIds { get => _explicitNullValueRepoIds; set { _explicitNullValueRepoIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoIds"); else _explicitNullProperties?.Remove("repoIds"); } }
+        private List<string> _explicitNullValueRepoIds = default!;
 #endif
         /// <summary>The repoPermissions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem?>? RepoPermissions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem?>? RepoPermissions { get => _explicitNullValueRepoPermissions; set { _explicitNullValueRepoPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoPermissions"); else _explicitNullProperties?.Remove("repoPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem?>? _explicitNullValueRepoPermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem?> RepoPermissions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem?> RepoPermissions { get => _explicitNullValueRepoPermissions; set { _explicitNullValueRepoPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoPermissions"); else _explicitNullProperties?.Remove("repoPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem?> _explicitNullValueRepoPermissions = default!;
 #endif
         /// <summary>The role property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole? Role { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole? _explicitNullValueRole = default!;
         /// <summary>The s3AccessKey property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? S3AccessKey { get; set; }
+        public string? S3AccessKey { get => _explicitNullValueS3AccessKey; set { _explicitNullValueS3AccessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3AccessKey"); else _explicitNullProperties?.Remove("s3AccessKey"); } }
+        private string? _explicitNullValueS3AccessKey = default!;
 #nullable restore
 #else
-        public string S3AccessKey { get; set; }
+        public string S3AccessKey { get => _explicitNullValueS3AccessKey; set { _explicitNullValueS3AccessKey = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("s3AccessKey"); else _explicitNullProperties?.Remove("s3AccessKey"); } }
+        private string _explicitNullValueS3AccessKey = default!;
 #endif
         /// <summary>The skipNetworkSecurity property</summary>
-        public bool? SkipNetworkSecurity { get; set; }
+        public bool? SkipNetworkSecurity { get => _explicitNullValueSkipNetworkSecurity; set { _explicitNullValueSkipNetworkSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipNetworkSecurity"); else _explicitNullProperties?.Remove("skipNetworkSecurity"); } }
+        private bool? _explicitNullValueSkipNetworkSecurity = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -94,7 +135,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,7 +179,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem>("repoPermissions", RepoPermissions);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole>("role", Role);
             writer.WriteStringValue("s3AccessKey", S3AccessKey);
-            writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);
+            writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

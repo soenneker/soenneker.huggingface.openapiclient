@@ -12,14 +12,24 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("scoped") is { } nullNodeScoped && nullNodeScoped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scoped = null;
+        }
+
         /// <summary>Permissions the token holds on individual entities, limited to the organization and the repositories it owns. Scopes pointing elsewhere are omitted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrainedScopedItem>? Scoped { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrainedScopedItem>? Scoped { get => _explicitNullValueScoped; set { _explicitNullValueScoped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scoped"); else _explicitNullProperties?.Remove("scoped"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrainedScopedItem>? _explicitNullValueScoped = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrainedScopedItem> Scoped { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrainedScopedItem> Scoped { get => _explicitNullValueScoped; set { _explicitNullValueScoped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scoped"); else _explicitNullProperties?.Remove("scoped"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrainedScopedItem> _explicitNullValueScoped = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -29,7 +39,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemFineGrained(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +59,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrainedScopedItem>("scoped", Scoped);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemFineGrainedScopedItem>("scoped", Scoped);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

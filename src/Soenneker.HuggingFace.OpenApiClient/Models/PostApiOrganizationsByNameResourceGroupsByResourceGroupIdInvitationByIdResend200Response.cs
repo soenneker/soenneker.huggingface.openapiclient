@@ -11,45 +11,70 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("author") is { } nullNodeAuthor && nullNodeAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Author = null;
+            if (parseNode.GetChildNode("expiresAt") is { } nullNodeExpiresAt && nullNodeExpiresAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExpiresAt = null;
+            if (parseNode.GetChildNode("externalCollaborator") is { } nullNodeExternalCollaborator && nullNodeExternalCollaborator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExternalCollaborator = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("invitee") is { } nullNodeInvitee && nullNodeInvitee.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Invitee = null;
+            if (parseNode.GetChildNode("resourceGroup") is { } nullNodeResourceGroup && nullNodeResourceGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroup = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+        }
+
         /// <summary>The user who issued the invitation</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseAuthor? Author { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseAuthor? Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseAuthor? _explicitNullValueAuthor = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseAuthor Author { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseAuthor Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseAuthor _explicitNullValueAuthor = default!;
 #endif
         /// <summary>The expiresAt property</summary>
-        public DateTimeOffset? ExpiresAt { get; set; }
+        public DateTimeOffset? ExpiresAt { get => _explicitNullValueExpiresAt; set { _explicitNullValueExpiresAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expiresAt"); else _explicitNullProperties?.Remove("expiresAt"); } }
+        private DateTimeOffset? _explicitNullValueExpiresAt = default!;
         /// <summary>Whether the invitee is exempted from SSO enforcement</summary>
-        public bool? ExternalCollaborator { get; set; }
+        public bool? ExternalCollaborator { get => _explicitNullValueExternalCollaborator; set { _explicitNullValueExternalCollaborator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalCollaborator"); else _explicitNullProperties?.Remove("externalCollaborator"); } }
+        private bool? _explicitNullValueExternalCollaborator = default!;
         /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The invitee property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseInvitee? Invitee { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseInvitee? Invitee { get => _explicitNullValueInvitee; set { _explicitNullValueInvitee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invitee"); else _explicitNullProperties?.Remove("invitee"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseInvitee? _explicitNullValueInvitee = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseInvitee Invitee { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseInvitee Invitee { get => _explicitNullValueInvitee; set { _explicitNullValueInvitee = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("invitee"); else _explicitNullProperties?.Remove("invitee"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseInvitee _explicitNullValueInvitee = default!;
 #endif
         /// <summary>Set when the invitation only grants access to one resource group</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseResourceGroup? ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseResourceGroup? ResourceGroup { get => _explicitNullValueResourceGroup; set { _explicitNullValueResourceGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroup"); else _explicitNullProperties?.Remove("resourceGroup"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseResourceGroup? _explicitNullValueResourceGroup = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseResourceGroup ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseResourceGroup ResourceGroup { get => _explicitNullValueResourceGroup; set { _explicitNullValueResourceGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroup"); else _explicitNullProperties?.Remove("resourceGroup"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseResourceGroup _explicitNullValueResourceGroup = default!;
 #endif
         /// <summary>Organization role the invitee joins with</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseRole? Role { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseRole? _explicitNullValueRole = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -58,7 +83,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -90,7 +115,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("id", Id);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseInvitee>("invitee", Invitee);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseResourceGroup>("resourceGroup", ResourceGroup);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseRole>("role", Role);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdInvitationByIdResend200ResponseRole>("role", Role);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

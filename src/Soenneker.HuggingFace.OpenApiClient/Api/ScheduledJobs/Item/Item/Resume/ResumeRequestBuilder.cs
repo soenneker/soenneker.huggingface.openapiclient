@@ -48,7 +48,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.ScheduledJobs.Item.Item.Resume
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.ScheduledJobs.Item.Item.Resume.ResumePostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.ScheduledJobs.Item.Item.Resume.ResumePostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.ScheduledJobs.Item.Item.Resume.ResumePostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.ScheduledJobs.Item.Item.Resume.ResumePostResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Resume scheduled job

@@ -11,13 +11,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiByRepoTypeByNamespaceValueByRepoDuplicateStatus200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filesCopied") is { } nullNodeFilesCopied && nullNodeFilesCopied.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesCopied = null;
+            if (parseNode.GetChildNode("filesTotal") is { } nullNodeFilesTotal && nullNodeFilesTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesTotal = null;
+            if (parseNode.GetChildNode("pending") is { } nullNodePending && nullNodePending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pending = null;
+        }
+
         /// <summary>Number of files copied so far</summary>
-        public int? FilesCopied { get; set; }
+        public int? FilesCopied { get => _explicitNullValueFilesCopied; set { _explicitNullValueFilesCopied = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesCopied"); else _explicitNullProperties?.Remove("filesCopied"); } }
+        private int? _explicitNullValueFilesCopied = default!;
         /// <summary>Number of LFS/Xet files the duplicate references</summary>
-        public int? FilesTotal { get; set; }
+        public int? FilesTotal { get => _explicitNullValueFilesTotal; set { _explicitNullValueFilesTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesTotal"); else _explicitNullProperties?.Remove("filesTotal"); } }
+        private int? _explicitNullValueFilesTotal = default!;
         /// <summary>True while the LFS/Xet files are still being copied</summary>
-        public bool? Pending { get; set; }
+        public bool? Pending { get => _explicitNullValuePending; set { _explicitNullValuePending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending"); else _explicitNullProperties?.Remove("pending"); } }
+        private bool? _explicitNullValuePending = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -26,7 +39,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDuplicateStatus200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDuplicateStatus200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDuplicateStatus200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +63,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteIntValue("filesCopied", FilesCopied);
             writer.WriteIntValue("filesTotal", FilesTotal);
-            writer.WriteBoolValue("pending", Pending);
+            writer.WriteBoolValue("pending", Pending);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

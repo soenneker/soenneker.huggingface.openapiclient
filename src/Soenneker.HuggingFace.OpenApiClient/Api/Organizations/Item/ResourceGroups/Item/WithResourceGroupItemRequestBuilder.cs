@@ -79,7 +79,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve a single resource group by id.Requires the org to have a Team plan or higher.
@@ -97,7 +97,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsByResourceGroupId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the name, description and/or monthly spend limits (in cents, `null` to remove) of a resource group.`spendLimits.total` caps the group&apos;s combined spend across every product; the per-product limits cap each product on top of it.Requires the org to have a Team plan or higher.
@@ -117,7 +117,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete a resource group from the organization.Requires the org to have a Team plan or higher.

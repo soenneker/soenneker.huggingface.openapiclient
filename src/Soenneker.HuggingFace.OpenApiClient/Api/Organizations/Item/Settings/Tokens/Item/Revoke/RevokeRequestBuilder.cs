@@ -48,7 +48,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Settings.To
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Settings.Tokens.Item.Revoke.RevokePostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Settings.Tokens.Item.Revoke.RevokePostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Settings.Tokens.Item.Revoke.RevokePostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Settings.Tokens.Item.Revoke.RevokePostResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// An org admin can revoke a token&apos;s access to the org. The token itself isn&apos;t deleted, it still works outside the org. The token id is the one displayed in the org token settings page or through the tokens listing API endpoint. Enterprise only.

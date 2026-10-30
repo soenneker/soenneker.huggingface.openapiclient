@@ -36,20 +36,20 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.InferenceEndpoints.Item.Item.A
         /// <summary>
         /// Check if the user has access to the inference endpoint
         /// </summary>
-        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms200Response"/></returns>
+        /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPermsSuccessResponse"/></returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms200Response?> PostAsync(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.InferenceEndpoints.Item.Item.AuthCheck.Item.WithPermsItemRequestBuilder.WithPermsItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPermsSuccessResponse?> PostAsync(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.InferenceEndpoints.Item.Item.AuthCheck.Item.WithPermsItemRequestBuilder.WithPermsItemRequestBuilderPostQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms200Response> PostAsync(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.InferenceEndpoints.Item.Item.AuthCheck.Item.WithPermsItemRequestBuilder.WithPermsItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPermsSuccessResponse> PostAsync(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.InferenceEndpoints.Item.Item.AuthCheck.Item.WithPermsItemRequestBuilder.WithPermsItemRequestBuilderPostQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPermsSuccessResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPermsSuccessResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Check if the user has access to the inference endpoint

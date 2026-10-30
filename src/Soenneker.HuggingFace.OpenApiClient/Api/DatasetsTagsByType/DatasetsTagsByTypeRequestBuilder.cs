@@ -49,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.DatasetsTagsByType
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsTagsByType200ResponseSchema>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsTagsByType200ResponseSchema.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsTagsByType200ResponseSchema>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsTagsByType200ResponseSchema.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get all possible tags used for datasets, grouped by tag type. Optionally restrict to only one tag type

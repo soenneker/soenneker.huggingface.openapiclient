@@ -68,7 +68,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Settings.Webhooks.Item
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiSettingsWebhooksByWebhookId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get webhook
@@ -86,7 +86,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Settings.Webhooks.Item
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooksByWebhookId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooksByWebhookId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooksByWebhookId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooksByWebhookId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update webhook
@@ -106,7 +106,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Settings.Webhooks.Item
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Delete webhook

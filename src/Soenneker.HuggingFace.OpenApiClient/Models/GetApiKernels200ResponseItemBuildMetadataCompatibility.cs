@@ -11,30 +11,46 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiKernels200ResponseItemBuildMetadataCompatibility : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("arch") is { } nullNodeArch && nullNodeArch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arch = null;
+            if (parseNode.GetChildNode("os") is { } nullNodeOs && nullNodeOs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Os = null;
+            if (parseNode.GetChildNode("torch") is { } nullNodeTorch && nullNodeTorch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Torch = null;
+        }
+
         /// <summary>The arch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityArchItem?>? Arch { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityArchItem?>? Arch { get => _explicitNullValueArch; set { _explicitNullValueArch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arch"); else _explicitNullProperties?.Remove("arch"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityArchItem?>? _explicitNullValueArch = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityArchItem?> Arch { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityArchItem?> Arch { get => _explicitNullValueArch; set { _explicitNullValueArch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arch"); else _explicitNullProperties?.Remove("arch"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityArchItem?> _explicitNullValueArch = default!;
 #endif
         /// <summary>The os property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityOsItem?>? Os { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityOsItem?>? Os { get => _explicitNullValueOs; set { _explicitNullValueOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os"); else _explicitNullProperties?.Remove("os"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityOsItem?>? _explicitNullValueOs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityOsItem?> Os { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityOsItem?> Os { get => _explicitNullValueOs; set { _explicitNullValueOs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("os"); else _explicitNullProperties?.Remove("os"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityOsItem?> _explicitNullValueOs = default!;
 #endif
         /// <summary>The torch property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityTorchItem?>? Torch { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityTorchItem?>? Torch { get => _explicitNullValueTorch; set { _explicitNullValueTorch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("torch"); else _explicitNullProperties?.Remove("torch"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityTorchItem?>? _explicitNullValueTorch = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityTorchItem?> Torch { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityTorchItem?> Torch { get => _explicitNullValueTorch; set { _explicitNullValueTorch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("torch"); else _explicitNullProperties?.Remove("torch"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityTorchItem?> _explicitNullValueTorch = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -44,7 +60,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,7 +84,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityArchItem>("arch", Arch);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityOsItem>("os", Os);
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityTorchItem>("torch", Torch);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibilityTorchItem>("torch", Torch);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

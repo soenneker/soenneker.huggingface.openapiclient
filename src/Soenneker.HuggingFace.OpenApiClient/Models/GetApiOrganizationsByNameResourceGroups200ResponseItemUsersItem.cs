@@ -11,65 +11,100 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("addedBy") is { } nullNodeAddedBy && nullNodeAddedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AddedBy = null;
+            if (parseNode.GetChildNode("assignedRole") is { } nullNodeAssignedRole && nullNodeAssignedRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AssignedRole = null;
+            if (parseNode.GetChildNode("avatarUrl") is { } nullNodeAvatarUrl && nullNodeAvatarUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvatarUrl = null;
+            if (parseNode.GetChildNode("fullname") is { } nullNodeFullname && nullNodeFullname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fullname = null;
+            if (parseNode.GetChildNode("_id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isExternalCollaborator") is { } nullNodeIsExternalCollaborator && nullNodeIsExternalCollaborator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternalCollaborator = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("orgRole") is { } nullNodeOrgRole && nullNodeOrgRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgRole = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("roleSetBy") is { } nullNodeRoleSetBy && nullNodeRoleSetBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleSetBy = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The addedBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AddedBy { get; set; }
+        public string? AddedBy { get => _explicitNullValueAddedBy; set { _explicitNullValueAddedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addedBy"); else _explicitNullProperties?.Remove("addedBy"); } }
+        private string? _explicitNullValueAddedBy = default!;
 #nullable restore
 #else
-        public string AddedBy { get; set; }
+        public string AddedBy { get => _explicitNullValueAddedBy; set { _explicitNullValueAddedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("addedBy"); else _explicitNullProperties?.Remove("addedBy"); } }
+        private string _explicitNullValueAddedBy = default!;
 #endif
         /// <summary>The assignedRole property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemAssignedRole? AssignedRole { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemAssignedRole? AssignedRole { get => _explicitNullValueAssignedRole; set { _explicitNullValueAssignedRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("assignedRole"); else _explicitNullProperties?.Remove("assignedRole"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemAssignedRole? _explicitNullValueAssignedRole = default!;
         /// <summary>The avatarUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvatarUrl { get; set; }
+        public string? AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarUrl"); else _explicitNullProperties?.Remove("avatarUrl"); } }
+        private string? _explicitNullValueAvatarUrl = default!;
 #nullable restore
 #else
-        public string AvatarUrl { get; set; }
+        public string AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarUrl"); else _explicitNullProperties?.Remove("avatarUrl"); } }
+        private string _explicitNullValueAvatarUrl = default!;
 #endif
         /// <summary>The fullname property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fullname { get; set; }
+        public string? Fullname { get => _explicitNullValueFullname; set { _explicitNullValueFullname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullname"); else _explicitNullProperties?.Remove("fullname"); } }
+        private string? _explicitNullValueFullname = default!;
 #nullable restore
 #else
-        public string Fullname { get; set; }
+        public string Fullname { get => _explicitNullValueFullname; set { _explicitNullValueFullname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullname"); else _explicitNullProperties?.Remove("fullname"); } }
+        private string _explicitNullValueFullname = default!;
 #endif
         /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Whether the user is an external collaborator of the organization</summary>
-        public bool? IsExternalCollaborator { get; set; }
+        public bool? IsExternalCollaborator { get => _explicitNullValueIsExternalCollaborator; set { _explicitNullValueIsExternalCollaborator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isExternalCollaborator"); else _explicitNullProperties?.Remove("isExternalCollaborator"); } }
+        private bool? _explicitNullValueIsExternalCollaborator = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The orgRole property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemOrgRole? OrgRole { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemOrgRole? OrgRole { get => _explicitNullValueOrgRole; set { _explicitNullValueOrgRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orgRole"); else _explicitNullProperties?.Remove("orgRole"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemOrgRole? _explicitNullValueOrgRole = default!;
         /// <summary>The role property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemRole? Role { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemRole? _explicitNullValueRole = default!;
         /// <summary>The roleSetBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RoleSetBy { get; set; }
+        public string? RoleSetBy { get => _explicitNullValueRoleSetBy; set { _explicitNullValueRoleSetBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleSetBy"); else _explicitNullProperties?.Remove("roleSetBy"); } }
+        private string? _explicitNullValueRoleSetBy = default!;
 #nullable restore
 #else
-        public string RoleSetBy { get; set; }
+        public string RoleSetBy { get => _explicitNullValueRoleSetBy; set { _explicitNullValueRoleSetBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleSetBy"); else _explicitNullProperties?.Remove("roleSetBy"); } }
+        private string _explicitNullValueRoleSetBy = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -78,7 +113,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,7 +153,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemOrgRole>("orgRole", OrgRole);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemRole>("role", Role);
             writer.WriteStringValue("roleSetBy", RoleSetBy);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemUsersItemType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

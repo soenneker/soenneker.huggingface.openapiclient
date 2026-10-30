@@ -49,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Settings.Ne
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsNetworkSecurity200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsNetworkSecurity200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsNetworkSecurity200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsNetworkSecurity200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the network security settings for an organization.
@@ -69,7 +69,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Settings.Ne
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get the network security settings for an organization.

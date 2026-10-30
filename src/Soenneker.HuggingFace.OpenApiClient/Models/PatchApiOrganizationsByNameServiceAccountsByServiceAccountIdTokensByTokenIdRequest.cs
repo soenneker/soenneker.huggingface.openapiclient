@@ -11,51 +11,75 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
+            if (parseNode.GetChildNode("endpointPatterns") is { } nullNodeEndpointPatterns && nullNodeEndpointPatterns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EndpointPatterns = null;
+            if (parseNode.GetChildNode("permissions") is { } nullNodePermissions && nullNodePermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Permissions = null;
+            if (parseNode.GetChildNode("repoIds") is { } nullNodeRepoIds && nullNodeRepoIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoIds = null;
+            if (parseNode.GetChildNode("repoPermissions") is { } nullNodeRepoPermissions && nullNodeRepoPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPermissions = null;
+            if (parseNode.GetChildNode("skipNetworkSecurity") is { } nullNodeSkipNetworkSecurity && nullNodeSkipNetworkSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipNetworkSecurity = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>New display name for the token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DisplayName { get; set; }
+        public string? DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string? _explicitNullValueDisplayName = default!;
 #nullable restore
 #else
-        public string DisplayName { get; set; }
+        public string DisplayName { get => _explicitNullValueDisplayName; set { _explicitNullValueDisplayName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("displayName"); else _explicitNullProperties?.Remove("displayName"); } }
+        private string _explicitNullValueDisplayName = default!;
 #endif
         /// <summary>Inference endpoint name patterns (wildcards allowed, e.g. `gpt2-*`) restricting the token&apos;s org-wide Inference Endpoint permissions to matching endpoints. Empty means all endpoints.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? EndpointPatterns { get; set; }
+        public List<string>? EndpointPatterns { get => _explicitNullValueEndpointPatterns; set { _explicitNullValueEndpointPatterns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointPatterns"); else _explicitNullProperties?.Remove("endpointPatterns"); } }
+        private List<string>? _explicitNullValueEndpointPatterns = default!;
 #nullable restore
 #else
-        public List<string> EndpointPatterns { get; set; }
+        public List<string> EndpointPatterns { get => _explicitNullValueEndpointPatterns; set { _explicitNullValueEndpointPatterns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpointPatterns"); else _explicitNullProperties?.Remove("endpointPatterns"); } }
+        private List<string> _explicitNullValueEndpointPatterns = default!;
 #endif
         /// <summary>Org-wide permissions for this token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem?>? Permissions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem?>? Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem?>? _explicitNullValuePermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem?> Permissions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem?> _explicitNullValuePermissions = default!;
 #endif
         /// <summary>Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? RepoIds { get; set; }
+        public List<string>? RepoIds { get => _explicitNullValueRepoIds; set { _explicitNullValueRepoIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoIds"); else _explicitNullProperties?.Remove("repoIds"); } }
+        private List<string>? _explicitNullValueRepoIds = default!;
 #nullable restore
 #else
-        public List<string> RepoIds { get; set; }
+        public List<string> RepoIds { get => _explicitNullValueRepoIds; set { _explicitNullValueRepoIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoIds"); else _explicitNullProperties?.Remove("repoIds"); } }
+        private List<string> _explicitNullValueRepoIds = default!;
 #endif
         /// <summary>Permissions granted on the selected `repoIds`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem?>? RepoPermissions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem?>? RepoPermissions { get => _explicitNullValueRepoPermissions; set { _explicitNullValueRepoPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoPermissions"); else _explicitNullProperties?.Remove("repoPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem?>? _explicitNullValueRepoPermissions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem?> RepoPermissions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem?> RepoPermissions { get => _explicitNullValueRepoPermissions; set { _explicitNullValueRepoPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoPermissions"); else _explicitNullProperties?.Remove("repoPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem?> _explicitNullValueRepoPermissions = default!;
 #endif
         /// <summary>Exempt this token from the org&apos;s Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.</summary>
-        public bool? SkipNetworkSecurity { get; set; }
+        public bool? SkipNetworkSecurity { get => _explicitNullValueSkipNetworkSecurity; set { _explicitNullValueSkipNetworkSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipNetworkSecurity"); else _explicitNullProperties?.Remove("skipNetworkSecurity"); } }
+        private bool? _explicitNullValueSkipNetworkSecurity = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequest"/> and sets the default values.
         /// </summary>
@@ -71,7 +95,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +126,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("repoIds", RepoIds);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem>("repoPermissions", RepoPermissions);
             writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

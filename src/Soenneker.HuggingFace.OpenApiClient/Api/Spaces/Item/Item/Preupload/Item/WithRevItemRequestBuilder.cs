@@ -51,7 +51,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Spaces.Item.Item.Preupload.Ite
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRev200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRev200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRev200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRev200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Check if a file should be uploaded through the Large File mechanism or directly.

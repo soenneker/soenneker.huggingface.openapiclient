@@ -11,71 +11,107 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiScheduledJobsByNamespaceValueByJobIdSchedule200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("concurrency") is { } nullNodeConcurrency && nullNodeConcurrency.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Concurrency = null;
+            if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("initiator") is { } nullNodeInitiator && nullNodeInitiator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Initiator = null;
+            if (parseNode.GetChildNode("jobSpec") is { } nullNodeJobSpec && nullNodeJobSpec.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobSpec = null;
+            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("schedule") is { } nullNodeSchedule && nullNodeSchedule.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schedule = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("suspend") is { } nullNodeSuspend && nullNodeSuspend.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Suspend = null;
+            if (parseNode.GetChildNode("suspendReason") is { } nullNodeSuspendReason && nullNodeSuspendReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SuspendReason = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The concurrency property</summary>
-        public bool? Concurrency { get; set; }
+        public bool? Concurrency { get => _explicitNullValueConcurrency; set { _explicitNullValueConcurrency = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("concurrency"); else _explicitNullProperties?.Remove("concurrency"); } }
+        private bool? _explicitNullValueConcurrency = default!;
         /// <summary>The createdAt property</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The initiator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseInitiator? Initiator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseInitiator? Initiator { get => _explicitNullValueInitiator; set { _explicitNullValueInitiator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiator"); else _explicitNullProperties?.Remove("initiator"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseInitiator? _explicitNullValueInitiator = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseInitiator Initiator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseInitiator Initiator { get => _explicitNullValueInitiator; set { _explicitNullValueInitiator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiator"); else _explicitNullProperties?.Remove("initiator"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseInitiator _explicitNullValueInitiator = default!;
 #endif
         /// <summary>The jobSpec property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseJobSpec? JobSpec { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseJobSpec? JobSpec { get => _explicitNullValueJobSpec; set { _explicitNullValueJobSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobSpec"); else _explicitNullProperties?.Remove("jobSpec"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseJobSpec? _explicitNullValueJobSpec = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseJobSpec JobSpec { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseJobSpec JobSpec { get => _explicitNullValueJobSpec; set { _explicitNullValueJobSpec = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobSpec"); else _explicitNullProperties?.Remove("jobSpec"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseJobSpec _explicitNullValueJobSpec = default!;
 #endif
         /// <summary>The owner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseOwner? Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseOwner? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseOwner Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseOwner _explicitNullValueOwner = default!;
 #endif
         /// <summary>The schedule property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Schedule { get; set; }
+        public string? Schedule { get => _explicitNullValueSchedule; set { _explicitNullValueSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule"); else _explicitNullProperties?.Remove("schedule"); } }
+        private string? _explicitNullValueSchedule = default!;
 #nullable restore
 #else
-        public string Schedule { get; set; }
+        public string Schedule { get => _explicitNullValueSchedule; set { _explicitNullValueSchedule = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedule"); else _explicitNullProperties?.Remove("schedule"); } }
+        private string _explicitNullValueSchedule = default!;
 #endif
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseStatus? Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseStatus? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseStatus Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseStatus Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseStatus _explicitNullValueStatus = default!;
 #endif
         /// <summary>The suspend property</summary>
-        public bool? Suspend { get; set; }
+        public bool? Suspend { get => _explicitNullValueSuspend; set { _explicitNullValueSuspend = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suspend"); else _explicitNullProperties?.Remove("suspend"); } }
+        private bool? _explicitNullValueSuspend = default!;
         /// <summary>The suspendReason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SuspendReason { get; set; }
+        public string? SuspendReason { get => _explicitNullValueSuspendReason; set { _explicitNullValueSuspendReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suspendReason"); else _explicitNullProperties?.Remove("suspendReason"); } }
+        private string? _explicitNullValueSuspendReason = default!;
 #nullable restore
 #else
-        public string SuspendReason { get; set; }
+        public string SuspendReason { get => _explicitNullValueSuspendReason; set { _explicitNullValueSuspendReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("suspendReason"); else _explicitNullProperties?.Remove("suspendReason"); } }
+        private string _explicitNullValueSuspendReason = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -84,7 +120,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -124,7 +160,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseStatus>("status", Status);
             writer.WriteBoolValue("suspend", Suspend);
             writer.WriteStringValue("suspendReason", SuspendReason);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdSchedule200ResponseType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

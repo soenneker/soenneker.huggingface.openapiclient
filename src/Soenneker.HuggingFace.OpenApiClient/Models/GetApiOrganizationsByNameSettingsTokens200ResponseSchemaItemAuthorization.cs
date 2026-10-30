@@ -12,21 +12,37 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("authorizedAt") is { } nullNodeAuthorizedAt && nullNodeAuthorizedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorizedAt = null;
+            if (parseNode.GetChildNode("authorizer") is { } nullNodeAuthorizer && nullNodeAuthorizer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Authorizer = null;
+            if (parseNode.GetChildNode("requestedAt") is { } nullNodeRequestedAt && nullNodeRequestedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RequestedAt = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+        }
+
         /// <summary>Date the token was granted access, recorded when the organization grants it automatically because the owner already holds write access</summary>
-        public DateTimeOffset? AuthorizedAt { get; set; }
+        public DateTimeOffset? AuthorizedAt { get => _explicitNullValueAuthorizedAt; set { _explicitNullValueAuthorizedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizedAt"); else _explicitNullProperties?.Remove("authorizedAt"); } }
+        private DateTimeOffset? _explicitNullValueAuthorizedAt = default!;
         /// <summary>User who granted the token its access. Absent when `authorizedAt` is, and when that account has since been deleted</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer? Authorizer { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer? Authorizer { get => _explicitNullValueAuthorizer; set { _explicitNullValueAuthorizer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizer"); else _explicitNullProperties?.Remove("authorizer"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer? _explicitNullValueAuthorizer = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer Authorizer { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer Authorizer { get => _explicitNullValueAuthorizer; set { _explicitNullValueAuthorizer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorizer"); else _explicitNullProperties?.Remove("authorizer"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer _explicitNullValueAuthorizer = default!;
 #endif
         /// <summary>Date the token first requested access to the organization</summary>
-        public DateTimeOffset? RequestedAt { get; set; }
+        public DateTimeOffset? RequestedAt { get => _explicitNullValueRequestedAt; set { _explicitNullValueRequestedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requestedAt"); else _explicitNullProperties?.Remove("requestedAt"); } }
+        private DateTimeOffset? _explicitNullValueRequestedAt = default!;
         /// <summary>`pending` while the token awaits an administrator&apos;s decision, `approved` once it may act on the organization, `denied` if an administrator refused it, and `revoked` if an administrator withdrew access it had already been granted</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationStatus? Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationStatus? _explicitNullValueStatus = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -35,7 +51,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseSchemaItemAuthorization(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -61,7 +77,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("authorizedAt", AuthorizedAt);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer>("authorizer", Authorizer);
             writer.WriteDateTimeOffsetValue("requestedAt", RequestedAt);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationStatus>("status", Status);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationStatus>("status", Status);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

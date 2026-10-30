@@ -11,9 +11,18 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiModelsByNamespaceValueByRepoNotebookByRevByPath200ResponseAnyOf2 : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("notInCache") is { } nullNodeNotInCache && nullNodeNotInCache.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotInCache = null;
+        }
+
         /// <summary>The notInCache property</summary>
-        public bool? NotInCache { get; set; }
+        public bool? NotInCache { get => _explicitNullValueNotInCache; set { _explicitNullValueNotInCache = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notInCache"); else _explicitNullProperties?.Remove("notInCache"); } }
+        private bool? _explicitNullValueNotInCache = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoNotebookByRevByPath200ResponseAnyOf2"/> and sets the default values.
         /// </summary>
@@ -29,7 +38,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoNotebookByRevByPath200ResponseAnyOf2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoNotebookByRevByPath200ResponseAnyOf2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoNotebookByRevByPath200ResponseAnyOf2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -49,7 +58,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteBoolValue("notInCache", NotInCache);
+            writer.WriteBoolValue("notInCache", NotInCache);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

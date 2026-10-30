@@ -11,24 +11,37 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiContainersByNamespaceValueByRepoSettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cdnRegions") is { } nullNodeCdnRegions && nullNodeCdnRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CdnRegions = null;
+            if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The cdnRegions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem>? CdnRegions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem>? CdnRegions { get => _explicitNullValueCdnRegions; set { _explicitNullValueCdnRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdnRegions"); else _explicitNullProperties?.Remove("cdnRegions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem>? _explicitNullValueCdnRegions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem> CdnRegions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem> CdnRegions { get => _explicitNullValueCdnRegions; set { _explicitNullValueCdnRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdnRegions"); else _explicitNullProperties?.Remove("cdnRegions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem> _explicitNullValueCdnRegions = default!;
 #endif
         /// <summary>The private property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest.PutApiContainersByNamespaceValueByRepoSettingsRequest_private? Private { get; set; }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? _explicitNullValuePrivate = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest.PutApiContainersByNamespaceValueByRepoSettingsRequest_private Private { get; set; }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode _explicitNullValuePrivate = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -56,7 +69,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "cdnRegions", n => { CdnRegions = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "private", n => { Private = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest.PutApiContainersByNamespaceValueByRepoSettingsRequest_private>(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest.PutApiContainersByNamespaceValueByRepoSettingsRequest_private.CreateFromDiscriminatorValue); } },
+                { "private", n => { Private = n.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +80,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequestCdnRegionsItem>("cdnRegions", CdnRegions);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest.PutApiContainersByNamespaceValueByRepoSettingsRequest_private>("private", Private);
+            writer.WriteObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("private", Private);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
@@ -93,13 +107,17 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest.PutApiContainersByNamespaceValueByRepoSettingsRequest_private CreateFromDiscriminatorValue(IParseNode parseNode)
             {
+            // A null union input must not initialize an object branch.
+            if (global::System.Object.ReferenceEquals(parseNode, null)) throw new global::System.ArgumentNullException(nameof(parseNode));
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest.PutApiContainersByNamespaceValueByRepoSettingsRequest_private();
+
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiContainersByNamespaceValueByRepoSettingsRequest.PutApiContainersByNamespaceValueByRepoSettingsRequest_private();
-                if(parseNode.GetBoolValue() is bool booleanValue)
+                if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool booleanValue)
                 {
                     result.Boolean = booleanValue;
                 }
-                else if(parseNode.GetStringValue() is string stringValue)
+                else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;
                 }
@@ -119,6 +137,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
+            // Empty composed wrappers serialize as JSON null.
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (Boolean == null && String == null) { writer.WriteNullValue(null); return; }
+
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Boolean != null)
                 {

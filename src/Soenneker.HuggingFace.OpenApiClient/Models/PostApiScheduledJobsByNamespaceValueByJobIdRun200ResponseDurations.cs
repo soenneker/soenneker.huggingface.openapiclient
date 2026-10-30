@@ -11,13 +11,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseDurations : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("runningSecs") is { } nullNodeRunningSecs && nullNodeRunningSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunningSecs = null;
+            if (parseNode.GetChildNode("schedulingSecs") is { } nullNodeSchedulingSecs && nullNodeSchedulingSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SchedulingSecs = null;
+            if (parseNode.GetChildNode("totalSecs") is { } nullNodeTotalSecs && nullNodeTotalSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalSecs = null;
+        }
+
         /// <summary>The runningSecs property</summary>
-        public double? RunningSecs { get; set; }
+        public double? RunningSecs { get => _explicitNullValueRunningSecs; set { _explicitNullValueRunningSecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runningSecs"); else _explicitNullProperties?.Remove("runningSecs"); } }
+        private double? _explicitNullValueRunningSecs = default!;
         /// <summary>The schedulingSecs property</summary>
-        public double? SchedulingSecs { get; set; }
+        public double? SchedulingSecs { get => _explicitNullValueSchedulingSecs; set { _explicitNullValueSchedulingSecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schedulingSecs"); else _explicitNullProperties?.Remove("schedulingSecs"); } }
+        private double? _explicitNullValueSchedulingSecs = default!;
         /// <summary>The totalSecs property</summary>
-        public double? TotalSecs { get; set; }
+        public double? TotalSecs { get => _explicitNullValueTotalSecs; set { _explicitNullValueTotalSecs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalSecs"); else _explicitNullProperties?.Remove("totalSecs"); } }
+        private double? _explicitNullValueTotalSecs = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -26,7 +39,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseDurations CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseDurations();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseDurations(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -50,7 +63,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("runningSecs", RunningSecs);
             writer.WriteDoubleValue("schedulingSecs", SchedulingSecs);
-            writer.WriteDoubleValue("totalSecs", TotalSecs);
+            writer.WriteDoubleValue("totalSecs", TotalSecs);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

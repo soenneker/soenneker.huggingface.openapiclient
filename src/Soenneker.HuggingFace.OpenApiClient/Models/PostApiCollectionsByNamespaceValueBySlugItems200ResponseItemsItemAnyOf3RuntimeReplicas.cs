@@ -11,16 +11,28 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicas : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("current") is { } nullNodeCurrent && nullNodeCurrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Current = null;
+            if (parseNode.GetChildNode("requested") is { } nullNodeRequested && nullNodeRequested.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Requested = null;
+        }
+
         /// <summary>The current property</summary>
-        public double? Current { get; set; }
+        public double? Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        private double? _explicitNullValueCurrent = default!;
         /// <summary>The requested property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicasRequested? Requested { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicasRequested? Requested { get => _explicitNullValueRequested; set { _explicitNullValueRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested"); else _explicitNullProperties?.Remove("requested"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicasRequested? _explicitNullValueRequested = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicasRequested Requested { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicasRequested Requested { get => _explicitNullValueRequested; set { _explicitNullValueRequested = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("requested"); else _explicitNullProperties?.Remove("requested"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicasRequested _explicitNullValueRequested = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -30,7 +42,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicas CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicas();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicas(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +64,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("current", Current);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicasRequested>("requested", Requested);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf3RuntimeReplicasRequested>("requested", Requested);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

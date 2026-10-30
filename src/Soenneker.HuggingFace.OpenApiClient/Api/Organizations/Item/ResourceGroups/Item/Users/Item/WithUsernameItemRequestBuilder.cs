@@ -49,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.DeleteApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Change the role of a user in a resource group. In a SCIM-managed resource group, pass `resetToScimRole` to undo a manual role change and restore the role mapped from the user&apos;s SCIM groups.Use the `inherit` role to give the member the same role they have in the organization, following it when it changes.Requires the org to have a Team plan or higher.
@@ -69,7 +69,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Remove a user from a resource group, revoking the access granted through it.Requires the org to have a Team plan or higher.

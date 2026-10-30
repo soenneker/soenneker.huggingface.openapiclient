@@ -11,24 +11,37 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatchApiSettingsNotificationsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("notifications") is { } nullNodeNotifications && nullNodeNotifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notifications = null;
+            if (parseNode.GetChildNode("prepaidAmount") is { } nullNodePrepaidAmount && nullNodePrepaidAmount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrepaidAmount = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The notifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications? Notifications { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications? Notifications { get => _explicitNullValueNotifications; set { _explicitNullValueNotifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications"); else _explicitNullProperties?.Remove("notifications"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications? _explicitNullValueNotifications = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications Notifications { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications Notifications { get => _explicitNullValueNotifications; set { _explicitNullValueNotifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications"); else _explicitNullProperties?.Remove("notifications"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications _explicitNullValueNotifications = default!;
 #endif
         /// <summary>To be provided when enabling launch_prepaid_credits</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrepaidAmount { get; set; }
+        public string? PrepaidAmount { get => _explicitNullValuePrepaidAmount; set { _explicitNullValuePrepaidAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepaidAmount"); else _explicitNullProperties?.Remove("prepaidAmount"); } }
+        private string? _explicitNullValuePrepaidAmount = default!;
 #nullable restore
 #else
-        public string PrepaidAmount { get; set; }
+        public string PrepaidAmount { get => _explicitNullValuePrepaidAmount; set { _explicitNullValuePrepaidAmount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prepaidAmount"); else _explicitNullProperties?.Remove("prepaidAmount"); } }
+        private string _explicitNullValuePrepaidAmount = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequest"/> and sets the default values.
@@ -45,7 +58,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +81,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications>("notifications", Notifications);
             writer.WriteStringValue("prepaidAmount", PrepaidAmount);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

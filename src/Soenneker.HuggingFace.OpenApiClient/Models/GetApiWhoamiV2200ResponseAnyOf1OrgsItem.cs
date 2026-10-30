@@ -11,77 +11,119 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiWhoamiV2200ResponseAnyOf1OrgsItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("avatarUrl") is { } nullNodeAvatarUrl && nullNodeAvatarUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvatarUrl = null;
+            if (parseNode.GetChildNode("billingMode") is { } nullNodeBillingMode && nullNodeBillingMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BillingMode = null;
+            if (parseNode.GetChildNode("canPay") is { } nullNodeCanPay && nullNodeCanPay.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanPay = null;
+            if (parseNode.GetChildNode("email") is { } nullNodeEmail && nullNodeEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Email = null;
+            if (parseNode.GetChildNode("fullname") is { } nullNodeFullname && nullNodeFullname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fullname = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("periodEnd") is { } nullNodePeriodEnd && nullNodePeriodEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodEnd = null;
+            if (parseNode.GetChildNode("plan") is { } nullNodePlan && nullNodePlan.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Plan = null;
+            if (parseNode.GetChildNode("resourceGroups") is { } nullNodeResourceGroups && nullNodeResourceGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroups = null;
+            if (parseNode.GetChildNode("roleInOrg") is { } nullNodeRoleInOrg && nullNodeRoleInOrg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RoleInOrg = null;
+            if (parseNode.GetChildNode("securityRestrictions") is { } nullNodeSecurityRestrictions && nullNodeSecurityRestrictions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityRestrictions = null;
+            if (parseNode.GetChildNode("spendLimitReached") is { } nullNodeSpendLimitReached && nullNodeSpendLimitReached.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpendLimitReached = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The avatarUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvatarUrl { get; set; }
+        public string? AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarUrl"); else _explicitNullProperties?.Remove("avatarUrl"); } }
+        private string? _explicitNullValueAvatarUrl = default!;
 #nullable restore
 #else
-        public string AvatarUrl { get; set; }
+        public string AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarUrl"); else _explicitNullProperties?.Remove("avatarUrl"); } }
+        private string _explicitNullValueAvatarUrl = default!;
 #endif
         /// <summary>The billingMode property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemBillingMode? BillingMode { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemBillingMode? BillingMode { get => _explicitNullValueBillingMode; set { _explicitNullValueBillingMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("billingMode"); else _explicitNullProperties?.Remove("billingMode"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemBillingMode? _explicitNullValueBillingMode = default!;
         /// <summary>The canPay property</summary>
-        public bool? CanPay { get; set; }
+        public bool? CanPay { get => _explicitNullValueCanPay; set { _explicitNullValueCanPay = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canPay"); else _explicitNullProperties?.Remove("canPay"); } }
+        private bool? _explicitNullValueCanPay = default!;
         /// <summary>The email property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Email { get; set; }
+        public string? Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string? _explicitNullValueEmail = default!;
 #nullable restore
 #else
-        public string Email { get; set; }
+        public string Email { get => _explicitNullValueEmail; set { _explicitNullValueEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("email"); else _explicitNullProperties?.Remove("email"); } }
+        private string _explicitNullValueEmail = default!;
 #endif
         /// <summary>The fullname property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fullname { get; set; }
+        public string? Fullname { get => _explicitNullValueFullname; set { _explicitNullValueFullname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullname"); else _explicitNullProperties?.Remove("fullname"); } }
+        private string? _explicitNullValueFullname = default!;
 #nullable restore
 #else
-        public string Fullname { get; set; }
+        public string Fullname { get => _explicitNullValueFullname; set { _explicitNullValueFullname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullname"); else _explicitNullProperties?.Remove("fullname"); } }
+        private string _explicitNullValueFullname = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The periodEnd property</summary>
-        public double? PeriodEnd { get; set; }
+        public double? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("periodEnd"); else _explicitNullProperties?.Remove("periodEnd"); } }
+        private double? _explicitNullValuePeriodEnd = default!;
         /// <summary>The plan property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemPlan? Plan { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemPlan? Plan { get => _explicitNullValuePlan; set { _explicitNullValuePlan = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("plan"); else _explicitNullProperties?.Remove("plan"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemPlan? _explicitNullValuePlan = default!;
         /// <summary>The resourceGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemResourceGroupsItem>? ResourceGroups { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemResourceGroupsItem>? ResourceGroups { get => _explicitNullValueResourceGroups; set { _explicitNullValueResourceGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroups"); else _explicitNullProperties?.Remove("resourceGroups"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemResourceGroupsItem>? _explicitNullValueResourceGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemResourceGroupsItem> ResourceGroups { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemResourceGroupsItem> ResourceGroups { get => _explicitNullValueResourceGroups; set { _explicitNullValueResourceGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroups"); else _explicitNullProperties?.Remove("resourceGroups"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemResourceGroupsItem> _explicitNullValueResourceGroups = default!;
 #endif
         /// <summary>The roleInOrg property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemRoleInOrg? RoleInOrg { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemRoleInOrg? RoleInOrg { get => _explicitNullValueRoleInOrg; set { _explicitNullValueRoleInOrg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("roleInOrg"); else _explicitNullProperties?.Remove("roleInOrg"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemRoleInOrg? _explicitNullValueRoleInOrg = default!;
         /// <summary>Current security restrictions for accessing data in this organization with current authentication method</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem?>? SecurityRestrictions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem?>? SecurityRestrictions { get => _explicitNullValueSecurityRestrictions; set { _explicitNullValueSecurityRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityRestrictions"); else _explicitNullProperties?.Remove("securityRestrictions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem?>? _explicitNullValueSecurityRestrictions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem?> SecurityRestrictions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem?> SecurityRestrictions { get => _explicitNullValueSecurityRestrictions; set { _explicitNullValueSecurityRestrictions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityRestrictions"); else _explicitNullProperties?.Remove("securityRestrictions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem?> _explicitNullValueSecurityRestrictions = default!;
 #endif
         /// <summary>The spendLimitReached property</summary>
-        public bool? SpendLimitReached { get; set; }
+        public bool? SpendLimitReached { get => _explicitNullValueSpendLimitReached; set { _explicitNullValueSpendLimitReached = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spendLimitReached"); else _explicitNullProperties?.Remove("spendLimitReached"); } }
+        private bool? _explicitNullValueSpendLimitReached = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemType? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -90,7 +132,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -136,7 +178,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemRoleInOrg>("roleInOrg", RoleInOrg);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemSecurityRestrictionsItem>("securityRestrictions", SecurityRestrictions);
             writer.WriteBoolValue("spendLimitReached", SpendLimitReached);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1OrgsItemType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

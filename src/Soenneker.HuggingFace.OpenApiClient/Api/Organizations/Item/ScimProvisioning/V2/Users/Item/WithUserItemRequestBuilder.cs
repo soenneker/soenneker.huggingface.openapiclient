@@ -48,7 +48,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ScimProvisi
         {
 #endif
             var requestInfo = ToDeleteRequestInformation(requestConfiguration);
-            await RequestAdapter.SendNoContentAsync(requestInfo, default, cancellationToken).ConfigureAwait(false);
+            await RequestAdapter.SendNoContentAsync(requestInfo, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieves a SCIM user by their ID for non-managed organizations.
@@ -66,7 +66,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ScimProvisi
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Modify individual attributes for non-managed organizations. Only the `active` field can be modified. User profile fields are not editable via SCIM.
@@ -86,7 +86,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ScimProvisi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPatchRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Updates a provisioned user&apos;s invitation for non-managed organizations. User profile fields are not editable via SCIM for non-managed organizations.
@@ -106,7 +106,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ScimProvisi
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameScimProvisioningV2UsersByUserId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Removes a user from the organization and deletes any pending invitations for non-managed organizations.

@@ -11,64 +11,92 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiSettingsWebhooksByWebhookIdRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("domains") is { } nullNodeDomains && nullNodeDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domains = null;
+            if (parseNode.GetChildNode("job") is { } nullNodeJob && nullNodeJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Job = null;
+            if (parseNode.GetChildNode("jobSourceId") is { } nullNodeJobSourceId && nullNodeJobSourceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobSourceId = null;
+            if (parseNode.GetChildNode("secret") is { } nullNodeSecret && nullNodeSecret.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secret = null;
+            if (parseNode.GetChildNode("secrets") is { } nullNodeSecrets && nullNodeSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secrets = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+            if (parseNode.GetChildNode("watched") is { } nullNodeWatched && nullNodeWatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Watched = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestDomainsItem?>? Domains { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestDomainsItem?>? Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestDomainsItem?>? _explicitNullValueDomains = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestDomainsItem?> Domains { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestDomainsItem?> Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestDomainsItem?> _explicitNullValueDomains = default!;
 #endif
         /// <summary>The job property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestJob? Job { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestJob? Job { get => _explicitNullValueJob; set { _explicitNullValueJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job"); else _explicitNullProperties?.Remove("job"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestJob? _explicitNullValueJob = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestJob Job { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestJob Job { get => _explicitNullValueJob; set { _explicitNullValueJob = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job"); else _explicitNullProperties?.Remove("job"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestJob _explicitNullValueJob = default!;
 #endif
         /// <summary>The jobSourceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobSourceId { get; set; }
+        public string? JobSourceId { get => _explicitNullValueJobSourceId; set { _explicitNullValueJobSourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobSourceId"); else _explicitNullProperties?.Remove("jobSourceId"); } }
+        private string? _explicitNullValueJobSourceId = default!;
 #nullable restore
 #else
-        public string JobSourceId { get; set; }
+        public string JobSourceId { get => _explicitNullValueJobSourceId; set { _explicitNullValueJobSourceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobSourceId"); else _explicitNullProperties?.Remove("jobSourceId"); } }
+        private string _explicitNullValueJobSourceId = default!;
 #endif
         /// <summary>The secret property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Secret { get; set; }
+        public string? Secret { get => _explicitNullValueSecret; set { _explicitNullValueSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secret"); else _explicitNullProperties?.Remove("secret"); } }
+        private string? _explicitNullValueSecret = default!;
 #nullable restore
 #else
-        public string Secret { get; set; }
+        public string Secret { get => _explicitNullValueSecret; set { _explicitNullValueSecret = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secret"); else _explicitNullProperties?.Remove("secret"); } }
+        private string _explicitNullValueSecret = default!;
 #endif
         /// <summary>Secrets of the job started by the webhook, used together with `jobSourceId`: the source job&apos;s own secrets are never copied. On update, listed keys are replaced, an empty value removes a secret, and omitted keys keep their stored value.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestSecrets? Secrets { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestSecrets? Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestSecrets? _explicitNullValueSecrets = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestSecrets Secrets { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestSecrets Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestSecrets _explicitNullValueSecrets = default!;
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>The watched property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestWatchedItem>? Watched { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestWatchedItem>? Watched { get => _explicitNullValueWatched; set { _explicitNullValueWatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watched"); else _explicitNullProperties?.Remove("watched"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestWatchedItem>? _explicitNullValueWatched = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestWatchedItem> Watched { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestWatchedItem> Watched { get => _explicitNullValueWatched; set { _explicitNullValueWatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("watched"); else _explicitNullProperties?.Remove("watched"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestWatchedItem> _explicitNullValueWatched = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequest"/> and sets the default values.
@@ -85,7 +113,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -118,6 +146,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestSecrets>("secrets", Secrets);
             writer.WriteStringValue("url", Url);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdRequestWatchedItem>("watched", Watched);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

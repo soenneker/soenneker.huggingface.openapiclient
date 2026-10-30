@@ -11,36 +11,58 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiNotifications200ResponseNotificationsItemOneOf2Discussion : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isPullRequest") is { } nullNodeIsPullRequest && nullNodeIsPullRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPullRequest = null;
+            if (parseNode.GetChildNode("num") is { } nullNodeNum && nullNodeNum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Num = null;
+            if (parseNode.GetChildNode("participating") is { } nullNodeParticipating && nullNodeParticipating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Participating = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("title") is { } nullNodeTitle && nullNodeTitle.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Title = null;
+        }
+
         /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The isPullRequest property</summary>
-        public bool? IsPullRequest { get; set; }
+        public bool? IsPullRequest { get => _explicitNullValueIsPullRequest; set { _explicitNullValueIsPullRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPullRequest"); else _explicitNullProperties?.Remove("isPullRequest"); } }
+        private bool? _explicitNullValueIsPullRequest = default!;
         /// <summary>The num property</summary>
-        public double? Num { get; set; }
+        public double? Num { get => _explicitNullValueNum; set { _explicitNullValueNum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num"); else _explicitNullProperties?.Remove("num"); } }
+        private double? _explicitNullValueNum = default!;
         /// <summary>The participating property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionParticipatingItem>? Participating { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionParticipatingItem>? Participating { get => _explicitNullValueParticipating; set { _explicitNullValueParticipating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participating"); else _explicitNullProperties?.Remove("participating"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionParticipatingItem>? _explicitNullValueParticipating = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionParticipatingItem> Participating { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionParticipatingItem> Participating { get => _explicitNullValueParticipating; set { _explicitNullValueParticipating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("participating"); else _explicitNullProperties?.Remove("participating"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionParticipatingItem> _explicitNullValueParticipating = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionStatus? Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionStatus? _explicitNullValueStatus = default!;
         /// <summary>The title property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Title { get; set; }
+        public string? Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string? _explicitNullValueTitle = default!;
 #nullable restore
 #else
-        public string Title { get; set; }
+        public string Title { get => _explicitNullValueTitle; set { _explicitNullValueTitle = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("title"); else _explicitNullProperties?.Remove("title"); } }
+        private string _explicitNullValueTitle = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -50,7 +72,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2Discussion CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2Discussion();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2Discussion(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,7 +102,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDoubleValue("num", Num);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionParticipatingItem>("participating", Participating);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiNotifications200ResponseNotificationsItemOneOf2DiscussionStatus>("status", Status);
-            writer.WriteStringValue("title", Title);
+            writer.WriteStringValue("title", Title);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

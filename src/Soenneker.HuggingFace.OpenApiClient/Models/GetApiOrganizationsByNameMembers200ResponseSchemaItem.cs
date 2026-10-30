@@ -11,66 +11,103 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiOrganizationsByNameMembers200ResponseSchemaItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("avatarUrl") is { } nullNodeAvatarUrl && nullNodeAvatarUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvatarUrl = null;
+            if (parseNode.GetChildNode("fullname") is { } nullNodeFullname && nullNodeFullname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fullname = null;
+            if (parseNode.GetChildNode("_id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isExternalCollaborator") is { } nullNodeIsExternalCollaborator && nullNodeIsExternalCollaborator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsExternalCollaborator = null;
+            if (parseNode.GetChildNode("isFollowing") is { } nullNodeIsFollowing && nullNodeIsFollowing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFollowing = null;
+            if (parseNode.GetChildNode("isPro") is { } nullNodeIsPro && nullNodeIsPro.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPro = null;
+            if (parseNode.GetChildNode("resourceGroups") is { } nullNodeResourceGroups && nullNodeResourceGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroups = null;
+            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("twoFaEnabled") is { } nullNodeTwoFaEnabled && nullNodeTwoFaEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TwoFaEnabled = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+            if (parseNode.GetChildNode("verifiedEmail") is { } nullNodeVerifiedEmail && nullNodeVerifiedEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) VerifiedEmail = null;
+        }
+
         /// <summary>The avatarUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvatarUrl { get; set; }
+        public string? AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarUrl"); else _explicitNullProperties?.Remove("avatarUrl"); } }
+        private string? _explicitNullValueAvatarUrl = default!;
 #nullable restore
 #else
-        public string AvatarUrl { get; set; }
+        public string AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarUrl"); else _explicitNullProperties?.Remove("avatarUrl"); } }
+        private string _explicitNullValueAvatarUrl = default!;
 #endif
         /// <summary>The fullname property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fullname { get; set; }
+        public string? Fullname { get => _explicitNullValueFullname; set { _explicitNullValueFullname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullname"); else _explicitNullProperties?.Remove("fullname"); } }
+        private string? _explicitNullValueFullname = default!;
 #nullable restore
 #else
-        public string Fullname { get; set; }
+        public string Fullname { get => _explicitNullValueFullname; set { _explicitNullValueFullname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullname"); else _explicitNullProperties?.Remove("fullname"); } }
+        private string _explicitNullValueFullname = default!;
 #endif
         /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The isExternalCollaborator property</summary>
-        public bool? IsExternalCollaborator { get; set; }
+        public bool? IsExternalCollaborator { get => _explicitNullValueIsExternalCollaborator; set { _explicitNullValueIsExternalCollaborator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isExternalCollaborator"); else _explicitNullProperties?.Remove("isExternalCollaborator"); } }
+        private bool? _explicitNullValueIsExternalCollaborator = default!;
         /// <summary>The isFollowing property</summary>
-        public bool? IsFollowing { get; set; }
+        public bool? IsFollowing { get => _explicitNullValueIsFollowing; set { _explicitNullValueIsFollowing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isFollowing"); else _explicitNullProperties?.Remove("isFollowing"); } }
+        private bool? _explicitNullValueIsFollowing = default!;
         /// <summary>The isPro property</summary>
-        public bool? IsPro { get; set; }
+        public bool? IsPro { get => _explicitNullValueIsPro; set { _explicitNullValueIsPro = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPro"); else _explicitNullProperties?.Remove("isPro"); } }
+        private bool? _explicitNullValueIsPro = default!;
         /// <summary>The resourceGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem>? ResourceGroups { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem>? ResourceGroups { get => _explicitNullValueResourceGroups; set { _explicitNullValueResourceGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroups"); else _explicitNullProperties?.Remove("resourceGroups"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem>? _explicitNullValueResourceGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem> ResourceGroups { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem> ResourceGroups { get => _explicitNullValueResourceGroups; set { _explicitNullValueResourceGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroups"); else _explicitNullProperties?.Remove("resourceGroups"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemResourceGroupsItem> _explicitNullValueResourceGroups = default!;
 #endif
         /// <summary>The role property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemRole? Role { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemRole? _explicitNullValueRole = default!;
         /// <summary>The twoFaEnabled property</summary>
-        public bool? TwoFaEnabled { get; set; }
+        public bool? TwoFaEnabled { get => _explicitNullValueTwoFaEnabled; set { _explicitNullValueTwoFaEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("twoFaEnabled"); else _explicitNullProperties?.Remove("twoFaEnabled"); } }
+        private bool? _explicitNullValueTwoFaEnabled = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemType? _explicitNullValueType = default!;
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? User { get; set; }
+        public string? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private string? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public string User { get; set; }
+        public string User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private string _explicitNullValueUser = default!;
 #endif
         /// <summary>The user&apos;s SSO email, if the org has a Team or Enterprise plan and the requester is an admin</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? VerifiedEmail { get; set; }
+        public string? VerifiedEmail { get => _explicitNullValueVerifiedEmail; set { _explicitNullValueVerifiedEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifiedEmail"); else _explicitNullProperties?.Remove("verifiedEmail"); } }
+        private string? _explicitNullValueVerifiedEmail = default!;
 #nullable restore
 #else
-        public string VerifiedEmail { get; set; }
+        public string VerifiedEmail { get => _explicitNullValueVerifiedEmail; set { _explicitNullValueVerifiedEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("verifiedEmail"); else _explicitNullProperties?.Remove("verifiedEmail"); } }
+        private string _explicitNullValueVerifiedEmail = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -80,7 +117,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseSchemaItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseSchemaItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseSchemaItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -122,7 +159,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("twoFaEnabled", TwoFaEnabled);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameMembers200ResponseItemType>("type", Type);
             writer.WriteStringValue("user", User);
-            writer.WriteStringValue("verifiedEmail", VerifiedEmail);
+            writer.WriteStringValue("verifiedEmail", VerifiedEmail);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

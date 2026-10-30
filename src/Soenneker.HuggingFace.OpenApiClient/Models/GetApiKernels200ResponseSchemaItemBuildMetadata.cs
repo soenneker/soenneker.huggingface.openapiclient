@@ -12,30 +12,46 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class GetApiKernels200ResponseSchemaItemBuildMetadata : IParsable
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("backends") is { } nullNodeBackends && nullNodeBackends.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Backends = null;
+            if (parseNode.GetChildNode("builder") is { } nullNodeBuilder && nullNodeBuilder.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Builder = null;
+            if (parseNode.GetChildNode("compatibility") is { } nullNodeCompatibility && nullNodeCompatibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Compatibility = null;
+        }
+
         /// <summary>The backends property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem>? Backends { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem>? Backends { get => _explicitNullValueBackends; set { _explicitNullValueBackends = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backends"); else _explicitNullProperties?.Remove("backends"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem>? _explicitNullValueBackends = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem> Backends { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem> Backends { get => _explicitNullValueBackends; set { _explicitNullValueBackends = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("backends"); else _explicitNullProperties?.Remove("backends"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem> _explicitNullValueBackends = default!;
 #endif
         /// <summary>The builder property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBuilder? Builder { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBuilder? Builder { get => _explicitNullValueBuilder; set { _explicitNullValueBuilder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("builder"); else _explicitNullProperties?.Remove("builder"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBuilder? _explicitNullValueBuilder = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBuilder Builder { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBuilder Builder { get => _explicitNullValueBuilder; set { _explicitNullValueBuilder = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("builder"); else _explicitNullProperties?.Remove("builder"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBuilder _explicitNullValueBuilder = default!;
 #endif
         /// <summary>The compatibility property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility? Compatibility { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility? Compatibility { get => _explicitNullValueCompatibility; set { _explicitNullValueCompatibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatibility"); else _explicitNullProperties?.Remove("compatibility"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility? _explicitNullValueCompatibility = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility Compatibility { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility Compatibility { get => _explicitNullValueCompatibility; set { _explicitNullValueCompatibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("compatibility"); else _explicitNullProperties?.Remove("compatibility"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility _explicitNullValueCompatibility = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -45,7 +61,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -69,7 +85,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem>("backends", Backends);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBuilder>("builder", Builder);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility>("compatibility", Compatibility);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataCompatibility>("compatibility", Compatibility);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,67 +11,99 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiSettingsWebhooks200ResponseWebhookJobOneOf2 : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("arguments") is { } nullNodeArguments && nullNodeArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arguments = null;
+            if (parseNode.GetChildNode("command") is { } nullNodeCommand && nullNodeCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Command = null;
+            if (parseNode.GetChildNode("dockerImage") is { } nullNodeDockerImage && nullNodeDockerImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DockerImage = null;
+            if (parseNode.GetChildNode("environment") is { } nullNodeEnvironment && nullNodeEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Environment = null;
+            if (parseNode.GetChildNode("flavor") is { } nullNodeFlavor && nullNodeFlavor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flavor = null;
+            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("secrets") is { } nullNodeSecrets && nullNodeSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secrets = null;
+            if (parseNode.GetChildNode("spaceId") is { } nullNodeSpaceId && nullNodeSpaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpaceId = null;
+            if (parseNode.GetChildNode("timeoutSeconds") is { } nullNodeTimeoutSeconds && nullNodeTimeoutSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutSeconds = null;
+        }
+
         /// <summary>The arguments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Arguments { get; set; }
+        public List<string>? Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
+        private List<string>? _explicitNullValueArguments = default!;
 #nullable restore
 #else
-        public List<string> Arguments { get; set; }
+        public List<string> Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
+        private List<string> _explicitNullValueArguments = default!;
 #endif
         /// <summary>The command property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Command { get; set; }
+        public List<string>? Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
+        private List<string>? _explicitNullValueCommand = default!;
 #nullable restore
 #else
-        public List<string> Command { get; set; }
+        public List<string> Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
+        private List<string> _explicitNullValueCommand = default!;
 #endif
         /// <summary>The dockerImage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DockerImage { get; set; }
+        public string? DockerImage { get => _explicitNullValueDockerImage; set { _explicitNullValueDockerImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dockerImage"); else _explicitNullProperties?.Remove("dockerImage"); } }
+        private string? _explicitNullValueDockerImage = default!;
 #nullable restore
 #else
-        public string DockerImage { get; set; }
+        public string DockerImage { get => _explicitNullValueDockerImage; set { _explicitNullValueDockerImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dockerImage"); else _explicitNullProperties?.Remove("dockerImage"); } }
+        private string _explicitNullValueDockerImage = default!;
 #endif
         /// <summary>The environment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Environment? Environment { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Environment? Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Environment? _explicitNullValueEnvironment = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Environment Environment { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Environment Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Environment _explicitNullValueEnvironment = default!;
 #endif
         /// <summary>The flavor property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Flavor? Flavor { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Flavor? Flavor { get => _explicitNullValueFlavor; set { _explicitNullValueFlavor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flavor"); else _explicitNullProperties?.Remove("flavor"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Flavor? _explicitNullValueFlavor = default!;
         /// <summary>Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dashes, and underscores.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Labels? Labels { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Labels? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Labels? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Labels Labels { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Labels Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Labels _explicitNullValueLabels = default!;
 #endif
         /// <summary>The secrets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Secrets { get; set; }
+        public List<string>? Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private List<string>? _explicitNullValueSecrets = default!;
 #nullable restore
 #else
-        public List<string> Secrets { get; set; }
+        public List<string> Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private List<string> _explicitNullValueSecrets = default!;
 #endif
         /// <summary>The spaceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpaceId { get; set; }
+        public string? SpaceId { get => _explicitNullValueSpaceId; set { _explicitNullValueSpaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaceId"); else _explicitNullProperties?.Remove("spaceId"); } }
+        private string? _explicitNullValueSpaceId = default!;
 #nullable restore
 #else
-        public string SpaceId { get; set; }
+        public string SpaceId { get => _explicitNullValueSpaceId; set { _explicitNullValueSpaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaceId"); else _explicitNullProperties?.Remove("spaceId"); } }
+        private string _explicitNullValueSpaceId = default!;
 #endif
         /// <summary>The timeoutSeconds property</summary>
-        public int? TimeoutSeconds { get; set; }
+        public int? TimeoutSeconds { get => _explicitNullValueTimeoutSeconds; set { _explicitNullValueTimeoutSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutSeconds"); else _explicitNullProperties?.Remove("timeoutSeconds"); } }
+        private int? _explicitNullValueTimeoutSeconds = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -80,7 +112,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,7 +148,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooks200ResponseWebhookJobOneOf2Labels>("labels", Labels);
             writer.WriteCollectionOfPrimitiveValues<string>("secrets", Secrets);
             writer.WriteStringValue("spaceId", SpaceId);
-            writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);
+            writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

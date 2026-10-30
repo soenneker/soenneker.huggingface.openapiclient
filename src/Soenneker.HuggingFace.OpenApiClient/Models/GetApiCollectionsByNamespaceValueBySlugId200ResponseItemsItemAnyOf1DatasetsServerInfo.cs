@@ -11,35 +11,55 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfo : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("formats") is { } nullNodeFormats && nullNodeFormats.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Formats = null;
+            if (parseNode.GetChildNode("libraries") is { } nullNodeLibraries && nullNodeLibraries.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Libraries = null;
+            if (parseNode.GetChildNode("modalities") is { } nullNodeModalities && nullNodeModalities.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Modalities = null;
+            if (parseNode.GetChildNode("numRows") is { } nullNodeNumRows && nullNodeNumRows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumRows = null;
+            if (parseNode.GetChildNode("viewer") is { } nullNodeViewer && nullNodeViewer.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Viewer = null;
+        }
+
         /// <summary>The formats property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoFormatsItem?>? Formats { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoFormatsItem?>? Formats { get => _explicitNullValueFormats; set { _explicitNullValueFormats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formats"); else _explicitNullProperties?.Remove("formats"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoFormatsItem?>? _explicitNullValueFormats = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoFormatsItem?> Formats { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoFormatsItem?> Formats { get => _explicitNullValueFormats; set { _explicitNullValueFormats = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("formats"); else _explicitNullProperties?.Remove("formats"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoFormatsItem?> _explicitNullValueFormats = default!;
 #endif
         /// <summary>The libraries property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoLibrariesItem?>? Libraries { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoLibrariesItem?>? Libraries { get => _explicitNullValueLibraries; set { _explicitNullValueLibraries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("libraries"); else _explicitNullProperties?.Remove("libraries"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoLibrariesItem?>? _explicitNullValueLibraries = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoLibrariesItem?> Libraries { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoLibrariesItem?> Libraries { get => _explicitNullValueLibraries; set { _explicitNullValueLibraries = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("libraries"); else _explicitNullProperties?.Remove("libraries"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoLibrariesItem?> _explicitNullValueLibraries = default!;
 #endif
         /// <summary>The modalities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoModalitiesItem?>? Modalities { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoModalitiesItem?>? Modalities { get => _explicitNullValueModalities; set { _explicitNullValueModalities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modalities"); else _explicitNullProperties?.Remove("modalities"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoModalitiesItem?>? _explicitNullValueModalities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoModalitiesItem?> Modalities { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoModalitiesItem?> Modalities { get => _explicitNullValueModalities; set { _explicitNullValueModalities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modalities"); else _explicitNullProperties?.Remove("modalities"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoModalitiesItem?> _explicitNullValueModalities = default!;
 #endif
         /// <summary>The numRows property</summary>
-        public double? NumRows { get; set; }
+        public double? NumRows { get => _explicitNullValueNumRows; set { _explicitNullValueNumRows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numRows"); else _explicitNullProperties?.Remove("numRows"); } }
+        private double? _explicitNullValueNumRows = default!;
         /// <summary>The viewer property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoViewer? Viewer { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoViewer? Viewer { get => _explicitNullValueViewer; set { _explicitNullValueViewer = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("viewer"); else _explicitNullProperties?.Remove("viewer"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoViewer? _explicitNullValueViewer = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -48,7 +68,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfo CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfo();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfo(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -76,7 +96,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoLibrariesItem>("libraries", Libraries);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoModalitiesItem>("modalities", Modalities);
             writer.WriteDoubleValue("numRows", NumRows);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoViewer>("viewer", Viewer);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1DatasetsServerInfoViewer>("viewer", Viewer);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

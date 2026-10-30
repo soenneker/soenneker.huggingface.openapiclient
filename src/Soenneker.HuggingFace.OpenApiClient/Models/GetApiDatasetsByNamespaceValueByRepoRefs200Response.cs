@@ -11,38 +11,57 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiDatasetsByNamespaceValueByRepoRefs200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("branches") is { } nullNodeBranches && nullNodeBranches.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Branches = null;
+            if (parseNode.GetChildNode("converts") is { } nullNodeConverts && nullNodeConverts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Converts = null;
+            if (parseNode.GetChildNode("pullRequests") is { } nullNodePullRequests && nullNodePullRequests.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PullRequests = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+        }
+
         /// <summary>The branches property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseBranchesItem>? Branches { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseBranchesItem>? Branches { get => _explicitNullValueBranches; set { _explicitNullValueBranches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branches"); else _explicitNullProperties?.Remove("branches"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseBranchesItem>? _explicitNullValueBranches = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseBranchesItem> Branches { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseBranchesItem> Branches { get => _explicitNullValueBranches; set { _explicitNullValueBranches = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("branches"); else _explicitNullProperties?.Remove("branches"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseBranchesItem> _explicitNullValueBranches = default!;
 #endif
         /// <summary>The converts property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseConvertsItem>? Converts { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseConvertsItem>? Converts { get => _explicitNullValueConverts; set { _explicitNullValueConverts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("converts"); else _explicitNullProperties?.Remove("converts"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseConvertsItem>? _explicitNullValueConverts = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseConvertsItem> Converts { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseConvertsItem> Converts { get => _explicitNullValueConverts; set { _explicitNullValueConverts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("converts"); else _explicitNullProperties?.Remove("converts"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseConvertsItem> _explicitNullValueConverts = default!;
 #endif
         /// <summary>The pullRequests property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponsePullRequestsItem>? PullRequests { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponsePullRequestsItem>? PullRequests { get => _explicitNullValuePullRequests; set { _explicitNullValuePullRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullRequests"); else _explicitNullProperties?.Remove("pullRequests"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponsePullRequestsItem>? _explicitNullValuePullRequests = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponsePullRequestsItem> PullRequests { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponsePullRequestsItem> PullRequests { get => _explicitNullValuePullRequests; set { _explicitNullValuePullRequests = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pullRequests"); else _explicitNullProperties?.Remove("pullRequests"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponsePullRequestsItem> _explicitNullValuePullRequests = default!;
 #endif
         /// <summary>The tags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseTagsItem>? Tags { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseTagsItem>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseTagsItem>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseTagsItem> Tags { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseTagsItem> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseTagsItem> _explicitNullValueTags = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -52,7 +71,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -78,7 +97,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseBranchesItem>("branches", Branches);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseConvertsItem>("converts", Converts);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponsePullRequestsItem>("pullRequests", PullRequests);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseTagsItem>("tags", Tags);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoRefs200ResponseTagsItem>("tags", Tags);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

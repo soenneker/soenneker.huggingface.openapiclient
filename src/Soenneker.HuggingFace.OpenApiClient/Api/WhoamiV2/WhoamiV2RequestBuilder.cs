@@ -49,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.WhoamiV2
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get information about the user and auth method used

@@ -11,17 +11,29 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiTrending200ResponseRecentlyTrendingItemOneOf3 : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("repoData") is { } nullNodeRepoData && nullNodeRepoData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoData = null;
+            if (parseNode.GetChildNode("repoType") is { } nullNodeRepoType && nullNodeRepoType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoType = null;
+        }
+
         /// <summary>The repoData property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3RepoData? RepoData { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3RepoData? RepoData { get => _explicitNullValueRepoData; set { _explicitNullValueRepoData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoData"); else _explicitNullProperties?.Remove("repoData"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3RepoData? _explicitNullValueRepoData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3RepoData RepoData { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3RepoData RepoData { get => _explicitNullValueRepoData; set { _explicitNullValueRepoData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoData"); else _explicitNullProperties?.Remove("repoData"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3RepoData _explicitNullValueRepoData = default!;
 #endif
         /// <summary>The repoType property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.SpaceRepoType? RepoType { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.SpaceRepoType? RepoType { get => _explicitNullValueRepoType; set { _explicitNullValueRepoType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoType"); else _explicitNullProperties?.Remove("repoType"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.SpaceRepoType? _explicitNullValueRepoType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +42,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +64,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiTrending200ResponseRecentlyTrendingItemOneOf3RepoData>("repoData", RepoData);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.SpaceRepoType>("repoType", RepoType);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.SpaceRepoType>("repoType", RepoType);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

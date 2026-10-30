@@ -11,26 +11,41 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("notifications") is { } nullNodeNotifications && nullNodeNotifications.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Notifications = null;
+            if (parseNode.GetChildNode("profileSharing") is { } nullNodeProfileSharing && nullNodeProfileSharing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProfileSharing = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The mode property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Mode? Mode { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Mode? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Mode? _explicitNullValueMode = default!;
         /// <summary>The notifications property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications? Notifications { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications? Notifications { get => _explicitNullValueNotifications; set { _explicitNullValueNotifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications"); else _explicitNullProperties?.Remove("notifications"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications? _explicitNullValueNotifications = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications Notifications { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications Notifications { get => _explicitNullValueNotifications; set { _explicitNullValueNotifications = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("notifications"); else _explicitNullProperties?.Remove("notifications"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications _explicitNullValueNotifications = default!;
 #endif
         /// <summary>What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing? ProfileSharing { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing? ProfileSharing { get => _explicitNullValueProfileSharing; set { _explicitNullValueProfileSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profileSharing"); else _explicitNullProperties?.Remove("profileSharing"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing? _explicitNullValueProfileSharing = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing ProfileSharing { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing ProfileSharing { get => _explicitNullValueProfileSharing; set { _explicitNullValueProfileSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("profileSharing"); else _explicitNullProperties?.Remove("profileSharing"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing _explicitNullValueProfileSharing = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3"/> and sets the default values.
@@ -47,7 +62,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,6 +87,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Mode>("mode", Mode);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3Notifications>("notifications", Notifications);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGatingAnyOf3ProfileSharing>("profileSharing", ProfileSharing);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

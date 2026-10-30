@@ -11,23 +11,41 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiSettingsBillingUsageJobs200ResponseUsage : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("jobDetails") is { } nullNodeJobDetails && nullNodeJobDetails.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobDetails = null;
+            if (parseNode.GetChildNode("periodEnd") is { } nullNodePeriodEnd && nullNodePeriodEnd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodEnd = null;
+            if (parseNode.GetChildNode("periodStart") is { } nullNodePeriodStart && nullNodePeriodStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PeriodStart = null;
+            if (parseNode.GetChildNode("totalMinutes") is { } nullNodeTotalMinutes && nullNodeTotalMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalMinutes = null;
+            if (parseNode.GetChildNode("usedMicroUsd") is { } nullNodeUsedMicroUsd && nullNodeUsedMicroUsd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UsedMicroUsd = null;
+        }
+
         /// <summary>The jobDetails property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem>? JobDetails { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem>? JobDetails { get => _explicitNullValueJobDetails; set { _explicitNullValueJobDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobDetails"); else _explicitNullProperties?.Remove("jobDetails"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem>? _explicitNullValueJobDetails = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem> JobDetails { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem> JobDetails { get => _explicitNullValueJobDetails; set { _explicitNullValueJobDetails = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobDetails"); else _explicitNullProperties?.Remove("jobDetails"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem> _explicitNullValueJobDetails = default!;
 #endif
         /// <summary>The periodEnd property</summary>
-        public DateTimeOffset? PeriodEnd { get; set; }
+        public DateTimeOffset? PeriodEnd { get => _explicitNullValuePeriodEnd; set { _explicitNullValuePeriodEnd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("periodEnd"); else _explicitNullProperties?.Remove("periodEnd"); } }
+        private DateTimeOffset? _explicitNullValuePeriodEnd = default!;
         /// <summary>The periodStart property</summary>
-        public DateTimeOffset? PeriodStart { get; set; }
+        public DateTimeOffset? PeriodStart { get => _explicitNullValuePeriodStart; set { _explicitNullValuePeriodStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("periodStart"); else _explicitNullProperties?.Remove("periodStart"); } }
+        private DateTimeOffset? _explicitNullValuePeriodStart = default!;
         /// <summary>The totalMinutes property</summary>
-        public double? TotalMinutes { get; set; }
+        public double? TotalMinutes { get => _explicitNullValueTotalMinutes; set { _explicitNullValueTotalMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalMinutes"); else _explicitNullProperties?.Remove("totalMinutes"); } }
+        private double? _explicitNullValueTotalMinutes = default!;
         /// <summary>The usedMicroUsd property</summary>
-        public double? UsedMicroUsd { get; set; }
+        public double? UsedMicroUsd { get => _explicitNullValueUsedMicroUsd; set { _explicitNullValueUsedMicroUsd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("usedMicroUsd"); else _explicitNullProperties?.Remove("usedMicroUsd"); } }
+        private double? _explicitNullValueUsedMicroUsd = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -36,7 +54,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,7 +82,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDateTimeOffsetValue("periodEnd", PeriodEnd);
             writer.WriteDateTimeOffsetValue("periodStart", PeriodStart);
             writer.WriteDoubleValue("totalMinutes", TotalMinutes);
-            writer.WriteDoubleValue("usedMicroUsd", UsedMicroUsd);
+            writer.WriteDoubleValue("usedMicroUsd", UsedMicroUsd);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,21 +11,37 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiByRepoTypeByNamespaceValueByRepoDiscussions200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("count") is { } nullNodeCount && nullNodeCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Count = null;
+            if (parseNode.GetChildNode("discussions") is { } nullNodeDiscussions && nullNodeDiscussions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Discussions = null;
+            if (parseNode.GetChildNode("numClosedDiscussions") is { } nullNodeNumClosedDiscussions && nullNodeNumClosedDiscussions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumClosedDiscussions = null;
+            if (parseNode.GetChildNode("start") is { } nullNodeStart && nullNodeStart.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Start = null;
+        }
+
         /// <summary>The count property</summary>
-        public double? Count { get; set; }
+        public double? Count { get => _explicitNullValueCount; set { _explicitNullValueCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("count"); else _explicitNullProperties?.Remove("count"); } }
+        private double? _explicitNullValueCount = default!;
         /// <summary>The discussions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItem>? Discussions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItem>? Discussions { get => _explicitNullValueDiscussions; set { _explicitNullValueDiscussions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussions"); else _explicitNullProperties?.Remove("discussions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItem>? _explicitNullValueDiscussions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItem> Discussions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItem> Discussions { get => _explicitNullValueDiscussions; set { _explicitNullValueDiscussions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussions"); else _explicitNullProperties?.Remove("discussions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItem> _explicitNullValueDiscussions = default!;
 #endif
         /// <summary>Number of closed discussions on the first page</summary>
-        public double? NumClosedDiscussions { get; set; }
+        public double? NumClosedDiscussions { get => _explicitNullValueNumClosedDiscussions; set { _explicitNullValueNumClosedDiscussions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numClosedDiscussions"); else _explicitNullProperties?.Remove("numClosedDiscussions"); } }
+        private double? _explicitNullValueNumClosedDiscussions = default!;
         /// <summary>The start property</summary>
-        public double? Start { get; set; }
+        public double? Start { get => _explicitNullValueStart; set { _explicitNullValueStart = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("start"); else _explicitNullProperties?.Remove("start"); } }
+        private double? _explicitNullValueStart = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -34,7 +50,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +76,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDoubleValue("count", Count);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItem>("discussions", Discussions);
             writer.WriteDoubleValue("numClosedDiscussions", NumClosedDiscussions);
-            writer.WriteDoubleValue("start", Start);
+            writer.WriteDoubleValue("start", Start);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

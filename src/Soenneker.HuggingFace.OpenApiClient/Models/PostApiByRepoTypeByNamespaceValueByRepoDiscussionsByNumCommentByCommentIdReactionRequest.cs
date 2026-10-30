@@ -11,13 +11,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("action") is { } nullNodeAction && nullNodeAction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Action = null;
+            if (parseNode.GetChildNode("reaction") is { } nullNodeReaction && nullNodeReaction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Reaction = null;
+        }
+
         /// <summary>The action property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequestAction? Action { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequestAction? Action { get => _explicitNullValueAction; set { _explicitNullValueAction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("action"); else _explicitNullProperties?.Remove("action"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequestAction? _explicitNullValueAction = default!;
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The reaction property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequestReaction? Reaction { get; set; }
+#nullable enable
+        public string? Reaction { get => _explicitNullValueReaction; set { _explicitNullValueReaction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reaction"); else _explicitNullProperties?.Remove("reaction"); } }
+        private string? _explicitNullValueReaction = default!;
+#nullable restore
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequest"/> and sets the default values.
         /// </summary>
@@ -33,7 +46,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -44,7 +57,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "action", n => { Action = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequestAction>(); } },
-                { "reaction", n => { Reaction = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequestReaction>(); } },
+                { "reaction", n => { Reaction = n.GetStringValue(); } },
             };
         }
         /// <summary>
@@ -55,7 +68,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequestAction>("action", Action);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumCommentByCommentIdReactionRequestReaction>("reaction", Reaction);
+            writer.WriteStringValue("reaction", Reaction);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

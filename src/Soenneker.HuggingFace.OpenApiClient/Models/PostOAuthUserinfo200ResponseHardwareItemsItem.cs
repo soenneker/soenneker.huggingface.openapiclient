@@ -11,20 +11,36 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostOAuthUserinfo200ResponseHardwareItemsItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("isPrimary") is { } nullNodeIsPrimary && nullNodeIsPrimary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPrimary = null;
+            if (parseNode.GetChildNode("mem") is { } nullNodeMem && nullNodeMem.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mem = null;
+            if (parseNode.GetChildNode("num") is { } nullNodeNum && nullNodeNum.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Num = null;
+            if (parseNode.GetChildNode("sku") is { } nullNodeSku && nullNodeSku.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sku = null;
+        }
+
         /// <summary>The isPrimary property</summary>
-        public bool? IsPrimary { get; set; }
+        public bool? IsPrimary { get => _explicitNullValueIsPrimary; set { _explicitNullValueIsPrimary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPrimary"); else _explicitNullProperties?.Remove("isPrimary"); } }
+        private bool? _explicitNullValueIsPrimary = default!;
         /// <summary>Memory in GB</summary>
-        public double? Mem { get; set; }
+        public double? Mem { get => _explicitNullValueMem; set { _explicitNullValueMem = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mem"); else _explicitNullProperties?.Remove("mem"); } }
+        private double? _explicitNullValueMem = default!;
         /// <summary>Number of units</summary>
-        public double? Num { get; set; }
+        public double? Num { get => _explicitNullValueNum; set { _explicitNullValueNum = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("num"); else _explicitNullProperties?.Remove("num"); } }
+        private double? _explicitNullValueNum = default!;
         /// <summary>Hardware SKU as [type, vendor, model]</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public UntypedNode? Sku { get; set; }
+        public UntypedNode? Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private UntypedNode? _explicitNullValueSku = default!;
 #nullable restore
 #else
-        public UntypedNode Sku { get; set; }
+        public UntypedNode Sku { get => _explicitNullValueSku; set { _explicitNullValueSku = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sku"); else _explicitNullProperties?.Remove("sku"); } }
+        private UntypedNode _explicitNullValueSku = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostOAuthUserinfo200ResponseHardwareItemsItem"/> and sets the default values.
@@ -41,7 +57,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostOAuthUserinfo200ResponseHardwareItemsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostOAuthUserinfo200ResponseHardwareItemsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostOAuthUserinfo200ResponseHardwareItemsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -67,7 +83,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("isPrimary", IsPrimary);
             writer.WriteDoubleValue("mem", Mem);
             writer.WriteDoubleValue("num", Num);
-            writer.WriteObjectValue<UntypedNode>("sku", Sku);
+            writer.WriteObjectValue<UntypedNode>("sku", Sku);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

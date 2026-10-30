@@ -11,19 +11,33 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiKernels200ResponseItemBuildMetadataBackendsItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("hardwareTypes") is { } nullNodeHardwareTypes && nullNodeHardwareTypes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HardwareTypes = null;
+            if (parseNode.GetChildNode("noArchs") is { } nullNodeNoArchs && nullNodeNoArchs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NoArchs = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The hardwareTypes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemHardwareTypesItem?>? HardwareTypes { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemHardwareTypesItem?>? HardwareTypes { get => _explicitNullValueHardwareTypes; set { _explicitNullValueHardwareTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardwareTypes"); else _explicitNullProperties?.Remove("hardwareTypes"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemHardwareTypesItem?>? _explicitNullValueHardwareTypes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemHardwareTypesItem?> HardwareTypes { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemHardwareTypesItem?> HardwareTypes { get => _explicitNullValueHardwareTypes; set { _explicitNullValueHardwareTypes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardwareTypes"); else _explicitNullProperties?.Remove("hardwareTypes"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemHardwareTypesItem?> _explicitNullValueHardwareTypes = default!;
 #endif
         /// <summary>The noArchs property</summary>
-        public bool? NoArchs { get; set; }
+        public bool? NoArchs { get => _explicitNullValueNoArchs; set { _explicitNullValueNoArchs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("noArchs"); else _explicitNullProperties?.Remove("noArchs"); } }
+        private bool? _explicitNullValueNoArchs = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem"/> and sets the default values.
         /// </summary>
@@ -39,7 +53,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -63,7 +77,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemHardwareTypesItem>("hardwareTypes", HardwareTypes);
             writer.WriteBoolValue("noArchs", NoArchs);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemType>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemBuildMetadataBackendsItemType>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

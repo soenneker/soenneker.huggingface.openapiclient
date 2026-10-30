@@ -11,48 +11,72 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScan : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("pickleImports") is { } nullNodePickleImports && nullNodePickleImports.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PickleImports = null;
+            if (parseNode.GetChildNode("reportLabel") is { } nullNodeReportLabel && nullNodeReportLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportLabel = null;
+            if (parseNode.GetChildNode("reportLink") is { } nullNodeReportLink && nullNodeReportLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReportLink = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("version") is { } nullNodeVersion && nullNodeVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Version = null;
+        }
+
         /// <summary>The message property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Message { get; set; }
+        public string? Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string? _explicitNullValueMessage = default!;
 #nullable restore
 #else
-        public string Message { get; set; }
+        public string Message { get => _explicitNullValueMessage; set { _explicitNullValueMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("message"); else _explicitNullProperties?.Remove("message"); } }
+        private string _explicitNullValueMessage = default!;
 #endif
         /// <summary>The pickleImports property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanPickleImportsItem>? PickleImports { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanPickleImportsItem>? PickleImports { get => _explicitNullValuePickleImports; set { _explicitNullValuePickleImports = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickleImports"); else _explicitNullProperties?.Remove("pickleImports"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanPickleImportsItem>? _explicitNullValuePickleImports = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanPickleImportsItem> PickleImports { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanPickleImportsItem> PickleImports { get => _explicitNullValuePickleImports; set { _explicitNullValuePickleImports = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pickleImports"); else _explicitNullProperties?.Remove("pickleImports"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanPickleImportsItem> _explicitNullValuePickleImports = default!;
 #endif
         /// <summary>The reportLabel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReportLabel { get; set; }
+        public string? ReportLabel { get => _explicitNullValueReportLabel; set { _explicitNullValueReportLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reportLabel"); else _explicitNullProperties?.Remove("reportLabel"); } }
+        private string? _explicitNullValueReportLabel = default!;
 #nullable restore
 #else
-        public string ReportLabel { get; set; }
+        public string ReportLabel { get => _explicitNullValueReportLabel; set { _explicitNullValueReportLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reportLabel"); else _explicitNullProperties?.Remove("reportLabel"); } }
+        private string _explicitNullValueReportLabel = default!;
 #endif
         /// <summary>The reportLink property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ReportLink { get; set; }
+        public string? ReportLink { get => _explicitNullValueReportLink; set { _explicitNullValueReportLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reportLink"); else _explicitNullProperties?.Remove("reportLink"); } }
+        private string? _explicitNullValueReportLink = default!;
 #nullable restore
 #else
-        public string ReportLink { get; set; }
+        public string ReportLink { get => _explicitNullValueReportLink; set { _explicitNullValueReportLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reportLink"); else _explicitNullProperties?.Remove("reportLink"); } }
+        private string _explicitNullValueReportLink = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanStatus? Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanStatus? _explicitNullValueStatus = default!;
         /// <summary>The version property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Version { get; set; }
+        public string? Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string? _explicitNullValueVersion = default!;
 #nullable restore
 #else
-        public string Version { get; set; }
+        public string Version { get => _explicitNullValueVersion; set { _explicitNullValueVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("version"); else _explicitNullProperties?.Remove("version"); } }
+        private string _explicitNullValueVersion = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -62,7 +86,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScan CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScan();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScan(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -92,7 +116,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("reportLabel", ReportLabel);
             writer.WriteStringValue("reportLink", ReportLink);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusVirusTotalScanStatus>("status", Status);
-            writer.WriteStringValue("version", Version);
+            writer.WriteStringValue("version", Version);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

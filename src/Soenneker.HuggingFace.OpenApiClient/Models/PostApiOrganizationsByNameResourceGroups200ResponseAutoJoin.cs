@@ -12,7 +12,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,9 +43,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoin();
-            result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1();
-            result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2();
-            return result;
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("enabled") != null && parseNode.GetChildNode("role") != null && (parseNode.GetChildNode("role")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString tag2 && ("admin".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "write".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "contributor".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "read".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "no_access".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal) || "inherit".Equals(tag2.GetValue(), global::System.StringComparison.Ordinal))) && (parseNode.GetChildNode("scope") == null || (parseNode.GetChildNode("scope")?.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString optionalTag3 && ("all".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal) || "read_plus".Equals(optionalTag3.GetValue(), global::System.StringComparison.Ordinal))))))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("enabled") != null))();
+            if (result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 == null && result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 == null && matchesUnionBranch0 && !matchesUnionBranch1) result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1(), parseNode);
+            if (result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 == null && result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 == null && matchesUnionBranch1 && !matchesUnionBranch0) result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2(), parseNode);
+            if (result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 == null && result.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +72,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 == null && PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 != null && PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 == null) { if (PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1); return; }
+            if (PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 != null && PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1 == null) { if (PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1>(null, PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf1, PostApiOrganizationsByNameResourceGroups200ResponseAutoJoinAnyOf2);
         }

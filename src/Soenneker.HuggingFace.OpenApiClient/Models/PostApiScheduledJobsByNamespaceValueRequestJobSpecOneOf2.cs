@@ -11,112 +11,163 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("arch") is { } nullNodeArch && nullNodeArch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arch = null;
+            if (parseNode.GetChildNode("arguments") is { } nullNodeArguments && nullNodeArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arguments = null;
+            if (parseNode.GetChildNode("attempts") is { } nullNodeAttempts && nullNodeAttempts.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Attempts = null;
+            if (parseNode.GetChildNode("command") is { } nullNodeCommand && nullNodeCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Command = null;
+            if (parseNode.GetChildNode("dockerImage") is { } nullNodeDockerImage && nullNodeDockerImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DockerImage = null;
+            if (parseNode.GetChildNode("environment") is { } nullNodeEnvironment && nullNodeEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Environment = null;
+            if (parseNode.GetChildNode("expose") is { } nullNodeExpose && nullNodeExpose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expose = null;
+            if (parseNode.GetChildNode("flavor") is { } nullNodeFlavor && nullNodeFlavor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flavor = null;
+            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("network") is { } nullNodeNetwork && nullNodeNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Network = null;
+            if (parseNode.GetChildNode("resourceGroupId") is { } nullNodeResourceGroupId && nullNodeResourceGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupId = null;
+            if (parseNode.GetChildNode("secrets") is { } nullNodeSecrets && nullNodeSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secrets = null;
+            if (parseNode.GetChildNode("spaceId") is { } nullNodeSpaceId && nullNodeSpaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpaceId = null;
+            if (parseNode.GetChildNode("ssh") is { } nullNodeSsh && nullNodeSsh.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ssh = null;
+            if (parseNode.GetChildNode("timeoutSeconds") is { } nullNodeTimeoutSeconds && nullNodeTimeoutSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TimeoutSeconds = null;
+            if (parseNode.GetChildNode("volumes") is { } nullNodeVolumes && nullNodeVolumes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Volumes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The arch property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Arch? Arch { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Arch? Arch { get => _explicitNullValueArch; set { _explicitNullValueArch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arch"); else _explicitNullProperties?.Remove("arch"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Arch? _explicitNullValueArch = default!;
         /// <summary>The arguments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Arguments { get; set; }
+        public List<string>? Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
+        private List<string>? _explicitNullValueArguments = default!;
 #nullable restore
 #else
-        public List<string> Arguments { get; set; }
+        public List<string> Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
+        private List<string> _explicitNullValueArguments = default!;
 #endif
         /// <summary>Max number of attempts to make. For example, if you set this to 3, the job will be retried up to 2 times if it fails.</summary>
-        public int? Attempts { get; set; }
+        public int? Attempts { get => _explicitNullValueAttempts; set { _explicitNullValueAttempts = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempts"); else _explicitNullProperties?.Remove("attempts"); } }
+        private int? _explicitNullValueAttempts = default!;
         /// <summary>The command property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Command { get; set; }
+        public List<string>? Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
+        private List<string>? _explicitNullValueCommand = default!;
 #nullable restore
 #else
-        public List<string> Command { get; set; }
+        public List<string> Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
+        private List<string> _explicitNullValueCommand = default!;
 #endif
         /// <summary>The dockerImage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DockerImage { get; set; }
+        public string? DockerImage { get => _explicitNullValueDockerImage; set { _explicitNullValueDockerImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dockerImage"); else _explicitNullProperties?.Remove("dockerImage"); } }
+        private string? _explicitNullValueDockerImage = default!;
 #nullable restore
 #else
-        public string DockerImage { get; set; }
+        public string DockerImage { get => _explicitNullValueDockerImage; set { _explicitNullValueDockerImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dockerImage"); else _explicitNullProperties?.Remove("dockerImage"); } }
+        private string _explicitNullValueDockerImage = default!;
 #endif
         /// <summary>The environment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Environment? Environment { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Environment? Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Environment? _explicitNullValueEnvironment = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Environment Environment { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Environment Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Environment _explicitNullValueEnvironment = default!;
 #endif
         /// <summary>Ports to expose publicly through the jobs proxy. Each port is reachable at `https://&lt;job_id&gt;--&lt;port&gt;.&lt;jobs-public-domain&gt;`. Access requires a HF token with read access to the job&apos;s namespace, except for ports also listed in `portsPublic`.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Expose? Expose { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Expose? Expose { get => _explicitNullValueExpose; set { _explicitNullValueExpose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expose"); else _explicitNullProperties?.Remove("expose"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Expose? _explicitNullValueExpose = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Expose Expose { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Expose Expose { get => _explicitNullValueExpose; set { _explicitNullValueExpose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expose"); else _explicitNullProperties?.Remove("expose"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Expose _explicitNullValueExpose = default!;
 #endif
         /// <summary>The flavor property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Flavor? Flavor { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Flavor? Flavor { get => _explicitNullValueFlavor; set { _explicitNullValueFlavor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flavor"); else _explicitNullProperties?.Remove("flavor"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Flavor? _explicitNullValueFlavor = default!;
         /// <summary>Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dashes, and underscores.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Labels? Labels { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Labels? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Labels? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Labels Labels { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Labels Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Labels _explicitNullValueLabels = default!;
 #endif
         /// <summary>Opt-in network group. Jobs of the same owner and resource group sharing a group are placed together and reach each other on every port. Two environment variables are set in the container: `HF_NETWORK_GROUP_HOSTNAME`, a hostname resolving to every member of the group, and `HF_NETWORK_GROUP_PREFIX`, to which an alias is appended to get that alias&apos; hostname.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Network? Network { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Network? Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Network? _explicitNullValueNetwork = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Network Network { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Network Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Network _explicitNullValueNetwork = default!;
 #endif
         /// <summary>The resourceGroupId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceGroupId { get; set; }
+        public string? ResourceGroupId { get => _explicitNullValueResourceGroupId; set { _explicitNullValueResourceGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupId"); else _explicitNullProperties?.Remove("resourceGroupId"); } }
+        private string? _explicitNullValueResourceGroupId = default!;
 #nullable restore
 #else
-        public string ResourceGroupId { get; set; }
+        public string ResourceGroupId { get => _explicitNullValueResourceGroupId; set { _explicitNullValueResourceGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupId"); else _explicitNullProperties?.Remove("resourceGroupId"); } }
+        private string _explicitNullValueResourceGroupId = default!;
 #endif
         /// <summary>The secrets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Secrets? Secrets { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Secrets? Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Secrets? _explicitNullValueSecrets = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Secrets Secrets { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Secrets Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Secrets _explicitNullValueSecrets = default!;
 #endif
         /// <summary>The spaceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpaceId { get; set; }
+        public string? SpaceId { get => _explicitNullValueSpaceId; set { _explicitNullValueSpaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaceId"); else _explicitNullProperties?.Remove("spaceId"); } }
+        private string? _explicitNullValueSpaceId = default!;
 #nullable restore
 #else
-        public string SpaceId { get; set; }
+        public string SpaceId { get => _explicitNullValueSpaceId; set { _explicitNullValueSpaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaceId"); else _explicitNullProperties?.Remove("spaceId"); } }
+        private string _explicitNullValueSpaceId = default!;
 #endif
         /// <summary>When `enabled`, the job&apos;s container is reachable over SSH at `ssh &lt;job_id&gt;@ssh.hf.jobs`. Only the job&apos;s owner is allowed in, authenticated by an SSH public key registered on the Hub.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Ssh? Ssh { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Ssh? Ssh { get => _explicitNullValueSsh; set { _explicitNullValueSsh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssh"); else _explicitNullProperties?.Remove("ssh"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Ssh? _explicitNullValueSsh = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Ssh Ssh { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Ssh Ssh { get => _explicitNullValueSsh; set { _explicitNullValueSsh = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ssh"); else _explicitNullProperties?.Remove("ssh"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Ssh _explicitNullValueSsh = default!;
 #endif
         /// <summary>The timeoutSeconds property</summary>
-        public int? TimeoutSeconds { get; set; }
+        public int? TimeoutSeconds { get => _explicitNullValueTimeoutSeconds; set { _explicitNullValueTimeoutSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutSeconds"); else _explicitNullProperties?.Remove("timeoutSeconds"); } }
+        private int? _explicitNullValueTimeoutSeconds = default!;
         /// <summary>HuggingFace Buckets or Repos to mount as volumes in the job container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2VolumesItem>? Volumes { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2VolumesItem>? Volumes { get => _explicitNullValueVolumes; set { _explicitNullValueVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumes"); else _explicitNullProperties?.Remove("volumes"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2VolumesItem>? _explicitNullValueVolumes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2VolumesItem> Volumes { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2VolumesItem> Volumes { get => _explicitNullValueVolumes; set { _explicitNullValueVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumes"); else _explicitNullProperties?.Remove("volumes"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2VolumesItem> _explicitNullValueVolumes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2"/> and sets the default values.
@@ -134,7 +185,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -185,6 +236,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2Ssh>("ssh", Ssh);
             writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueRequestJobSpecOneOf2VolumesItem>("volumes", Volumes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

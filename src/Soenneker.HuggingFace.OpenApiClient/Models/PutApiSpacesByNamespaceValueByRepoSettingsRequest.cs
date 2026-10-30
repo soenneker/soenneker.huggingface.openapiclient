@@ -11,45 +11,73 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiSpacesByNamespaceValueByRepoSettingsRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discussionsDisabled") is { } nullNodeDiscussionsDisabled && nullNodeDiscussionsDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscussionsDisabled = null;
+            if (parseNode.GetChildNode("discussionsSorting") is { } nullNodeDiscussionsSorting && nullNodeDiscussionsSorting.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscussionsSorting = null;
+            if (parseNode.GetChildNode("gated") is { } nullNodeGated && nullNodeGated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gated = null;
+            if (parseNode.GetChildNode("gatedNotificationsEmail") is { } nullNodeGatedNotificationsEmail && nullNodeGatedNotificationsEmail.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GatedNotificationsEmail = null;
+            if (parseNode.GetChildNode("gatedNotificationsMode") is { } nullNodeGatedNotificationsMode && nullNodeGatedNotificationsMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GatedNotificationsMode = null;
+            if (parseNode.GetChildNode("gatedProfileSharing") is { } nullNodeGatedProfileSharing && nullNodeGatedProfileSharing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GatedProfileSharing = null;
+            if (parseNode.GetChildNode("orgMembersGated") is { } nullNodeOrgMembersGated && nullNodeOrgMembersGated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgMembersGated = null;
+            if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
+            if (parseNode.GetChildNode("visibility") is { } nullNodeVisibility && nullNodeVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visibility = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The discussionsDisabled property</summary>
-        public bool? DiscussionsDisabled { get; set; }
+        public bool? DiscussionsDisabled { get => _explicitNullValueDiscussionsDisabled; set { _explicitNullValueDiscussionsDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussionsDisabled"); else _explicitNullProperties?.Remove("discussionsDisabled"); } }
+        private bool? _explicitNullValueDiscussionsDisabled = default!;
         /// <summary>The discussionsSorting property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestDiscussionsSorting? DiscussionsSorting { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestDiscussionsSorting? DiscussionsSorting { get => _explicitNullValueDiscussionsSorting; set { _explicitNullValueDiscussionsSorting = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussionsSorting"); else _explicitNullProperties?.Remove("discussionsSorting"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestDiscussionsSorting? _explicitNullValueDiscussionsSorting = default!;
         /// <summary>The gated property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGated? Gated { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGated? Gated { get => _explicitNullValueGated; set { _explicitNullValueGated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gated"); else _explicitNullProperties?.Remove("gated"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGated? _explicitNullValueGated = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGated Gated { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGated Gated { get => _explicitNullValueGated; set { _explicitNullValueGated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gated"); else _explicitNullProperties?.Remove("gated"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGated _explicitNullValueGated = default!;
 #endif
         /// <summary>The gatedNotificationsEmail property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GatedNotificationsEmail { get; set; }
+        public string? GatedNotificationsEmail { get => _explicitNullValueGatedNotificationsEmail; set { _explicitNullValueGatedNotificationsEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gatedNotificationsEmail"); else _explicitNullProperties?.Remove("gatedNotificationsEmail"); } }
+        private string? _explicitNullValueGatedNotificationsEmail = default!;
 #nullable restore
 #else
-        public string GatedNotificationsEmail { get; set; }
+        public string GatedNotificationsEmail { get => _explicitNullValueGatedNotificationsEmail; set { _explicitNullValueGatedNotificationsEmail = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gatedNotificationsEmail"); else _explicitNullProperties?.Remove("gatedNotificationsEmail"); } }
+        private string _explicitNullValueGatedNotificationsEmail = default!;
 #endif
         /// <summary>The gatedNotificationsMode property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedNotificationsMode? GatedNotificationsMode { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedNotificationsMode? GatedNotificationsMode { get => _explicitNullValueGatedNotificationsMode; set { _explicitNullValueGatedNotificationsMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gatedNotificationsMode"); else _explicitNullProperties?.Remove("gatedNotificationsMode"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedNotificationsMode? _explicitNullValueGatedNotificationsMode = default!;
         /// <summary>What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedProfileSharing? GatedProfileSharing { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedProfileSharing? GatedProfileSharing { get => _explicitNullValueGatedProfileSharing; set { _explicitNullValueGatedProfileSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gatedProfileSharing"); else _explicitNullProperties?.Remove("gatedProfileSharing"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedProfileSharing? _explicitNullValueGatedProfileSharing = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedProfileSharing GatedProfileSharing { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedProfileSharing GatedProfileSharing { get => _explicitNullValueGatedProfileSharing; set { _explicitNullValueGatedProfileSharing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gatedProfileSharing"); else _explicitNullProperties?.Remove("gatedProfileSharing"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestGatedProfileSharing _explicitNullValueGatedProfileSharing = default!;
 #endif
         /// <summary>If true, members of the owning org (except admins) must also go through the gated access-request flow.</summary>
-        public bool? OrgMembersGated { get; set; }
+        public bool? OrgMembersGated { get => _explicitNullValueOrgMembersGated; set { _explicitNullValueOrgMembersGated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orgMembersGated"); else _explicitNullProperties?.Remove("orgMembersGated"); } }
+        private bool? _explicitNullValueOrgMembersGated = default!;
         /// <summary>The private property</summary>
-        public bool? Private { get; set; }
+        public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        private bool? _explicitNullValuePrivate = default!;
         /// <summary>Repository visibility. `protected` is only supported for Spaces.</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestVisibility? Visibility { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestVisibility? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestVisibility? _explicitNullValueVisibility = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequest"/> and sets the default values.
         /// </summary>
@@ -65,7 +93,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -102,6 +130,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("orgMembersGated", OrgMembersGated);
             writer.WriteBoolValue("private", Private);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiSpacesByNamespaceValueByRepoSettingsRequestVisibility>("visibility", Visibility);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

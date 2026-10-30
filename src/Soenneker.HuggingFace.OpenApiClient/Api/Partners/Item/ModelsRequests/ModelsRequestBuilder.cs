@@ -62,7 +62,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.ModelsGetResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.ModelsGetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.ModelsGetResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.ModelsGetResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Register a model mapping for your inference provider. Requires a write token of the provider organization.
@@ -82,7 +82,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.ModelsPostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.ModelsPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.ModelsPostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.ModelsPostResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// List the model mappings of an inference provider.

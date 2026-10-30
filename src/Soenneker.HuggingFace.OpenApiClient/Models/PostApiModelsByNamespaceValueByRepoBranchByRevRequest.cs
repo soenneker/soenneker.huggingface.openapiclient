@@ -11,20 +11,34 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiModelsByNamespaceValueByRepoBranchByRevRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("emptyBranch") is { } nullNodeEmptyBranch && nullNodeEmptyBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmptyBranch = null;
+            if (parseNode.GetChildNode("overwrite") is { } nullNodeOverwrite && nullNodeOverwrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overwrite = null;
+            if (parseNode.GetChildNode("startingPoint") is { } nullNodeStartingPoint && nullNodeStartingPoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingPoint = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Create an empty branch</summary>
-        public bool? EmptyBranch { get; set; }
+        public bool? EmptyBranch { get => _explicitNullValueEmptyBranch; set { _explicitNullValueEmptyBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emptyBranch"); else _explicitNullProperties?.Remove("emptyBranch"); } }
+        private bool? _explicitNullValueEmptyBranch = default!;
         /// <summary>Overwrite the branch if it already exists</summary>
-        public bool? Overwrite { get; set; }
+        public bool? Overwrite { get => _explicitNullValueOverwrite; set { _explicitNullValueOverwrite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overwrite"); else _explicitNullProperties?.Remove("overwrite"); } }
+        private bool? _explicitNullValueOverwrite = default!;
         /// <summary>The commit to start from</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartingPoint { get; set; }
+        public string? StartingPoint { get => _explicitNullValueStartingPoint; set { _explicitNullValueStartingPoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingPoint"); else _explicitNullProperties?.Remove("startingPoint"); } }
+        private string? _explicitNullValueStartingPoint = default!;
 #nullable restore
 #else
-        public string StartingPoint { get; set; }
+        public string StartingPoint { get => _explicitNullValueStartingPoint; set { _explicitNullValueStartingPoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingPoint"); else _explicitNullProperties?.Remove("startingPoint"); } }
+        private string _explicitNullValueStartingPoint = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiModelsByNamespaceValueByRepoBranchByRevRequest"/> and sets the default values.
@@ -43,7 +57,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiModelsByNamespaceValueByRepoBranchByRevRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiModelsByNamespaceValueByRepoBranchByRevRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiModelsByNamespaceValueByRepoBranchByRevRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -68,6 +82,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("emptyBranch", EmptyBranch);
             writer.WriteBoolValue("overwrite", Overwrite);
             writer.WriteStringValue("startingPoint", StartingPoint);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

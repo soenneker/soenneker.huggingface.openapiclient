@@ -11,33 +11,51 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2Changes : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("base") is { } nullNodeBase && nullNodeBase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Base = null;
+            if (parseNode.GetChildNode("headCommitId") is { } nullNodeHeadCommitId && nullNodeHeadCommitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadCommitId = null;
+            if (parseNode.GetChildNode("mergeCommitId") is { } nullNodeMergeCommitId && nullNodeMergeCommitId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MergeCommitId = null;
+            if (parseNode.GetChildNode("refDeleted") is { } nullNodeRefDeleted && nullNodeRefDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefDeleted = null;
+        }
+
         /// <summary>The base property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Base { get; set; }
+        public string? Base { get => _explicitNullValueBase; set { _explicitNullValueBase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base"); else _explicitNullProperties?.Remove("base"); } }
+        private string? _explicitNullValueBase = default!;
 #nullable restore
 #else
-        public string Base { get; set; }
+        public string Base { get => _explicitNullValueBase; set { _explicitNullValueBase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base"); else _explicitNullProperties?.Remove("base"); } }
+        private string _explicitNullValueBase = default!;
 #endif
         /// <summary>The last commit ID of the PR branch, stored before ref deletion so diffs can still be computed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeadCommitId { get; set; }
+        public string? HeadCommitId { get => _explicitNullValueHeadCommitId; set { _explicitNullValueHeadCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headCommitId"); else _explicitNullProperties?.Remove("headCommitId"); } }
+        private string? _explicitNullValueHeadCommitId = default!;
 #nullable restore
 #else
-        public string HeadCommitId { get; set; }
+        public string HeadCommitId { get => _explicitNullValueHeadCommitId; set { _explicitNullValueHeadCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headCommitId"); else _explicitNullProperties?.Remove("headCommitId"); } }
+        private string _explicitNullValueHeadCommitId = default!;
 #endif
         /// <summary>The mergeCommitId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? MergeCommitId { get; set; }
+        public string? MergeCommitId { get => _explicitNullValueMergeCommitId; set { _explicitNullValueMergeCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mergeCommitId"); else _explicitNullProperties?.Remove("mergeCommitId"); } }
+        private string? _explicitNullValueMergeCommitId = default!;
 #nullable restore
 #else
-        public string MergeCommitId { get; set; }
+        public string MergeCommitId { get => _explicitNullValueMergeCommitId; set { _explicitNullValueMergeCommitId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mergeCommitId"); else _explicitNullProperties?.Remove("mergeCommitId"); } }
+        private string _explicitNullValueMergeCommitId = default!;
 #endif
         /// <summary>Whether the PR ref has been deleted (to free up storage).</summary>
-        public bool? RefDeleted { get; set; }
+        public bool? RefDeleted { get => _explicitNullValueRefDeleted; set { _explicitNullValueRefDeleted = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("refDeleted"); else _explicitNullProperties?.Remove("refDeleted"); } }
+        private bool? _explicitNullValueRefDeleted = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -46,7 +64,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2Changes CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2Changes();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf2Changes(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -72,7 +90,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("base", Base);
             writer.WriteStringValue("headCommitId", HeadCommitId);
             writer.WriteStringValue("mergeCommitId", MergeCommitId);
-            writer.WriteBoolValue("refDeleted", RefDeleted);
+            writer.WriteBoolValue("refDeleted", RefDeleted);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

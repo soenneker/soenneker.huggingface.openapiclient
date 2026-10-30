@@ -51,7 +51,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Credentials.Revoke
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Credentials.Revoke.RevokePostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Credentials.Revoke.RevokePostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Credentials.Revoke.RevokePostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Credentials.Revoke.RevokePostResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Publicly invalidate leaked Hugging Face access tokens. Possession of the raw token value is the only proof required: no authentication is needed, and no rights over the owning account or org are necessary. Each raw token is fully invalidated, the owning user is notified by email. Always returns 202, whether or not any of the provided tokens existed, so the response cannot be used to probe token validity.

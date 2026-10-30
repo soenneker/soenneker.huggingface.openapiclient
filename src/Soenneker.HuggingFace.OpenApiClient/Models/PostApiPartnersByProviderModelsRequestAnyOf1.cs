@@ -11,31 +11,50 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiPartnersByProviderModelsRequestAnyOf1 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("hfModel") is { } nullNodeHfModel && nullNodeHfModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HfModel = null;
+            if (parseNode.GetChildNode("providerModel") is { } nullNodeProviderModel && nullNodeProviderModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderModel = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("task") is { } nullNodeTask && nullNodeTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Task = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The hfModel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HfModel { get; set; }
+        public string? HfModel { get => _explicitNullValueHfModel; set { _explicitNullValueHfModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hfModel"); else _explicitNullProperties?.Remove("hfModel"); } }
+        private string? _explicitNullValueHfModel = default!;
 #nullable restore
 #else
-        public string HfModel { get; set; }
+        public string HfModel { get => _explicitNullValueHfModel; set { _explicitNullValueHfModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hfModel"); else _explicitNullProperties?.Remove("hfModel"); } }
+        private string _explicitNullValueHfModel = default!;
 #endif
         /// <summary>The providerModel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderModel { get; set; }
+        public string? ProviderModel { get => _explicitNullValueProviderModel; set { _explicitNullValueProviderModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerModel"); else _explicitNullProperties?.Remove("providerModel"); } }
+        private string? _explicitNullValueProviderModel = default!;
 #nullable restore
 #else
-        public string ProviderModel { get; set; }
+        public string ProviderModel { get => _explicitNullValueProviderModel; set { _explicitNullValueProviderModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerModel"); else _explicitNullProperties?.Remove("providerModel"); } }
+        private string _explicitNullValueProviderModel = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status? Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status? _explicitNullValueStatus = default!;
         /// <summary>The task property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task? Task { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task? Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task? _explicitNullValueTask = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1"/> and sets the default values.
         /// </summary>
@@ -51,7 +70,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -80,6 +99,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status>("status", Status);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task>("task", Task);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

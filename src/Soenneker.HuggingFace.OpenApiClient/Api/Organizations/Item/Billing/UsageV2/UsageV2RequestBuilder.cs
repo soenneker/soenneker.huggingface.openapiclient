@@ -48,7 +48,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.Usa
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.UsageV2.UsageV2GetResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.UsageV2.UsageV2GetResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.UsageV2.UsageV2GetResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.UsageV2.UsageV2GetResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Get org usage for a given period

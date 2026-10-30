@@ -11,174 +11,254 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiJobsByNamespaceValueByJobIdCancel200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("arch") is { } nullNodeArch && nullNodeArch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arch = null;
+            if (parseNode.GetChildNode("arguments") is { } nullNodeArguments && nullNodeArguments.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Arguments = null;
+            if (parseNode.GetChildNode("command") is { } nullNodeCommand && nullNodeCommand.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Command = null;
+            if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("createdBy") is { } nullNodeCreatedBy && nullNodeCreatedBy.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedBy = null;
+            if (parseNode.GetChildNode("dockerImage") is { } nullNodeDockerImage && nullNodeDockerImage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DockerImage = null;
+            if (parseNode.GetChildNode("durations") is { } nullNodeDurations && nullNodeDurations.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Durations = null;
+            if (parseNode.GetChildNode("environment") is { } nullNodeEnvironment && nullNodeEnvironment.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Environment = null;
+            if (parseNode.GetChildNode("expose") is { } nullNodeExpose && nullNodeExpose.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Expose = null;
+            if (parseNode.GetChildNode("finishedAt") is { } nullNodeFinishedAt && nullNodeFinishedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FinishedAt = null;
+            if (parseNode.GetChildNode("flavor") is { } nullNodeFlavor && nullNodeFlavor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flavor = null;
+            if (parseNode.GetChildNode("hfToken") is { } nullNodeHfToken && nullNodeHfToken.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HfToken = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("initiator") is { } nullNodeInitiator && nullNodeInitiator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Initiator = null;
+            if (parseNode.GetChildNode("labels") is { } nullNodeLabels && nullNodeLabels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Labels = null;
+            if (parseNode.GetChildNode("network") is { } nullNodeNetwork && nullNodeNetwork.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Network = null;
+            if (parseNode.GetChildNode("owner") is { } nullNodeOwner && nullNodeOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Owner = null;
+            if (parseNode.GetChildNode("resourceGroup") is { } nullNodeResourceGroup && nullNodeResourceGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroup = null;
+            if (parseNode.GetChildNode("resourceGroupId") is { } nullNodeResourceGroupId && nullNodeResourceGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupId = null;
+            if (parseNode.GetChildNode("retry") is { } nullNodeRetry && nullNodeRetry.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Retry = null;
+            if (parseNode.GetChildNode("secrets") is { } nullNodeSecrets && nullNodeSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secrets = null;
+            if (parseNode.GetChildNode("spaceId") is { } nullNodeSpaceId && nullNodeSpaceId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpaceId = null;
+            if (parseNode.GetChildNode("startedAt") is { } nullNodeStartedAt && nullNodeStartedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedAt = null;
+            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("timeout") is { } nullNodeTimeout && nullNodeTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Timeout = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("volumes") is { } nullNodeVolumes && nullNodeVolumes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Volumes = null;
+        }
+
         /// <summary>The arch property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseArch? Arch { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseArch? Arch { get => _explicitNullValueArch; set { _explicitNullValueArch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arch"); else _explicitNullProperties?.Remove("arch"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseArch? _explicitNullValueArch = default!;
         /// <summary>The arguments property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Arguments { get; set; }
+        public List<string>? Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
+        private List<string>? _explicitNullValueArguments = default!;
 #nullable restore
 #else
-        public List<string> Arguments { get; set; }
+        public List<string> Arguments { get => _explicitNullValueArguments; set { _explicitNullValueArguments = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arguments"); else _explicitNullProperties?.Remove("arguments"); } }
+        private List<string> _explicitNullValueArguments = default!;
 #endif
         /// <summary>The command property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Command { get; set; }
+        public List<string>? Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
+        private List<string>? _explicitNullValueCommand = default!;
 #nullable restore
 #else
-        public List<string> Command { get; set; }
+        public List<string> Command { get => _explicitNullValueCommand; set { _explicitNullValueCommand = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("command"); else _explicitNullProperties?.Remove("command"); } }
+        private List<string> _explicitNullValueCommand = default!;
 #endif
         /// <summary>The createdAt property</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>The createdBy property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseCreatedBy? CreatedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseCreatedBy? CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseCreatedBy? _explicitNullValueCreatedBy = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseCreatedBy CreatedBy { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseCreatedBy CreatedBy { get => _explicitNullValueCreatedBy; set { _explicitNullValueCreatedBy = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdBy"); else _explicitNullProperties?.Remove("createdBy"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseCreatedBy _explicitNullValueCreatedBy = default!;
 #endif
         /// <summary>The dockerImage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DockerImage { get; set; }
+        public string? DockerImage { get => _explicitNullValueDockerImage; set { _explicitNullValueDockerImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dockerImage"); else _explicitNullProperties?.Remove("dockerImage"); } }
+        private string? _explicitNullValueDockerImage = default!;
 #nullable restore
 #else
-        public string DockerImage { get; set; }
+        public string DockerImage { get => _explicitNullValueDockerImage; set { _explicitNullValueDockerImage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("dockerImage"); else _explicitNullProperties?.Remove("dockerImage"); } }
+        private string _explicitNullValueDockerImage = default!;
 #endif
         /// <summary>The durations property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseDurations? Durations { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseDurations? Durations { get => _explicitNullValueDurations; set { _explicitNullValueDurations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("durations"); else _explicitNullProperties?.Remove("durations"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseDurations? _explicitNullValueDurations = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseDurations Durations { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseDurations Durations { get => _explicitNullValueDurations; set { _explicitNullValueDurations = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("durations"); else _explicitNullProperties?.Remove("durations"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseDurations _explicitNullValueDurations = default!;
 #endif
         /// <summary>The environment property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseEnvironment? Environment { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseEnvironment? Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseEnvironment? _explicitNullValueEnvironment = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseEnvironment Environment { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseEnvironment Environment { get => _explicitNullValueEnvironment; set { _explicitNullValueEnvironment = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("environment"); else _explicitNullProperties?.Remove("environment"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseEnvironment _explicitNullValueEnvironment = default!;
 #endif
         /// <summary>Ports exposed through the jobs proxy (see `status.exposeUrls` for the reachable URLs).</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseExpose? Expose { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseExpose? Expose { get => _explicitNullValueExpose; set { _explicitNullValueExpose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expose"); else _explicitNullProperties?.Remove("expose"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseExpose? _explicitNullValueExpose = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseExpose Expose { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseExpose Expose { get => _explicitNullValueExpose; set { _explicitNullValueExpose = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expose"); else _explicitNullProperties?.Remove("expose"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseExpose _explicitNullValueExpose = default!;
 #endif
         /// <summary>The finishedAt property</summary>
-        public DateTimeOffset? FinishedAt { get; set; }
+        public DateTimeOffset? FinishedAt { get => _explicitNullValueFinishedAt; set { _explicitNullValueFinishedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("finishedAt"); else _explicitNullProperties?.Remove("finishedAt"); } }
+        private DateTimeOffset? _explicitNullValueFinishedAt = default!;
         /// <summary>The flavor property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseFlavor? Flavor { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseFlavor? Flavor { get => _explicitNullValueFlavor; set { _explicitNullValueFlavor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flavor"); else _explicitNullProperties?.Remove("flavor"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseFlavor? _explicitNullValueFlavor = default!;
         /// <summary>The hfToken property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseHfToken? HfToken { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseHfToken? HfToken { get => _explicitNullValueHfToken; set { _explicitNullValueHfToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hfToken"); else _explicitNullProperties?.Remove("hfToken"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseHfToken? _explicitNullValueHfToken = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseHfToken HfToken { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseHfToken HfToken { get => _explicitNullValueHfToken; set { _explicitNullValueHfToken = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hfToken"); else _explicitNullProperties?.Remove("hfToken"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseHfToken _explicitNullValueHfToken = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The initiator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseInitiator? Initiator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseInitiator? Initiator { get => _explicitNullValueInitiator; set { _explicitNullValueInitiator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiator"); else _explicitNullProperties?.Remove("initiator"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseInitiator? _explicitNullValueInitiator = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseInitiator Initiator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseInitiator Initiator { get => _explicitNullValueInitiator; set { _explicitNullValueInitiator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("initiator"); else _explicitNullProperties?.Remove("initiator"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseInitiator _explicitNullValueInitiator = default!;
 #endif
         /// <summary>The labels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseLabels? Labels { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseLabels? Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseLabels? _explicitNullValueLabels = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseLabels Labels { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseLabels Labels { get => _explicitNullValueLabels; set { _explicitNullValueLabels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("labels"); else _explicitNullProperties?.Remove("labels"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseLabels _explicitNullValueLabels = default!;
 #endif
         /// <summary>Network group the job belongs to.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseNetwork? Network { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseNetwork? Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseNetwork? _explicitNullValueNetwork = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseNetwork Network { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseNetwork Network { get => _explicitNullValueNetwork; set { _explicitNullValueNetwork = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("network"); else _explicitNullProperties?.Remove("network"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseNetwork _explicitNullValueNetwork = default!;
 #endif
         /// <summary>The owner property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseOwner? Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseOwner? Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseOwner? _explicitNullValueOwner = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseOwner Owner { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseOwner Owner { get => _explicitNullValueOwner; set { _explicitNullValueOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("owner"); else _explicitNullProperties?.Remove("owner"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseOwner _explicitNullValueOwner = default!;
 #endif
         /// <summary>The resourceGroup property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseResourceGroup? ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseResourceGroup? ResourceGroup { get => _explicitNullValueResourceGroup; set { _explicitNullValueResourceGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroup"); else _explicitNullProperties?.Remove("resourceGroup"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseResourceGroup? _explicitNullValueResourceGroup = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseResourceGroup ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseResourceGroup ResourceGroup { get => _explicitNullValueResourceGroup; set { _explicitNullValueResourceGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroup"); else _explicitNullProperties?.Remove("resourceGroup"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseResourceGroup _explicitNullValueResourceGroup = default!;
 #endif
         /// <summary>The resourceGroupId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceGroupId { get; set; }
+        public string? ResourceGroupId { get => _explicitNullValueResourceGroupId; set { _explicitNullValueResourceGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupId"); else _explicitNullProperties?.Remove("resourceGroupId"); } }
+        private string? _explicitNullValueResourceGroupId = default!;
 #nullable restore
 #else
-        public string ResourceGroupId { get; set; }
+        public string ResourceGroupId { get => _explicitNullValueResourceGroupId; set { _explicitNullValueResourceGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupId"); else _explicitNullProperties?.Remove("resourceGroupId"); } }
+        private string _explicitNullValueResourceGroupId = default!;
 #endif
         /// <summary>The retry property</summary>
-        public double? Retry { get; set; }
+        public double? Retry { get => _explicitNullValueRetry; set { _explicitNullValueRetry = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("retry"); else _explicitNullProperties?.Remove("retry"); } }
+        private double? _explicitNullValueRetry = default!;
         /// <summary>The secrets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Secrets { get; set; }
+        public List<string>? Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private List<string>? _explicitNullValueSecrets = default!;
 #nullable restore
 #else
-        public List<string> Secrets { get; set; }
+        public List<string> Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private List<string> _explicitNullValueSecrets = default!;
 #endif
         /// <summary>The spaceId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SpaceId { get; set; }
+        public string? SpaceId { get => _explicitNullValueSpaceId; set { _explicitNullValueSpaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaceId"); else _explicitNullProperties?.Remove("spaceId"); } }
+        private string? _explicitNullValueSpaceId = default!;
 #nullable restore
 #else
-        public string SpaceId { get; set; }
+        public string SpaceId { get => _explicitNullValueSpaceId; set { _explicitNullValueSpaceId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaceId"); else _explicitNullProperties?.Remove("spaceId"); } }
+        private string _explicitNullValueSpaceId = default!;
 #endif
         /// <summary>The startedAt property</summary>
-        public DateTimeOffset? StartedAt { get; set; }
+        public DateTimeOffset? StartedAt { get => _explicitNullValueStartedAt; set { _explicitNullValueStartedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedAt"); else _explicitNullProperties?.Remove("startedAt"); } }
+        private DateTimeOffset? _explicitNullValueStartedAt = default!;
         /// <summary>The status property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseStatus? Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseStatus? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseStatus? _explicitNullValueStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseStatus Status { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseStatus Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseStatus _explicitNullValueStatus = default!;
 #endif
         /// <summary>The timeout property</summary>
-        public double? Timeout { get; set; }
+        public double? Timeout { get => _explicitNullValueTimeout; set { _explicitNullValueTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeout"); else _explicitNullProperties?.Remove("timeout"); } }
+        private double? _explicitNullValueTimeout = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseType? _explicitNullValueType = default!;
         /// <summary>The volumes property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseVolumesItem>? Volumes { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseVolumesItem>? Volumes { get => _explicitNullValueVolumes; set { _explicitNullValueVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumes"); else _explicitNullProperties?.Remove("volumes"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseVolumesItem>? _explicitNullValueVolumes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseVolumesItem> Volumes { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseVolumesItem> Volumes { get => _explicitNullValueVolumes; set { _explicitNullValueVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumes"); else _explicitNullProperties?.Remove("volumes"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseVolumesItem> _explicitNullValueVolumes = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -188,7 +268,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -260,7 +340,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseStatus>("status", Status);
             writer.WriteDoubleValue("timeout", Timeout);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseType>("type", Type);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseVolumesItem>("volumes", Volumes);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueByJobIdCancel200ResponseVolumesItem>("volumes", Volumes);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

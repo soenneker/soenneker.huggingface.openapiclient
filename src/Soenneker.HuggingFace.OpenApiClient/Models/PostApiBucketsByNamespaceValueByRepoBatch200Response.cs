@@ -11,21 +11,37 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiBucketsByNamespaceValueByRepoBatch200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("failed") is { } nullNodeFailed && nullNodeFailed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Failed = null;
+            if (parseNode.GetChildNode("processed") is { } nullNodeProcessed && nullNodeProcessed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Processed = null;
+            if (parseNode.GetChildNode("succeeded") is { } nullNodeSucceeded && nullNodeSucceeded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Succeeded = null;
+            if (parseNode.GetChildNode("success") is { } nullNodeSuccess && nullNodeSuccess.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Success = null;
+        }
+
         /// <summary>List of failed operations</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200ResponseFailedItem>? Failed { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200ResponseFailedItem>? Failed { get => _explicitNullValueFailed; set { _explicitNullValueFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed"); else _explicitNullProperties?.Remove("failed"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200ResponseFailedItem>? _explicitNullValueFailed = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200ResponseFailedItem> Failed { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200ResponseFailedItem> Failed { get => _explicitNullValueFailed; set { _explicitNullValueFailed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("failed"); else _explicitNullProperties?.Remove("failed"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200ResponseFailedItem> _explicitNullValueFailed = default!;
 #endif
         /// <summary>Total number of operations attempted</summary>
-        public int? Processed { get; set; }
+        public int? Processed { get => _explicitNullValueProcessed; set { _explicitNullValueProcessed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processed"); else _explicitNullProperties?.Remove("processed"); } }
+        private int? _explicitNullValueProcessed = default!;
         /// <summary>Number of successful operations</summary>
-        public int? Succeeded { get; set; }
+        public int? Succeeded { get => _explicitNullValueSucceeded; set { _explicitNullValueSucceeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded"); else _explicitNullProperties?.Remove("succeeded"); } }
+        private int? _explicitNullValueSucceeded = default!;
         /// <summary>True if all operations succeeded</summary>
-        public bool? Success { get; set; }
+        public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
+        private bool? _explicitNullValueSuccess = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -34,7 +50,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,7 +76,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200ResponseFailedItem>("failed", Failed);
             writer.WriteIntValue("processed", Processed);
             writer.WriteIntValue("succeeded", Succeeded);
-            writer.WriteBoolValue("success", Success);
+            writer.WriteBoolValue("success", Success);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

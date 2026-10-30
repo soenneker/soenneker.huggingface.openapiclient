@@ -49,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Jobs.Item.AuthCheck.Item
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Check if the user has access to jobs in the namespace

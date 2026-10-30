@@ -49,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the org-wide resource group settings. Omitted fields are left unchanged.Enabling `allowExternalInvites` lets resource group admins add members to the org, consuming billable seats.Requires the org to have a Team plan or higher.
@@ -69,7 +69,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ResourceGro
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettings200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettings200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettings200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettings200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Retrieve the org-wide resource group settings: who may create resource groups, and whether resource group admins may invite users from outside the org.Requires the org to have a Team plan or higher.

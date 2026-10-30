@@ -11,27 +11,44 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("oid") is { } nullNodeOid && nullNodeOid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Oid = null;
+            if (parseNode.GetChildNode("path") is { } nullNodePath && nullNodePath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Path = null;
+            if (parseNode.GetChildNode("shouldIgnore") is { } nullNodeShouldIgnore && nullNodeShouldIgnore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShouldIgnore = null;
+            if (parseNode.GetChildNode("uploadMode") is { } nullNodeUploadMode && nullNodeUploadMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UploadMode = null;
+        }
+
         /// <summary>The oid of the blob if it already exists in the repository. If the blob is a LFS file, it&apos;ll be the lfs oid.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Oid { get; set; }
+        public string? Oid { get => _explicitNullValueOid; set { _explicitNullValueOid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oid"); else _explicitNullProperties?.Remove("oid"); } }
+        private string? _explicitNullValueOid = default!;
 #nullable restore
 #else
-        public string Oid { get; set; }
+        public string Oid { get => _explicitNullValueOid; set { _explicitNullValueOid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oid"); else _explicitNullProperties?.Remove("oid"); } }
+        private string _explicitNullValueOid = default!;
 #endif
         /// <summary>The path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Path { get; set; }
+        public string? Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        private string? _explicitNullValuePath = default!;
 #nullable restore
 #else
-        public string Path { get; set; }
+        public string Path { get => _explicitNullValuePath; set { _explicitNullValuePath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("path"); else _explicitNullProperties?.Remove("path"); } }
+        private string _explicitNullValuePath = default!;
 #endif
         /// <summary>The shouldIgnore property</summary>
-        public bool? ShouldIgnore { get; set; }
+        public bool? ShouldIgnore { get => _explicitNullValueShouldIgnore; set { _explicitNullValueShouldIgnore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("shouldIgnore"); else _explicitNullProperties?.Remove("shouldIgnore"); } }
+        private bool? _explicitNullValueShouldIgnore = default!;
         /// <summary>The uploadMode property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItemUploadMode? UploadMode { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItemUploadMode? UploadMode { get => _explicitNullValueUploadMode; set { _explicitNullValueUploadMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("uploadMode"); else _explicitNullProperties?.Remove("uploadMode"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItemUploadMode? _explicitNullValueUploadMode = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -40,7 +57,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -66,7 +83,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("oid", Oid);
             writer.WriteStringValue("path", Path);
             writer.WriteBoolValue("shouldIgnore", ShouldIgnore);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItemUploadMode>("uploadMode", UploadMode);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoPreuploadByRev200ResponseFilesItemUploadMode>("uploadMode", UploadMode);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

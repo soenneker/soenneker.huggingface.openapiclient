@@ -11,17 +11,29 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiDatasetsByNamespaceValueByRepoScan200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filesWithIssues") is { } nullNodeFilesWithIssues && nullNodeFilesWithIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesWithIssues = null;
+            if (parseNode.GetChildNode("scansDone") is { } nullNodeScansDone && nullNodeScansDone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScansDone = null;
+        }
+
         /// <summary>The filesWithIssues property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200ResponseFilesWithIssuesItem>? FilesWithIssues { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200ResponseFilesWithIssuesItem>? FilesWithIssues { get => _explicitNullValueFilesWithIssues; set { _explicitNullValueFilesWithIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesWithIssues"); else _explicitNullProperties?.Remove("filesWithIssues"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200ResponseFilesWithIssuesItem>? _explicitNullValueFilesWithIssues = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200ResponseFilesWithIssuesItem> FilesWithIssues { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200ResponseFilesWithIssuesItem> FilesWithIssues { get => _explicitNullValueFilesWithIssues; set { _explicitNullValueFilesWithIssues = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesWithIssues"); else _explicitNullProperties?.Remove("filesWithIssues"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200ResponseFilesWithIssuesItem> _explicitNullValueFilesWithIssues = default!;
 #endif
         /// <summary>The scansDone property</summary>
-        public bool? ScansDone { get; set; }
+        public bool? ScansDone { get => _explicitNullValueScansDone; set { _explicitNullValueScansDone = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scansDone"); else _explicitNullProperties?.Remove("scansDone"); } }
+        private bool? _explicitNullValueScansDone = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +42,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +64,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoScan200ResponseFilesWithIssuesItem>("filesWithIssues", FilesWithIssues);
-            writer.WriteBoolValue("scansDone", ScansDone);
+            writer.WriteBoolValue("scansDone", ScansDone);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -12,7 +12,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharing : IComposedTypeWrapper, IParsable
-    {
+    , global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder {
+        // Preserve ambiguous union payloads without inventing a discriminator.
+        /// <summary>The complete payload when no unique typed union branch can be selected.</summary>
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode UnrecognizedValue { get; set; } = null!;
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalData { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
         /// <summary>Composed type representation for type <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1"/></summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -38,9 +43,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
             var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharing();
-            result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1();
-            result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 = new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2();
-            return result;
+            
+            
+            
+            var unionPayload = parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue);
+            bool matchesUnionBranch0 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("username") != null && parseNode.GetChildNode("email") != null))();
+            bool matchesUnionBranch1 = unionPayload is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject && ((global::System.Func<bool>)(() => parseNode.GetChildNode("username") != null && parseNode.GetChildNode("email") != null))();
+            if (result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 == null && result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 == null && matchesUnionBranch0 && !matchesUnionBranch1) result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1(), parseNode);
+            if (result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 == null && result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 == null && matchesUnionBranch1 && !matchesUnionBranch0) result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 = global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2(), parseNode);
+            if (result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 == null && result.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 == null) result.UnrecognizedValue = unionPayload;
+return result;
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -60,6 +72,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <param name="writer">Serialization writer to use to serialize this model</param>
         public virtual void Serialize(ISerializationWriter writer)
         {
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 == null && PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 == null) { if (UnrecognizedValue is global::Microsoft.Kiota.Abstractions.Serialization.UntypedObject rawObject) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData, rawObject)); else if (UnrecognizedValue != null) writer.WriteObjectValue(null, UnrecognizedValue); else if (AdditionalData.Count > 0) writer.WriteObjectValue(null, new global::Soenneker.OpenApi.Generated.OpenApiUnionAdditionalData(AdditionalData)); else writer.WriteNullValue(null); return; }
+            if (PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 != null && PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 == null) { if (PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1); return; }
+            if (PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 != null && PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1 == null) { if (PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2 is global::Microsoft.Kiota.Abstractions.Serialization.IAdditionalDataHolder selectedData) foreach (var entry in AdditionalData) selectedData.AdditionalData[entry.Key] = entry.Value; writer.WriteObjectValue(null, PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2); return; }
+
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1>(null, PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf1, PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedProfileSharingAnyOf2);
         }

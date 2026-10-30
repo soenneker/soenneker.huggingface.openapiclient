@@ -51,7 +51,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.I
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.Item.Status.StatusPutResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.Item.Status.StatusPutResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.Item.Status.StatusPutResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Partners.Item.ModelsRequests.Item.Status.StatusPutResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Update the status of one of your inference provider&apos;s model mappings.

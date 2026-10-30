@@ -49,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Settings.Webhooks.Item.Replay.
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdReplayByLogId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdReplayByLogId200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdReplayByLogId200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksByWebhookIdReplayByLogId200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Replay webhook log

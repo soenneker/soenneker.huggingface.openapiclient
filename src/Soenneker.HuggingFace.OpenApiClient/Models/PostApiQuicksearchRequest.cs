@@ -11,136 +11,191 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiQuicksearchRequest : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("discussionCollectionName") is { } nullNodeDiscussionCollectionName && nullNodeDiscussionCollectionName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscussionCollectionName = null;
+            if (parseNode.GetChildNode("discussionId") is { } nullNodeDiscussionId && nullNodeDiscussionId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscussionId = null;
+            if (parseNode.GetChildNode("exclude") is { } nullNodeExclude && nullNodeExclude.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Exclude = null;
+            if (parseNode.GetChildNode("includeInvitees") is { } nullNodeIncludeInvitees && nullNodeIncludeInvitees.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IncludeInvitees = null;
+            if (parseNode.GetChildNode("lang") is { } nullNodeLang && nullNodeLang.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lang = null;
+            if (parseNode.GetChildNode("library") is { } nullNodeLibrary && nullNodeLibrary.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Library = null;
+            if (parseNode.GetChildNode("limit") is { } nullNodeLimit && nullNodeLimit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Limit = null;
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("orgsFilter") is { } nullNodeOrgsFilter && nullNodeOrgsFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgsFilter = null;
+            if (parseNode.GetChildNode("pipelines") is { } nullNodePipelines && nullNodePipelines.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Pipelines = null;
+            if (parseNode.GetChildNode("q") is { } nullNodeQ && nullNodeQ.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Q = null;
+            if (parseNode.GetChildNode("repoName") is { } nullNodeRepoName && nullNodeRepoName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoName = null;
+            if (parseNode.GetChildNode("reposFilter") is { } nullNodeReposFilter && nullNodeReposFilter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReposFilter = null;
+            if (parseNode.GetChildNode("repoType") is { } nullNodeRepoType && nullNodeRepoType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoType = null;
+            if (parseNode.GetChildNode("spacesTags") is { } nullNodeSpacesTags && nullNodeSpacesTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpacesTags = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The discussionCollectionName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscussionCollectionName { get; set; }
+        public string? DiscussionCollectionName { get => _explicitNullValueDiscussionCollectionName; set { _explicitNullValueDiscussionCollectionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussionCollectionName"); else _explicitNullProperties?.Remove("discussionCollectionName"); } }
+        private string? _explicitNullValueDiscussionCollectionName = default!;
 #nullable restore
 #else
-        public string DiscussionCollectionName { get; set; }
+        public string DiscussionCollectionName { get => _explicitNullValueDiscussionCollectionName; set { _explicitNullValueDiscussionCollectionName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussionCollectionName"); else _explicitNullProperties?.Remove("discussionCollectionName"); } }
+        private string _explicitNullValueDiscussionCollectionName = default!;
 #endif
         /// <summary>The discussionId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? DiscussionId { get; set; }
+        public string? DiscussionId { get => _explicitNullValueDiscussionId; set { _explicitNullValueDiscussionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussionId"); else _explicitNullProperties?.Remove("discussionId"); } }
+        private string? _explicitNullValueDiscussionId = default!;
 #nullable restore
 #else
-        public string DiscussionId { get; set; }
+        public string DiscussionId { get => _explicitNullValueDiscussionId; set { _explicitNullValueDiscussionId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussionId"); else _explicitNullProperties?.Remove("discussionId"); } }
+        private string _explicitNullValueDiscussionId = default!;
 #endif
         /// <summary>Array of excluded resources: spaces/repo, models/repo, datasets/repo, papers/paperId, collections/collectionId, users/username, orgs/orgName, buckets/bucketName, containers/containerName, kernels/repo, blog/blogSlug</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Exclude { get; set; }
+        public List<string>? Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
+        private List<string>? _explicitNullValueExclude = default!;
 #nullable restore
 #else
-        public List<string> Exclude { get; set; }
+        public List<string> Exclude { get => _explicitNullValueExclude; set { _explicitNullValueExclude = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exclude"); else _explicitNullProperties?.Remove("exclude"); } }
+        private List<string> _explicitNullValueExclude = default!;
 #endif
         /// <summary>The includeInvitees property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest.PostApiQuicksearchRequest_includeInvitees? IncludeInvitees { get; set; }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? IncludeInvitees { get => _explicitNullValueIncludeInvitees; set { _explicitNullValueIncludeInvitees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeInvitees"); else _explicitNullProperties?.Remove("includeInvitees"); } }
+        private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? _explicitNullValueIncludeInvitees = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest.PostApiQuicksearchRequest_includeInvitees IncludeInvitees { get; set; }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode IncludeInvitees { get => _explicitNullValueIncludeInvitees; set { _explicitNullValueIncludeInvitees = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("includeInvitees"); else _explicitNullProperties?.Remove("includeInvitees"); } }
+        private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode _explicitNullValueIncludeInvitees = default!;
 #endif
         /// <summary>The lang property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang? Lang { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang? Lang { get => _explicitNullValueLang; set { _explicitNullValueLang = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lang"); else _explicitNullProperties?.Remove("lang"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang? _explicitNullValueLang = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang Lang { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang Lang { get => _explicitNullValueLang; set { _explicitNullValueLang = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lang"); else _explicitNullProperties?.Remove("lang"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang _explicitNullValueLang = default!;
 #endif
         /// <summary>The library property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary? Library { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary? Library { get => _explicitNullValueLibrary; set { _explicitNullValueLibrary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("library"); else _explicitNullProperties?.Remove("library"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary? _explicitNullValueLibrary = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary Library { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary Library { get => _explicitNullValueLibrary; set { _explicitNullValueLibrary = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("library"); else _explicitNullProperties?.Remove("library"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary _explicitNullValueLibrary = default!;
 #endif
         /// <summary>The limit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit? Limit { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit? Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit? _explicitNullValueLimit = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit Limit { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit Limit { get => _explicitNullValueLimit; set { _explicitNullValueLimit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("limit"); else _explicitNullProperties?.Remove("limit"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit _explicitNullValueLimit = default!;
 #endif
         /// <summary>Namespace to filter by</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Namespace { get; set; }
+        public string? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public string Namespace { get; set; }
+        public string Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private string _explicitNullValueNamespace = default!;
 #endif
         /// <summary>The orgsFilter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter? OrgsFilter { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter? OrgsFilter { get => _explicitNullValueOrgsFilter; set { _explicitNullValueOrgsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orgsFilter"); else _explicitNullProperties?.Remove("orgsFilter"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter? _explicitNullValueOrgsFilter = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter OrgsFilter { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter OrgsFilter { get => _explicitNullValueOrgsFilter; set { _explicitNullValueOrgsFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orgsFilter"); else _explicitNullProperties?.Remove("orgsFilter"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestOrgsFilter _explicitNullValueOrgsFilter = default!;
 #endif
         /// <summary>Comma-separated or array of pipeline types</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item?>? Pipelines { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item?>? Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item?>? _explicitNullValuePipelines = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item?> Pipelines { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item?> Pipelines { get => _explicitNullValuePipelines; set { _explicitNullValuePipelines = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pipelines"); else _explicitNullProperties?.Remove("pipelines"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestPipelinesAnyOf1Item?> _explicitNullValuePipelines = default!;
 #endif
         /// <summary>The q property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Q { get; set; }
+        public string? Q { get => _explicitNullValueQ; set { _explicitNullValueQ = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q"); else _explicitNullProperties?.Remove("q"); } }
+        private string? _explicitNullValueQ = default!;
 #nullable restore
 #else
-        public string Q { get; set; }
+        public string Q { get => _explicitNullValueQ; set { _explicitNullValueQ = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q"); else _explicitNullProperties?.Remove("q"); } }
+        private string _explicitNullValueQ = default!;
 #endif
         /// <summary>The repoName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? RepoName { get; set; }
+        public string? RepoName { get => _explicitNullValueRepoName; set { _explicitNullValueRepoName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoName"); else _explicitNullProperties?.Remove("repoName"); } }
+        private string? _explicitNullValueRepoName = default!;
 #nullable restore
 #else
-        public string RepoName { get; set; }
+        public string RepoName { get => _explicitNullValueRepoName; set { _explicitNullValueRepoName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoName"); else _explicitNullProperties?.Remove("repoName"); } }
+        private string _explicitNullValueRepoName = default!;
 #endif
         /// <summary>The reposFilter property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestReposFilter? ReposFilter { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestReposFilter? ReposFilter { get => _explicitNullValueReposFilter; set { _explicitNullValueReposFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reposFilter"); else _explicitNullProperties?.Remove("reposFilter"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestReposFilter? _explicitNullValueReposFilter = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestReposFilter ReposFilter { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestReposFilter ReposFilter { get => _explicitNullValueReposFilter; set { _explicitNullValueReposFilter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("reposFilter"); else _explicitNullProperties?.Remove("reposFilter"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestReposFilter _explicitNullValueReposFilter = default!;
 #endif
         /// <summary>The repoType property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType? RepoType { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType? RepoType { get => _explicitNullValueRepoType; set { _explicitNullValueRepoType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoType"); else _explicitNullProperties?.Remove("repoType"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType? _explicitNullValueRepoType = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType RepoType { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType RepoType { get => _explicitNullValueRepoType; set { _explicitNullValueRepoType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoType"); else _explicitNullProperties?.Remove("repoType"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType _explicitNullValueRepoType = default!;
 #endif
         /// <summary>The spacesTags property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? SpacesTags { get; set; }
+        public List<string>? SpacesTags { get => _explicitNullValueSpacesTags; set { _explicitNullValueSpacesTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spacesTags"); else _explicitNullProperties?.Remove("spacesTags"); } }
+        private List<string>? _explicitNullValueSpacesTags = default!;
 #nullable restore
 #else
-        public List<string> SpacesTags { get; set; }
+        public List<string> SpacesTags { get => _explicitNullValueSpacesTags; set { _explicitNullValueSpacesTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spacesTags"); else _explicitNullProperties?.Remove("spacesTags"); } }
+        private List<string> _explicitNullValueSpacesTags = default!;
 #endif
         /// <summary>The type property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestType? _explicitNullValueType = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestType Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestType Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestType _explicitNullValueType = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest"/> and sets the default values.
@@ -157,7 +212,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -170,7 +225,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "discussionCollectionName", n => { DiscussionCollectionName = n.GetStringValue(); } },
                 { "discussionId", n => { DiscussionId = n.GetStringValue(); } },
                 { "exclude", n => { Exclude = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "includeInvitees", n => { IncludeInvitees = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest.PostApiQuicksearchRequest_includeInvitees>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest.PostApiQuicksearchRequest_includeInvitees.CreateFromDiscriminatorValue); } },
+                { "includeInvitees", n => { IncludeInvitees = n.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue); } },
                 { "lang", n => { Lang = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang.CreateFromDiscriminatorValue); } },
                 { "library", n => { Library = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary.CreateFromDiscriminatorValue); } },
                 { "limit", n => { Limit = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit.CreateFromDiscriminatorValue); } },
@@ -195,7 +250,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("discussionCollectionName", DiscussionCollectionName);
             writer.WriteStringValue("discussionId", DiscussionId);
             writer.WriteCollectionOfPrimitiveValues<string>("exclude", Exclude);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest.PostApiQuicksearchRequest_includeInvitees>("includeInvitees", IncludeInvitees);
+            writer.WriteObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>("includeInvitees", IncludeInvitees);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLang>("lang", Lang);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLibrary>("library", Library);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestLimit>("limit", Limit);
@@ -208,6 +263,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestRepoType>("repoType", RepoType);
             writer.WriteCollectionOfPrimitiveValues<string>("spacesTags", SpacesTags);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequestType>("type", Type);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
         /// <summary>
@@ -233,13 +289,17 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             /// <param name="parseNode">The parse node to use to read the discriminator value and create the object</param>
             public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest.PostApiQuicksearchRequest_includeInvitees CreateFromDiscriminatorValue(IParseNode parseNode)
             {
+            // A null union input must not initialize an object branch.
+            if (global::System.Object.ReferenceEquals(parseNode, null)) throw new global::System.ArgumentNullException(nameof(parseNode));
+            if (parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest.PostApiQuicksearchRequest_includeInvitees();
+
                 if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
                 var result = new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiQuicksearchRequest.PostApiQuicksearchRequest_includeInvitees();
-                if(parseNode.GetBoolValue() is bool booleanValue)
+                if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedBoolean && parseNode.GetBoolValue() is bool booleanValue)
                 {
                     result.Boolean = booleanValue;
                 }
-                else if(parseNode.GetStringValue() is string stringValue)
+                else if(parseNode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is global::Microsoft.Kiota.Abstractions.Serialization.UntypedString && parseNode.GetStringValue() is string stringValue)
                 {
                     result.String = stringValue;
                 }
@@ -259,6 +319,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             /// <param name="writer">Serialization writer to use to serialize this model</param>
             public virtual void Serialize(ISerializationWriter writer)
             {
+            // Empty composed wrappers serialize as JSON null.
+            if (global::System.Object.ReferenceEquals(writer, null)) throw new global::System.ArgumentNullException(nameof(writer));
+            if (Boolean == null && String == null) { writer.WriteNullValue(null); return; }
+
                 if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
                 if(Boolean != null)
                 {

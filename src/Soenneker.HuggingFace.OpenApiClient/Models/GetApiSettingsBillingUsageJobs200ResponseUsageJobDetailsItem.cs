@@ -11,31 +11,52 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("completedAt") is { } nullNodeCompletedAt && nullNodeCompletedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CompletedAt = null;
+            if (parseNode.GetChildNode("hardwareFlavor") is { } nullNodeHardwareFlavor && nullNodeHardwareFlavor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HardwareFlavor = null;
+            if (parseNode.GetChildNode("jobId") is { } nullNodeJobId && nullNodeJobId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobId = null;
+            if (parseNode.GetChildNode("startedAt") is { } nullNodeStartedAt && nullNodeStartedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartedAt = null;
+            if (parseNode.GetChildNode("totalCostMicroUsd") is { } nullNodeTotalCostMicroUsd && nullNodeTotalCostMicroUsd.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalCostMicroUsd = null;
+            if (parseNode.GetChildNode("totalMinutes") is { } nullNodeTotalMinutes && nullNodeTotalMinutes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalMinutes = null;
+        }
+
         /// <summary>The completedAt property</summary>
-        public DateTimeOffset? CompletedAt { get; set; }
+        public DateTimeOffset? CompletedAt { get => _explicitNullValueCompletedAt; set { _explicitNullValueCompletedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("completedAt"); else _explicitNullProperties?.Remove("completedAt"); } }
+        private DateTimeOffset? _explicitNullValueCompletedAt = default!;
         /// <summary>The hardwareFlavor property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HardwareFlavor { get; set; }
+        public string? HardwareFlavor { get => _explicitNullValueHardwareFlavor; set { _explicitNullValueHardwareFlavor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardwareFlavor"); else _explicitNullProperties?.Remove("hardwareFlavor"); } }
+        private string? _explicitNullValueHardwareFlavor = default!;
 #nullable restore
 #else
-        public string HardwareFlavor { get; set; }
+        public string HardwareFlavor { get => _explicitNullValueHardwareFlavor; set { _explicitNullValueHardwareFlavor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardwareFlavor"); else _explicitNullProperties?.Remove("hardwareFlavor"); } }
+        private string _explicitNullValueHardwareFlavor = default!;
 #endif
         /// <summary>The jobId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? JobId { get; set; }
+        public string? JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobId"); else _explicitNullProperties?.Remove("jobId"); } }
+        private string? _explicitNullValueJobId = default!;
 #nullable restore
 #else
-        public string JobId { get; set; }
+        public string JobId { get => _explicitNullValueJobId; set { _explicitNullValueJobId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobId"); else _explicitNullProperties?.Remove("jobId"); } }
+        private string _explicitNullValueJobId = default!;
 #endif
         /// <summary>The startedAt property</summary>
-        public DateTimeOffset? StartedAt { get; set; }
+        public DateTimeOffset? StartedAt { get => _explicitNullValueStartedAt; set { _explicitNullValueStartedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startedAt"); else _explicitNullProperties?.Remove("startedAt"); } }
+        private DateTimeOffset? _explicitNullValueStartedAt = default!;
         /// <summary>The totalCostMicroUsd property</summary>
-        public double? TotalCostMicroUsd { get; set; }
+        public double? TotalCostMicroUsd { get => _explicitNullValueTotalCostMicroUsd; set { _explicitNullValueTotalCostMicroUsd = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalCostMicroUsd"); else _explicitNullProperties?.Remove("totalCostMicroUsd"); } }
+        private double? _explicitNullValueTotalCostMicroUsd = default!;
         /// <summary>The totalMinutes property</summary>
-        public double? TotalMinutes { get; set; }
+        public double? TotalMinutes { get => _explicitNullValueTotalMinutes; set { _explicitNullValueTotalMinutes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalMinutes"); else _explicitNullProperties?.Remove("totalMinutes"); } }
+        private double? _explicitNullValueTotalMinutes = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -44,7 +65,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsBillingUsageJobs200ResponseUsageJobDetailsItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -74,7 +95,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("jobId", JobId);
             writer.WriteDateTimeOffsetValue("startedAt", StartedAt);
             writer.WriteDoubleValue("totalCostMicroUsd", TotalCostMicroUsd);
-            writer.WriteDoubleValue("totalMinutes", TotalMinutes);
+            writer.WriteDoubleValue("totalMinutes", TotalMinutes);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

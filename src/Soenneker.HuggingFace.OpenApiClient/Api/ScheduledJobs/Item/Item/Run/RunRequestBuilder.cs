@@ -53,6 +53,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.ScheduledJobs.Item.Item.Run
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "409", global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun409Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

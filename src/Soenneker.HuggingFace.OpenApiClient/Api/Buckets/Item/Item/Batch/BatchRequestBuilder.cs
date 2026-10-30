@@ -53,6 +53,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Buckets.Item.Item.Batch
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "422", global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch422Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoBatch200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

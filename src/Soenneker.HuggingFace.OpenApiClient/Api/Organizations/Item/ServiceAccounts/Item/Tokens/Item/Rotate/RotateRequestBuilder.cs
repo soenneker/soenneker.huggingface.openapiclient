@@ -49,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAcco
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRotate200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRotate200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRotate200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRotate200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Invalidate an existing token and generate a new one with the same permissions. The old token will stop working immediately.

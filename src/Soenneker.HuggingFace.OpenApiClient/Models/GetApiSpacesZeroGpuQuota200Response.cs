@@ -11,22 +11,40 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiSpacesZeroGpuQuota200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("base") is { } nullNodeBase && nullNodeBase.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Base = null;
+            if (parseNode.GetChildNode("current") is { } nullNodeCurrent && nullNodeCurrent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Current = null;
+            if (parseNode.GetChildNode("overquotaUsed") is { } nullNodeOverquotaUsed && nullNodeOverquotaUsed.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OverquotaUsed = null;
+            if (parseNode.GetChildNode("resetsAt") is { } nullNodeResetsAt && nullNodeResetsAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResetsAt = null;
+            if (parseNode.GetChildNode("runs") is { } nullNodeRuns && nullNodeRuns.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Runs = null;
+        }
+
         /// <summary>Total quota in GPU-seconds</summary>
-        public double? Base { get; set; }
+        public double? Base { get => _explicitNullValueBase; set { _explicitNullValueBase = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("base"); else _explicitNullProperties?.Remove("base"); } }
+        private double? _explicitNullValueBase = default!;
         /// <summary>Remaining quota in GPU-seconds</summary>
-        public double? Current { get; set; }
+        public double? Current { get => _explicitNullValueCurrent; set { _explicitNullValueCurrent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("current"); else _explicitNullProperties?.Remove("current"); } }
+        private double? _explicitNullValueCurrent = default!;
         /// <summary>Overquota (paid) GPU-seconds consumed</summary>
-        public double? OverquotaUsed { get; set; }
+        public double? OverquotaUsed { get => _explicitNullValueOverquotaUsed; set { _explicitNullValueOverquotaUsed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overquotaUsed"); else _explicitNullProperties?.Remove("overquotaUsed"); } }
+        private double? _explicitNullValueOverquotaUsed = default!;
         /// <summary>ISO 8601 timestamp when the quota resets, or null if the quota has not been used yet</summary>
-        public DateTimeOffset? ResetsAt { get; set; }
+        public DateTimeOffset? ResetsAt { get => _explicitNullValueResetsAt; set { _explicitNullValueResetsAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resetsAt"); else _explicitNullProperties?.Remove("resetsAt"); } }
+        private DateTimeOffset? _explicitNullValueResetsAt = default!;
         /// <summary>Execution (runs) accounting, or omitted for visitors without a runs limit</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200ResponseRuns? Runs { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200ResponseRuns? Runs { get => _explicitNullValueRuns; set { _explicitNullValueRuns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runs"); else _explicitNullProperties?.Remove("runs"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200ResponseRuns? _explicitNullValueRuns = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200ResponseRuns Runs { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200ResponseRuns Runs { get => _explicitNullValueRuns; set { _explicitNullValueRuns = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("runs"); else _explicitNullProperties?.Remove("runs"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200ResponseRuns _explicitNullValueRuns = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +54,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -64,7 +82,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDoubleValue("current", Current);
             writer.WriteDoubleValue("overquotaUsed", OverquotaUsed);
             writer.WriteDateTimeOffsetValue("resetsAt", ResetsAt);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200ResponseRuns>("runs", Runs);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesZeroGpuQuota200ResponseRuns>("runs", Runs);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

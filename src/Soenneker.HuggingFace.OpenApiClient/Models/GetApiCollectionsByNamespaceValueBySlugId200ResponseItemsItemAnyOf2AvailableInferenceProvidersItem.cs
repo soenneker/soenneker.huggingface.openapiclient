@@ -11,53 +11,91 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("adapterType") is { } nullNodeAdapterType && nullNodeAdapterType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdapterType = null;
+            if (parseNode.GetChildNode("adapterWeightsPath") is { } nullNodeAdapterWeightsPath && nullNodeAdapterWeightsPath.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AdapterWeightsPath = null;
+            if (parseNode.GetChildNode("features") is { } nullNodeFeatures && nullNodeFeatures.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Features = null;
+            if (parseNode.GetChildNode("freeUntil") is { } nullNodeFreeUntil && nullNodeFreeUntil.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FreeUntil = null;
+            if (parseNode.GetChildNode("isCheapestPricingOutput") is { } nullNodeIsCheapestPricingOutput && nullNodeIsCheapestPricingOutput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsCheapestPricingOutput = null;
+            if (parseNode.GetChildNode("isFastestThroughput") is { } nullNodeIsFastestThroughput && nullNodeIsFastestThroughput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsFastestThroughput = null;
+            if (parseNode.GetChildNode("isModelAuthor") is { } nullNodeIsModelAuthor && nullNodeIsModelAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsModelAuthor = null;
+            if (parseNode.GetChildNode("modelStatus") is { } nullNodeModelStatus && nullNodeModelStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelStatus = null;
+            if (parseNode.GetChildNode("pricingOutput") is { } nullNodePricingOutput && nullNodePricingOutput.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PricingOutput = null;
+            if (parseNode.GetChildNode("provider") is { } nullNodeProvider && nullNodeProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provider = null;
+            if (parseNode.GetChildNode("providerId") is { } nullNodeProviderId && nullNodeProviderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderId = null;
+            if (parseNode.GetChildNode("providerStatus") is { } nullNodeProviderStatus && nullNodeProviderStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderStatus = null;
+            if (parseNode.GetChildNode("task") is { } nullNodeTask && nullNodeTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Task = null;
+            if (parseNode.GetChildNode("tokensPerSecond") is { } nullNodeTokensPerSecond && nullNodeTokensPerSecond.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TokensPerSecond = null;
+        }
+
         /// <summary>The adapterType property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemAdapterType? AdapterType { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemAdapterType? AdapterType { get => _explicitNullValueAdapterType; set { _explicitNullValueAdapterType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adapterType"); else _explicitNullProperties?.Remove("adapterType"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemAdapterType? _explicitNullValueAdapterType = default!;
         /// <summary>The adapterWeightsPath property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AdapterWeightsPath { get; set; }
+        public string? AdapterWeightsPath { get => _explicitNullValueAdapterWeightsPath; set { _explicitNullValueAdapterWeightsPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adapterWeightsPath"); else _explicitNullProperties?.Remove("adapterWeightsPath"); } }
+        private string? _explicitNullValueAdapterWeightsPath = default!;
 #nullable restore
 #else
-        public string AdapterWeightsPath { get; set; }
+        public string AdapterWeightsPath { get => _explicitNullValueAdapterWeightsPath; set { _explicitNullValueAdapterWeightsPath = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("adapterWeightsPath"); else _explicitNullProperties?.Remove("adapterWeightsPath"); } }
+        private string _explicitNullValueAdapterWeightsPath = default!;
 #endif
         /// <summary>The features property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemFeatures? Features { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemFeatures? Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemFeatures? _explicitNullValueFeatures = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemFeatures Features { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemFeatures Features { get => _explicitNullValueFeatures; set { _explicitNullValueFeatures = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("features"); else _explicitNullProperties?.Remove("features"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemFeatures _explicitNullValueFeatures = default!;
 #endif
         /// <summary>The freeUntil property</summary>
-        public DateTimeOffset? FreeUntil { get; set; }
+        public DateTimeOffset? FreeUntil { get => _explicitNullValueFreeUntil; set { _explicitNullValueFreeUntil = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("freeUntil"); else _explicitNullProperties?.Remove("freeUntil"); } }
+        private DateTimeOffset? _explicitNullValueFreeUntil = default!;
         /// <summary>The isCheapestPricingOutput property</summary>
-        public bool? IsCheapestPricingOutput { get; set; }
+        public bool? IsCheapestPricingOutput { get => _explicitNullValueIsCheapestPricingOutput; set { _explicitNullValueIsCheapestPricingOutput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isCheapestPricingOutput"); else _explicitNullProperties?.Remove("isCheapestPricingOutput"); } }
+        private bool? _explicitNullValueIsCheapestPricingOutput = default!;
         /// <summary>The isFastestThroughput property</summary>
-        public bool? IsFastestThroughput { get; set; }
+        public bool? IsFastestThroughput { get => _explicitNullValueIsFastestThroughput; set { _explicitNullValueIsFastestThroughput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isFastestThroughput"); else _explicitNullProperties?.Remove("isFastestThroughput"); } }
+        private bool? _explicitNullValueIsFastestThroughput = default!;
         /// <summary>The isModelAuthor property</summary>
-        public bool? IsModelAuthor { get; set; }
+        public bool? IsModelAuthor { get => _explicitNullValueIsModelAuthor; set { _explicitNullValueIsModelAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isModelAuthor"); else _explicitNullProperties?.Remove("isModelAuthor"); } }
+        private bool? _explicitNullValueIsModelAuthor = default!;
         /// <summary>The modelStatus property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus? ModelStatus { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus? ModelStatus { get => _explicitNullValueModelStatus; set { _explicitNullValueModelStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modelStatus"); else _explicitNullProperties?.Remove("modelStatus"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus? _explicitNullValueModelStatus = default!;
         /// <summary>The pricingOutput property</summary>
-        public double? PricingOutput { get; set; }
+        public double? PricingOutput { get => _explicitNullValuePricingOutput; set { _explicitNullValuePricingOutput = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pricingOutput"); else _explicitNullProperties?.Remove("pricingOutput"); } }
+        private double? _explicitNullValuePricingOutput = default!;
         /// <summary>The provider property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider? Provider { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider? Provider { get => _explicitNullValueProvider; set { _explicitNullValueProvider = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("provider"); else _explicitNullProperties?.Remove("provider"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider? _explicitNullValueProvider = default!;
         /// <summary>The providerId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderId { get; set; }
+        public string? ProviderId { get => _explicitNullValueProviderId; set { _explicitNullValueProviderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerId"); else _explicitNullProperties?.Remove("providerId"); } }
+        private string? _explicitNullValueProviderId = default!;
 #nullable restore
 #else
-        public string ProviderId { get; set; }
+        public string ProviderId { get => _explicitNullValueProviderId; set { _explicitNullValueProviderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerId"); else _explicitNullProperties?.Remove("providerId"); } }
+        private string _explicitNullValueProviderId = default!;
 #endif
         /// <summary>The providerStatus property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus? ProviderStatus { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus? ProviderStatus { get => _explicitNullValueProviderStatus; set { _explicitNullValueProviderStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerStatus"); else _explicitNullProperties?.Remove("providerStatus"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus? _explicitNullValueProviderStatus = default!;
         /// <summary>The task property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemTask? Task { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemTask? Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemTask? _explicitNullValueTask = default!;
         /// <summary>The tokensPerSecond property</summary>
-        public double? TokensPerSecond { get; set; }
+        public double? TokensPerSecond { get => _explicitNullValueTokensPerSecond; set { _explicitNullValueTokensPerSecond = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tokensPerSecond"); else _explicitNullProperties?.Remove("tokensPerSecond"); } }
+        private double? _explicitNullValueTokensPerSecond = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -66,7 +104,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -112,7 +150,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("providerId", ProviderId);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus>("providerStatus", ProviderStatus);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemTask>("task", Task);
-            writer.WriteDoubleValue("tokensPerSecond", TokensPerSecond);
+            writer.WriteDoubleValue("tokensPerSecond", TokensPerSecond);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

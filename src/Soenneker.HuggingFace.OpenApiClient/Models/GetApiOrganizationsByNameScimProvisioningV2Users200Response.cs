@@ -11,29 +11,48 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiOrganizationsByNameScimProvisioningV2Users200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("itemsPerPage") is { } nullNodeItemsPerPage && nullNodeItemsPerPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ItemsPerPage = null;
+            if (parseNode.GetChildNode("Resources") is { } nullNodeResources && nullNodeResources.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resources = null;
+            if (parseNode.GetChildNode("schemas") is { } nullNodeSchemas && nullNodeSchemas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Schemas = null;
+            if (parseNode.GetChildNode("startIndex") is { } nullNodeStartIndex && nullNodeStartIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartIndex = null;
+            if (parseNode.GetChildNode("totalResults") is { } nullNodeTotalResults && nullNodeTotalResults.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalResults = null;
+        }
+
         /// <summary>The itemsPerPage property</summary>
-        public int? ItemsPerPage { get; set; }
+        public int? ItemsPerPage { get => _explicitNullValueItemsPerPage; set { _explicitNullValueItemsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemsPerPage"); else _explicitNullProperties?.Remove("itemsPerPage"); } }
+        private int? _explicitNullValueItemsPerPage = default!;
         /// <summary>The Resources property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200ResponseResourcesItem>? Resources { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200ResponseResourcesItem>? Resources { get => _explicitNullValueResources; set { _explicitNullValueResources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Resources"); else _explicitNullProperties?.Remove("Resources"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200ResponseResourcesItem>? _explicitNullValueResources = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200ResponseResourcesItem> Resources { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200ResponseResourcesItem> Resources { get => _explicitNullValueResources; set { _explicitNullValueResources = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("Resources"); else _explicitNullProperties?.Remove("Resources"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200ResponseResourcesItem> _explicitNullValueResources = default!;
 #endif
         /// <summary>The schemas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem?>? Schemas { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem?>? Schemas { get => _explicitNullValueSchemas; set { _explicitNullValueSchemas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemas"); else _explicitNullProperties?.Remove("schemas"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem?>? _explicitNullValueSchemas = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem?> Schemas { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem?> Schemas { get => _explicitNullValueSchemas; set { _explicitNullValueSchemas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("schemas"); else _explicitNullProperties?.Remove("schemas"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem?> _explicitNullValueSchemas = default!;
 #endif
         /// <summary>The startIndex property</summary>
-        public int? StartIndex { get; set; }
+        public int? StartIndex { get => _explicitNullValueStartIndex; set { _explicitNullValueStartIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startIndex"); else _explicitNullProperties?.Remove("startIndex"); } }
+        private int? _explicitNullValueStartIndex = default!;
         /// <summary>The totalResults property</summary>
-        public int? TotalResults { get; set; }
+        public int? TotalResults { get => _explicitNullValueTotalResults; set { _explicitNullValueTotalResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalResults"); else _explicitNullProperties?.Remove("totalResults"); } }
+        private int? _explicitNullValueTotalResults = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -42,7 +61,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -70,7 +89,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimProvisioningV2Users200ResponseResourcesItem>("Resources", Resources);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem>("schemas", Schemas);
             writer.WriteIntValue("startIndex", StartIndex);
-            writer.WriteIntValue("totalResults", TotalResults);
+            writer.WriteIntValue("totalResults", TotalResults);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

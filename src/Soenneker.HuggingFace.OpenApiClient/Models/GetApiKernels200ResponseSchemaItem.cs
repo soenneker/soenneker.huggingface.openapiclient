@@ -11,111 +11,167 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiKernels200ResponseSchemaItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("author") is { } nullNodeAuthor && nullNodeAuthor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Author = null;
+            if (parseNode.GetChildNode("buildMetadata") is { } nullNodeBuildMetadata && nullNodeBuildMetadata.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuildMetadata = null;
+            if (parseNode.GetChildNode("cardData") is { } nullNodeCardData && nullNodeCardData.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CardData = null;
+            if (parseNode.GetChildNode("createdAt") is { } nullNodeCreatedAt && nullNodeCreatedAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CreatedAt = null;
+            if (parseNode.GetChildNode("disabled") is { } nullNodeDisabled && nullNodeDisabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Disabled = null;
+            if (parseNode.GetChildNode("downloads") is { } nullNodeDownloads && nullNodeDownloads.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Downloads = null;
+            if (parseNode.GetChildNode("downloadsAllTime") is { } nullNodeDownloadsAllTime && nullNodeDownloadsAllTime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DownloadsAllTime = null;
+            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("gated") is { } nullNodeGated && nullNodeGated.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Gated = null;
+            if (parseNode.GetChildNode("id") is { } nullNodeGetApiKernels200ResponseSchemaItemId && nullNodeGetApiKernels200ResponseSchemaItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GetApiKernels200ResponseSchemaItemId = null;
+            if (parseNode.GetChildNode("_id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("lastModified") is { } nullNodeLastModified && nullNodeLastModified.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastModified = null;
+            if (parseNode.GetChildNode("likes") is { } nullNodeLikes && nullNodeLikes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Likes = null;
+            if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
+            if (parseNode.GetChildNode("resourceGroup") is { } nullNodeResourceGroup && nullNodeResourceGroup.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroup = null;
+            if (parseNode.GetChildNode("sha") is { } nullNodeSha && nullNodeSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha = null;
+            if (parseNode.GetChildNode("supportedDriverFamilies") is { } nullNodeSupportedDriverFamilies && nullNodeSupportedDriverFamilies.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SupportedDriverFamilies = null;
+            if (parseNode.GetChildNode("tags") is { } nullNodeTags && nullNodeTags.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Tags = null;
+            if (parseNode.GetChildNode("trendingScore") is { } nullNodeTrendingScore && nullNodeTrendingScore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrendingScore = null;
+        }
+
         /// <summary>Namespace (user or organization) of the kernel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Author { get; set; }
+        public string? Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private string? _explicitNullValueAuthor = default!;
 #nullable restore
 #else
-        public string Author { get; set; }
+        public string Author { get => _explicitNullValueAuthor; set { _explicitNullValueAuthor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("author"); else _explicitNullProperties?.Remove("author"); } }
+        private string _explicitNullValueAuthor = default!;
 #endif
         /// <summary>Build metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata? BuildMetadata { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata? BuildMetadata { get => _explicitNullValueBuildMetadata; set { _explicitNullValueBuildMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildMetadata"); else _explicitNullProperties?.Remove("buildMetadata"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata? _explicitNullValueBuildMetadata = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata BuildMetadata { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata BuildMetadata { get => _explicitNullValueBuildMetadata; set { _explicitNullValueBuildMetadata = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buildMetadata"); else _explicitNullProperties?.Remove("buildMetadata"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata _explicitNullValueBuildMetadata = default!;
 #endif
         /// <summary>Kernel card metadata</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData? CardData { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData? CardData { get => _explicitNullValueCardData; set { _explicitNullValueCardData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardData"); else _explicitNullProperties?.Remove("cardData"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData? _explicitNullValueCardData = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData CardData { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData CardData { get => _explicitNullValueCardData; set { _explicitNullValueCardData = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cardData"); else _explicitNullProperties?.Remove("cardData"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData _explicitNullValueCardData = default!;
 #endif
         /// <summary>Creation timestamp</summary>
-        public DateTimeOffset? CreatedAt { get; set; }
+        public DateTimeOffset? CreatedAt { get => _explicitNullValueCreatedAt; set { _explicitNullValueCreatedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("createdAt"); else _explicitNullProperties?.Remove("createdAt"); } }
+        private DateTimeOffset? _explicitNullValueCreatedAt = default!;
         /// <summary>Whether the kernel is disabled</summary>
-        public bool? Disabled { get; set; }
+        public bool? Disabled { get => _explicitNullValueDisabled; set { _explicitNullValueDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled"); else _explicitNullProperties?.Remove("disabled"); } }
+        private bool? _explicitNullValueDisabled = default!;
         /// <summary>Number of downloads in the last 30 days</summary>
-        public int? Downloads { get; set; }
+        public int? Downloads { get => _explicitNullValueDownloads; set { _explicitNullValueDownloads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloads"); else _explicitNullProperties?.Remove("downloads"); } }
+        private int? _explicitNullValueDownloads = default!;
         /// <summary>Total number of downloads</summary>
-        public int? DownloadsAllTime { get; set; }
+        public int? DownloadsAllTime { get => _explicitNullValueDownloadsAllTime; set { _explicitNullValueDownloadsAllTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadsAllTime"); else _explicitNullProperties?.Remove("downloadsAllTime"); } }
+        private int? _explicitNullValueDownloadsAllTime = default!;
         /// <summary>List of files in the kernel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Files { get; set; }
+        public List<string>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<string>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<string> Files { get; set; }
+        public List<string> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<string> _explicitNullValueFiles = default!;
 #endif
         /// <summary>Gated access status</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated? Gated { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated? Gated { get => _explicitNullValueGated; set { _explicitNullValueGated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gated"); else _explicitNullProperties?.Remove("gated"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated? _explicitNullValueGated = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated Gated { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated Gated { get => _explicitNullValueGated; set { _explicitNullValueGated = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gated"); else _explicitNullProperties?.Remove("gated"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated _explicitNullValueGated = default!;
 #endif
         /// <summary>Kernel ID in format namespace/name</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GetApiKernels200ResponseSchemaItemId { get; set; }
+        public string? GetApiKernels200ResponseSchemaItemId { get => _explicitNullValueGetApiKernels200ResponseSchemaItemId; set { _explicitNullValueGetApiKernels200ResponseSchemaItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string? _explicitNullValueGetApiKernels200ResponseSchemaItemId = default!;
 #nullable restore
 #else
-        public string GetApiKernels200ResponseSchemaItemId { get; set; }
+        public string GetApiKernels200ResponseSchemaItemId { get => _explicitNullValueGetApiKernels200ResponseSchemaItemId; set { _explicitNullValueGetApiKernels200ResponseSchemaItemId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("id"); else _explicitNullProperties?.Remove("id"); } }
+        private string _explicitNullValueGetApiKernels200ResponseSchemaItemId = default!;
 #endif
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>Last modification timestamp</summary>
-        public DateTimeOffset? LastModified { get; set; }
+        public DateTimeOffset? LastModified { get => _explicitNullValueLastModified; set { _explicitNullValueLastModified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastModified"); else _explicitNullProperties?.Remove("lastModified"); } }
+        private DateTimeOffset? _explicitNullValueLastModified = default!;
         /// <summary>Number of likes</summary>
-        public int? Likes { get; set; }
+        public int? Likes { get => _explicitNullValueLikes; set { _explicitNullValueLikes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("likes"); else _explicitNullProperties?.Remove("likes"); } }
+        private int? _explicitNullValueLikes = default!;
         /// <summary>Whether the kernel is private</summary>
-        public bool? Private { get; set; }
+        public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        private bool? _explicitNullValuePrivate = default!;
         /// <summary>Resource group information</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup? ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup? ResourceGroup { get => _explicitNullValueResourceGroup; set { _explicitNullValueResourceGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroup"); else _explicitNullProperties?.Remove("resourceGroup"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup? _explicitNullValueResourceGroup = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup ResourceGroup { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup ResourceGroup { get => _explicitNullValueResourceGroup; set { _explicitNullValueResourceGroup = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroup"); else _explicitNullProperties?.Remove("resourceGroup"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup _explicitNullValueResourceGroup = default!;
 #endif
         /// <summary>Current commit SHA</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sha { get; set; }
+        public string? Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string? _explicitNullValueSha = default!;
 #nullable restore
 #else
-        public string Sha { get; set; }
+        public string Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string _explicitNullValueSha = default!;
 #endif
         /// <summary>Driver families supported by the kernel (derived from build metadata)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem?>? SupportedDriverFamilies { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem?>? SupportedDriverFamilies { get => _explicitNullValueSupportedDriverFamilies; set { _explicitNullValueSupportedDriverFamilies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportedDriverFamilies"); else _explicitNullProperties?.Remove("supportedDriverFamilies"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem?>? _explicitNullValueSupportedDriverFamilies = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem?> SupportedDriverFamilies { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem?> SupportedDriverFamilies { get => _explicitNullValueSupportedDriverFamilies; set { _explicitNullValueSupportedDriverFamilies = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("supportedDriverFamilies"); else _explicitNullProperties?.Remove("supportedDriverFamilies"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem?> _explicitNullValueSupportedDriverFamilies = default!;
 #endif
         /// <summary>Kernel tags</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Tags { get; set; }
+        public List<string>? Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string>? _explicitNullValueTags = default!;
 #nullable restore
 #else
-        public List<string> Tags { get; set; }
+        public List<string> Tags { get => _explicitNullValueTags; set { _explicitNullValueTags = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("tags"); else _explicitNullProperties?.Remove("tags"); } }
+        private List<string> _explicitNullValueTags = default!;
 #endif
         /// <summary>Trending score</summary>
-        public double? TrendingScore { get; set; }
+        public double? TrendingScore { get => _explicitNullValueTrendingScore; set { _explicitNullValueTrendingScore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trendingScore"); else _explicitNullProperties?.Remove("trendingScore"); } }
+        private double? _explicitNullValueTrendingScore = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -124,7 +180,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -180,7 +236,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("sha", Sha);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemSupportedDriverFamiliesItem>("supportedDriverFamilies", SupportedDriverFamilies);
             writer.WriteCollectionOfPrimitiveValues<string>("tags", Tags);
-            writer.WriteDoubleValue("trendingScore", TrendingScore);
+            writer.WriteDoubleValue("trendingScore", TrendingScore);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,17 +11,29 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PutApiBucketsByNamespaceValueByRepoSettings200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("cdnRegions") is { } nullNodeCdnRegions && nullNodeCdnRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CdnRegions = null;
+            if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
+        }
+
         /// <summary>The cdnRegions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200ResponseCdnRegionsItem>? CdnRegions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200ResponseCdnRegionsItem>? CdnRegions { get => _explicitNullValueCdnRegions; set { _explicitNullValueCdnRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdnRegions"); else _explicitNullProperties?.Remove("cdnRegions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200ResponseCdnRegionsItem>? _explicitNullValueCdnRegions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200ResponseCdnRegionsItem> CdnRegions { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200ResponseCdnRegionsItem> CdnRegions { get => _explicitNullValueCdnRegions; set { _explicitNullValueCdnRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdnRegions"); else _explicitNullProperties?.Remove("cdnRegions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200ResponseCdnRegionsItem> _explicitNullValueCdnRegions = default!;
 #endif
         /// <summary>The private property</summary>
-        public bool? Private { get; set; }
+        public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        private bool? _explicitNullValuePrivate = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +42,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +64,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettings200ResponseCdnRegionsItem>("cdnRegions", CdnRegions);
-            writer.WriteBoolValue("private", Private);
+            writer.WriteBoolValue("private", Private);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

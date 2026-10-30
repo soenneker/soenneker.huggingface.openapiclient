@@ -11,61 +11,92 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3Runtime : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("devMode") is { } nullNodeDevMode && nullNodeDevMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevMode = null;
+            if (parseNode.GetChildNode("domains") is { } nullNodeDomains && nullNodeDomains.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Domains = null;
+            if (parseNode.GetChildNode("errorMessage") is { } nullNodeErrorMessage && nullNodeErrorMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ErrorMessage = null;
+            if (parseNode.GetChildNode("gcTimeout") is { } nullNodeGcTimeout && nullNodeGcTimeout.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GcTimeout = null;
+            if (parseNode.GetChildNode("hardware") is { } nullNodeHardware && nullNodeHardware.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hardware = null;
+            if (parseNode.GetChildNode("hotReloading") is { } nullNodeHotReloading && nullNodeHotReloading.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HotReloading = null;
+            if (parseNode.GetChildNode("replicas") is { } nullNodeReplicas && nullNodeReplicas.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Replicas = null;
+            if (parseNode.GetChildNode("sha") is { } nullNodeSha && nullNodeSha.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sha = null;
+            if (parseNode.GetChildNode("stage") is { } nullNodeStage && nullNodeStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stage = null;
+        }
+
         /// <summary>The devMode property</summary>
-        public bool? DevMode { get; set; }
+        public bool? DevMode { get => _explicitNullValueDevMode; set { _explicitNullValueDevMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("devMode"); else _explicitNullProperties?.Remove("devMode"); } }
+        private bool? _explicitNullValueDevMode = default!;
         /// <summary>The domains property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeDomainsItem>? Domains { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeDomainsItem>? Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeDomainsItem>? _explicitNullValueDomains = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeDomainsItem> Domains { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeDomainsItem> Domains { get => _explicitNullValueDomains; set { _explicitNullValueDomains = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("domains"); else _explicitNullProperties?.Remove("domains"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeDomainsItem> _explicitNullValueDomains = default!;
 #endif
         /// <summary>The errorMessage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ErrorMessage { get; set; }
+        public string? ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessage"); else _explicitNullProperties?.Remove("errorMessage"); } }
+        private string? _explicitNullValueErrorMessage = default!;
 #nullable restore
 #else
-        public string ErrorMessage { get; set; }
+        public string ErrorMessage { get => _explicitNullValueErrorMessage; set { _explicitNullValueErrorMessage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("errorMessage"); else _explicitNullProperties?.Remove("errorMessage"); } }
+        private string _explicitNullValueErrorMessage = default!;
 #endif
         /// <summary>The gcTimeout property</summary>
-        public double? GcTimeout { get; set; }
+        public double? GcTimeout { get => _explicitNullValueGcTimeout; set { _explicitNullValueGcTimeout = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gcTimeout"); else _explicitNullProperties?.Remove("gcTimeout"); } }
+        private double? _explicitNullValueGcTimeout = default!;
         /// <summary>The hardware property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHardware? Hardware { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHardware? Hardware { get => _explicitNullValueHardware; set { _explicitNullValueHardware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware"); else _explicitNullProperties?.Remove("hardware"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHardware? _explicitNullValueHardware = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHardware Hardware { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHardware Hardware { get => _explicitNullValueHardware; set { _explicitNullValueHardware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware"); else _explicitNullProperties?.Remove("hardware"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHardware _explicitNullValueHardware = default!;
 #endif
         /// <summary>The hotReloading property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHotReloading? HotReloading { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHotReloading? HotReloading { get => _explicitNullValueHotReloading; set { _explicitNullValueHotReloading = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hotReloading"); else _explicitNullProperties?.Remove("hotReloading"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHotReloading? _explicitNullValueHotReloading = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHotReloading HotReloading { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHotReloading HotReloading { get => _explicitNullValueHotReloading; set { _explicitNullValueHotReloading = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hotReloading"); else _explicitNullProperties?.Remove("hotReloading"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHotReloading _explicitNullValueHotReloading = default!;
 #endif
         /// <summary>The replicas property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeReplicas? Replicas { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeReplicas? Replicas { get => _explicitNullValueReplicas; set { _explicitNullValueReplicas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replicas"); else _explicitNullProperties?.Remove("replicas"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeReplicas? _explicitNullValueReplicas = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeReplicas Replicas { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeReplicas Replicas { get => _explicitNullValueReplicas; set { _explicitNullValueReplicas = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("replicas"); else _explicitNullProperties?.Remove("replicas"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeReplicas _explicitNullValueReplicas = default!;
 #endif
         /// <summary>The sha property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Sha { get; set; }
+        public string? Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string? _explicitNullValueSha = default!;
 #nullable restore
 #else
-        public string Sha { get; set; }
+        public string Sha { get => _explicitNullValueSha; set { _explicitNullValueSha = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sha"); else _explicitNullProperties?.Remove("sha"); } }
+        private string _explicitNullValueSha = default!;
 #endif
         /// <summary>The stage property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeStage? Stage { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeStage? Stage { get => _explicitNullValueStage; set { _explicitNullValueStage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("stage"); else _explicitNullProperties?.Remove("stage"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeStage? _explicitNullValueStage = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -74,7 +105,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3Runtime CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3Runtime();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3Runtime(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -110,7 +141,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeHotReloading>("hotReloading", HotReloading);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeReplicas>("replicas", Replicas);
             writer.WriteStringValue("sha", Sha);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeStage>("stage", Stage);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3RuntimeStage>("stage", Stage);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

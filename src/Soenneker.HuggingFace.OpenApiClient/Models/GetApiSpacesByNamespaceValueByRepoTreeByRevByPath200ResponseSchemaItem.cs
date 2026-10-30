@@ -11,50 +11,76 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("lastCommit") is { } nullNodeLastCommit && nullNodeLastCommit.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastCommit = null;
+            if (parseNode.GetChildNode("lfs") is { } nullNodeLfs && nullNodeLfs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Lfs = null;
+            if (parseNode.GetChildNode("oid") is { } nullNodeOid && nullNodeOid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Oid = null;
+            if (parseNode.GetChildNode("securityFileStatus") is { } nullNodeSecurityFileStatus && nullNodeSecurityFileStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecurityFileStatus = null;
+            if (parseNode.GetChildNode("size") is { } nullNodeSize && nullNodeSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Size = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("xetHash") is { } nullNodeXetHash && nullNodeXetHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) XetHash = null;
+        }
+
         /// <summary>The lastCommit property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit? LastCommit { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit? LastCommit { get => _explicitNullValueLastCommit; set { _explicitNullValueLastCommit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastCommit"); else _explicitNullProperties?.Remove("lastCommit"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit? _explicitNullValueLastCommit = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit LastCommit { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit LastCommit { get => _explicitNullValueLastCommit; set { _explicitNullValueLastCommit = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastCommit"); else _explicitNullProperties?.Remove("lastCommit"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLastCommit _explicitNullValueLastCommit = default!;
 #endif
         /// <summary>The lfs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs? Lfs { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs? Lfs { get => _explicitNullValueLfs; set { _explicitNullValueLfs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs"); else _explicitNullProperties?.Remove("lfs"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs? _explicitNullValueLfs = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs Lfs { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs Lfs { get => _explicitNullValueLfs; set { _explicitNullValueLfs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lfs"); else _explicitNullProperties?.Remove("lfs"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs _explicitNullValueLfs = default!;
 #endif
         /// <summary>The oid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Oid { get; set; }
+        public string? Oid { get => _explicitNullValueOid; set { _explicitNullValueOid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oid"); else _explicitNullProperties?.Remove("oid"); } }
+        private string? _explicitNullValueOid = default!;
 #nullable restore
 #else
-        public string Oid { get; set; }
+        public string Oid { get => _explicitNullValueOid; set { _explicitNullValueOid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oid"); else _explicitNullProperties?.Remove("oid"); } }
+        private string _explicitNullValueOid = default!;
 #endif
         /// <summary>The securityFileStatus property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus? SecurityFileStatus { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus? SecurityFileStatus { get => _explicitNullValueSecurityFileStatus; set { _explicitNullValueSecurityFileStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityFileStatus"); else _explicitNullProperties?.Remove("securityFileStatus"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus? _explicitNullValueSecurityFileStatus = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus SecurityFileStatus { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus SecurityFileStatus { get => _explicitNullValueSecurityFileStatus; set { _explicitNullValueSecurityFileStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("securityFileStatus"); else _explicitNullProperties?.Remove("securityFileStatus"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus _explicitNullValueSecurityFileStatus = default!;
 #endif
         /// <summary>If the file is a LFS pointer, it&apos;ll return the size of the remote file</summary>
-        public int? Size { get; set; }
+        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private int? _explicitNullValueSize = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseItemType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseItemType? _explicitNullValueType = default!;
         /// <summary>The xetHash property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? XetHash { get; set; }
+        public string? XetHash { get => _explicitNullValueXetHash; set { _explicitNullValueXetHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("xetHash"); else _explicitNullProperties?.Remove("xetHash"); } }
+        private string? _explicitNullValueXetHash = default!;
 #nullable restore
 #else
-        public string XetHash { get; set; }
+        public string XetHash { get => _explicitNullValueXetHash; set { _explicitNullValueXetHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("xetHash"); else _explicitNullProperties?.Remove("xetHash"); } }
+        private string _explicitNullValueXetHash = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -64,7 +90,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -96,7 +122,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus>("securityFileStatus", SecurityFileStatus);
             writer.WriteIntValue("size", Size);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoTreeByRevByPath200ResponseItemType>("type", Type);
-            writer.WriteStringValue("xetHash", XetHash);
+            writer.WriteStringValue("xetHash", XetHash);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

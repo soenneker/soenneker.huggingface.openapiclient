@@ -11,22 +11,35 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiAgentHarnesses200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("harnesses") is { } nullNodeHarnesses && nullNodeHarnesses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Harnesses = null;
+            if (parseNode.GetChildNode("standardEnvVars") is { } nullNodeStandardEnvVars && nullNodeStandardEnvVars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardEnvVars = null;
+        }
+
         /// <summary>Registered harnesses, keyed by id and ordered by detection priority: the first match wins</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200ResponseHarnesses? Harnesses { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200ResponseHarnesses? Harnesses { get => _explicitNullValueHarnesses; set { _explicitNullValueHarnesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("harnesses"); else _explicitNullProperties?.Remove("harnesses"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200ResponseHarnesses? _explicitNullValueHarnesses = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200ResponseHarnesses Harnesses { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200ResponseHarnesses Harnesses { get => _explicitNullValueHarnesses; set { _explicitNullValueHarnesses = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("harnesses"); else _explicitNullProperties?.Remove("harnesses"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200ResponseHarnesses _explicitNullValueHarnesses = default!;
 #endif
         /// <summary>Standard environment variables that any agent can set to identify itself. Their value is matched against the harness ids.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? StandardEnvVars { get; set; }
+        public List<string>? StandardEnvVars { get => _explicitNullValueStandardEnvVars; set { _explicitNullValueStandardEnvVars = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardEnvVars"); else _explicitNullProperties?.Remove("standardEnvVars"); } }
+        private List<string>? _explicitNullValueStandardEnvVars = default!;
 #nullable restore
 #else
-        public List<string> StandardEnvVars { get; set; }
+        public List<string> StandardEnvVars { get => _explicitNullValueStandardEnvVars; set { _explicitNullValueStandardEnvVars = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("standardEnvVars"); else _explicitNullProperties?.Remove("standardEnvVars"); } }
+        private List<string> _explicitNullValueStandardEnvVars = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +71,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiAgentHarnesses200ResponseHarnesses>("harnesses", Harnesses);
-            writer.WriteCollectionOfPrimitiveValues<string>("standardEnvVars", StandardEnvVars);
+            writer.WriteCollectionOfPrimitiveValues<string>("standardEnvVars", StandardEnvVars);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

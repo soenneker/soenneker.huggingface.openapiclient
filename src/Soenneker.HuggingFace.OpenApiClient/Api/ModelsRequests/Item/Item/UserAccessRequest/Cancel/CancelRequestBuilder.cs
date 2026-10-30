@@ -48,7 +48,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserA
         {
 #endif
             var requestInfo = ToPostRequestInformation(requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserAccessRequest.Cancel.CancelPostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserAccessRequest.Cancel.CancelPostResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserAccessRequest.Cancel.CancelPostResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.UserAccessRequest.Cancel.CancelPostResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Cancel the current user&apos;s access request to a gated repository

@@ -55,6 +55,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Repos.Create
             var errorMapping = new Dictionary<string, ParsableFactory<IParsable>>
             {
                 { "409", global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreate409Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreate200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreate200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

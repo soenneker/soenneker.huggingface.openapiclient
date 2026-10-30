@@ -55,6 +55,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Containers.Item.Item.Resolve.Item
             {
                 { "400", global::Soenneker.HuggingFace.OpenApiClient.Models.GetContainersByNamespaceValueByRepoResolveByPath400Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HuggingFace.OpenApiClient.Models.GetContainersByNamespaceValueByRepoResolveByPath404Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetContainersByNamespaceValueByRepoResolveByPath200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetContainersByNamespaceValueByRepoResolveByPath200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }

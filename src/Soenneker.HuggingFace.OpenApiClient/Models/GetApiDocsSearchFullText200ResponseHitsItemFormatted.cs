@@ -11,78 +11,112 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiDocsSearchFullText200ResponseHitsItemFormatted : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("content") is { } nullNodeContent && nullNodeContent.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Content = null;
+            if (parseNode.GetChildNode("hierarchy_lvl0") is { } nullNodeHierarchyLvl0 && nullNodeHierarchyLvl0.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HierarchyLvl0 = null;
+            if (parseNode.GetChildNode("hierarchy_lvl1") is { } nullNodeHierarchyLvl1 && nullNodeHierarchyLvl1.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HierarchyLvl1 = null;
+            if (parseNode.GetChildNode("hierarchy_lvl2") is { } nullNodeHierarchyLvl2 && nullNodeHierarchyLvl2.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HierarchyLvl2 = null;
+            if (parseNode.GetChildNode("hierarchy_lvl3") is { } nullNodeHierarchyLvl3 && nullNodeHierarchyLvl3.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HierarchyLvl3 = null;
+            if (parseNode.GetChildNode("hierarchy_lvl4") is { } nullNodeHierarchyLvl4 && nullNodeHierarchyLvl4.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HierarchyLvl4 = null;
+            if (parseNode.GetChildNode("hierarchy_lvl5") is { } nullNodeHierarchyLvl5 && nullNodeHierarchyLvl5.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HierarchyLvl5 = null;
+            if (parseNode.GetChildNode("hierarchy_lvl6") is { } nullNodeHierarchyLvl6 && nullNodeHierarchyLvl6.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HierarchyLvl6 = null;
+            if (parseNode.GetChildNode("url") is { } nullNodeUrl && nullNodeUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Url = null;
+        }
+
         /// <summary>The content property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Content { get; set; }
+        public string? Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string? _explicitNullValueContent = default!;
 #nullable restore
 #else
-        public string Content { get; set; }
+        public string Content { get => _explicitNullValueContent; set { _explicitNullValueContent = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content"); else _explicitNullProperties?.Remove("content"); } }
+        private string _explicitNullValueContent = default!;
 #endif
         /// <summary>The hierarchy_lvl0 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HierarchyLvl0 { get; set; }
+        public string? HierarchyLvl0 { get => _explicitNullValueHierarchyLvl0; set { _explicitNullValueHierarchyLvl0 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl0"); else _explicitNullProperties?.Remove("hierarchy_lvl0"); } }
+        private string? _explicitNullValueHierarchyLvl0 = default!;
 #nullable restore
 #else
-        public string HierarchyLvl0 { get; set; }
+        public string HierarchyLvl0 { get => _explicitNullValueHierarchyLvl0; set { _explicitNullValueHierarchyLvl0 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl0"); else _explicitNullProperties?.Remove("hierarchy_lvl0"); } }
+        private string _explicitNullValueHierarchyLvl0 = default!;
 #endif
         /// <summary>The hierarchy_lvl1 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HierarchyLvl1 { get; set; }
+        public string? HierarchyLvl1 { get => _explicitNullValueHierarchyLvl1; set { _explicitNullValueHierarchyLvl1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl1"); else _explicitNullProperties?.Remove("hierarchy_lvl1"); } }
+        private string? _explicitNullValueHierarchyLvl1 = default!;
 #nullable restore
 #else
-        public string HierarchyLvl1 { get; set; }
+        public string HierarchyLvl1 { get => _explicitNullValueHierarchyLvl1; set { _explicitNullValueHierarchyLvl1 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl1"); else _explicitNullProperties?.Remove("hierarchy_lvl1"); } }
+        private string _explicitNullValueHierarchyLvl1 = default!;
 #endif
         /// <summary>The hierarchy_lvl2 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HierarchyLvl2 { get; set; }
+        public string? HierarchyLvl2 { get => _explicitNullValueHierarchyLvl2; set { _explicitNullValueHierarchyLvl2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl2"); else _explicitNullProperties?.Remove("hierarchy_lvl2"); } }
+        private string? _explicitNullValueHierarchyLvl2 = default!;
 #nullable restore
 #else
-        public string HierarchyLvl2 { get; set; }
+        public string HierarchyLvl2 { get => _explicitNullValueHierarchyLvl2; set { _explicitNullValueHierarchyLvl2 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl2"); else _explicitNullProperties?.Remove("hierarchy_lvl2"); } }
+        private string _explicitNullValueHierarchyLvl2 = default!;
 #endif
         /// <summary>The hierarchy_lvl3 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HierarchyLvl3 { get; set; }
+        public string? HierarchyLvl3 { get => _explicitNullValueHierarchyLvl3; set { _explicitNullValueHierarchyLvl3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl3"); else _explicitNullProperties?.Remove("hierarchy_lvl3"); } }
+        private string? _explicitNullValueHierarchyLvl3 = default!;
 #nullable restore
 #else
-        public string HierarchyLvl3 { get; set; }
+        public string HierarchyLvl3 { get => _explicitNullValueHierarchyLvl3; set { _explicitNullValueHierarchyLvl3 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl3"); else _explicitNullProperties?.Remove("hierarchy_lvl3"); } }
+        private string _explicitNullValueHierarchyLvl3 = default!;
 #endif
         /// <summary>The hierarchy_lvl4 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HierarchyLvl4 { get; set; }
+        public string? HierarchyLvl4 { get => _explicitNullValueHierarchyLvl4; set { _explicitNullValueHierarchyLvl4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl4"); else _explicitNullProperties?.Remove("hierarchy_lvl4"); } }
+        private string? _explicitNullValueHierarchyLvl4 = default!;
 #nullable restore
 #else
-        public string HierarchyLvl4 { get; set; }
+        public string HierarchyLvl4 { get => _explicitNullValueHierarchyLvl4; set { _explicitNullValueHierarchyLvl4 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl4"); else _explicitNullProperties?.Remove("hierarchy_lvl4"); } }
+        private string _explicitNullValueHierarchyLvl4 = default!;
 #endif
         /// <summary>The hierarchy_lvl5 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HierarchyLvl5 { get; set; }
+        public string? HierarchyLvl5 { get => _explicitNullValueHierarchyLvl5; set { _explicitNullValueHierarchyLvl5 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl5"); else _explicitNullProperties?.Remove("hierarchy_lvl5"); } }
+        private string? _explicitNullValueHierarchyLvl5 = default!;
 #nullable restore
 #else
-        public string HierarchyLvl5 { get; set; }
+        public string HierarchyLvl5 { get => _explicitNullValueHierarchyLvl5; set { _explicitNullValueHierarchyLvl5 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl5"); else _explicitNullProperties?.Remove("hierarchy_lvl5"); } }
+        private string _explicitNullValueHierarchyLvl5 = default!;
 #endif
         /// <summary>The hierarchy_lvl6 property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HierarchyLvl6 { get; set; }
+        public string? HierarchyLvl6 { get => _explicitNullValueHierarchyLvl6; set { _explicitNullValueHierarchyLvl6 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl6"); else _explicitNullProperties?.Remove("hierarchy_lvl6"); } }
+        private string? _explicitNullValueHierarchyLvl6 = default!;
 #nullable restore
 #else
-        public string HierarchyLvl6 { get; set; }
+        public string HierarchyLvl6 { get => _explicitNullValueHierarchyLvl6; set { _explicitNullValueHierarchyLvl6 = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hierarchy_lvl6"); else _explicitNullProperties?.Remove("hierarchy_lvl6"); } }
+        private string _explicitNullValueHierarchyLvl6 = default!;
 #endif
         /// <summary>The url property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Url { get; set; }
+        public string? Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string? _explicitNullValueUrl = default!;
 #nullable restore
 #else
-        public string Url { get; set; }
+        public string Url { get => _explicitNullValueUrl; set { _explicitNullValueUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("url"); else _explicitNullProperties?.Remove("url"); } }
+        private string _explicitNullValueUrl = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -92,7 +126,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearchFullText200ResponseHitsItemFormatted CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearchFullText200ResponseHitsItemFormatted();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDocsSearchFullText200ResponseHitsItemFormatted(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -128,7 +162,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("hierarchy_lvl4", HierarchyLvl4);
             writer.WriteStringValue("hierarchy_lvl5", HierarchyLvl5);
             writer.WriteStringValue("hierarchy_lvl6", HierarchyLvl6);
-            writer.WriteStringValue("url", Url);
+            writer.WriteStringValue("url", Url);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

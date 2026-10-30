@@ -11,120 +11,181 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiQuicksearch200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("blogs") is { } nullNodeBlogs && nullNodeBlogs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Blogs = null;
+            if (parseNode.GetChildNode("blogsCount") is { } nullNodeBlogsCount && nullNodeBlogsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlogsCount = null;
+            if (parseNode.GetChildNode("buckets") is { } nullNodeBuckets && nullNodeBuckets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Buckets = null;
+            if (parseNode.GetChildNode("bucketsCount") is { } nullNodeBucketsCount && nullNodeBucketsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BucketsCount = null;
+            if (parseNode.GetChildNode("collections") is { } nullNodeCollections && nullNodeCollections.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Collections = null;
+            if (parseNode.GetChildNode("collectionsCount") is { } nullNodeCollectionsCount && nullNodeCollectionsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CollectionsCount = null;
+            if (parseNode.GetChildNode("containers") is { } nullNodeContainers && nullNodeContainers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Containers = null;
+            if (parseNode.GetChildNode("containersCount") is { } nullNodeContainersCount && nullNodeContainersCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContainersCount = null;
+            if (parseNode.GetChildNode("datasets") is { } nullNodeDatasets && nullNodeDatasets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Datasets = null;
+            if (parseNode.GetChildNode("datasetsCount") is { } nullNodeDatasetsCount && nullNodeDatasetsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DatasetsCount = null;
+            if (parseNode.GetChildNode("kernels") is { } nullNodeKernels && nullNodeKernels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Kernels = null;
+            if (parseNode.GetChildNode("kernelsCount") is { } nullNodeKernelsCount && nullNodeKernelsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KernelsCount = null;
+            if (parseNode.GetChildNode("models") is { } nullNodeModels && nullNodeModels.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Models = null;
+            if (parseNode.GetChildNode("modelsCount") is { } nullNodeModelsCount && nullNodeModelsCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ModelsCount = null;
+            if (parseNode.GetChildNode("orgs") is { } nullNodeOrgs && nullNodeOrgs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Orgs = null;
+            if (parseNode.GetChildNode("papers") is { } nullNodePapers && nullNodePapers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Papers = null;
+            if (parseNode.GetChildNode("papersCount") is { } nullNodePapersCount && nullNodePapersCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PapersCount = null;
+            if (parseNode.GetChildNode("q") is { } nullNodeQ && nullNodeQ.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Q = null;
+            if (parseNode.GetChildNode("spaces") is { } nullNodeSpaces && nullNodeSpaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Spaces = null;
+            if (parseNode.GetChildNode("spacesCount") is { } nullNodeSpacesCount && nullNodeSpacesCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpacesCount = null;
+            if (parseNode.GetChildNode("users") is { } nullNodeUsers && nullNodeUsers.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Users = null;
+        }
+
         /// <summary>The blogs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBlogsItem>? Blogs { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBlogsItem>? Blogs { get => _explicitNullValueBlogs; set { _explicitNullValueBlogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogs"); else _explicitNullProperties?.Remove("blogs"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBlogsItem>? _explicitNullValueBlogs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBlogsItem> Blogs { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBlogsItem> Blogs { get => _explicitNullValueBlogs; set { _explicitNullValueBlogs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogs"); else _explicitNullProperties?.Remove("blogs"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBlogsItem> _explicitNullValueBlogs = default!;
 #endif
         /// <summary>The blogsCount property</summary>
-        public double? BlogsCount { get; set; }
+        public double? BlogsCount { get => _explicitNullValueBlogsCount; set { _explicitNullValueBlogsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blogsCount"); else _explicitNullProperties?.Remove("blogsCount"); } }
+        private double? _explicitNullValueBlogsCount = default!;
         /// <summary>The buckets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBucketsItem>? Buckets { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBucketsItem>? Buckets { get => _explicitNullValueBuckets; set { _explicitNullValueBuckets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buckets"); else _explicitNullProperties?.Remove("buckets"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBucketsItem>? _explicitNullValueBuckets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBucketsItem> Buckets { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBucketsItem> Buckets { get => _explicitNullValueBuckets; set { _explicitNullValueBuckets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("buckets"); else _explicitNullProperties?.Remove("buckets"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseBucketsItem> _explicitNullValueBuckets = default!;
 #endif
         /// <summary>The bucketsCount property</summary>
-        public double? BucketsCount { get; set; }
+        public double? BucketsCount { get => _explicitNullValueBucketsCount; set { _explicitNullValueBucketsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("bucketsCount"); else _explicitNullProperties?.Remove("bucketsCount"); } }
+        private double? _explicitNullValueBucketsCount = default!;
         /// <summary>The collections property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseCollectionsItem>? Collections { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseCollectionsItem>? Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseCollectionsItem>? _explicitNullValueCollections = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseCollectionsItem> Collections { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseCollectionsItem> Collections { get => _explicitNullValueCollections; set { _explicitNullValueCollections = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collections"); else _explicitNullProperties?.Remove("collections"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseCollectionsItem> _explicitNullValueCollections = default!;
 #endif
         /// <summary>The collectionsCount property</summary>
-        public double? CollectionsCount { get; set; }
+        public double? CollectionsCount { get => _explicitNullValueCollectionsCount; set { _explicitNullValueCollectionsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("collectionsCount"); else _explicitNullProperties?.Remove("collectionsCount"); } }
+        private double? _explicitNullValueCollectionsCount = default!;
         /// <summary>The containers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseContainersItem>? Containers { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseContainersItem>? Containers { get => _explicitNullValueContainers; set { _explicitNullValueContainers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containers"); else _explicitNullProperties?.Remove("containers"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseContainersItem>? _explicitNullValueContainers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseContainersItem> Containers { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseContainersItem> Containers { get => _explicitNullValueContainers; set { _explicitNullValueContainers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containers"); else _explicitNullProperties?.Remove("containers"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseContainersItem> _explicitNullValueContainers = default!;
 #endif
         /// <summary>The containersCount property</summary>
-        public double? ContainersCount { get; set; }
+        public double? ContainersCount { get => _explicitNullValueContainersCount; set { _explicitNullValueContainersCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("containersCount"); else _explicitNullProperties?.Remove("containersCount"); } }
+        private double? _explicitNullValueContainersCount = default!;
         /// <summary>The datasets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItem>? Datasets { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItem>? Datasets { get => _explicitNullValueDatasets; set { _explicitNullValueDatasets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasets"); else _explicitNullProperties?.Remove("datasets"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItem>? _explicitNullValueDatasets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItem> Datasets { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItem> Datasets { get => _explicitNullValueDatasets; set { _explicitNullValueDatasets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasets"); else _explicitNullProperties?.Remove("datasets"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItem> _explicitNullValueDatasets = default!;
 #endif
         /// <summary>The datasetsCount property</summary>
-        public double? DatasetsCount { get; set; }
+        public double? DatasetsCount { get => _explicitNullValueDatasetsCount; set { _explicitNullValueDatasetsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("datasetsCount"); else _explicitNullProperties?.Remove("datasetsCount"); } }
+        private double? _explicitNullValueDatasetsCount = default!;
         /// <summary>The kernels property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseKernelsItem>? Kernels { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseKernelsItem>? Kernels { get => _explicitNullValueKernels; set { _explicitNullValueKernels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kernels"); else _explicitNullProperties?.Remove("kernels"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseKernelsItem>? _explicitNullValueKernels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseKernelsItem> Kernels { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseKernelsItem> Kernels { get => _explicitNullValueKernels; set { _explicitNullValueKernels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kernels"); else _explicitNullProperties?.Remove("kernels"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseKernelsItem> _explicitNullValueKernels = default!;
 #endif
         /// <summary>The kernelsCount property</summary>
-        public double? KernelsCount { get; set; }
+        public double? KernelsCount { get => _explicitNullValueKernelsCount; set { _explicitNullValueKernelsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("kernelsCount"); else _explicitNullProperties?.Remove("kernelsCount"); } }
+        private double? _explicitNullValueKernelsCount = default!;
         /// <summary>The models property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseModelsItem>? Models { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseModelsItem>? Models { get => _explicitNullValueModels; set { _explicitNullValueModels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("models"); else _explicitNullProperties?.Remove("models"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseModelsItem>? _explicitNullValueModels = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseModelsItem> Models { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseModelsItem> Models { get => _explicitNullValueModels; set { _explicitNullValueModels = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("models"); else _explicitNullProperties?.Remove("models"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseModelsItem> _explicitNullValueModels = default!;
 #endif
         /// <summary>The modelsCount property</summary>
-        public double? ModelsCount { get; set; }
+        public double? ModelsCount { get => _explicitNullValueModelsCount; set { _explicitNullValueModelsCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("modelsCount"); else _explicitNullProperties?.Remove("modelsCount"); } }
+        private double? _explicitNullValueModelsCount = default!;
         /// <summary>The orgs property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseOrgsItem>? Orgs { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseOrgsItem>? Orgs { get => _explicitNullValueOrgs; set { _explicitNullValueOrgs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orgs"); else _explicitNullProperties?.Remove("orgs"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseOrgsItem>? _explicitNullValueOrgs = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseOrgsItem> Orgs { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseOrgsItem> Orgs { get => _explicitNullValueOrgs; set { _explicitNullValueOrgs = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("orgs"); else _explicitNullProperties?.Remove("orgs"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseOrgsItem> _explicitNullValueOrgs = default!;
 #endif
         /// <summary>The papers property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponsePapersItem>? Papers { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponsePapersItem>? Papers { get => _explicitNullValuePapers; set { _explicitNullValuePapers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("papers"); else _explicitNullProperties?.Remove("papers"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponsePapersItem>? _explicitNullValuePapers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponsePapersItem> Papers { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponsePapersItem> Papers { get => _explicitNullValuePapers; set { _explicitNullValuePapers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("papers"); else _explicitNullProperties?.Remove("papers"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponsePapersItem> _explicitNullValuePapers = default!;
 #endif
         /// <summary>The papersCount property</summary>
-        public double? PapersCount { get; set; }
+        public double? PapersCount { get => _explicitNullValuePapersCount; set { _explicitNullValuePapersCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("papersCount"); else _explicitNullProperties?.Remove("papersCount"); } }
+        private double? _explicitNullValuePapersCount = default!;
         /// <summary>The q property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Q { get; set; }
+        public string? Q { get => _explicitNullValueQ; set { _explicitNullValueQ = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q"); else _explicitNullProperties?.Remove("q"); } }
+        private string? _explicitNullValueQ = default!;
 #nullable restore
 #else
-        public string Q { get; set; }
+        public string Q { get => _explicitNullValueQ; set { _explicitNullValueQ = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("q"); else _explicitNullProperties?.Remove("q"); } }
+        private string _explicitNullValueQ = default!;
 #endif
         /// <summary>The spaces property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItem>? Spaces { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItem>? Spaces { get => _explicitNullValueSpaces; set { _explicitNullValueSpaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaces"); else _explicitNullProperties?.Remove("spaces"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItem>? _explicitNullValueSpaces = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItem> Spaces { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItem> Spaces { get => _explicitNullValueSpaces; set { _explicitNullValueSpaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaces"); else _explicitNullProperties?.Remove("spaces"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItem> _explicitNullValueSpaces = default!;
 #endif
         /// <summary>The spacesCount property</summary>
-        public double? SpacesCount { get; set; }
+        public double? SpacesCount { get => _explicitNullValueSpacesCount; set { _explicitNullValueSpacesCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spacesCount"); else _explicitNullProperties?.Remove("spacesCount"); } }
+        private double? _explicitNullValueSpacesCount = default!;
         /// <summary>The users property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseUsersItem>? Users { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseUsersItem>? Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseUsersItem>? _explicitNullValueUsers = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseUsersItem> Users { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseUsersItem> Users { get => _explicitNullValueUsers; set { _explicitNullValueUsers = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("users"); else _explicitNullProperties?.Remove("users"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseUsersItem> _explicitNullValueUsers = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -134,7 +195,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -194,7 +255,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("q", Q);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItem>("spaces", Spaces);
             writer.WriteDoubleValue("spacesCount", SpacesCount);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseUsersItem>("users", Users);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseUsersItem>("users", Users);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

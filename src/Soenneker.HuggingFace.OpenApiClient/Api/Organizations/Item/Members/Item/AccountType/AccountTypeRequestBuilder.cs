@@ -51,7 +51,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Ite
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPutRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Item.AccountType.AccountTypePutResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Item.AccountType.AccountTypePutResponse.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Item.AccountType.AccountTypePutResponse>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Members.Item.AccountType.AccountTypePutResponse.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Convert a member into an external collaborator, who isn&apos;t required to sign in with SSO, or back into a member. Need a paid plan. Doesn&apos;t affect the role, which must be changed separately.

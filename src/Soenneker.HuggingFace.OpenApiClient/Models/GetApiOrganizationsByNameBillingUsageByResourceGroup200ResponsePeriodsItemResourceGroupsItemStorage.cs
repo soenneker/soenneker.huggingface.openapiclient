@@ -11,11 +11,22 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiOrganizationsByNameBillingUsageByResourceGroup200ResponsePeriodsItemResourceGroupsItemStorage : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("privateGB") is { } nullNodePrivateGB && nullNodePrivateGB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateGB = null;
+            if (parseNode.GetChildNode("publicGB") is { } nullNodePublicGB && nullNodePublicGB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicGB = null;
+        }
+
         /// <summary>The privateGB property</summary>
-        public double? PrivateGB { get; set; }
+        public double? PrivateGB { get => _explicitNullValuePrivateGB; set { _explicitNullValuePrivateGB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("privateGB"); else _explicitNullProperties?.Remove("privateGB"); } }
+        private double? _explicitNullValuePrivateGB = default!;
         /// <summary>The publicGB property</summary>
-        public double? PublicGB { get; set; }
+        public double? PublicGB { get => _explicitNullValuePublicGB; set { _explicitNullValuePublicGB = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("publicGB"); else _explicitNullProperties?.Remove("publicGB"); } }
+        private double? _explicitNullValuePublicGB = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -24,7 +35,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameBillingUsageByResourceGroup200ResponsePeriodsItemResourceGroupsItemStorage CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameBillingUsageByResourceGroup200ResponsePeriodsItemResourceGroupsItemStorage();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameBillingUsageByResourceGroup200ResponsePeriodsItemResourceGroupsItemStorage(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -46,7 +57,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteDoubleValue("privateGB", PrivateGB);
-            writer.WriteDoubleValue("publicGB", PublicGB);
+            writer.WriteDoubleValue("publicGB", PublicGB);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

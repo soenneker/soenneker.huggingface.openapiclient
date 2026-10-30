@@ -11,24 +11,39 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrained : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("canReadGatedRepos") is { } nullNodeCanReadGatedRepos && nullNodeCanReadGatedRepos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanReadGatedRepos = null;
+            if (parseNode.GetChildNode("global") is { } nullNodeGlobal && nullNodeGlobal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Global = null;
+            if (parseNode.GetChildNode("scoped") is { } nullNodeScoped && nullNodeScoped.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scoped = null;
+        }
+
         /// <summary>Allow access to all public gated repos to which the user has access</summary>
-        public bool? CanReadGatedRepos { get; set; }
+        public bool? CanReadGatedRepos { get => _explicitNullValueCanReadGatedRepos; set { _explicitNullValueCanReadGatedRepos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canReadGatedRepos"); else _explicitNullProperties?.Remove("canReadGatedRepos"); } }
+        private bool? _explicitNullValueCanReadGatedRepos = default!;
         /// <summary>The global property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedGlobalItem?>? Global { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedGlobalItem?>? Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedGlobalItem?>? _explicitNullValueGlobal = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedGlobalItem?> Global { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedGlobalItem?> Global { get => _explicitNullValueGlobal; set { _explicitNullValueGlobal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("global"); else _explicitNullProperties?.Remove("global"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedGlobalItem?> _explicitNullValueGlobal = default!;
 #endif
         /// <summary>The scoped property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedScopedItem>? Scoped { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedScopedItem>? Scoped { get => _explicitNullValueScoped; set { _explicitNullValueScoped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scoped"); else _explicitNullProperties?.Remove("scoped"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedScopedItem>? _explicitNullValueScoped = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedScopedItem> Scoped { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedScopedItem> Scoped { get => _explicitNullValueScoped; set { _explicitNullValueScoped = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("scoped"); else _explicitNullProperties?.Remove("scoped"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedScopedItem> _explicitNullValueScoped = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -38,7 +53,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrained CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrained();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrained(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -62,7 +77,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("canReadGatedRepos", CanReadGatedRepos);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedGlobalItem>("global", Global);
-            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedScopedItem>("scoped", Scoped);
+            writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiWhoamiV2200ResponseAnyOf1AuthAccessTokenFineGrainedScopedItem>("scoped", Scoped);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

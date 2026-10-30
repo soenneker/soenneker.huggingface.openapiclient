@@ -11,128 +11,192 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiReposCreateRequestOneOf4 : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("devModeEnabled") is { } nullNodeDevModeEnabled && nullNodeDevModeEnabled.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DevModeEnabled = null;
+            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("hardware") is { } nullNodeHardware && nullNodeHardware.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hardware = null;
+            if (parseNode.GetChildNode("license") is { } nullNodeLicense && nullNodeLicense.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) License = null;
+            if (parseNode.GetChildNode("license_link") is { } nullNodeLicenseLink && nullNodeLicenseLink.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LicenseLink = null;
+            if (parseNode.GetChildNode("license_name") is { } nullNodeLicenseName && nullNodeLicenseName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LicenseName = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("organization") is { } nullNodeOrganization && nullNodeOrganization.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Organization = null;
+            if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
+            if (parseNode.GetChildNode("region") is { } nullNodeRegion && nullNodeRegion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Region = null;
+            if (parseNode.GetChildNode("resourceGroupId") is { } nullNodeResourceGroupId && nullNodeResourceGroupId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupId = null;
+            if (parseNode.GetChildNode("sdk") is { } nullNodeSdk && nullNodeSdk.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sdk = null;
+            if (parseNode.GetChildNode("sdkVersion") is { } nullNodeSdkVersion && nullNodeSdkVersion.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SdkVersion = null;
+            if (parseNode.GetChildNode("secrets") is { } nullNodeSecrets && nullNodeSecrets.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Secrets = null;
+            if (parseNode.GetChildNode("short_description") is { } nullNodeShortDescription && nullNodeShortDescription.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ShortDescription = null;
+            if (parseNode.GetChildNode("sleepTimeSeconds") is { } nullNodeSleepTimeSeconds && nullNodeSleepTimeSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeSeconds = null;
+            if (parseNode.GetChildNode("template") is { } nullNodeTemplate && nullNodeTemplate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Template = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("variables") is { } nullNodeVariables && nullNodeVariables.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Variables = null;
+            if (parseNode.GetChildNode("visibility") is { } nullNodeVisibility && nullNodeVisibility.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Visibility = null;
+            if (parseNode.GetChildNode("volumes") is { } nullNodeVolumes && nullNodeVolumes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Volumes = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The devModeEnabled property</summary>
-        public bool? DevModeEnabled { get; set; }
+        public bool? DevModeEnabled { get => _explicitNullValueDevModeEnabled; set { _explicitNullValueDevModeEnabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("devModeEnabled"); else _explicitNullProperties?.Remove("devModeEnabled"); } }
+        private bool? _explicitNullValueDevModeEnabled = default!;
         /// <summary>The files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem>? Files { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem> Files { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem> _explicitNullValueFiles = default!;
 #endif
         /// <summary>The hardware flavor of the space. If you select &apos;zero-a10g&apos; or &apos;zerogpu&apos;, the SDK must be Gradio.</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Hardware? Hardware { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Hardware? Hardware { get => _explicitNullValueHardware; set { _explicitNullValueHardware = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hardware"); else _explicitNullProperties?.Remove("hardware"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Hardware? _explicitNullValueHardware = default!;
         /// <summary>The license of the repository. You can select &apos;Other&apos; if your license is not in the list</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4License? License { get; set; }
+#nullable enable
+        public string? License { get => _explicitNullValueLicense; set { _explicitNullValueLicense = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("license"); else _explicitNullProperties?.Remove("license"); } }
+        private string? _explicitNullValueLicense = default!;
+#nullable restore
         /// <summary>The license_link property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink? LicenseLink { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink? LicenseLink { get => _explicitNullValueLicenseLink; set { _explicitNullValueLicenseLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("license_link"); else _explicitNullProperties?.Remove("license_link"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink? _explicitNullValueLicenseLink = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink LicenseLink { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink LicenseLink { get => _explicitNullValueLicenseLink; set { _explicitNullValueLicenseLink = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("license_link"); else _explicitNullProperties?.Remove("license_link"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink _explicitNullValueLicenseLink = default!;
 #endif
         /// <summary>The license_name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? LicenseName { get; set; }
+        public string? LicenseName { get => _explicitNullValueLicenseName; set { _explicitNullValueLicenseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("license_name"); else _explicitNullProperties?.Remove("license_name"); } }
+        private string? _explicitNullValueLicenseName = default!;
 #nullable restore
 #else
-        public string LicenseName { get; set; }
+        public string LicenseName { get => _explicitNullValueLicenseName; set { _explicitNullValueLicenseName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("license_name"); else _explicitNullProperties?.Remove("license_name"); } }
+        private string _explicitNullValueLicenseName = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The organization property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Organization { get; set; }
+        public string? Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        private string? _explicitNullValueOrganization = default!;
 #nullable restore
 #else
-        public string Organization { get; set; }
+        public string Organization { get => _explicitNullValueOrganization; set { _explicitNullValueOrganization = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organization"); else _explicitNullProperties?.Remove("organization"); } }
+        private string _explicitNullValueOrganization = default!;
 #endif
         /// <summary>Repository visibility. Defaults to public. Cannot be specified along with visibility.</summary>
-        public bool? Private { get; set; }
+        public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        private bool? _explicitNullValuePrivate = default!;
         /// <summary>The region where the repository is hosted.</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Region? Region { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Region? Region { get => _explicitNullValueRegion; set { _explicitNullValueRegion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("region"); else _explicitNullProperties?.Remove("region"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Region? _explicitNullValueRegion = default!;
         /// <summary>The resourceGroupId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ResourceGroupId { get; set; }
+        public string? ResourceGroupId { get => _explicitNullValueResourceGroupId; set { _explicitNullValueResourceGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupId"); else _explicitNullProperties?.Remove("resourceGroupId"); } }
+        private string? _explicitNullValueResourceGroupId = default!;
 #nullable restore
 #else
-        public string ResourceGroupId { get; set; }
+        public string ResourceGroupId { get => _explicitNullValueResourceGroupId; set { _explicitNullValueResourceGroupId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupId"); else _explicitNullProperties?.Remove("resourceGroupId"); } }
+        private string _explicitNullValueResourceGroupId = default!;
 #endif
         /// <summary>The Space SDK. `static` is free for everyone. `gradio` and `docker` run on compute: on the free `cpu-basic` flavor they require a subscription (PRO for users, Team/Enterprise for orgs), while paid hardware only requires billing (a payment method and prepaid credits).</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Sdk? Sdk { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Sdk? Sdk { get => _explicitNullValueSdk; set { _explicitNullValueSdk = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdk"); else _explicitNullProperties?.Remove("sdk"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Sdk? _explicitNullValueSdk = default!;
         /// <summary>The sdkVersion property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? SdkVersion { get; set; }
+        public string? SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
+        private string? _explicitNullValueSdkVersion = default!;
 #nullable restore
 #else
-        public string SdkVersion { get; set; }
+        public string SdkVersion { get => _explicitNullValueSdkVersion; set { _explicitNullValueSdkVersion = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sdkVersion"); else _explicitNullProperties?.Remove("sdkVersion"); } }
+        private string _explicitNullValueSdkVersion = default!;
 #endif
         /// <summary>The secrets property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SecretsItem>? Secrets { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SecretsItem>? Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SecretsItem>? _explicitNullValueSecrets = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SecretsItem> Secrets { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SecretsItem> Secrets { get => _explicitNullValueSecrets; set { _explicitNullValueSecrets = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secrets"); else _explicitNullProperties?.Remove("secrets"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SecretsItem> _explicitNullValueSecrets = default!;
 #endif
         /// <summary>The short_description property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ShortDescription { get; set; }
+        public string? ShortDescription { get => _explicitNullValueShortDescription; set { _explicitNullValueShortDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_description"); else _explicitNullProperties?.Remove("short_description"); } }
+        private string? _explicitNullValueShortDescription = default!;
 #nullable restore
 #else
-        public string ShortDescription { get; set; }
+        public string ShortDescription { get => _explicitNullValueShortDescription; set { _explicitNullValueShortDescription = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("short_description"); else _explicitNullProperties?.Remove("short_description"); } }
+        private string _explicitNullValueShortDescription = default!;
 #endif
         /// <summary>The sleepTimeSeconds property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SleepTimeSeconds? SleepTimeSeconds { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SleepTimeSeconds? SleepTimeSeconds { get => _explicitNullValueSleepTimeSeconds; set { _explicitNullValueSleepTimeSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeSeconds"); else _explicitNullProperties?.Remove("sleepTimeSeconds"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SleepTimeSeconds? _explicitNullValueSleepTimeSeconds = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SleepTimeSeconds SleepTimeSeconds { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SleepTimeSeconds SleepTimeSeconds { get => _explicitNullValueSleepTimeSeconds; set { _explicitNullValueSleepTimeSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeSeconds"); else _explicitNullProperties?.Remove("sleepTimeSeconds"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4SleepTimeSeconds _explicitNullValueSleepTimeSeconds = default!;
 #endif
         /// <summary>The template property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Template { get; set; }
+        public string? Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private string? _explicitNullValueTemplate = default!;
 #nullable restore
 #else
-        public string Template { get; set; }
+        public string Template { get => _explicitNullValueTemplate; set { _explicitNullValueTemplate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("template"); else _explicitNullProperties?.Remove("template"); } }
+        private string _explicitNullValueTemplate = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.SpaceType? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.SpaceType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.SpaceType? _explicitNullValueType = default!;
         /// <summary>The variables property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VariablesItem>? Variables { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VariablesItem>? Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VariablesItem>? _explicitNullValueVariables = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VariablesItem> Variables { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VariablesItem> Variables { get => _explicitNullValueVariables; set { _explicitNullValueVariables = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("variables"); else _explicitNullProperties?.Remove("variables"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VariablesItem> _explicitNullValueVariables = default!;
 #endif
         /// <summary>Repository visibility. `protected` is only supported for Spaces. Cannot be specified along with private.</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Visibility? Visibility { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Visibility? Visibility { get => _explicitNullValueVisibility; set { _explicitNullValueVisibility = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("visibility"); else _explicitNullProperties?.Remove("visibility"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Visibility? _explicitNullValueVisibility = default!;
         /// <summary>HuggingFace Buckets or Repos to mount as volumes in the Space container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VolumesItem>? Volumes { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VolumesItem>? Volumes { get => _explicitNullValueVolumes; set { _explicitNullValueVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumes"); else _explicitNullProperties?.Remove("volumes"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VolumesItem>? _explicitNullValueVolumes = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VolumesItem> Volumes { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VolumesItem> Volumes { get => _explicitNullValueVolumes; set { _explicitNullValueVolumes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("volumes"); else _explicitNullProperties?.Remove("volumes"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VolumesItem> _explicitNullValueVolumes = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4"/> and sets the default values.
@@ -149,7 +213,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -162,7 +226,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "devModeEnabled", n => { DevModeEnabled = n.GetBoolValue(); } },
                 { "files", n => { Files = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "hardware", n => { Hardware = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Hardware>(); } },
-                { "license", n => { License = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4License>(); } },
+                { "license", n => { License = n.GetStringValue(); } },
                 { "license_link", n => { LicenseLink = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink.CreateFromDiscriminatorValue); } },
                 { "license_name", n => { LicenseName = n.GetStringValue(); } },
                 { "name", n => { Name = n.GetStringValue(); } },
@@ -192,7 +256,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("devModeEnabled", DevModeEnabled);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4FilesItem>("files", Files);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Hardware>("hardware", Hardware);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4License>("license", License);
+            writer.WriteStringValue("license", License);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4LicenseLink>("license_link", LicenseLink);
             writer.WriteStringValue("license_name", LicenseName);
             writer.WriteStringValue("name", Name);
@@ -210,6 +274,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VariablesItem>("variables", Variables);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4Visibility>("visibility", Visibility);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiReposCreateRequestOneOf4VolumesItem>("volumes", Volumes);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

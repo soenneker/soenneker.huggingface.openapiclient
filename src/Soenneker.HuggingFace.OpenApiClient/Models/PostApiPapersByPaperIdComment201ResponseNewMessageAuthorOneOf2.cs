@@ -11,75 +11,120 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2 : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("avatarUrl") is { } nullNodeAvatarUrl && nullNodeAvatarUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AvatarUrl = null;
+            if (parseNode.GetChildNode("followerCount") is { } nullNodeFollowerCount && nullNodeFollowerCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FollowerCount = null;
+            if (parseNode.GetChildNode("fullname") is { } nullNodeFullname && nullNodeFullname.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Fullname = null;
+            if (parseNode.GetChildNode("_id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
+            if (parseNode.GetChildNode("isBlockedByMe") is { } nullNodeIsBlockedByMe && nullNodeIsBlockedByMe.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsBlockedByMe = null;
+            if (parseNode.GetChildNode("isHf") is { } nullNodeIsHf && nullNodeIsHf.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsHf = null;
+            if (parseNode.GetChildNode("isHfAdmin") is { } nullNodeIsHfAdmin && nullNodeIsHfAdmin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsHfAdmin = null;
+            if (parseNode.GetChildNode("isMod") is { } nullNodeIsMod && nullNodeIsMod.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsMod = null;
+            if (parseNode.GetChildNode("isOrgMember") is { } nullNodeIsOrgMember && nullNodeIsOrgMember.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOrgMember = null;
+            if (parseNode.GetChildNode("isOwner") is { } nullNodeIsOwner && nullNodeIsOwner.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsOwner = null;
+            if (parseNode.GetChildNode("isPro") is { } nullNodeIsPro && nullNodeIsPro.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsPro = null;
+            if (parseNode.GetChildNode("isUserFollowing") is { } nullNodeIsUserFollowing && nullNodeIsUserFollowing.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IsUserFollowing = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("oauthApp") is { } nullNodeOauthApp && nullNodeOauthApp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OauthApp = null;
+            if (parseNode.GetChildNode("primaryOrg") is { } nullNodePrimaryOrg && nullNodePrimaryOrg.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrimaryOrg = null;
+            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+        }
+
         /// <summary>The avatarUrl property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? AvatarUrl { get; set; }
+        public string? AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarUrl"); else _explicitNullProperties?.Remove("avatarUrl"); } }
+        private string? _explicitNullValueAvatarUrl = default!;
 #nullable restore
 #else
-        public string AvatarUrl { get; set; }
+        public string AvatarUrl { get => _explicitNullValueAvatarUrl; set { _explicitNullValueAvatarUrl = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("avatarUrl"); else _explicitNullProperties?.Remove("avatarUrl"); } }
+        private string _explicitNullValueAvatarUrl = default!;
 #endif
         /// <summary>The followerCount property</summary>
-        public double? FollowerCount { get; set; }
+        public double? FollowerCount { get => _explicitNullValueFollowerCount; set { _explicitNullValueFollowerCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("followerCount"); else _explicitNullProperties?.Remove("followerCount"); } }
+        private double? _explicitNullValueFollowerCount = default!;
         /// <summary>The fullname property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Fullname { get; set; }
+        public string? Fullname { get => _explicitNullValueFullname; set { _explicitNullValueFullname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullname"); else _explicitNullProperties?.Remove("fullname"); } }
+        private string? _explicitNullValueFullname = default!;
 #nullable restore
 #else
-        public string Fullname { get; set; }
+        public string Fullname { get => _explicitNullValueFullname; set { _explicitNullValueFullname = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("fullname"); else _explicitNullProperties?.Remove("fullname"); } }
+        private string _explicitNullValueFullname = default!;
 #endif
         /// <summary>A hex string of 24 characters representing an ObjectId.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Id { get; set; }
+        public string? Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string? _explicitNullValueId = default!;
 #nullable restore
 #else
-        public string Id { get; set; }
+        public string Id { get => _explicitNullValueId; set { _explicitNullValueId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("_id"); else _explicitNullProperties?.Remove("_id"); } }
+        private string _explicitNullValueId = default!;
 #endif
         /// <summary>The isBlockedByMe property</summary>
-        public bool? IsBlockedByMe { get; set; }
+        public bool? IsBlockedByMe { get => _explicitNullValueIsBlockedByMe; set { _explicitNullValueIsBlockedByMe = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isBlockedByMe"); else _explicitNullProperties?.Remove("isBlockedByMe"); } }
+        private bool? _explicitNullValueIsBlockedByMe = default!;
         /// <summary>The isHf property</summary>
-        public bool? IsHf { get; set; }
+        public bool? IsHf { get => _explicitNullValueIsHf; set { _explicitNullValueIsHf = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isHf"); else _explicitNullProperties?.Remove("isHf"); } }
+        private bool? _explicitNullValueIsHf = default!;
         /// <summary>The isHfAdmin property</summary>
-        public bool? IsHfAdmin { get; set; }
+        public bool? IsHfAdmin { get => _explicitNullValueIsHfAdmin; set { _explicitNullValueIsHfAdmin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isHfAdmin"); else _explicitNullProperties?.Remove("isHfAdmin"); } }
+        private bool? _explicitNullValueIsHfAdmin = default!;
         /// <summary>The isMod property</summary>
-        public bool? IsMod { get; set; }
+        public bool? IsMod { get => _explicitNullValueIsMod; set { _explicitNullValueIsMod = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isMod"); else _explicitNullProperties?.Remove("isMod"); } }
+        private bool? _explicitNullValueIsMod = default!;
         /// <summary>The isOrgMember property</summary>
-        public bool? IsOrgMember { get; set; }
+        public bool? IsOrgMember { get => _explicitNullValueIsOrgMember; set { _explicitNullValueIsOrgMember = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOrgMember"); else _explicitNullProperties?.Remove("isOrgMember"); } }
+        private bool? _explicitNullValueIsOrgMember = default!;
         /// <summary>The isOwner property</summary>
-        public bool? IsOwner { get; set; }
+        public bool? IsOwner { get => _explicitNullValueIsOwner; set { _explicitNullValueIsOwner = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isOwner"); else _explicitNullProperties?.Remove("isOwner"); } }
+        private bool? _explicitNullValueIsOwner = default!;
         /// <summary>The isPro property</summary>
-        public bool? IsPro { get; set; }
+        public bool? IsPro { get => _explicitNullValueIsPro; set { _explicitNullValueIsPro = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isPro"); else _explicitNullProperties?.Remove("isPro"); } }
+        private bool? _explicitNullValueIsPro = default!;
         /// <summary>The isUserFollowing property</summary>
-        public bool? IsUserFollowing { get; set; }
+        public bool? IsUserFollowing { get => _explicitNullValueIsUserFollowing; set { _explicitNullValueIsUserFollowing = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("isUserFollowing"); else _explicitNullProperties?.Remove("isUserFollowing"); } }
+        private bool? _explicitNullValueIsUserFollowing = default!;
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The oauthApp property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2OAuthApp? OauthApp { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2OAuthApp? OauthApp { get => _explicitNullValueOauthApp; set { _explicitNullValueOauthApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauthApp"); else _explicitNullProperties?.Remove("oauthApp"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2OAuthApp? _explicitNullValueOauthApp = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2OAuthApp OauthApp { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2OAuthApp OauthApp { get => _explicitNullValueOauthApp; set { _explicitNullValueOauthApp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("oauthApp"); else _explicitNullProperties?.Remove("oauthApp"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2OAuthApp _explicitNullValueOauthApp = default!;
 #endif
         /// <summary>The primaryOrg property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2PrimaryOrg? PrimaryOrg { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2PrimaryOrg? PrimaryOrg { get => _explicitNullValuePrimaryOrg; set { _explicitNullValuePrimaryOrg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryOrg"); else _explicitNullProperties?.Remove("primaryOrg"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2PrimaryOrg? _explicitNullValuePrimaryOrg = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2PrimaryOrg PrimaryOrg { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2PrimaryOrg PrimaryOrg { get => _explicitNullValuePrimaryOrg; set { _explicitNullValuePrimaryOrg = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("primaryOrg"); else _explicitNullProperties?.Remove("primaryOrg"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2PrimaryOrg _explicitNullValuePrimaryOrg = default!;
 #endif
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2Type? Type { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2Type? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2Type? _explicitNullValueType = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -88,7 +133,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2 CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -138,7 +183,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("name", Name);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2OAuthApp>("oauthApp", OauthApp);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2PrimaryOrg>("primaryOrg", PrimaryOrg);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2Type>("type", Type);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdComment201ResponseNewMessageAuthorOneOf2Type>("type", Type);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

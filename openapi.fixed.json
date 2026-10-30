@@ -5599,7 +5599,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-29T19:27:25.953Z"
+              "default": "2026-10-30T20:44:18.187Z"
             }
           }
         ],
@@ -5651,7 +5651,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-29T19:27:25.954Z"
+              "default": "2026-10-30T20:44:18.188Z"
             }
           }
         ],
@@ -5703,7 +5703,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-29T19:27:25.955Z"
+              "default": "2026-10-30T20:44:18.189Z"
             }
           },
           {
@@ -5861,7 +5861,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-29T19:27:25.954Z"
+              "default": "2026-10-30T20:44:18.188Z"
             }
           }
         ],
@@ -6469,6 +6469,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueAuthCheckByPermsSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueAuthCheckByPerms200Response"
                 }
               }
@@ -6479,6 +6482,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueAuthCheckByPermsSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueAuthCheckByPerms207Response"
                 }
               }
@@ -6575,6 +6581,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPermsSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms200Response"
                 }
               }
@@ -6585,6 +6594,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPermsSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms207Response"
                 }
               }
@@ -7737,6 +7749,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiModelsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiModelsByNamespaceValueByRepoLfsFilesDuplicate200Response"
                 }
               }
@@ -7747,6 +7762,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiModelsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiModelsByNamespaceValueByRepoLfsFilesDuplicate207Response"
                 }
               }
@@ -7796,6 +7814,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiKernelsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiKernelsByNamespaceValueByRepoLfsFilesDuplicate200Response"
                 }
               }
@@ -7806,6 +7827,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiKernelsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiKernelsByNamespaceValueByRepoLfsFilesDuplicate207Response"
                 }
               }
@@ -7855,6 +7879,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicate200Response"
                 }
               }
@@ -7865,6 +7892,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicate207Response"
                 }
               }
@@ -7914,6 +7944,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiSpacesByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiSpacesByNamespaceValueByRepoLfsFilesDuplicate200Response"
                 }
               }
@@ -7924,6 +7957,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiSpacesByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiSpacesByNamespaceValueByRepoLfsFilesDuplicate207Response"
                 }
               }
@@ -7973,6 +8009,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiBucketsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiBucketsByNamespaceValueByRepoLfsFilesDuplicate200Response"
                 }
               }
@@ -7983,6 +8022,9 @@
             "content": {
               "application/json": {
                 "schema": {
+                  "$ref": "#/components/schemas/PostApiBucketsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse"
+                },
+                "x-client-original-success-schema": {
                   "$ref": "#/components/schemas/PostApiBucketsByNamespaceValueByRepoLfsFilesDuplicate207Response"
                 }
               }
@@ -167146,6 +167188,76 @@
         "additionalProperties": {
           "type": "string"
         }
+      },
+      "PostApiInferenceEndpointsByNamespaceValueAuthCheckByPermsSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueAuthCheckByPerms200Response"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueAuthCheckByPerms207Response"
+          }
+        ]
+      },
+      "PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPermsSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms200Response"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiInferenceEndpointsByNamespaceValueByEndpointAuthCheckByPerms207Response"
+          }
+        ]
+      },
+      "PostApiModelsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiModelsByNamespaceValueByRepoLfsFilesDuplicate200Response"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiModelsByNamespaceValueByRepoLfsFilesDuplicate207Response"
+          }
+        ]
+      },
+      "PostApiKernelsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiKernelsByNamespaceValueByRepoLfsFilesDuplicate200Response"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiKernelsByNamespaceValueByRepoLfsFilesDuplicate207Response"
+          }
+        ]
+      },
+      "PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicate200Response"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicate207Response"
+          }
+        ]
+      },
+      "PostApiSpacesByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiSpacesByNamespaceValueByRepoLfsFilesDuplicate200Response"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiSpacesByNamespaceValueByRepoLfsFilesDuplicate207Response"
+          }
+        ]
+      },
+      "PostApiBucketsByNamespaceValueByRepoLfsFilesDuplicateSuccessResponse": {
+        "anyOf": [
+          {
+            "$ref": "#/components/schemas/PostApiBucketsByNamespaceValueByRepoLfsFilesDuplicate200Response"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiBucketsByNamespaceValueByRepoLfsFilesDuplicate207Response"
+          }
+        ]
       }
     },
     "securitySchemes": {

@@ -11,22 +11,35 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PostApiJobsByNamespaceValueAuthCheckByPerms200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("namespace") is { } nullNodeNamespace && nullNodeNamespace.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Namespace = null;
+            if (parseNode.GetChildNode("user") is { } nullNodeUser && nullNodeUser.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) User = null;
+        }
+
         /// <summary>The namespace property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseNamespace? Namespace { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseNamespace? Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseNamespace? _explicitNullValueNamespace = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseNamespace Namespace { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseNamespace Namespace { get => _explicitNullValueNamespace; set { _explicitNullValueNamespace = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("namespace"); else _explicitNullProperties?.Remove("namespace"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseNamespace _explicitNullValueNamespace = default!;
 #endif
         /// <summary>The user property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseUser? User { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseUser? User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseUser? _explicitNullValueUser = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseUser User { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseUser User { get => _explicitNullValueUser; set { _explicitNullValueUser = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user"); else _explicitNullProperties?.Remove("user"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseUser _explicitNullValueUser = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -36,7 +49,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -58,7 +71,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseNamespace>("namespace", Namespace);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseUser>("user", User);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiJobsByNamespaceValueAuthCheckByPerms200ResponseUser>("user", User);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

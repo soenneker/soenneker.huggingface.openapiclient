@@ -11,43 +11,66 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("filepaths") is { } nullNodeFilepaths && nullNodeFilepaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Filepaths = null;
+            if (parseNode.GetChildNode("headers") is { } nullNodeHeaders && nullNodeHeaders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Headers = null;
+            if (parseNode.GetChildNode("index") is { } nullNodeIndex && nullNodeIndex.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Index = null;
+            if (parseNode.GetChildNode("parameterCount") is { } nullNodeParameterCount && nullNodeParameterCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParameterCount = null;
+            if (parseNode.GetChildNode("parameterTotal") is { } nullNodeParameterTotal && nullNodeParameterTotal.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ParameterTotal = null;
+            if (parseNode.GetChildNode("sharded") is { } nullNodeSharded && nullNodeSharded.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Sharded = null;
+        }
+
         /// <summary>The index file, then every shard file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? Filepaths { get; set; }
+        public List<string>? Filepaths { get => _explicitNullValueFilepaths; set { _explicitNullValueFilepaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filepaths"); else _explicitNullProperties?.Remove("filepaths"); } }
+        private List<string>? _explicitNullValueFilepaths = default!;
 #nullable restore
 #else
-        public List<string> Filepaths { get; set; }
+        public List<string> Filepaths { get => _explicitNullValueFilepaths; set { _explicitNullValueFilepaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filepaths"); else _explicitNullProperties?.Remove("filepaths"); } }
+        private List<string> _explicitNullValueFilepaths = default!;
 #endif
         /// <summary>The header of each shard, by shard file name: `__metadata__`, then the `dtype`, `shape` and `data_offsets` of each tensor</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders? Headers { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders? Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders? _explicitNullValueHeaders = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders Headers { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders Headers { get => _explicitNullValueHeaders; set { _explicitNullValueHeaders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headers"); else _explicitNullProperties?.Remove("headers"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders _explicitNullValueHeaders = default!;
 #endif
         /// <summary>The index file, without its `weight_map`: each shard header lists its tensors</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex? Index { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex? Index { get => _explicitNullValueIndex; set { _explicitNullValueIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("index"); else _explicitNullProperties?.Remove("index"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex? _explicitNullValueIndex = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex Index { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex Index { get => _explicitNullValueIndex; set { _explicitNullValueIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("index"); else _explicitNullProperties?.Remove("index"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex _explicitNullValueIndex = default!;
 #endif
         /// <summary>Number of parameters per dtype</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount? ParameterCount { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount? ParameterCount { get => _explicitNullValueParameterCount; set { _explicitNullValueParameterCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameterCount"); else _explicitNullProperties?.Remove("parameterCount"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount? _explicitNullValueParameterCount = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount ParameterCount { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount ParameterCount { get => _explicitNullValueParameterCount; set { _explicitNullValueParameterCount = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameterCount"); else _explicitNullProperties?.Remove("parameterCount"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount _explicitNullValueParameterCount = default!;
 #endif
         /// <summary>The parameterTotal property</summary>
-        public int? ParameterTotal { get; set; }
+        public int? ParameterTotal { get => _explicitNullValueParameterTotal; set { _explicitNullValueParameterTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameterTotal"); else _explicitNullProperties?.Remove("parameterTotal"); } }
+        private int? _explicitNullValueParameterTotal = default!;
         /// <summary>The sharded property</summary>
-        public bool? Sharded { get; set; }
+        public bool? Sharded { get => _explicitNullValueSharded; set { _explicitNullValueSharded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharded"); else _explicitNullProperties?.Remove("sharded"); } }
+        private bool? _explicitNullValueSharded = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200Response"/> and sets the default values.
         /// </summary>
@@ -63,7 +86,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -93,7 +116,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex>("index", Index);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount>("parameterCount", ParameterCount);
             writer.WriteIntValue("parameterTotal", ParameterTotal);
-            writer.WriteBoolValue("sharded", Sharded);
+            writer.WriteBoolValue("sharded", Sharded);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

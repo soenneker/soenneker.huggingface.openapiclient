@@ -11,63 +11,124 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatchApiSettingsNotificationsRequestNotifications : IAdditionalDataHolder, IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("announcements") is { } nullNodeAnnouncements && nullNodeAnnouncements.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Announcements = null;
+            if (parseNode.GetChildNode("api_inference_sunset") is { } nullNodeApiInferenceSunset && nullNodeApiInferenceSunset.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ApiInferenceSunset = null;
+            if (parseNode.GetChildNode("arxiv_paper_activity") is { } nullNodeArxivPaperActivity && nullNodeArxivPaperActivity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArxivPaperActivity = null;
+            if (parseNode.GetChildNode("content_access_policy_request") is { } nullNodeContentAccessPolicyRequest && nullNodeContentAccessPolicyRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentAccessPolicyRequest = null;
+            if (parseNode.GetChildNode("daily_papers_digest") is { } nullNodeDailyPapersDigest && nullNodeDailyPapersDigest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DailyPapersDigest = null;
+            if (parseNode.GetChildNode("discussions_participating") is { } nullNodeDiscussionsParticipating && nullNodeDiscussionsParticipating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscussionsParticipating = null;
+            if (parseNode.GetChildNode("discussions_watched") is { } nullNodeDiscussionsWatched && nullNodeDiscussionsWatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DiscussionsWatched = null;
+            if (parseNode.GetChildNode("gated_user_access_request") is { } nullNodeGatedUserAccessRequest && nullNodeGatedUserAccessRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GatedUserAccessRequest = null;
+            if (parseNode.GetChildNode("inference_endpoint_status") is { } nullNodeInferenceEndpointStatus && nullNodeInferenceEndpointStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) InferenceEndpointStatus = null;
+            if (parseNode.GetChildNode("job_status") is { } nullNodeJobStatus && nullNodeJobStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) JobStatus = null;
+            if (parseNode.GetChildNode("launch_autonlp") is { } nullNodeLaunchAutonlp && nullNodeLaunchAutonlp.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LaunchAutonlp = null;
+            if (parseNode.GetChildNode("launch_prepaid_credits") is { } nullNodeLaunchPrepaidCredits && nullNodeLaunchPrepaidCredits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LaunchPrepaidCredits = null;
+            if (parseNode.GetChildNode("launch_spaces") is { } nullNodeLaunchSpaces && nullNodeLaunchSpaces.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LaunchSpaces = null;
+            if (parseNode.GetChildNode("launch_training_cluster") is { } nullNodeLaunchTrainingCluster && nullNodeLaunchTrainingCluster.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LaunchTrainingCluster = null;
+            if (parseNode.GetChildNode("locked_out") is { } nullNodeLockedOut && nullNodeLockedOut.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LockedOut = null;
+            if (parseNode.GetChildNode("org_request") is { } nullNodeOrgRequest && nullNodeOrgRequest.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgRequest = null;
+            if (parseNode.GetChildNode("org_suggestions") is { } nullNodeOrgSuggestions && nullNodeOrgSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgSuggestions = null;
+            if (parseNode.GetChildNode("org_suggestions_to_create") is { } nullNodeOrgSuggestionsToCreate && nullNodeOrgSuggestionsToCreate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgSuggestionsToCreate = null;
+            if (parseNode.GetChildNode("org_verified_suggestions") is { } nullNodeOrgVerifiedSuggestions && nullNodeOrgVerifiedSuggestions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrgVerifiedSuggestions = null;
+            if (parseNode.GetChildNode("posts_participating") is { } nullNodePostsParticipating && nullNodePostsParticipating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PostsParticipating = null;
+            if (parseNode.GetChildNode("product_updates_after") is { } nullNodeProductUpdatesAfter && nullNodeProductUpdatesAfter.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProductUpdatesAfter = null;
+            if (parseNode.GetChildNode("repo_release") is { } nullNodeRepoRelease && nullNodeRepoRelease.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoRelease = null;
+            if (parseNode.GetChildNode("secret_detected") is { } nullNodeSecretDetected && nullNodeSecretDetected.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SecretDetected = null;
+            if (parseNode.GetChildNode("user_follows") is { } nullNodeUserFollows && nullNodeUserFollows.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserFollows = null;
+            if (parseNode.GetChildNode("web_discussions_participating") is { } nullNodeWebDiscussionsParticipating && nullNodeWebDiscussionsParticipating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebDiscussionsParticipating = null;
+            if (parseNode.GetChildNode("web_discussions_watched") is { } nullNodeWebDiscussionsWatched && nullNodeWebDiscussionsWatched.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebDiscussionsWatched = null;
+            if (parseNode.GetChildNode("web_posts_participating") is { } nullNodeWebPostsParticipating && nullNodeWebPostsParticipating.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) WebPostsParticipating = null;
+        }
+
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The announcements property</summary>
-        public bool? Announcements { get; set; }
+        public bool? Announcements { get => _explicitNullValueAnnouncements; set { _explicitNullValueAnnouncements = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("announcements"); else _explicitNullProperties?.Remove("announcements"); } }
+        private bool? _explicitNullValueAnnouncements = default!;
         /// <summary>The api_inference_sunset property</summary>
-        public bool? ApiInferenceSunset { get; set; }
+        public bool? ApiInferenceSunset { get => _explicitNullValueApiInferenceSunset; set { _explicitNullValueApiInferenceSunset = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("api_inference_sunset"); else _explicitNullProperties?.Remove("api_inference_sunset"); } }
+        private bool? _explicitNullValueApiInferenceSunset = default!;
         /// <summary>The arxiv_paper_activity property</summary>
-        public bool? ArxivPaperActivity { get; set; }
+        public bool? ArxivPaperActivity { get => _explicitNullValueArxivPaperActivity; set { _explicitNullValueArxivPaperActivity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arxiv_paper_activity"); else _explicitNullProperties?.Remove("arxiv_paper_activity"); } }
+        private bool? _explicitNullValueArxivPaperActivity = default!;
         /// <summary>The content_access_policy_request property</summary>
-        public bool? ContentAccessPolicyRequest { get; set; }
+        public bool? ContentAccessPolicyRequest { get => _explicitNullValueContentAccessPolicyRequest; set { _explicitNullValueContentAccessPolicyRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("content_access_policy_request"); else _explicitNullProperties?.Remove("content_access_policy_request"); } }
+        private bool? _explicitNullValueContentAccessPolicyRequest = default!;
         /// <summary>The daily_papers_digest property</summary>
-        public bool? DailyPapersDigest { get; set; }
+        public bool? DailyPapersDigest { get => _explicitNullValueDailyPapersDigest; set { _explicitNullValueDailyPapersDigest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("daily_papers_digest"); else _explicitNullProperties?.Remove("daily_papers_digest"); } }
+        private bool? _explicitNullValueDailyPapersDigest = default!;
         /// <summary>The discussions_participating property</summary>
-        public bool? DiscussionsParticipating { get; set; }
+        public bool? DiscussionsParticipating { get => _explicitNullValueDiscussionsParticipating; set { _explicitNullValueDiscussionsParticipating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussions_participating"); else _explicitNullProperties?.Remove("discussions_participating"); } }
+        private bool? _explicitNullValueDiscussionsParticipating = default!;
         /// <summary>The discussions_watched property</summary>
-        public bool? DiscussionsWatched { get; set; }
+        public bool? DiscussionsWatched { get => _explicitNullValueDiscussionsWatched; set { _explicitNullValueDiscussionsWatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("discussions_watched"); else _explicitNullProperties?.Remove("discussions_watched"); } }
+        private bool? _explicitNullValueDiscussionsWatched = default!;
         /// <summary>The gated_user_access_request property</summary>
-        public bool? GatedUserAccessRequest { get; set; }
+        public bool? GatedUserAccessRequest { get => _explicitNullValueGatedUserAccessRequest; set { _explicitNullValueGatedUserAccessRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gated_user_access_request"); else _explicitNullProperties?.Remove("gated_user_access_request"); } }
+        private bool? _explicitNullValueGatedUserAccessRequest = default!;
         /// <summary>The inference_endpoint_status property</summary>
-        public bool? InferenceEndpointStatus { get; set; }
+        public bool? InferenceEndpointStatus { get => _explicitNullValueInferenceEndpointStatus; set { _explicitNullValueInferenceEndpointStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inference_endpoint_status"); else _explicitNullProperties?.Remove("inference_endpoint_status"); } }
+        private bool? _explicitNullValueInferenceEndpointStatus = default!;
         /// <summary>The job_status property</summary>
-        public bool? JobStatus { get; set; }
+        public bool? JobStatus { get => _explicitNullValueJobStatus; set { _explicitNullValueJobStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("job_status"); else _explicitNullProperties?.Remove("job_status"); } }
+        private bool? _explicitNullValueJobStatus = default!;
         /// <summary>The launch_autonlp property</summary>
-        public bool? LaunchAutonlp { get; set; }
+        public bool? LaunchAutonlp { get => _explicitNullValueLaunchAutonlp; set { _explicitNullValueLaunchAutonlp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("launch_autonlp"); else _explicitNullProperties?.Remove("launch_autonlp"); } }
+        private bool? _explicitNullValueLaunchAutonlp = default!;
         /// <summary>The launch_prepaid_credits property</summary>
-        public bool? LaunchPrepaidCredits { get; set; }
+        public bool? LaunchPrepaidCredits { get => _explicitNullValueLaunchPrepaidCredits; set { _explicitNullValueLaunchPrepaidCredits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("launch_prepaid_credits"); else _explicitNullProperties?.Remove("launch_prepaid_credits"); } }
+        private bool? _explicitNullValueLaunchPrepaidCredits = default!;
         /// <summary>The launch_spaces property</summary>
-        public bool? LaunchSpaces { get; set; }
+        public bool? LaunchSpaces { get => _explicitNullValueLaunchSpaces; set { _explicitNullValueLaunchSpaces = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("launch_spaces"); else _explicitNullProperties?.Remove("launch_spaces"); } }
+        private bool? _explicitNullValueLaunchSpaces = default!;
         /// <summary>The launch_training_cluster property</summary>
-        public bool? LaunchTrainingCluster { get; set; }
+        public bool? LaunchTrainingCluster { get => _explicitNullValueLaunchTrainingCluster; set { _explicitNullValueLaunchTrainingCluster = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("launch_training_cluster"); else _explicitNullProperties?.Remove("launch_training_cluster"); } }
+        private bool? _explicitNullValueLaunchTrainingCluster = default!;
         /// <summary>The locked_out property</summary>
-        public bool? LockedOut { get; set; }
+        public bool? LockedOut { get => _explicitNullValueLockedOut; set { _explicitNullValueLockedOut = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("locked_out"); else _explicitNullProperties?.Remove("locked_out"); } }
+        private bool? _explicitNullValueLockedOut = default!;
         /// <summary>The org_request property</summary>
-        public bool? OrgRequest { get; set; }
+        public bool? OrgRequest { get => _explicitNullValueOrgRequest; set { _explicitNullValueOrgRequest = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_request"); else _explicitNullProperties?.Remove("org_request"); } }
+        private bool? _explicitNullValueOrgRequest = default!;
         /// <summary>The org_suggestions property</summary>
-        public bool? OrgSuggestions { get; set; }
+        public bool? OrgSuggestions { get => _explicitNullValueOrgSuggestions; set { _explicitNullValueOrgSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_suggestions"); else _explicitNullProperties?.Remove("org_suggestions"); } }
+        private bool? _explicitNullValueOrgSuggestions = default!;
         /// <summary>The org_suggestions_to_create property</summary>
-        public bool? OrgSuggestionsToCreate { get; set; }
+        public bool? OrgSuggestionsToCreate { get => _explicitNullValueOrgSuggestionsToCreate; set { _explicitNullValueOrgSuggestionsToCreate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_suggestions_to_create"); else _explicitNullProperties?.Remove("org_suggestions_to_create"); } }
+        private bool? _explicitNullValueOrgSuggestionsToCreate = default!;
         /// <summary>The org_verified_suggestions property</summary>
-        public bool? OrgVerifiedSuggestions { get; set; }
+        public bool? OrgVerifiedSuggestions { get => _explicitNullValueOrgVerifiedSuggestions; set { _explicitNullValueOrgVerifiedSuggestions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("org_verified_suggestions"); else _explicitNullProperties?.Remove("org_verified_suggestions"); } }
+        private bool? _explicitNullValueOrgVerifiedSuggestions = default!;
         /// <summary>The posts_participating property</summary>
-        public bool? PostsParticipating { get; set; }
+        public bool? PostsParticipating { get => _explicitNullValuePostsParticipating; set { _explicitNullValuePostsParticipating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("posts_participating"); else _explicitNullProperties?.Remove("posts_participating"); } }
+        private bool? _explicitNullValuePostsParticipating = default!;
         /// <summary>The product_updates_after property</summary>
-        public DateTimeOffset? ProductUpdatesAfter { get; set; }
+        public DateTimeOffset? ProductUpdatesAfter { get => _explicitNullValueProductUpdatesAfter; set { _explicitNullValueProductUpdatesAfter = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("product_updates_after"); else _explicitNullProperties?.Remove("product_updates_after"); } }
+        private DateTimeOffset? _explicitNullValueProductUpdatesAfter = default!;
         /// <summary>The repo_release property</summary>
-        public bool? RepoRelease { get; set; }
+        public bool? RepoRelease { get => _explicitNullValueRepoRelease; set { _explicitNullValueRepoRelease = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repo_release"); else _explicitNullProperties?.Remove("repo_release"); } }
+        private bool? _explicitNullValueRepoRelease = default!;
         /// <summary>The secret_detected property</summary>
-        public bool? SecretDetected { get; set; }
+        public bool? SecretDetected { get => _explicitNullValueSecretDetected; set { _explicitNullValueSecretDetected = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("secret_detected"); else _explicitNullProperties?.Remove("secret_detected"); } }
+        private bool? _explicitNullValueSecretDetected = default!;
         /// <summary>The user_follows property</summary>
-        public bool? UserFollows { get; set; }
+        public bool? UserFollows { get => _explicitNullValueUserFollows; set { _explicitNullValueUserFollows = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("user_follows"); else _explicitNullProperties?.Remove("user_follows"); } }
+        private bool? _explicitNullValueUserFollows = default!;
         /// <summary>The web_discussions_participating property</summary>
-        public bool? WebDiscussionsParticipating { get; set; }
+        public bool? WebDiscussionsParticipating { get => _explicitNullValueWebDiscussionsParticipating; set { _explicitNullValueWebDiscussionsParticipating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_discussions_participating"); else _explicitNullProperties?.Remove("web_discussions_participating"); } }
+        private bool? _explicitNullValueWebDiscussionsParticipating = default!;
         /// <summary>The web_discussions_watched property</summary>
-        public bool? WebDiscussionsWatched { get; set; }
+        public bool? WebDiscussionsWatched { get => _explicitNullValueWebDiscussionsWatched; set { _explicitNullValueWebDiscussionsWatched = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_discussions_watched"); else _explicitNullProperties?.Remove("web_discussions_watched"); } }
+        private bool? _explicitNullValueWebDiscussionsWatched = default!;
         /// <summary>The web_posts_participating property</summary>
-        public bool? WebPostsParticipating { get; set; }
+        public bool? WebPostsParticipating { get => _explicitNullValueWebPostsParticipating; set { _explicitNullValueWebPostsParticipating = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("web_posts_participating"); else _explicitNullProperties?.Remove("web_posts_participating"); } }
+        private bool? _explicitNullValueWebPostsParticipating = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications"/> and sets the default values.
         /// </summary>
@@ -83,7 +144,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiSettingsNotificationsRequestNotifications(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -156,6 +217,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("web_discussions_participating", WebDiscussionsParticipating);
             writer.WriteBoolValue("web_discussions_watched", WebDiscussionsWatched);
             writer.WriteBoolValue("web_posts_participating", WebPostsParticipating);
+            if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
     }

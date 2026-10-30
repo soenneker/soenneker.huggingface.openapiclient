@@ -11,11 +11,22 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiOrganizationsByNameResourceGroupsSettings200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowExternalInvites") is { } nullNodeAllowExternalInvites && nullNodeAllowExternalInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowExternalInvites = null;
+            if (parseNode.GetChildNode("minRoleToCreate") is { } nullNodeMinRoleToCreate && nullNodeMinRoleToCreate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRoleToCreate = null;
+        }
+
         /// <summary>The allowExternalInvites property</summary>
-        public bool? AllowExternalInvites { get; set; }
+        public bool? AllowExternalInvites { get => _explicitNullValueAllowExternalInvites; set { _explicitNullValueAllowExternalInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowExternalInvites"); else _explicitNullProperties?.Remove("allowExternalInvites"); } }
+        private bool? _explicitNullValueAllowExternalInvites = default!;
         /// <summary>The minRoleToCreate property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200ResponseMinRoleToCreate? MinRoleToCreate { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200ResponseMinRoleToCreate? MinRoleToCreate { get => _explicitNullValueMinRoleToCreate; set { _explicitNullValueMinRoleToCreate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minRoleToCreate"); else _explicitNullProperties?.Remove("minRoleToCreate"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200ResponseMinRoleToCreate? _explicitNullValueMinRoleToCreate = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -24,7 +35,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -46,7 +57,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteBoolValue("allowExternalInvites", AllowExternalInvites);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200ResponseMinRoleToCreate>("minRoleToCreate", MinRoleToCreate);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroupsSettings200ResponseMinRoleToCreate>("minRoleToCreate", MinRoleToCreate);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

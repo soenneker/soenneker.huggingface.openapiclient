@@ -11,17 +11,29 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1EventsItemOneOf9Data : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("headOid") is { } nullNodeHeadOid && nullNodeHeadOid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadOid = null;
+            if (parseNode.GetChildNode("hiddenCommits") is { } nullNodeHiddenCommits && nullNodeHiddenCommits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HiddenCommits = null;
+        }
+
         /// <summary>The headOid property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HeadOid { get; set; }
+        public string? HeadOid { get => _explicitNullValueHeadOid; set { _explicitNullValueHeadOid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headOid"); else _explicitNullProperties?.Remove("headOid"); } }
+        private string? _explicitNullValueHeadOid = default!;
 #nullable restore
 #else
-        public string HeadOid { get; set; }
+        public string HeadOid { get => _explicitNullValueHeadOid; set { _explicitNullValueHeadOid = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("headOid"); else _explicitNullProperties?.Remove("headOid"); } }
+        private string _explicitNullValueHeadOid = default!;
 #endif
         /// <summary>The hiddenCommits property</summary>
-        public double? HiddenCommits { get; set; }
+        public double? HiddenCommits { get => _explicitNullValueHiddenCommits; set { _explicitNullValueHiddenCommits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hiddenCommits"); else _explicitNullProperties?.Remove("hiddenCommits"); } }
+        private double? _explicitNullValueHiddenCommits = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -30,7 +42,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1EventsItemOneOf9Data CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1EventsItemOneOf9Data();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiByRepoTypeByNamespaceValueByRepoDiscussionsByNum200ResponseOneOf1EventsItemOneOf9Data(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -52,7 +64,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("headOid", HeadOid);
-            writer.WriteDoubleValue("hiddenCommits", HiddenCommits);
+            writer.WriteDoubleValue("hiddenCommits", HiddenCommits);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

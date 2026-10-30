@@ -11,66 +11,98 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class GetApiJobsHardware200ResponseSchemaItem : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("accelerator") is { } nullNodeAccelerator && nullNodeAccelerator.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Accelerator = null;
+            if (parseNode.GetChildNode("cpu") is { } nullNodeCpu && nullNodeCpu.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Cpu = null;
+            if (parseNode.GetChildNode("ephemeralStorage") is { } nullNodeEphemeralStorage && nullNodeEphemeralStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EphemeralStorage = null;
+            if (parseNode.GetChildNode("name") is { } nullNodeName && nullNodeName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Name = null;
+            if (parseNode.GetChildNode("prettyName") is { } nullNodePrettyName && nullNodePrettyName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrettyName = null;
+            if (parseNode.GetChildNode("ram") is { } nullNodeRam && nullNodeRam.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Ram = null;
+            if (parseNode.GetChildNode("unitCostMicroUSD") is { } nullNodeUnitCostMicroUSD && nullNodeUnitCostMicroUSD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitCostMicroUSD = null;
+            if (parseNode.GetChildNode("unitCostUSD") is { } nullNodeUnitCostUSD && nullNodeUnitCostUSD.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitCostUSD = null;
+            if (parseNode.GetChildNode("unitLabel") is { } nullNodeUnitLabel && nullNodeUnitLabel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UnitLabel = null;
+        }
+
         /// <summary>The accelerator property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator? Accelerator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator? Accelerator { get => _explicitNullValueAccelerator; set { _explicitNullValueAccelerator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accelerator"); else _explicitNullProperties?.Remove("accelerator"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator? _explicitNullValueAccelerator = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator Accelerator { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator Accelerator { get => _explicitNullValueAccelerator; set { _explicitNullValueAccelerator = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("accelerator"); else _explicitNullProperties?.Remove("accelerator"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItemAccelerator _explicitNullValueAccelerator = default!;
 #endif
         /// <summary>The cpu property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Cpu { get; set; }
+        public string? Cpu { get => _explicitNullValueCpu; set { _explicitNullValueCpu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpu"); else _explicitNullProperties?.Remove("cpu"); } }
+        private string? _explicitNullValueCpu = default!;
 #nullable restore
 #else
-        public string Cpu { get; set; }
+        public string Cpu { get => _explicitNullValueCpu; set { _explicitNullValueCpu = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cpu"); else _explicitNullProperties?.Remove("cpu"); } }
+        private string _explicitNullValueCpu = default!;
 #endif
         /// <summary>The ephemeralStorage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? EphemeralStorage { get; set; }
+        public string? EphemeralStorage { get => _explicitNullValueEphemeralStorage; set { _explicitNullValueEphemeralStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ephemeralStorage"); else _explicitNullProperties?.Remove("ephemeralStorage"); } }
+        private string? _explicitNullValueEphemeralStorage = default!;
 #nullable restore
 #else
-        public string EphemeralStorage { get; set; }
+        public string EphemeralStorage { get => _explicitNullValueEphemeralStorage; set { _explicitNullValueEphemeralStorage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ephemeralStorage"); else _explicitNullProperties?.Remove("ephemeralStorage"); } }
+        private string _explicitNullValueEphemeralStorage = default!;
 #endif
         /// <summary>The name property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Name { get; set; }
+        public string? Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string? _explicitNullValueName = default!;
 #nullable restore
 #else
-        public string Name { get; set; }
+        public string Name { get => _explicitNullValueName; set { _explicitNullValueName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("name"); else _explicitNullProperties?.Remove("name"); } }
+        private string _explicitNullValueName = default!;
 #endif
         /// <summary>The prettyName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PrettyName { get; set; }
+        public string? PrettyName { get => _explicitNullValuePrettyName; set { _explicitNullValuePrettyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prettyName"); else _explicitNullProperties?.Remove("prettyName"); } }
+        private string? _explicitNullValuePrettyName = default!;
 #nullable restore
 #else
-        public string PrettyName { get; set; }
+        public string PrettyName { get => _explicitNullValuePrettyName; set { _explicitNullValuePrettyName = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("prettyName"); else _explicitNullProperties?.Remove("prettyName"); } }
+        private string _explicitNullValuePrettyName = default!;
 #endif
         /// <summary>The ram property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? Ram { get; set; }
+        public string? Ram { get => _explicitNullValueRam; set { _explicitNullValueRam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ram"); else _explicitNullProperties?.Remove("ram"); } }
+        private string? _explicitNullValueRam = default!;
 #nullable restore
 #else
-        public string Ram { get; set; }
+        public string Ram { get => _explicitNullValueRam; set { _explicitNullValueRam = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ram"); else _explicitNullProperties?.Remove("ram"); } }
+        private string _explicitNullValueRam = default!;
 #endif
         /// <summary>The unitCostMicroUSD property</summary>
-        public double? UnitCostMicroUSD { get; set; }
+        public double? UnitCostMicroUSD { get => _explicitNullValueUnitCostMicroUSD; set { _explicitNullValueUnitCostMicroUSD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitCostMicroUSD"); else _explicitNullProperties?.Remove("unitCostMicroUSD"); } }
+        private double? _explicitNullValueUnitCostMicroUSD = default!;
         /// <summary>The unitCostUSD property</summary>
-        public double? UnitCostUSD { get; set; }
+        public double? UnitCostUSD { get => _explicitNullValueUnitCostUSD; set { _explicitNullValueUnitCostUSD = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitCostUSD"); else _explicitNullProperties?.Remove("unitCostUSD"); } }
+        private double? _explicitNullValueUnitCostUSD = default!;
         /// <summary>The unitLabel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? UnitLabel { get; set; }
+        public string? UnitLabel { get => _explicitNullValueUnitLabel; set { _explicitNullValueUnitLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitLabel"); else _explicitNullProperties?.Remove("unitLabel"); } }
+        private string? _explicitNullValueUnitLabel = default!;
 #nullable restore
 #else
-        public string UnitLabel { get; set; }
+        public string UnitLabel { get => _explicitNullValueUnitLabel; set { _explicitNullValueUnitLabel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("unitLabel"); else _explicitNullProperties?.Remove("unitLabel"); } }
+        private string _explicitNullValueUnitLabel = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -80,7 +112,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItem CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItem();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsHardware200ResponseSchemaItem(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -116,7 +148,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("ram", Ram);
             writer.WriteDoubleValue("unitCostMicroUSD", UnitCostMicroUSD);
             writer.WriteDoubleValue("unitCostUSD", UnitCostUSD);
-            writer.WriteStringValue("unitLabel", UnitLabel);
+            writer.WriteStringValue("unitLabel", UnitLabel);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

@@ -11,54 +11,84 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     #pragma warning disable CS1591
     public partial class PatchApiOrganizationsByNameSettingsNetworkSecurity200Response : IParsable
     #pragma warning restore CS1591
-    {
+    , global::Soenneker.OpenApi.Generated.IOpenApiExplicitNulls {
+        // Track explicitly assigned nulls separately from absent properties.
+        private global::System.Collections.Generic.HashSet<string> _explicitNullProperties = null!;
+
+        public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
+        {
+            if (parseNode.GetChildNode("allowedContents") is { } nullNodeAllowedContents && nullNodeAllowedContents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowedContents = null;
+            if (parseNode.GetChildNode("areCidrRangesApproved") is { } nullNodeAreCidrRangesApproved && nullNodeAreCidrRangesApproved.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AreCidrRangesApproved = null;
+            if (parseNode.GetChildNode("blockedContents") is { } nullNodeBlockedContents && nullNodeBlockedContents.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BlockedContents = null;
+            if (parseNode.GetChildNode("enforceAuth") is { } nullNodeEnforceAuth && nullNodeEnforceAuth.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforceAuth = null;
+            if (parseNode.GetChildNode("enforceIpRestriction") is { } nullNodeEnforceIpRestriction && nullNodeEnforceIpRestriction.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EnforceIpRestriction = null;
+            if (parseNode.GetChildNode("highRateLimits") is { } nullNodeHighRateLimits && nullNodeHighRateLimits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HighRateLimits = null;
+            if (parseNode.GetChildNode("ipRanges") is { } nullNodeIpRanges && nullNodeIpRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) IpRanges = null;
+            if (parseNode.GetChildNode("keepReposMetadataVisible") is { } nullNodeKeepReposMetadataVisible && nullNodeKeepReposMetadataVisible.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) KeepReposMetadataVisible = null;
+            if (parseNode.GetChildNode("validatedIpRanges") is { } nullNodeValidatedIpRanges && nullNodeValidatedIpRanges.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ValidatedIpRanges = null;
+        }
+
         /// <summary>The allowedContents property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseAllowedContentsItem>? AllowedContents { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseAllowedContentsItem>? AllowedContents { get => _explicitNullValueAllowedContents; set { _explicitNullValueAllowedContents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedContents"); else _explicitNullProperties?.Remove("allowedContents"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseAllowedContentsItem>? _explicitNullValueAllowedContents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseAllowedContentsItem> AllowedContents { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseAllowedContentsItem> AllowedContents { get => _explicitNullValueAllowedContents; set { _explicitNullValueAllowedContents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowedContents"); else _explicitNullProperties?.Remove("allowedContents"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseAllowedContentsItem> _explicitNullValueAllowedContents = default!;
 #endif
         /// <summary>Whether the declared ipRanges match the admin-validated CIDR ranges</summary>
-        public bool? AreCidrRangesApproved { get; set; }
+        public bool? AreCidrRangesApproved { get => _explicitNullValueAreCidrRangesApproved; set { _explicitNullValueAreCidrRangesApproved = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("areCidrRangesApproved"); else _explicitNullProperties?.Remove("areCidrRangesApproved"); } }
+        private bool? _explicitNullValueAreCidrRangesApproved = default!;
         /// <summary>The blockedContents property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItem>? BlockedContents { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItem>? BlockedContents { get => _explicitNullValueBlockedContents; set { _explicitNullValueBlockedContents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedContents"); else _explicitNullProperties?.Remove("blockedContents"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItem>? _explicitNullValueBlockedContents = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItem> BlockedContents { get; set; }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItem> BlockedContents { get => _explicitNullValueBlockedContents; set { _explicitNullValueBlockedContents = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("blockedContents"); else _explicitNullProperties?.Remove("blockedContents"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItem> _explicitNullValueBlockedContents = default!;
 #endif
         /// <summary>The enforceAuth property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseEnforceAuth? EnforceAuth { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseEnforceAuth? EnforceAuth { get => _explicitNullValueEnforceAuth; set { _explicitNullValueEnforceAuth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforceAuth"); else _explicitNullProperties?.Remove("enforceAuth"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseEnforceAuth? _explicitNullValueEnforceAuth = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseEnforceAuth EnforceAuth { get; set; }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseEnforceAuth EnforceAuth { get => _explicitNullValueEnforceAuth; set { _explicitNullValueEnforceAuth = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforceAuth"); else _explicitNullProperties?.Remove("enforceAuth"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseEnforceAuth _explicitNullValueEnforceAuth = default!;
 #endif
         /// <summary>The enforceIpRestriction property</summary>
-        public bool? EnforceIpRestriction { get; set; }
+        public bool? EnforceIpRestriction { get => _explicitNullValueEnforceIpRestriction; set { _explicitNullValueEnforceIpRestriction = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("enforceIpRestriction"); else _explicitNullProperties?.Remove("enforceIpRestriction"); } }
+        private bool? _explicitNullValueEnforceIpRestriction = default!;
         /// <summary>The highRateLimits property</summary>
-        public bool? HighRateLimits { get; set; }
+        public bool? HighRateLimits { get => _explicitNullValueHighRateLimits; set { _explicitNullValueHighRateLimits = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("highRateLimits"); else _explicitNullProperties?.Remove("highRateLimits"); } }
+        private bool? _explicitNullValueHighRateLimits = default!;
         /// <summary>The ipRanges property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? IpRanges { get; set; }
+        public List<string>? IpRanges { get => _explicitNullValueIpRanges; set { _explicitNullValueIpRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipRanges"); else _explicitNullProperties?.Remove("ipRanges"); } }
+        private List<string>? _explicitNullValueIpRanges = default!;
 #nullable restore
 #else
-        public List<string> IpRanges { get; set; }
+        public List<string> IpRanges { get => _explicitNullValueIpRanges; set { _explicitNullValueIpRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("ipRanges"); else _explicitNullProperties?.Remove("ipRanges"); } }
+        private List<string> _explicitNullValueIpRanges = default!;
 #endif
         /// <summary>The keepReposMetadataVisible property</summary>
-        public bool? KeepReposMetadataVisible { get; set; }
+        public bool? KeepReposMetadataVisible { get => _explicitNullValueKeepReposMetadataVisible; set { _explicitNullValueKeepReposMetadataVisible = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("keepReposMetadataVisible"); else _explicitNullProperties?.Remove("keepReposMetadataVisible"); } }
+        private bool? _explicitNullValueKeepReposMetadataVisible = default!;
         /// <summary>The admin-validated CIDR ranges</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<string>? ValidatedIpRanges { get; set; }
+        public List<string>? ValidatedIpRanges { get => _explicitNullValueValidatedIpRanges; set { _explicitNullValueValidatedIpRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validatedIpRanges"); else _explicitNullProperties?.Remove("validatedIpRanges"); } }
+        private List<string>? _explicitNullValueValidatedIpRanges = default!;
 #nullable restore
 #else
-        public List<string> ValidatedIpRanges { get; set; }
+        public List<string> ValidatedIpRanges { get => _explicitNullValueValidatedIpRanges; set { _explicitNullValueValidatedIpRanges = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("validatedIpRanges"); else _explicitNullProperties?.Remove("validatedIpRanges"); } }
+        private List<string> _explicitNullValueValidatedIpRanges = default!;
 #endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -68,7 +98,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public static global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200Response CreateFromDiscriminatorValue(IParseNode parseNode)
         {
             if(ReferenceEquals(parseNode, null)) throw new ArgumentNullException(nameof(parseNode));
-            return new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200Response();
+            return global::Soenneker.OpenApi.Generated.OpenApiNullTracking.Capture(new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200Response(), parseNode);
         }
         /// <summary>
         /// The deserialization information for the current model
@@ -104,7 +134,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteBoolValue("highRateLimits", HighRateLimits);
             writer.WriteCollectionOfPrimitiveValues<string>("ipRanges", IpRanges);
             writer.WriteBoolValue("keepReposMetadataVisible", KeepReposMetadataVisible);
-            writer.WriteCollectionOfPrimitiveValues<string>("validatedIpRanges", ValidatedIpRanges);
+            writer.WriteCollectionOfPrimitiveValues<string>("validatedIpRanges", ValidatedIpRanges);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            
         }
     }
 }

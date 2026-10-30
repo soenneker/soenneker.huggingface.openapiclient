@@ -51,7 +51,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Spaces.Item.Item.SuperSquash.I
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
             var requestInfo = ToPostRequestInformation(body, requestConfiguration);
-            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoSuperSquashByRev200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoSuperSquashByRev200Response.CreateFromDiscriminatorValue, default, cancellationToken).ConfigureAwait(false);
+            return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoSuperSquashByRev200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoSuperSquashByRev200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
         /// Squash all commits in the current ref into a single commit with the given message. Action is irreversible.

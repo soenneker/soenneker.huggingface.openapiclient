@@ -55,6 +55,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Buckets.Item.Item.Resolve.Item
             {
                 { "400", global::Soenneker.HuggingFace.OpenApiClient.Models.GetBucketsByNamespaceValueByRepoResolveByPath400Response.CreateFromDiscriminatorValue },
                 { "404", global::Soenneker.HuggingFace.OpenApiClient.Models.GetBucketsByNamespaceValueByRepoResolveByPath404Response.CreateFromDiscriminatorValue },
+                { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
+                { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue },
             };
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetBucketsByNamespaceValueByRepoResolveByPath200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetBucketsByNamespaceValueByRepoResolveByPath200Response.CreateFromDiscriminatorValue, errorMapping, cancellationToken).ConfigureAwait(false);
         }
