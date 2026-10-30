@@ -17,7 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("notInCache") is { } nullNodeNotInCache && nullNodeNotInCache.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotInCache = null;
+            if (parseNode.GetChildNode("notInCache") is null) { _explicitNullValueNotInCache = default!; _explicitNullProperties?.Remove("notInCache"); }
+            else if (parseNode.GetChildNode("notInCache") is { } nullNodeNotInCache && nullNodeNotInCache.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NotInCache = null;
         }
 
         /// <summary>The notInCache property</summary>

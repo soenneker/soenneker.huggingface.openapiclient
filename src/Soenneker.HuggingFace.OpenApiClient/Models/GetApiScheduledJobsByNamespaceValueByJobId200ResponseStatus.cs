@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("lastJob") is { } nullNodeLastJob && nullNodeLastJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastJob = null;
-            if (parseNode.GetChildNode("nextJobRunAt") is { } nullNodeNextJobRunAt && nullNodeNextJobRunAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextJobRunAt = null;
+            if (parseNode.GetChildNode("lastJob") is null) { _explicitNullValueLastJob = default!; _explicitNullProperties?.Remove("lastJob"); }
+            else if (parseNode.GetChildNode("lastJob") is { } nullNodeLastJob && nullNodeLastJob.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) LastJob = null;
+            if (parseNode.GetChildNode("nextJobRunAt") is null) { _explicitNullValueNextJobRunAt = default!; _explicitNullProperties?.Remove("nextJobRunAt"); }
+            else if (parseNode.GetChildNode("nextJobRunAt") is { } nullNodeNextJobRunAt && nullNodeNextJobRunAt.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NextJobRunAt = null;
         }
 
         /// <summary>The lastJob property</summary>

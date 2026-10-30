@@ -17,20 +17,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("resource") is { } nullNodeResource && nullNodeResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resource = null;
-            if (parseNode.GetChildNode("scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
+            if (parseNode.GetChildNode("resource") is null) { _explicitNullValueResource = default!; _explicitNullProperties?.Remove("resource"); }
+            else if (parseNode.GetChildNode("resource") is { } nullNodeResource && nullNodeResource.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Resource = null;
+            if (parseNode.GetChildNode("scope") is null) { _explicitNullValueScope = default!; _explicitNullProperties?.Remove("scope"); }
+            else if (parseNode.GetChildNode("scope") is { } nullNodeScope && nullNodeScope.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Scope = null;
         }
 
         /// <summary>The resource property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
         public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource? Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource? _explicitNullValueResource = default!;
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource Resource { get => _explicitNullValueResource; set { _explicitNullValueResource = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resource"); else _explicitNullProperties?.Remove("resource"); } }
-        private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource _explicitNullValueResource = default!;
-#endif
         /// <summary>The scope property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -59,7 +54,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "resource", n => { Resource = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource.CreateFromDiscriminatorValue); } },
+                { "resource", n => { Resource = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource>(); } },
                 { "scope", n => { Scope = n.GetStringValue(); } },
             };
         }
@@ -70,7 +65,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource>("resource", Resource);
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameSettingsNetworkSecurity200ResponseBlockedContentsItemResource>("resource", Resource);
             writer.WriteStringValue("scope", Scope);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

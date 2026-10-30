@@ -17,7 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("recentlyTrending") is { } nullNodeRecentlyTrending && nullNodeRecentlyTrending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecentlyTrending = null;
+            if (parseNode.GetChildNode("recentlyTrending") is null) { _explicitNullValueRecentlyTrending = default!; _explicitNullProperties?.Remove("recentlyTrending"); }
+            else if (parseNode.GetChildNode("recentlyTrending") is { } nullNodeRecentlyTrending && nullNodeRecentlyTrending.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RecentlyTrending = null;
         }
 
         /// <summary>The recentlyTrending property</summary>

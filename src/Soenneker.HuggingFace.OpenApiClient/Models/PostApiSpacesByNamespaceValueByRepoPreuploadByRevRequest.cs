@@ -17,9 +17,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
-            if (parseNode.GetChildNode("gitAttributes") is { } nullNodeGitAttributes && nullNodeGitAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitAttributes = null;
-            if (parseNode.GetChildNode("gitIgnore") is { } nullNodeGitIgnore && nullNodeGitIgnore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitIgnore = null;
+            if (parseNode.GetChildNode("files") is null) { _explicitNullValueFiles = default!; _explicitNullProperties?.Remove("files"); }
+            else if (parseNode.GetChildNode("files") is { } nullNodeFiles && nullNodeFiles.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Files = null;
+            if (parseNode.GetChildNode("gitAttributes") is null) { _explicitNullValueGitAttributes = default!; _explicitNullProperties?.Remove("gitAttributes"); }
+            else if (parseNode.GetChildNode("gitAttributes") is { } nullNodeGitAttributes && nullNodeGitAttributes.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitAttributes = null;
+            if (parseNode.GetChildNode("gitIgnore") is null) { _explicitNullValueGitIgnore = default!; _explicitNullProperties?.Remove("gitIgnore"); }
+            else if (parseNode.GetChildNode("gitIgnore") is { } nullNodeGitIgnore && nullNodeGitIgnore.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GitIgnore = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The files property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRevRequestFilesItem>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRevRequestFilesItem>? Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRevRequestFilesItem>? _explicitNullValueFiles = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRevRequestFilesItem> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRevRequestFilesItem> Files { get => _explicitNullValueFiles; set { _explicitNullValueFiles = value; AdditionalData?.Remove("files"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("files"); else _explicitNullProperties?.Remove("files"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPreuploadByRevRequestFilesItem> _explicitNullValueFiles = default!;
 #endif
         /// <summary>Provide this parameter if you plan to modify `.gitattributes` yourself at the same time as uploading LFS files. Note that this is not needed if you solely rely on automatic LFS detection from HF: the commit endpoint will automatically edit the `.gitattributes` file to track the files passed to its `lfsFiles` param.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GitAttributes { get => _explicitNullValueGitAttributes; set { _explicitNullValueGitAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitAttributes"); else _explicitNullProperties?.Remove("gitAttributes"); } }
+        public string? GitAttributes { get => _explicitNullValueGitAttributes; set { _explicitNullValueGitAttributes = value; AdditionalData?.Remove("gitAttributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitAttributes"); else _explicitNullProperties?.Remove("gitAttributes"); } }
         private string? _explicitNullValueGitAttributes = default!;
 #nullable restore
 #else
-        public string GitAttributes { get => _explicitNullValueGitAttributes; set { _explicitNullValueGitAttributes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitAttributes"); else _explicitNullProperties?.Remove("gitAttributes"); } }
+        public string GitAttributes { get => _explicitNullValueGitAttributes; set { _explicitNullValueGitAttributes = value; AdditionalData?.Remove("gitAttributes"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitAttributes"); else _explicitNullProperties?.Remove("gitAttributes"); } }
         private string _explicitNullValueGitAttributes = default!;
 #endif
         /// <summary>Content of the .gitignore file for the revision. Optional, otherwise takes the existing content of `.gitignore` for the revision.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GitIgnore { get => _explicitNullValueGitIgnore; set { _explicitNullValueGitIgnore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitIgnore"); else _explicitNullProperties?.Remove("gitIgnore"); } }
+        public string? GitIgnore { get => _explicitNullValueGitIgnore; set { _explicitNullValueGitIgnore = value; AdditionalData?.Remove("gitIgnore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitIgnore"); else _explicitNullProperties?.Remove("gitIgnore"); } }
         private string? _explicitNullValueGitIgnore = default!;
 #nullable restore
 #else
-        public string GitIgnore { get => _explicitNullValueGitIgnore; set { _explicitNullValueGitIgnore = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitIgnore"); else _explicitNullProperties?.Remove("gitIgnore"); } }
+        public string GitIgnore { get => _explicitNullValueGitIgnore; set { _explicitNullValueGitIgnore = value; AdditionalData?.Remove("gitIgnore"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("gitIgnore"); else _explicitNullProperties?.Remove("gitIgnore"); } }
         private string _explicitNullValueGitIgnore = default!;
 #endif
         /// <summary>

@@ -17,9 +17,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("claimAuthorId") is { } nullNodeClaimAuthorId && nullNodeClaimAuthorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClaimAuthorId = null;
-            if (parseNode.GetChildNode("paperId") is { } nullNodePaperId && nullNodePaperId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaperId = null;
-            if (parseNode.GetChildNode("targetUserId") is { } nullNodeTargetUserId && nullNodeTargetUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUserId = null;
+            if (parseNode.GetChildNode("claimAuthorId") is null) { _explicitNullValueClaimAuthorId = default!; _explicitNullProperties?.Remove("claimAuthorId"); }
+            else if (parseNode.GetChildNode("claimAuthorId") is { } nullNodeClaimAuthorId && nullNodeClaimAuthorId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ClaimAuthorId = null;
+            if (parseNode.GetChildNode("paperId") is null) { _explicitNullValuePaperId = default!; _explicitNullProperties?.Remove("paperId"); }
+            else if (parseNode.GetChildNode("paperId") is { } nullNodePaperId && nullNodePaperId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PaperId = null;
+            if (parseNode.GetChildNode("targetUserId") is null) { _explicitNullValueTargetUserId = default!; _explicitNullProperties?.Remove("targetUserId"); }
+            else if (parseNode.GetChildNode("targetUserId") is { } nullNodeTargetUserId && nullNodeTargetUserId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TargetUserId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Author entry on the paper being claimed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ClaimAuthorId { get => _explicitNullValueClaimAuthorId; set { _explicitNullValueClaimAuthorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claimAuthorId"); else _explicitNullProperties?.Remove("claimAuthorId"); } }
+        public string? ClaimAuthorId { get => _explicitNullValueClaimAuthorId; set { _explicitNullValueClaimAuthorId = value; AdditionalData?.Remove("claimAuthorId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claimAuthorId"); else _explicitNullProperties?.Remove("claimAuthorId"); } }
         private string? _explicitNullValueClaimAuthorId = default!;
 #nullable restore
 #else
-        public string ClaimAuthorId { get => _explicitNullValueClaimAuthorId; set { _explicitNullValueClaimAuthorId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claimAuthorId"); else _explicitNullProperties?.Remove("claimAuthorId"); } }
+        public string ClaimAuthorId { get => _explicitNullValueClaimAuthorId; set { _explicitNullValueClaimAuthorId = value; AdditionalData?.Remove("claimAuthorId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("claimAuthorId"); else _explicitNullProperties?.Remove("claimAuthorId"); } }
         private string _explicitNullValueClaimAuthorId = default!;
 #endif
         /// <summary>ArXiv paper identifier being claimed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? PaperId { get => _explicitNullValuePaperId; set { _explicitNullValuePaperId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paperId"); else _explicitNullProperties?.Remove("paperId"); } }
+        public string? PaperId { get => _explicitNullValuePaperId; set { _explicitNullValuePaperId = value; AdditionalData?.Remove("paperId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paperId"); else _explicitNullProperties?.Remove("paperId"); } }
         private string? _explicitNullValuePaperId = default!;
 #nullable restore
 #else
-        public string PaperId { get => _explicitNullValuePaperId; set { _explicitNullValuePaperId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paperId"); else _explicitNullProperties?.Remove("paperId"); } }
+        public string PaperId { get => _explicitNullValuePaperId; set { _explicitNullValuePaperId = value; AdditionalData?.Remove("paperId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paperId"); else _explicitNullProperties?.Remove("paperId"); } }
         private string _explicitNullValuePaperId = default!;
 #endif
         /// <summary>HF user who should receive the claim.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetUserId"); else _explicitNullProperties?.Remove("targetUserId"); } }
+        public string? TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; AdditionalData?.Remove("targetUserId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetUserId"); else _explicitNullProperties?.Remove("targetUserId"); } }
         private string? _explicitNullValueTargetUserId = default!;
 #nullable restore
 #else
-        public string TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetUserId"); else _explicitNullProperties?.Remove("targetUserId"); } }
+        public string TargetUserId { get => _explicitNullValueTargetUserId; set { _explicitNullValueTargetUserId = value; AdditionalData?.Remove("targetUserId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("targetUserId"); else _explicitNullProperties?.Remove("targetUserId"); } }
         private string _explicitNullValueTargetUserId = default!;
 #endif
         /// <summary>

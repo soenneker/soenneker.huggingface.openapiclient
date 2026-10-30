@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("estimatedStorage") is { } nullNodeEstimatedStorage && nullNodeEstimatedStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedStorage = null;
-            if (parseNode.GetChildNode("refDeleted") is { } nullNodeRefDeleted && nullNodeRefDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefDeleted = null;
+            if (parseNode.GetChildNode("estimatedStorage") is null) { _explicitNullValueEstimatedStorage = default!; _explicitNullProperties?.Remove("estimatedStorage"); }
+            else if (parseNode.GetChildNode("estimatedStorage") is { } nullNodeEstimatedStorage && nullNodeEstimatedStorage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EstimatedStorage = null;
+            if (parseNode.GetChildNode("refDeleted") is null) { _explicitNullValueRefDeleted = default!; _explicitNullProperties?.Remove("refDeleted"); }
+            else if (parseNode.GetChildNode("refDeleted") is { } nullNodeRefDeleted && nullNodeRefDeleted.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RefDeleted = null;
         }
 
         /// <summary>Estimated storage in bytes that may be freed</summary>

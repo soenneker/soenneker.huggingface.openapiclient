@@ -17,9 +17,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("runningSecs") is { } nullNodeRunningSecs && nullNodeRunningSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunningSecs = null;
-            if (parseNode.GetChildNode("schedulingSecs") is { } nullNodeSchedulingSecs && nullNodeSchedulingSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SchedulingSecs = null;
-            if (parseNode.GetChildNode("totalSecs") is { } nullNodeTotalSecs && nullNodeTotalSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalSecs = null;
+            if (parseNode.GetChildNode("runningSecs") is null) { _explicitNullValueRunningSecs = default!; _explicitNullProperties?.Remove("runningSecs"); }
+            else if (parseNode.GetChildNode("runningSecs") is { } nullNodeRunningSecs && nullNodeRunningSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RunningSecs = null;
+            if (parseNode.GetChildNode("schedulingSecs") is null) { _explicitNullValueSchedulingSecs = default!; _explicitNullProperties?.Remove("schedulingSecs"); }
+            else if (parseNode.GetChildNode("schedulingSecs") is { } nullNodeSchedulingSecs && nullNodeSchedulingSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SchedulingSecs = null;
+            if (parseNode.GetChildNode("totalSecs") is null) { _explicitNullValueTotalSecs = default!; _explicitNullProperties?.Remove("totalSecs"); }
+            else if (parseNode.GetChildNode("totalSecs") is { } nullNodeTotalSecs && nullNodeTotalSecs.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TotalSecs = null;
         }
 
         /// <summary>The runningSecs property</summary>

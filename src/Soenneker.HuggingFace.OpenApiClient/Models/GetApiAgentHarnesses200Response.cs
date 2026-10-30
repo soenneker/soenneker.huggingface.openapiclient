@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("harnesses") is { } nullNodeHarnesses && nullNodeHarnesses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Harnesses = null;
-            if (parseNode.GetChildNode("standardEnvVars") is { } nullNodeStandardEnvVars && nullNodeStandardEnvVars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardEnvVars = null;
+            if (parseNode.GetChildNode("harnesses") is null) { _explicitNullValueHarnesses = default!; _explicitNullProperties?.Remove("harnesses"); }
+            else if (parseNode.GetChildNode("harnesses") is { } nullNodeHarnesses && nullNodeHarnesses.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Harnesses = null;
+            if (parseNode.GetChildNode("standardEnvVars") is null) { _explicitNullValueStandardEnvVars = default!; _explicitNullProperties?.Remove("standardEnvVars"); }
+            else if (parseNode.GetChildNode("standardEnvVars") is { } nullNodeStandardEnvVars && nullNodeStandardEnvVars.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StandardEnvVars = null;
         }
 
         /// <summary>Registered harnesses, keyed by id and ordered by detection priority: the first match wins</summary>

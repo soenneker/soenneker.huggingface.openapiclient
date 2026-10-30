@@ -65,7 +65,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Spaces.SemanticSearch
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.Spaces.SemanticSearch.SemanticSearchRequestBuilder.SemanticSearchRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://huggingface.co", "/api/spaces/semantic-search", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

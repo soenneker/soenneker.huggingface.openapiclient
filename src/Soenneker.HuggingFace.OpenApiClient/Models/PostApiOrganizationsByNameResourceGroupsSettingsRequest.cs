@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowExternalInvites") is { } nullNodeAllowExternalInvites && nullNodeAllowExternalInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowExternalInvites = null;
-            if (parseNode.GetChildNode("minRoleToCreate") is { } nullNodeMinRoleToCreate && nullNodeMinRoleToCreate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRoleToCreate = null;
+            if (parseNode.GetChildNode("allowExternalInvites") is null) { _explicitNullValueAllowExternalInvites = default!; _explicitNullProperties?.Remove("allowExternalInvites"); }
+            else if (parseNode.GetChildNode("allowExternalInvites") is { } nullNodeAllowExternalInvites && nullNodeAllowExternalInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowExternalInvites = null;
+            if (parseNode.GetChildNode("minRoleToCreate") is null) { _explicitNullValueMinRoleToCreate = default!; _explicitNullProperties?.Remove("minRoleToCreate"); }
+            else if (parseNode.GetChildNode("minRoleToCreate") is { } nullNodeMinRoleToCreate && nullNodeMinRoleToCreate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRoleToCreate = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Whether resource group admins may invite users from outside the organization</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? AllowExternalInvites { get => _explicitNullValueAllowExternalInvites; set { _explicitNullValueAllowExternalInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowExternalInvites"); else _explicitNullProperties?.Remove("allowExternalInvites"); } }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? AllowExternalInvites { get => _explicitNullValueAllowExternalInvites; set { _explicitNullValueAllowExternalInvites = value; AdditionalData?.Remove("allowExternalInvites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowExternalInvites"); else _explicitNullProperties?.Remove("allowExternalInvites"); } }
         private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? _explicitNullValueAllowExternalInvites = default!;
 #nullable restore
 #else
-        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode AllowExternalInvites { get => _explicitNullValueAllowExternalInvites; set { _explicitNullValueAllowExternalInvites = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowExternalInvites"); else _explicitNullProperties?.Remove("allowExternalInvites"); } }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode AllowExternalInvites { get => _explicitNullValueAllowExternalInvites; set { _explicitNullValueAllowExternalInvites = value; AdditionalData?.Remove("allowExternalInvites"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("allowExternalInvites"); else _explicitNullProperties?.Remove("allowExternalInvites"); } }
         private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode _explicitNullValueAllowExternalInvites = default!;
 #endif
         /// <summary>Minimum organization role required to create a resource group</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettingsRequestMinRoleToCreate? MinRoleToCreate { get => _explicitNullValueMinRoleToCreate; set { _explicitNullValueMinRoleToCreate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minRoleToCreate"); else _explicitNullProperties?.Remove("minRoleToCreate"); } }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettingsRequestMinRoleToCreate? MinRoleToCreate { get => _explicitNullValueMinRoleToCreate; set { _explicitNullValueMinRoleToCreate = value; AdditionalData?.Remove("minRoleToCreate"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("minRoleToCreate"); else _explicitNullProperties?.Remove("minRoleToCreate"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettingsRequestMinRoleToCreate? _explicitNullValueMinRoleToCreate = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettingsRequest"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "allowExternalInvites", n => { AllowExternalInvites = n.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue); } },
-                { "minRoleToCreate", n => { MinRoleToCreate = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettingsRequestMinRoleToCreate>(); } },
+                { "minRoleToCreate", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsSettingsRequestMinRoleToCreate>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueMinRoleToCreate = default; _explicitNullProperties?.Remove("minRoleToCreate"); AdditionalData["minRoleToCreate"] = unknown; } else { MinRoleToCreate = parsed; AdditionalData.Remove("minRoleToCreate"); } } },
             };
         }
         /// <summary>

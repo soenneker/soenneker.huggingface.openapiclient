@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("privateGB") is { } nullNodePrivateGB && nullNodePrivateGB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateGB = null;
-            if (parseNode.GetChildNode("publicGB") is { } nullNodePublicGB && nullNodePublicGB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicGB = null;
+            if (parseNode.GetChildNode("privateGB") is null) { _explicitNullValuePrivateGB = default!; _explicitNullProperties?.Remove("privateGB"); }
+            else if (parseNode.GetChildNode("privateGB") is { } nullNodePrivateGB && nullNodePrivateGB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PrivateGB = null;
+            if (parseNode.GetChildNode("publicGB") is null) { _explicitNullValuePublicGB = default!; _explicitNullProperties?.Remove("publicGB"); }
+            else if (parseNode.GetChildNode("publicGB") is { } nullNodePublicGB && nullNodePublicGB.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PublicGB = null;
         }
 
         /// <summary>The privateGB property</summary>

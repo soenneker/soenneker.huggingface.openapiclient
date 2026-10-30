@@ -17,27 +17,30 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("emptyBranch") is { } nullNodeEmptyBranch && nullNodeEmptyBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmptyBranch = null;
-            if (parseNode.GetChildNode("overwrite") is { } nullNodeOverwrite && nullNodeOverwrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overwrite = null;
-            if (parseNode.GetChildNode("startingPoint") is { } nullNodeStartingPoint && nullNodeStartingPoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingPoint = null;
+            if (parseNode.GetChildNode("emptyBranch") is null) { _explicitNullValueEmptyBranch = default!; _explicitNullProperties?.Remove("emptyBranch"); }
+            else if (parseNode.GetChildNode("emptyBranch") is { } nullNodeEmptyBranch && nullNodeEmptyBranch.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) EmptyBranch = null;
+            if (parseNode.GetChildNode("overwrite") is null) { _explicitNullValueOverwrite = default!; _explicitNullProperties?.Remove("overwrite"); }
+            else if (parseNode.GetChildNode("overwrite") is { } nullNodeOverwrite && nullNodeOverwrite.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Overwrite = null;
+            if (parseNode.GetChildNode("startingPoint") is null) { _explicitNullValueStartingPoint = default!; _explicitNullProperties?.Remove("startingPoint"); }
+            else if (parseNode.GetChildNode("startingPoint") is { } nullNodeStartingPoint && nullNodeStartingPoint.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) StartingPoint = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>Create an empty branch</summary>
-        public bool? EmptyBranch { get => _explicitNullValueEmptyBranch; set { _explicitNullValueEmptyBranch = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emptyBranch"); else _explicitNullProperties?.Remove("emptyBranch"); } }
+        public bool? EmptyBranch { get => _explicitNullValueEmptyBranch; set { _explicitNullValueEmptyBranch = value; AdditionalData?.Remove("emptyBranch"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emptyBranch"); else _explicitNullProperties?.Remove("emptyBranch"); } }
         private bool? _explicitNullValueEmptyBranch = default!;
         /// <summary>Overwrite the branch if it already exists</summary>
-        public bool? Overwrite { get => _explicitNullValueOverwrite; set { _explicitNullValueOverwrite = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overwrite"); else _explicitNullProperties?.Remove("overwrite"); } }
+        public bool? Overwrite { get => _explicitNullValueOverwrite; set { _explicitNullValueOverwrite = value; AdditionalData?.Remove("overwrite"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("overwrite"); else _explicitNullProperties?.Remove("overwrite"); } }
         private bool? _explicitNullValueOverwrite = default!;
         /// <summary>The commit to start from</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? StartingPoint { get => _explicitNullValueStartingPoint; set { _explicitNullValueStartingPoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingPoint"); else _explicitNullProperties?.Remove("startingPoint"); } }
+        public string? StartingPoint { get => _explicitNullValueStartingPoint; set { _explicitNullValueStartingPoint = value; AdditionalData?.Remove("startingPoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingPoint"); else _explicitNullProperties?.Remove("startingPoint"); } }
         private string? _explicitNullValueStartingPoint = default!;
 #nullable restore
 #else
-        public string StartingPoint { get => _explicitNullValueStartingPoint; set { _explicitNullValueStartingPoint = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingPoint"); else _explicitNullProperties?.Remove("startingPoint"); } }
+        public string StartingPoint { get => _explicitNullValueStartingPoint; set { _explicitNullValueStartingPoint = value; AdditionalData?.Remove("startingPoint"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startingPoint"); else _explicitNullProperties?.Remove("startingPoint"); } }
         private string _explicitNullValueStartingPoint = default!;
 #endif
         /// <summary>

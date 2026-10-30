@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("resourceGroups") is { } nullNodeResourceGroups && nullNodeResourceGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroups = null;
-            if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
+            if (parseNode.GetChildNode("resourceGroups") is null) { _explicitNullValueResourceGroups = default!; _explicitNullProperties?.Remove("resourceGroups"); }
+            else if (parseNode.GetChildNode("resourceGroups") is { } nullNodeResourceGroups && nullNodeResourceGroups.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroups = null;
+            if (parseNode.GetChildNode("role") is null) { _explicitNullValueRole = default!; _explicitNullProperties?.Remove("role"); }
+            else if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,15 +28,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The resourceGroups property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem>? ResourceGroups { get => _explicitNullValueResourceGroups; set { _explicitNullValueResourceGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroups"); else _explicitNullProperties?.Remove("resourceGroups"); } }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem>? ResourceGroups { get => _explicitNullValueResourceGroups; set { _explicitNullValueResourceGroups = value; AdditionalData?.Remove("resourceGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroups"); else _explicitNullProperties?.Remove("resourceGroups"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem>? _explicitNullValueResourceGroups = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem> ResourceGroups { get => _explicitNullValueResourceGroups; set { _explicitNullValueResourceGroups = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroups"); else _explicitNullProperties?.Remove("resourceGroups"); } }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem> ResourceGroups { get => _explicitNullValueResourceGroups; set { _explicitNullValueResourceGroups = value; AdditionalData?.Remove("resourceGroups"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroups"); else _explicitNullProperties?.Remove("resourceGroups"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem> _explicitNullValueResourceGroups = default!;
 #endif
         /// <summary>The role property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; AdditionalData?.Remove("role"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestRole? _explicitNullValueRole = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequest"/> and sets the default values.
@@ -62,7 +64,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "resourceGroups", n => { ResourceGroups = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestRole>(); } },
+                { "role", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiOrganizationsByNameMembersByUsernameRoleRequestRole>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueRole = default; _explicitNullProperties?.Remove("role"); AdditionalData["role"] = unknown; } else { Role = parsed; AdditionalData.Remove("role"); } } },
             };
         }
         /// <summary>

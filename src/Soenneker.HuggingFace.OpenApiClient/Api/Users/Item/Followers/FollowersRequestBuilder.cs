@@ -36,20 +36,20 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Followers
         /// <summary>
         /// List user followers
         /// </summary>
-        /// <returns>A List&lt;global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseSchemaItem&gt;</returns>
+        /// <returns>A List&lt;global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseItem&gt;</returns>
         /// <param name="cancellationToken">Cancellation token to use when cancelling requests</param>
         /// <param name="requestConfiguration">Configuration for the request such as headers, query parameters, and middleware options.</param>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public async Task<List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseSchemaItem>?> GetAsync(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseItem>?> GetAsync(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>>? requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #nullable restore
 #else
-        public async Task<List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseSchemaItem>> GetAsync(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
+        public async Task<List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseItem>> GetAsync(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>> requestConfiguration = default, CancellationToken cancellationToken = default)
         {
 #endif
             var requestInfo = ToGetRequestInformation(requestConfiguration);
-            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseSchemaItem>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseSchemaItem.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
+            var collectionResult = await RequestAdapter.SendCollectionAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseItem>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiUsersByUsernameFollowers200ResponseItem.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
             return collectionResult?.AsList();
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Followers
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Followers.FollowersRequestBuilder.FollowersRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://huggingface.co", "/api/users/{username}/followers", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

@@ -17,7 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("paths") is { } nullNodePaths && nullNodePaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paths = null;
+            if (parseNode.GetChildNode("paths") is null) { _explicitNullValuePaths = default!; _explicitNullProperties?.Remove("paths"); }
+            else if (parseNode.GetChildNode("paths") is { } nullNodePaths && nullNodePaths.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Paths = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,12 +26,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The paths property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiContainersByNamespaceValueByRepoPathsInfoRequestPaths? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
-        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiContainersByNamespaceValueByRepoPathsInfoRequestPaths? _explicitNullValuePaths = default!;
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoPathsInfoRequestPaths? Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoPathsInfoRequestPaths? _explicitNullValuePaths = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiContainersByNamespaceValueByRepoPathsInfoRequestPaths Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
-        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiContainersByNamespaceValueByRepoPathsInfoRequestPaths _explicitNullValuePaths = default!;
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoPathsInfoRequestPaths Paths { get => _explicitNullValuePaths; set { _explicitNullValuePaths = value; AdditionalData?.Remove("paths"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("paths"); else _explicitNullProperties?.Remove("paths"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoPathsInfoRequestPaths _explicitNullValuePaths = default!;
 #endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiContainersByNamespaceValueByRepoPathsInfoRequest"/> and sets the default values.
@@ -57,7 +58,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "paths", n => { Paths = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiContainersByNamespaceValueByRepoPathsInfoRequestPaths>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiContainersByNamespaceValueByRepoPathsInfoRequestPaths.CreateFromDiscriminatorValue); } },
+                { "paths", n => { Paths = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoPathsInfoRequestPaths>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoPathsInfoRequestPaths.CreateFromDiscriminatorValue); } },
             };
         }
         /// <summary>
@@ -67,7 +68,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiContainersByNamespaceValueByRepoPathsInfoRequestPaths>("paths", Paths);
+            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBucketsByNamespaceValueByRepoPathsInfoRequestPaths>("paths", Paths);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

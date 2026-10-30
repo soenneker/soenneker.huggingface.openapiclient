@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("allowExternalInvites") is { } nullNodeAllowExternalInvites && nullNodeAllowExternalInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowExternalInvites = null;
-            if (parseNode.GetChildNode("minRoleToCreate") is { } nullNodeMinRoleToCreate && nullNodeMinRoleToCreate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRoleToCreate = null;
+            if (parseNode.GetChildNode("allowExternalInvites") is null) { _explicitNullValueAllowExternalInvites = default!; _explicitNullProperties?.Remove("allowExternalInvites"); }
+            else if (parseNode.GetChildNode("allowExternalInvites") is { } nullNodeAllowExternalInvites && nullNodeAllowExternalInvites.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AllowExternalInvites = null;
+            if (parseNode.GetChildNode("minRoleToCreate") is null) { _explicitNullValueMinRoleToCreate = default!; _explicitNullProperties?.Remove("minRoleToCreate"); }
+            else if (parseNode.GetChildNode("minRoleToCreate") is { } nullNodeMinRoleToCreate && nullNodeMinRoleToCreate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MinRoleToCreate = null;
         }
 
         /// <summary>Whether resource group admins may invite users from outside the organization</summary>

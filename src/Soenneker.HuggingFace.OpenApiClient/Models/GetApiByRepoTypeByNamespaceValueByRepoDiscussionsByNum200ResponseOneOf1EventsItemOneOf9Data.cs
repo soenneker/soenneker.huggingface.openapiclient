@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("headOid") is { } nullNodeHeadOid && nullNodeHeadOid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadOid = null;
-            if (parseNode.GetChildNode("hiddenCommits") is { } nullNodeHiddenCommits && nullNodeHiddenCommits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HiddenCommits = null;
+            if (parseNode.GetChildNode("headOid") is null) { _explicitNullValueHeadOid = default!; _explicitNullProperties?.Remove("headOid"); }
+            else if (parseNode.GetChildNode("headOid") is { } nullNodeHeadOid && nullNodeHeadOid.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HeadOid = null;
+            if (parseNode.GetChildNode("hiddenCommits") is null) { _explicitNullValueHiddenCommits = default!; _explicitNullProperties?.Remove("hiddenCommits"); }
+            else if (parseNode.GetChildNode("hiddenCommits") is { } nullNodeHiddenCommits && nullNodeHiddenCommits.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HiddenCommits = null;
         }
 
         /// <summary>The headOid property</summary>

@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cdnRegions") is { } nullNodeCdnRegions && nullNodeCdnRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CdnRegions = null;
-            if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
+            if (parseNode.GetChildNode("cdnRegions") is null) { _explicitNullValueCdnRegions = default!; _explicitNullProperties?.Remove("cdnRegions"); }
+            else if (parseNode.GetChildNode("cdnRegions") is { } nullNodeCdnRegions && nullNodeCdnRegions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CdnRegions = null;
+            if (parseNode.GetChildNode("private") is null) { _explicitNullValuePrivate = default!; _explicitNullProperties?.Remove("private"); }
+            else if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,21 +28,21 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The cdnRegions property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettingsRequestCdnRegionsItem>? CdnRegions { get => _explicitNullValueCdnRegions; set { _explicitNullValueCdnRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdnRegions"); else _explicitNullProperties?.Remove("cdnRegions"); } }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettingsRequestCdnRegionsItem>? CdnRegions { get => _explicitNullValueCdnRegions; set { _explicitNullValueCdnRegions = value; AdditionalData?.Remove("cdnRegions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdnRegions"); else _explicitNullProperties?.Remove("cdnRegions"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettingsRequestCdnRegionsItem>? _explicitNullValueCdnRegions = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettingsRequestCdnRegionsItem> CdnRegions { get => _explicitNullValueCdnRegions; set { _explicitNullValueCdnRegions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdnRegions"); else _explicitNullProperties?.Remove("cdnRegions"); } }
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettingsRequestCdnRegionsItem> CdnRegions { get => _explicitNullValueCdnRegions; set { _explicitNullValueCdnRegions = value; AdditionalData?.Remove("cdnRegions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cdnRegions"); else _explicitNullProperties?.Remove("cdnRegions"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PutApiBucketsByNamespaceValueByRepoSettingsRequestCdnRegionsItem> _explicitNullValueCdnRegions = default!;
 #endif
         /// <summary>The private property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; AdditionalData?.Remove("private"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
         private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode? _explicitNullValuePrivate = default!;
 #nullable restore
 #else
-        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
+        public global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; AdditionalData?.Remove("private"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
         private global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode _explicitNullValuePrivate = default!;
 #endif
         /// <summary>

@@ -17,31 +17,27 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("flavor") is { } nullNodeFlavor && nullNodeFlavor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flavor = null;
-            if (parseNode.GetChildNode("sleepTimeSeconds") is { } nullNodeSleepTimeSeconds && nullNodeSleepTimeSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeSeconds = null;
+            if (parseNode.GetChildNode("flavor") is null) { _explicitNullValueFlavor = default!; _explicitNullProperties?.Remove("flavor"); }
+            else if (parseNode.GetChildNode("flavor") is { } nullNodeFlavor && nullNodeFlavor.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Flavor = null;
+            if (parseNode.GetChildNode("sleepTimeSeconds") is null) { _explicitNullValueSleepTimeSeconds = default!; _explicitNullProperties?.Remove("sleepTimeSeconds"); }
+            else if (parseNode.GetChildNode("sleepTimeSeconds") is { } nullNodeSleepTimeSeconds && nullNodeSleepTimeSeconds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SleepTimeSeconds = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The flavor property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestFlavor? Flavor { get => _explicitNullValueFlavor; set { _explicitNullValueFlavor = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flavor"); else _explicitNullProperties?.Remove("flavor"); } }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestFlavor? Flavor { get => _explicitNullValueFlavor; set { _explicitNullValueFlavor = value; AdditionalData?.Remove("flavor"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("flavor"); else _explicitNullProperties?.Remove("flavor"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestFlavor? _explicitNullValueFlavor = default!;
         /// <summary>The sleepTimeSeconds property</summary>
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
-#nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestSleepTimeSeconds? SleepTimeSeconds { get => _explicitNullValueSleepTimeSeconds; set { _explicitNullValueSleepTimeSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeSeconds"); else _explicitNullProperties?.Remove("sleepTimeSeconds"); } }
-        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestSleepTimeSeconds? _explicitNullValueSleepTimeSeconds = default!;
-#nullable restore
-#else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestSleepTimeSeconds SleepTimeSeconds { get => _explicitNullValueSleepTimeSeconds; set { _explicitNullValueSleepTimeSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeSeconds"); else _explicitNullProperties?.Remove("sleepTimeSeconds"); } }
-        private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestSleepTimeSeconds _explicitNullValueSleepTimeSeconds = default!;
-#endif
+        public double? SleepTimeSeconds { get => _explicitNullValueSleepTimeSeconds; set { _explicitNullValueSleepTimeSeconds = value; AdditionalData?.Remove("sleepTimeSeconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sleepTimeSeconds"); else _explicitNullProperties?.Remove("sleepTimeSeconds"); } }
+        private double? _explicitNullValueSleepTimeSeconds = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequest"/> and sets the default values.
         /// </summary>
         public PostApiSpacesByNamespaceValueByRepoHardwareRequest()
         {
             AdditionalData = new Dictionary<string, object>();
+            SleepTimeSeconds = -1;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -61,8 +57,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "flavor", n => { Flavor = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestFlavor>(); } },
-                { "sleepTimeSeconds", n => { SleepTimeSeconds = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestSleepTimeSeconds>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestSleepTimeSeconds.CreateFromDiscriminatorValue); } },
+                { "flavor", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestFlavor>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueFlavor = default; _explicitNullProperties?.Remove("flavor"); AdditionalData["flavor"] = unknown; } else { Flavor = parsed; AdditionalData.Remove("flavor"); } } },
+                { "sleepTimeSeconds", n => { SleepTimeSeconds = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -73,7 +69,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestFlavor>("flavor", Flavor);
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoHardwareRequestSleepTimeSeconds>("sleepTimeSeconds", SleepTimeSeconds);
+            writer.WriteDoubleValue("sleepTimeSeconds", SleepTimeSeconds);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

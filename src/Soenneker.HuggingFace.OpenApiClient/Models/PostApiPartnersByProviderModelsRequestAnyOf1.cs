@@ -17,11 +17,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("hfModel") is { } nullNodeHfModel && nullNodeHfModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HfModel = null;
-            if (parseNode.GetChildNode("providerModel") is { } nullNodeProviderModel && nullNodeProviderModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderModel = null;
-            if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
-            if (parseNode.GetChildNode("task") is { } nullNodeTask && nullNodeTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Task = null;
-            if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
+            if (parseNode.GetChildNode("hfModel") is null) { _explicitNullValueHfModel = default!; _explicitNullProperties?.Remove("hfModel"); }
+            else if (parseNode.GetChildNode("hfModel") is { } nullNodeHfModel && nullNodeHfModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) HfModel = null;
+            if (parseNode.GetChildNode("providerModel") is null) { _explicitNullValueProviderModel = default!; _explicitNullProperties?.Remove("providerModel"); }
+            else if (parseNode.GetChildNode("providerModel") is { } nullNodeProviderModel && nullNodeProviderModel.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderModel = null;
+            if (parseNode.GetChildNode("status") is null) { _explicitNullValueStatus = default!; _explicitNullProperties?.Remove("status"); }
+            else if (parseNode.GetChildNode("status") is { } nullNodeStatus && nullNodeStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Status = null;
+            if (parseNode.GetChildNode("task") is null) { _explicitNullValueTask = default!; _explicitNullProperties?.Remove("task"); }
+            else if (parseNode.GetChildNode("task") is { } nullNodeTask && nullNodeTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Task = null;
+            if (parseNode.GetChildNode("type") is null) { _explicitNullValueType = default!; _explicitNullProperties?.Remove("type"); }
+            else if (parseNode.GetChildNode("type") is { } nullNodeType && nullNodeType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Type = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -29,31 +34,31 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The hfModel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? HfModel { get => _explicitNullValueHfModel; set { _explicitNullValueHfModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hfModel"); else _explicitNullProperties?.Remove("hfModel"); } }
+        public string? HfModel { get => _explicitNullValueHfModel; set { _explicitNullValueHfModel = value; AdditionalData?.Remove("hfModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hfModel"); else _explicitNullProperties?.Remove("hfModel"); } }
         private string? _explicitNullValueHfModel = default!;
 #nullable restore
 #else
-        public string HfModel { get => _explicitNullValueHfModel; set { _explicitNullValueHfModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hfModel"); else _explicitNullProperties?.Remove("hfModel"); } }
+        public string HfModel { get => _explicitNullValueHfModel; set { _explicitNullValueHfModel = value; AdditionalData?.Remove("hfModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hfModel"); else _explicitNullProperties?.Remove("hfModel"); } }
         private string _explicitNullValueHfModel = default!;
 #endif
         /// <summary>The providerModel property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProviderModel { get => _explicitNullValueProviderModel; set { _explicitNullValueProviderModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerModel"); else _explicitNullProperties?.Remove("providerModel"); } }
+        public string? ProviderModel { get => _explicitNullValueProviderModel; set { _explicitNullValueProviderModel = value; AdditionalData?.Remove("providerModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerModel"); else _explicitNullProperties?.Remove("providerModel"); } }
         private string? _explicitNullValueProviderModel = default!;
 #nullable restore
 #else
-        public string ProviderModel { get => _explicitNullValueProviderModel; set { _explicitNullValueProviderModel = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerModel"); else _explicitNullProperties?.Remove("providerModel"); } }
+        public string ProviderModel { get => _explicitNullValueProviderModel; set { _explicitNullValueProviderModel = value; AdditionalData?.Remove("providerModel"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerModel"); else _explicitNullProperties?.Remove("providerModel"); } }
         private string _explicitNullValueProviderModel = default!;
 #endif
         /// <summary>The status property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status? Status { get => _explicitNullValueStatus; set { _explicitNullValueStatus = value; AdditionalData?.Remove("status"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("status"); else _explicitNullProperties?.Remove("status"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status? _explicitNullValueStatus = default!;
         /// <summary>The task property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task? Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task? Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; AdditionalData?.Remove("task"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task? _explicitNullValueTask = default!;
         /// <summary>The type property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; AdditionalData?.Remove("type"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType? _explicitNullValueType = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1"/> and sets the default values.
@@ -82,9 +87,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "hfModel", n => { HfModel = n.GetStringValue(); } },
                 { "providerModel", n => { ProviderModel = n.GetStringValue(); } },
-                { "status", n => { Status = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status>(); } },
-                { "task", n => { Task = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task>(); } },
-                { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType>(); } },
+                { "status", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Status>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueStatus = default; _explicitNullProperties?.Remove("status"); AdditionalData["status"] = unknown; } else { Status = parsed; AdditionalData.Remove("status"); } } },
+                { "task", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPartnersByProviderModelsRequestAnyOf1Task>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTask = default; _explicitNullProperties?.Remove("task"); AdditionalData["task"] = unknown; } else { Task = parsed; AdditionalData.Remove("task"); } } },
+                { "type", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.SingleModelType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueType = default; _explicitNullProperties?.Remove("type"); AdditionalData["type"] = unknown; } else { Type = parsed; AdditionalData.Remove("type"); } } },
             };
         }
         /// <summary>

@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("filesWithIssues") is { } nullNodeFilesWithIssues && nullNodeFilesWithIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesWithIssues = null;
-            if (parseNode.GetChildNode("scansDone") is { } nullNodeScansDone && nullNodeScansDone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScansDone = null;
+            if (parseNode.GetChildNode("filesWithIssues") is null) { _explicitNullValueFilesWithIssues = default!; _explicitNullProperties?.Remove("filesWithIssues"); }
+            else if (parseNode.GetChildNode("filesWithIssues") is { } nullNodeFilesWithIssues && nullNodeFilesWithIssues.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FilesWithIssues = null;
+            if (parseNode.GetChildNode("scansDone") is null) { _explicitNullValueScansDone = default!; _explicitNullProperties?.Remove("scansDone"); }
+            else if (parseNode.GetChildNode("scansDone") is { } nullNodeScansDone && nullNodeScansDone.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ScansDone = null;
         }
 
         /// <summary>The filesWithIssues property</summary>

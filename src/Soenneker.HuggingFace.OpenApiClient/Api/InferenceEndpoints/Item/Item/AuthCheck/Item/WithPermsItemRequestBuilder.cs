@@ -65,7 +65,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.InferenceEndpoints.Item.Item.A
         public RequestInformation ToPostRequestInformation(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.InferenceEndpoints.Item.Item.AuthCheck.Item.WithPermsItemRequestBuilder.WithPermsItemRequestBuilderPostQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://huggingface.co", "/api/inference-endpoints/{namespaceValue}/{endpoint}/auth-check/{perms}", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;

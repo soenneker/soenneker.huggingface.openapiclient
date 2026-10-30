@@ -17,7 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("pointerSize") is { } nullNodePointerSize && nullNodePointerSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PointerSize = null;
+            if (parseNode.GetChildNode("pointerSize") is null) { _explicitNullValuePointerSize = default!; _explicitNullProperties?.Remove("pointerSize"); }
+            else if (parseNode.GetChildNode("pointerSize") is { } nullNodePointerSize && nullNodePointerSize.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PointerSize = null;
         }
 
         /// <summary>The pointerSize property</summary>

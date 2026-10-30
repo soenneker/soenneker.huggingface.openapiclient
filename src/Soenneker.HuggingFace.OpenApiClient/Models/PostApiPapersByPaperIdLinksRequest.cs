@@ -17,9 +17,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("githubRepo") is { } nullNodeGithubRepo && nullNodeGithubRepo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GithubRepo = null;
-            if (parseNode.GetChildNode("organizationId") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
-            if (parseNode.GetChildNode("projectPage") is { } nullNodeProjectPage && nullNodeProjectPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectPage = null;
+            if (parseNode.GetChildNode("githubRepo") is null) { _explicitNullValueGithubRepo = default!; _explicitNullProperties?.Remove("githubRepo"); }
+            else if (parseNode.GetChildNode("githubRepo") is { } nullNodeGithubRepo && nullNodeGithubRepo.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GithubRepo = null;
+            if (parseNode.GetChildNode("organizationId") is null) { _explicitNullValueOrganizationId = default!; _explicitNullProperties?.Remove("organizationId"); }
+            else if (parseNode.GetChildNode("organizationId") is { } nullNodeOrganizationId && nullNodeOrganizationId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OrganizationId = null;
+            if (parseNode.GetChildNode("projectPage") is null) { _explicitNullValueProjectPage = default!; _explicitNullProperties?.Remove("projectPage"); }
+            else if (parseNode.GetChildNode("projectPage") is { } nullNodeProjectPage && nullNodeProjectPage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProjectPage = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -27,31 +30,31 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The githubRepo property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? GithubRepo { get => _explicitNullValueGithubRepo; set { _explicitNullValueGithubRepo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("githubRepo"); else _explicitNullProperties?.Remove("githubRepo"); } }
+        public string? GithubRepo { get => _explicitNullValueGithubRepo; set { _explicitNullValueGithubRepo = value; AdditionalData?.Remove("githubRepo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("githubRepo"); else _explicitNullProperties?.Remove("githubRepo"); } }
         private string? _explicitNullValueGithubRepo = default!;
 #nullable restore
 #else
-        public string GithubRepo { get => _explicitNullValueGithubRepo; set { _explicitNullValueGithubRepo = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("githubRepo"); else _explicitNullProperties?.Remove("githubRepo"); } }
+        public string GithubRepo { get => _explicitNullValueGithubRepo; set { _explicitNullValueGithubRepo = value; AdditionalData?.Remove("githubRepo"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("githubRepo"); else _explicitNullProperties?.Remove("githubRepo"); } }
         private string _explicitNullValueGithubRepo = default!;
 #endif
         /// <summary>The organizationId property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organizationId"); else _explicitNullProperties?.Remove("organizationId"); } }
+        public string? OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; AdditionalData?.Remove("organizationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organizationId"); else _explicitNullProperties?.Remove("organizationId"); } }
         private string? _explicitNullValueOrganizationId = default!;
 #nullable restore
 #else
-        public string OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organizationId"); else _explicitNullProperties?.Remove("organizationId"); } }
+        public string OrganizationId { get => _explicitNullValueOrganizationId; set { _explicitNullValueOrganizationId = value; AdditionalData?.Remove("organizationId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("organizationId"); else _explicitNullProperties?.Remove("organizationId"); } }
         private string _explicitNullValueOrganizationId = default!;
 #endif
         /// <summary>The projectPage property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ProjectPage { get => _explicitNullValueProjectPage; set { _explicitNullValueProjectPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectPage"); else _explicitNullProperties?.Remove("projectPage"); } }
+        public string? ProjectPage { get => _explicitNullValueProjectPage; set { _explicitNullValueProjectPage = value; AdditionalData?.Remove("projectPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectPage"); else _explicitNullProperties?.Remove("projectPage"); } }
         private string? _explicitNullValueProjectPage = default!;
 #nullable restore
 #else
-        public string ProjectPage { get => _explicitNullValueProjectPage; set { _explicitNullValueProjectPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectPage"); else _explicitNullProperties?.Remove("projectPage"); } }
+        public string ProjectPage { get => _explicitNullValueProjectPage; set { _explicitNullValueProjectPage = value; AdditionalData?.Remove("projectPage"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("projectPage"); else _explicitNullProperties?.Remove("projectPage"); } }
         private string _explicitNullValueProjectPage = default!;
 #endif
         /// <summary>

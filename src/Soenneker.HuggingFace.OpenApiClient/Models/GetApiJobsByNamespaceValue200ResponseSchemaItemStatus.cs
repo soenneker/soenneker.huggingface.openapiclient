@@ -17,23 +17,29 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("cancelReason") is { } nullNodeCancelReason && nullNodeCancelReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelReason = null;
-            if (parseNode.GetChildNode("exposeUrls") is { } nullNodeExposeUrls && nullNodeExposeUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExposeUrls = null;
-            if (parseNode.GetChildNode("failureCount") is { } nullNodeFailureCount && nullNodeFailureCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureCount = null;
-            if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
-            if (parseNode.GetChildNode("sshUrl") is { } nullNodeSshUrl && nullNodeSshUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SshUrl = null;
-            if (parseNode.GetChildNode("stage") is { } nullNodeStage && nullNodeStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stage = null;
+            if (parseNode.GetChildNode("cancelReason") is null) { _explicitNullValueCancelReason = default!; _explicitNullProperties?.Remove("cancelReason"); }
+            else if (parseNode.GetChildNode("cancelReason") is { } nullNodeCancelReason && nullNodeCancelReason.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CancelReason = null;
+            if (parseNode.GetChildNode("exposeUrls") is null) { _explicitNullValueExposeUrls = default!; _explicitNullProperties?.Remove("exposeUrls"); }
+            else if (parseNode.GetChildNode("exposeUrls") is { } nullNodeExposeUrls && nullNodeExposeUrls.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ExposeUrls = null;
+            if (parseNode.GetChildNode("failureCount") is null) { _explicitNullValueFailureCount = default!; _explicitNullProperties?.Remove("failureCount"); }
+            else if (parseNode.GetChildNode("failureCount") is { } nullNodeFailureCount && nullNodeFailureCount.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) FailureCount = null;
+            if (parseNode.GetChildNode("message") is null) { _explicitNullValueMessage = default!; _explicitNullProperties?.Remove("message"); }
+            else if (parseNode.GetChildNode("message") is { } nullNodeMessage && nullNodeMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Message = null;
+            if (parseNode.GetChildNode("sshUrl") is null) { _explicitNullValueSshUrl = default!; _explicitNullProperties?.Remove("sshUrl"); }
+            else if (parseNode.GetChildNode("sshUrl") is { } nullNodeSshUrl && nullNodeSshUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SshUrl = null;
+            if (parseNode.GetChildNode("stage") is null) { _explicitNullValueStage = default!; _explicitNullProperties?.Remove("stage"); }
+            else if (parseNode.GetChildNode("stage") is { } nullNodeStage && nullNodeStage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Stage = null;
         }
 
         /// <summary>The cancelReason property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatusCancelReason? CancelReason { get => _explicitNullValueCancelReason; set { _explicitNullValueCancelReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelReason"); else _explicitNullProperties?.Remove("cancelReason"); } }
-        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatusCancelReason? _explicitNullValueCancelReason = default!;
+        public string? CancelReason { get => _explicitNullValueCancelReason; set { _explicitNullValueCancelReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelReason"); else _explicitNullProperties?.Remove("cancelReason"); } }
+        private string? _explicitNullValueCancelReason = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatusCancelReason CancelReason { get => _explicitNullValueCancelReason; set { _explicitNullValueCancelReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelReason"); else _explicitNullProperties?.Remove("cancelReason"); } }
-        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatusCancelReason _explicitNullValueCancelReason = default!;
+        public string CancelReason { get => _explicitNullValueCancelReason; set { _explicitNullValueCancelReason = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("cancelReason"); else _explicitNullProperties?.Remove("cancelReason"); } }
+        private string _explicitNullValueCancelReason = default!;
 #endif
         /// <summary>One reachable URL per port declared in `expose.ports`, in the same order (e.g. `https://&lt;job_id&gt;--8000.hf.jobs`). Absent when the job is not exposed.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -89,7 +95,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "cancelReason", n => { CancelReason = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatusCancelReason>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatusCancelReason.CreateFromDiscriminatorValue); } },
+                { "cancelReason", n => { CancelReason = n.GetStringValue(); } },
                 { "exposeUrls", n => { ExposeUrls = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "failureCount", n => { FailureCount = n.GetDoubleValue(); } },
                 { "message", n => { Message = n.GetStringValue(); } },
@@ -104,7 +110,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemStatusCancelReason>("cancelReason", CancelReason);
+            writer.WriteStringValue("cancelReason", CancelReason);
             writer.WriteCollectionOfPrimitiveValues<string>("exposeUrls", ExposeUrls);
             writer.WriteDoubleValue("failureCount", FailureCount);
             writer.WriteStringValue("message", Message);

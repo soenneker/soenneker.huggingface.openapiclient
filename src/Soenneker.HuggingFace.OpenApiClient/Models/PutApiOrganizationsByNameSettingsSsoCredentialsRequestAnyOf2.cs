@@ -18,7 +18,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("x509Cert") is { } nullNodeX509Cert && nullNodeX509Cert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) X509Cert = null;
+            if (parseNode.GetChildNode("x509Cert") is null) { _explicitNullValueX509Cert = default!; _explicitNullProperties?.Remove("x509Cert"); }
+            else if (parseNode.GetChildNode("x509Cert") is { } nullNodeX509Cert && nullNodeX509Cert.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) X509Cert = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -26,11 +27,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The x509Cert property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? X509Cert { get => _explicitNullValueX509Cert; set { _explicitNullValueX509Cert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x509Cert"); else _explicitNullProperties?.Remove("x509Cert"); } }
+        public string? X509Cert { get => _explicitNullValueX509Cert; set { _explicitNullValueX509Cert = value; AdditionalData?.Remove("x509Cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x509Cert"); else _explicitNullProperties?.Remove("x509Cert"); } }
         private string? _explicitNullValueX509Cert = default!;
 #nullable restore
 #else
-        public string X509Cert { get => _explicitNullValueX509Cert; set { _explicitNullValueX509Cert = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x509Cert"); else _explicitNullProperties?.Remove("x509Cert"); } }
+        public string X509Cert { get => _explicitNullValueX509Cert; set { _explicitNullValueX509Cert = value; AdditionalData?.Remove("x509Cert"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("x509Cert"); else _explicitNullProperties?.Remove("x509Cert"); } }
         private string _explicitNullValueX509Cert = default!;
 #endif
         /// <summary>

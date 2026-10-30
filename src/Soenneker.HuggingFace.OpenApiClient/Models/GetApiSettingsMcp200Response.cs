@@ -17,8 +17,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("builtInTools") is { } nullNodeBuiltInTools && nullNodeBuiltInTools.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuiltInTools = null;
-            if (parseNode.GetChildNode("spaceTools") is { } nullNodeSpaceTools && nullNodeSpaceTools.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpaceTools = null;
+            if (parseNode.GetChildNode("builtInTools") is null) { _explicitNullValueBuiltInTools = default!; _explicitNullProperties?.Remove("builtInTools"); }
+            else if (parseNode.GetChildNode("builtInTools") is { } nullNodeBuiltInTools && nullNodeBuiltInTools.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) BuiltInTools = null;
+            if (parseNode.GetChildNode("spaceTools") is null) { _explicitNullValueSpaceTools = default!; _explicitNullProperties?.Remove("spaceTools"); }
+            else if (parseNode.GetChildNode("spaceTools") is { } nullNodeSpaceTools && nullNodeSpaceTools.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SpaceTools = null;
         }
 
         /// <summary>The builtInTools property</summary>

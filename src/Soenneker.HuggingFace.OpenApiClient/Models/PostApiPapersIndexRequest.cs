@@ -17,7 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("arxivId") is { } nullNodeArxivId && nullNodeArxivId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArxivId = null;
+            if (parseNode.GetChildNode("arxivId") is null) { _explicitNullValueArxivId = default!; _explicitNullProperties?.Remove("arxivId"); }
+            else if (parseNode.GetChildNode("arxivId") is { } nullNodeArxivId && nullNodeArxivId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ArxivId = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The arXiv ID of the paper to index (e.g. 2301.00001)</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public string? ArxivId { get => _explicitNullValueArxivId; set { _explicitNullValueArxivId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arxivId"); else _explicitNullProperties?.Remove("arxivId"); } }
+        public string? ArxivId { get => _explicitNullValueArxivId; set { _explicitNullValueArxivId = value; AdditionalData?.Remove("arxivId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arxivId"); else _explicitNullProperties?.Remove("arxivId"); } }
         private string? _explicitNullValueArxivId = default!;
 #nullable restore
 #else
-        public string ArxivId { get => _explicitNullValueArxivId; set { _explicitNullValueArxivId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arxivId"); else _explicitNullProperties?.Remove("arxivId"); } }
+        public string ArxivId { get => _explicitNullValueArxivId; set { _explicitNullValueArxivId = value; AdditionalData?.Remove("arxivId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("arxivId"); else _explicitNullProperties?.Remove("arxivId"); } }
         private string _explicitNullValueArxivId = default!;
 #endif
         /// <summary>

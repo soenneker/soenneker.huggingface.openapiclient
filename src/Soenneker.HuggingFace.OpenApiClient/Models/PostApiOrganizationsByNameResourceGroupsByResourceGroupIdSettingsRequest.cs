@@ -17,7 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("autoJoin") is { } nullNodeAutoJoin && nullNodeAutoJoin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoJoin = null;
+            if (parseNode.GetChildNode("autoJoin") is null) { _explicitNullValueAutoJoin = default!; _explicitNullProperties?.Remove("autoJoin"); }
+            else if (parseNode.GetChildNode("autoJoin") is { } nullNodeAutoJoin && nullNodeAutoJoin.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AutoJoin = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
@@ -25,11 +26,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The autoJoin property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettingsRequestAutoJoin? AutoJoin { get => _explicitNullValueAutoJoin; set { _explicitNullValueAutoJoin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoJoin"); else _explicitNullProperties?.Remove("autoJoin"); } }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettingsRequestAutoJoin? AutoJoin { get => _explicitNullValueAutoJoin; set { _explicitNullValueAutoJoin = value; AdditionalData?.Remove("autoJoin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoJoin"); else _explicitNullProperties?.Remove("autoJoin"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettingsRequestAutoJoin? _explicitNullValueAutoJoin = default!;
 #nullable restore
 #else
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettingsRequestAutoJoin AutoJoin { get => _explicitNullValueAutoJoin; set { _explicitNullValueAutoJoin = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoJoin"); else _explicitNullProperties?.Remove("autoJoin"); } }
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettingsRequestAutoJoin AutoJoin { get => _explicitNullValueAutoJoin; set { _explicitNullValueAutoJoin = value; AdditionalData?.Remove("autoJoin"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("autoJoin"); else _explicitNullProperties?.Remove("autoJoin"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdSettingsRequestAutoJoin _explicitNullValueAutoJoin = default!;
 #endif
         /// <summary>

@@ -85,7 +85,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch.QuicksearchRequestBuilder.QuicksearchRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://huggingface.co", "/api/quicksearch", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
@@ -106,7 +106,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch
         {
 #endif
             if(ReferenceEquals(body, null)) throw new ArgumentNullException(nameof(body));
-            var requestInfo = new RequestInformation(Method.POST, UrlTemplate, PathParameters);
+            var requestInfo = new RequestInformation(Method.POST, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://huggingface.co", "/api/quicksearch", PathParameters.ContainsKey("request-raw-url")), PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             requestInfo.SetContentFromParsable(RequestAdapter, "application/json", body);
@@ -217,13 +217,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("orgsFilter")]
-            public string? OrgsFilter { get; set; }
+            public string[]? OrgsFilter { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("orgsFilter")]
-            public string OrgsFilter { get; set; }
+            public string[] OrgsFilter { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -269,13 +269,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("reposFilter")]
-            public string? ReposFilter { get; set; }
+            public string[]? ReposFilter { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("reposFilter")]
-            public string ReposFilter { get; set; }
+            public string[] ReposFilter { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -308,13 +308,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("type")]
-            public string? Type { get; set; }
+            public string[]? Type { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("type")]
-            public string Type { get; set; }
+            public string[] Type { get; set; }
             #pragma warning restore CS1591
 #endif
         }
@@ -414,13 +414,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("orgsFilter")]
-            public string? OrgsFilter { get; set; }
+            public string[]? OrgsFilter { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("orgsFilter")]
-            public string OrgsFilter { get; set; }
+            public string[] OrgsFilter { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -466,13 +466,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("reposFilter")]
-            public string? ReposFilter { get; set; }
+            public string[]? ReposFilter { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("reposFilter")]
-            public string ReposFilter { get; set; }
+            public string[] ReposFilter { get; set; }
             #pragma warning restore CS1591
 #endif
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -505,13 +505,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Quicksearch
 #nullable enable
             #pragma warning disable CS1591
             [QueryParameter("type")]
-            public string? Type { get; set; }
+            public string[]? Type { get; set; }
             #pragma warning restore CS1591
 #nullable restore
 #else
             #pragma warning disable CS1591
             [QueryParameter("type")]
-            public string Type { get; set; }
+            public string[] Type { get; set; }
             #pragma warning restore CS1591
 #endif
         }

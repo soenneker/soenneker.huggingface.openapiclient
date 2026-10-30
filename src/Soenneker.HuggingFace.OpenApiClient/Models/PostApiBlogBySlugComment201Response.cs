@@ -17,7 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
-            if (parseNode.GetChildNode("newMessage") is { } nullNodeNewMessage && nullNodeNewMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessage = null;
+            if (parseNode.GetChildNode("newMessage") is null) { _explicitNullValueNewMessage = default!; _explicitNullProperties?.Remove("newMessage"); }
+            else if (parseNode.GetChildNode("newMessage") is { } nullNodeNewMessage && nullNodeNewMessage.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NewMessage = null;
         }
 
         /// <summary>The newMessage property</summary>
