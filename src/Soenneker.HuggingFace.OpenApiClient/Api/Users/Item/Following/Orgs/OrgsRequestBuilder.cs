@@ -66,7 +66,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Following.Orgs
         public RequestInformation ToGetRequestInformation(Action<RequestConfiguration<global::Soenneker.HuggingFace.OpenApiClient.Api.Users.Item.Following.Orgs.OrgsRequestBuilder.OrgsRequestBuilderGetQueryParameters>> requestConfiguration = default)
         {
 #endif
-            var requestInfo = new RequestInformation(Method.GET, global::Soenneker.OpenApi.Generated.OpenApiServiceRoutes.Resolve(UrlTemplate, RequestAdapter.BaseUrl, "https://huggingface.co", "/api/users/{username}/following/orgs", PathParameters.ContainsKey("request-raw-url")), PathParameters);
+            var requestInfo = new RequestInformation(Method.GET, UrlTemplate, PathParameters);
             requestInfo.Configure(requestConfiguration);
             requestInfo.Headers.TryAdd("Accept", "application/json");
             return requestInfo;
