@@ -208,6 +208,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -318,6 +331,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -351,6 +377,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "security": []
@@ -727,6 +766,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -759,6 +811,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -1016,6 +1081,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-badges": [
@@ -1716,6 +1794,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "x-badges": [
@@ -2344,6 +2435,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Created service account",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccounts201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-badges": [
@@ -2450,6 +2552,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Service account deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiOrganizationsByNameServiceAccountsByServiceAccountId204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "x-badges": [
@@ -2513,6 +2626,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Created token",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokens201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-badges": [
@@ -2575,6 +2699,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Token deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenId204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "x-badges": [
@@ -3255,6 +3390,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "SCIM User",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiOrganizationsByNameScimV2Users201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-badges": [
@@ -3470,6 +3616,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "User deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiOrganizationsByNameScimV2UsersByUserId204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "x-badges": [
@@ -3597,6 +3754,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "SCIM Group",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiOrganizationsByNameScimV2Groups201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-badges": [
@@ -3799,6 +3967,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "SCIM Group deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiOrganizationsByNameScimV2GroupsByGroupId204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "x-badges": [
@@ -3918,6 +4097,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "SCIM User",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiOrganizationsByNameScimProvisioningV2Users201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-badges": [
@@ -4166,6 +4356,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "User removed from organization",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiOrganizationsByNameScimProvisioningV2UsersByUserId204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "x-badges": [
@@ -4309,6 +4510,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "SCIM Group",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiOrganizationsByNameScimProvisioningV2Groups201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         },
         "x-badges": [
@@ -4543,6 +4755,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "SCIM Group deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiOrganizationsByNameScimProvisioningV2GroupsByGroupId204ResponseSchema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         },
         "x-badges": [
@@ -4587,6 +4810,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Details of the OAuth app that was created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostOAuthRegister201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -4751,6 +4985,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiBlogBySlugComment201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -4799,6 +5044,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiBlogBySlugCommentByCommentIdReply201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -4849,6 +5105,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -4899,6 +5168,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -4949,6 +5231,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -4997,6 +5292,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiBlogBySlugBySlug2Comment201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -5053,6 +5359,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiBlogBySlugBySlug2CommentByCommentIdReply201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -5111,6 +5428,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -5169,6 +5499,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -5227,6 +5570,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -5599,7 +5955,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-30T21:13:10.472Z"
+              "default": "2026-10-30T13:00:44.197Z"
             }
           }
         ],
@@ -5651,7 +6007,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-30T21:13:10.472Z"
+              "default": "2026-10-30T13:00:44.197Z"
             }
           }
         ],
@@ -5703,7 +6059,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-30T21:13:10.473Z"
+              "default": "2026-10-30T13:00:44.198Z"
             }
           },
           {
@@ -5861,7 +6217,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-10-30T21:13:10.472Z"
+              "default": "2026-10-30T13:00:44.197Z"
             }
           }
         ],
@@ -7431,6 +7787,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -7482,6 +7851,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -7533,6 +7915,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -7590,6 +7985,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -7647,6 +8055,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -7704,6 +8125,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -9899,6 +10333,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -9946,6 +10393,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -10004,6 +10464,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -10051,6 +10524,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -10109,6 +10595,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -10156,6 +10655,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -10214,6 +10726,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -10261,6 +10786,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -10319,6 +10857,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -10366,6 +10917,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -10424,6 +10988,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -10471,6 +11048,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -12021,6 +12611,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -12085,6 +12688,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoDiscussionsByNumComment201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -12281,6 +12895,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -12347,6 +12974,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -12405,6 +13045,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -12527,6 +13180,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -12601,6 +13267,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -12675,6 +13354,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -12749,6 +13441,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -13038,6 +13743,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -14105,6 +14823,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -14154,6 +14885,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       },
@@ -14243,6 +14987,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       },
@@ -14292,6 +15049,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       },
@@ -14506,6 +15276,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -14625,6 +15408,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "SQL console embed deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeleteApiByRepoTypeByNamespaceValueByRepoSqlConsoleEmbedById204Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -14681,6 +15475,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "SQL console embed hidden successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSqlConsoleEmbedByIdHide204Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -15594,6 +16399,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -15636,6 +16454,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -15875,6 +16706,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -15926,6 +16770,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -16075,6 +16932,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -16126,6 +16996,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -16215,6 +17098,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -16265,6 +17161,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -16315,6 +17224,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -16516,6 +17438,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -16566,6 +17501,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -16961,6 +17909,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiPapersByPaperIdComment201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17009,6 +17968,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiPapersByPaperIdCommentByCommentIdReply201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17059,6 +18029,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17109,6 +18092,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17159,6 +18155,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17282,6 +18291,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -17330,6 +18352,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiPostsByUsernameByPostSlugComment201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17386,6 +18419,17 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "New comment created",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiPostsByUsernameByPostSlugCommentByCommentIdReply201Response"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17444,6 +18488,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17502,6 +18559,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17560,6 +18630,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -17708,6 +18791,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -17832,6 +18928,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -17997,6 +19106,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -18048,6 +19170,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -18171,6 +19306,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -18278,6 +19426,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -18710,6 +19871,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       },
@@ -18844,6 +20018,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       },
@@ -19027,6 +20214,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -20463,6 +21663,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -20504,6 +21717,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -20545,6 +21771,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }
@@ -20774,6 +22013,19 @@
                 }
               }
             }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "201"
           }
         }
       }

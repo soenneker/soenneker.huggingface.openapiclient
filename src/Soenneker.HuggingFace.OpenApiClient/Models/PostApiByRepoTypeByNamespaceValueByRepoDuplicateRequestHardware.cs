@@ -8,7 +8,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
     public enum PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestHardware
     #pragma warning restore CS1591
     {
-        [EnumMember(Value = "")]
+        [global::System.Runtime.Serialization.EnumMember(Value = "")]
         EmptyString,
 
         [EnumMember(Value = "cpu-basic")]
