@@ -126,7 +126,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Notifications.MarkAsRead
             #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("p")]
-            public int? P { get; set; }
+            public long? P { get; set; }
             #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

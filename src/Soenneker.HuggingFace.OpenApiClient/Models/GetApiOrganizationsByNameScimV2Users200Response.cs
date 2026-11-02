@@ -30,8 +30,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         }
 
         /// <summary>The itemsPerPage property</summary>
-        public int? ItemsPerPage { get => _explicitNullValueItemsPerPage; set { _explicitNullValueItemsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemsPerPage"); else _explicitNullProperties?.Remove("itemsPerPage"); } }
-        private int? _explicitNullValueItemsPerPage = default!;
+        public long? ItemsPerPage { get => _explicitNullValueItemsPerPage; set { _explicitNullValueItemsPerPage = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("itemsPerPage"); else _explicitNullProperties?.Remove("itemsPerPage"); } }
+        private long? _explicitNullValueItemsPerPage = default!;
         /// <summary>The Resources property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -53,11 +53,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem?> _explicitNullValueSchemas = default!;
 #endif
         /// <summary>The startIndex property</summary>
-        public int? StartIndex { get => _explicitNullValueStartIndex; set { _explicitNullValueStartIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startIndex"); else _explicitNullProperties?.Remove("startIndex"); } }
-        private int? _explicitNullValueStartIndex = default!;
+        public long? StartIndex { get => _explicitNullValueStartIndex; set { _explicitNullValueStartIndex = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("startIndex"); else _explicitNullProperties?.Remove("startIndex"); } }
+        private long? _explicitNullValueStartIndex = default!;
         /// <summary>The totalResults property</summary>
-        public int? TotalResults { get => _explicitNullValueTotalResults; set { _explicitNullValueTotalResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalResults"); else _explicitNullProperties?.Remove("totalResults"); } }
-        private int? _explicitNullValueTotalResults = default!;
+        public long? TotalResults { get => _explicitNullValueTotalResults; set { _explicitNullValueTotalResults = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("totalResults"); else _explicitNullProperties?.Remove("totalResults"); } }
+        private long? _explicitNullValueTotalResults = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -76,11 +76,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "itemsPerPage", n => { ItemsPerPage = n.GetIntValue(); } },
+                { "itemsPerPage", n => { ItemsPerPage = n.GetLongValue(); } },
                 { "Resources", n => { Resources = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2Users200ResponseResourcesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2Users200ResponseResourcesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "schemas", n => { Schemas = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem>()?.AsList(); } },
-                { "startIndex", n => { StartIndex = n.GetIntValue(); } },
-                { "totalResults", n => { TotalResults = n.GetIntValue(); } },
+                { "startIndex", n => { StartIndex = n.GetLongValue(); } },
+                { "totalResults", n => { TotalResults = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -90,11 +90,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("itemsPerPage", ItemsPerPage);
+            writer.WriteLongValue("itemsPerPage", ItemsPerPage);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameScimV2Users200ResponseResourcesItem>("Resources", Resources);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UrnColonIetfColonParamsColonScimColonApiColonMessagesColon20ColonListResponseItem>("schemas", Schemas);
-            writer.WriteIntValue("startIndex", StartIndex);
-            writer.WriteIntValue("totalResults", TotalResults);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("startIndex", StartIndex);
+            writer.WriteLongValue("totalResults", TotalResults);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

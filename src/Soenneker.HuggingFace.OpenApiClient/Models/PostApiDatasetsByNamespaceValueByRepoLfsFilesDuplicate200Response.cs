@@ -38,11 +38,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicate200ResponseFailedItem> _explicitNullValueFailed = default!;
 #endif
         /// <summary>Total number of unique files processed</summary>
-        public int? Processed { get => _explicitNullValueProcessed; set { _explicitNullValueProcessed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processed"); else _explicitNullProperties?.Remove("processed"); } }
-        private int? _explicitNullValueProcessed = default!;
+        public long? Processed { get => _explicitNullValueProcessed; set { _explicitNullValueProcessed = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("processed"); else _explicitNullProperties?.Remove("processed"); } }
+        private long? _explicitNullValueProcessed = default!;
         /// <summary>Number of files duplicated or already present in the target</summary>
-        public int? Succeeded { get => _explicitNullValueSucceeded; set { _explicitNullValueSucceeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded"); else _explicitNullProperties?.Remove("succeeded"); } }
-        private int? _explicitNullValueSucceeded = default!;
+        public long? Succeeded { get => _explicitNullValueSucceeded; set { _explicitNullValueSucceeded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("succeeded"); else _explicitNullProperties?.Remove("succeeded"); } }
+        private long? _explicitNullValueSucceeded = default!;
         /// <summary>True if all requested files were duplicated (or already present)</summary>
         public bool? Success { get => _explicitNullValueSuccess; set { _explicitNullValueSuccess = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("success"); else _explicitNullProperties?.Remove("success"); } }
         private bool? _explicitNullValueSuccess = default!;
@@ -65,8 +65,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "failed", n => { Failed = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicate200ResponseFailedItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicate200ResponseFailedItem.CreateFromDiscriminatorValue)?.AsList(); } },
-                { "processed", n => { Processed = n.GetIntValue(); } },
-                { "succeeded", n => { Succeeded = n.GetIntValue(); } },
+                { "processed", n => { Processed = n.GetLongValue(); } },
+                { "succeeded", n => { Succeeded = n.GetLongValue(); } },
                 { "success", n => { Success = n.GetBoolValue(); } },
             };
         }
@@ -78,8 +78,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiDatasetsByNamespaceValueByRepoLfsFilesDuplicate200ResponseFailedItem>("failed", Failed);
-            writer.WriteIntValue("processed", Processed);
-            writer.WriteIntValue("succeeded", Succeeded);
+            writer.WriteLongValue("processed", Processed);
+            writer.WriteLongValue("succeeded", Succeeded);
             writer.WriteBoolValue("success", Success);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

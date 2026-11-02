@@ -67,8 +67,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private List<string> _explicitNullValueArguments = default!;
 #endif
         /// <summary>Max number of attempts to make. For example, if you set this to 3, the job will be retried up to 2 times if it fails.</summary>
-        public int? Attempts { get => _explicitNullValueAttempts; set { _explicitNullValueAttempts = value; AdditionalData?.Remove("attempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempts"); else _explicitNullProperties?.Remove("attempts"); } }
-        private int? _explicitNullValueAttempts = default!;
+        public long? Attempts { get => _explicitNullValueAttempts; set { _explicitNullValueAttempts = value; AdditionalData?.Remove("attempts"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("attempts"); else _explicitNullProperties?.Remove("attempts"); } }
+        private long? _explicitNullValueAttempts = default!;
         /// <summary>The command property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -173,8 +173,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Ssh _explicitNullValueSsh = default!;
 #endif
         /// <summary>The timeoutSeconds property</summary>
-        public int? TimeoutSeconds { get => _explicitNullValueTimeoutSeconds; set { _explicitNullValueTimeoutSeconds = value; AdditionalData?.Remove("timeoutSeconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutSeconds"); else _explicitNullProperties?.Remove("timeoutSeconds"); } }
-        private int? _explicitNullValueTimeoutSeconds = default!;
+        public long? TimeoutSeconds { get => _explicitNullValueTimeoutSeconds; set { _explicitNullValueTimeoutSeconds = value; AdditionalData?.Remove("timeoutSeconds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutSeconds"); else _explicitNullProperties?.Remove("timeoutSeconds"); } }
+        private long? _explicitNullValueTimeoutSeconds = default!;
         /// <summary>HuggingFace Buckets or Repos to mount as volumes in the job container.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -191,7 +191,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public PostApiSettingsWebhooksRequestJobOneOf1()
         {
             AdditionalData = new Dictionary<string, object>();
-            Attempts = 1;
+            Attempts = 1L;
         }
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
@@ -213,7 +213,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "arch", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Arch>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueArch = default; _explicitNullProperties?.Remove("arch"); AdditionalData["arch"] = unknown; } else { Arch = parsed; AdditionalData.Remove("arch"); } } },
                 { "arguments", n => { Arguments = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
-                { "attempts", n => { Attempts = n.GetIntValue(); } },
+                { "attempts", n => { Attempts = n.GetLongValue(); } },
                 { "command", n => { Command = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "dockerImage", n => { DockerImage = n.GetStringValue(); } },
                 { "environment", n => { Environment = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Environment>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Environment.CreateFromDiscriminatorValue); } },
@@ -225,7 +225,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "secrets", n => { Secrets = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Secrets>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Secrets.CreateFromDiscriminatorValue); } },
                 { "spaceId", n => { SpaceId = n.GetStringValue(); } },
                 { "ssh", n => { Ssh = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Ssh>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Ssh.CreateFromDiscriminatorValue); } },
-                { "timeoutSeconds", n => { TimeoutSeconds = n.GetIntValue(); } },
+                { "timeoutSeconds", n => { TimeoutSeconds = n.GetLongValue(); } },
                 { "volumes", n => { Volumes = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1VolumesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1VolumesItem.CreateFromDiscriminatorValue)?.AsList(); } },
             };
         }
@@ -238,7 +238,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Arch>("arch", Arch);
             writer.WriteCollectionOfPrimitiveValues<string>("arguments", Arguments);
-            writer.WriteIntValue("attempts", Attempts);
+            writer.WriteLongValue("attempts", Attempts);
             writer.WriteCollectionOfPrimitiveValues<string>("command", Command);
             writer.WriteStringValue("dockerImage", DockerImage);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Environment>("environment", Environment);
@@ -250,7 +250,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Secrets>("secrets", Secrets);
             writer.WriteStringValue("spaceId", SpaceId);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1Ssh>("ssh", Ssh);
-            writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);
+            writer.WriteLongValue("timeoutSeconds", TimeoutSeconds);
             writer.WriteCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSettingsWebhooksRequestJobOneOf1VolumesItem>("volumes", Volumes);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);

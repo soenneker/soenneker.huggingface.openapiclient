@@ -94,11 +94,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public bool? Disabled { get => _explicitNullValueDisabled; set { _explicitNullValueDisabled = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("disabled"); else _explicitNullProperties?.Remove("disabled"); } }
         private bool? _explicitNullValueDisabled = default!;
         /// <summary>Number of downloads in the last 30 days</summary>
-        public int? Downloads { get => _explicitNullValueDownloads; set { _explicitNullValueDownloads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloads"); else _explicitNullProperties?.Remove("downloads"); } }
-        private int? _explicitNullValueDownloads = default!;
+        public long? Downloads { get => _explicitNullValueDownloads; set { _explicitNullValueDownloads = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloads"); else _explicitNullProperties?.Remove("downloads"); } }
+        private long? _explicitNullValueDownloads = default!;
         /// <summary>Total number of downloads</summary>
-        public int? DownloadsAllTime { get => _explicitNullValueDownloadsAllTime; set { _explicitNullValueDownloadsAllTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadsAllTime"); else _explicitNullProperties?.Remove("downloadsAllTime"); } }
-        private int? _explicitNullValueDownloadsAllTime = default!;
+        public long? DownloadsAllTime { get => _explicitNullValueDownloadsAllTime; set { _explicitNullValueDownloadsAllTime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("downloadsAllTime"); else _explicitNullProperties?.Remove("downloadsAllTime"); } }
+        private long? _explicitNullValueDownloadsAllTime = default!;
         /// <summary>List of files in the kernel</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -143,8 +143,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public DateTimeOffset? LastModified { get => _explicitNullValueLastModified; set { _explicitNullValueLastModified = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("lastModified"); else _explicitNullProperties?.Remove("lastModified"); } }
         private DateTimeOffset? _explicitNullValueLastModified = default!;
         /// <summary>Number of likes</summary>
-        public int? Likes { get => _explicitNullValueLikes; set { _explicitNullValueLikes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("likes"); else _explicitNullProperties?.Remove("likes"); } }
-        private int? _explicitNullValueLikes = default!;
+        public long? Likes { get => _explicitNullValueLikes; set { _explicitNullValueLikes = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("likes"); else _explicitNullProperties?.Remove("likes"); } }
+        private long? _explicitNullValueLikes = default!;
         /// <summary>Whether the kernel is private</summary>
         public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
         private bool? _explicitNullValuePrivate = default!;
@@ -214,14 +214,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "cardData", n => { CardData = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
                 { "disabled", n => { Disabled = n.GetBoolValue(); } },
-                { "downloads", n => { Downloads = n.GetIntValue(); } },
-                { "downloadsAllTime", n => { DownloadsAllTime = n.GetIntValue(); } },
+                { "downloads", n => { Downloads = n.GetLongValue(); } },
+                { "downloadsAllTime", n => { DownloadsAllTime = n.GetLongValue(); } },
                 { "files", n => { Files = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "gated", n => { Gated = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated.CreateFromDiscriminatorValue); } },
                 { "id", n => { GetApiKernels200ResponseSchemaItemId = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "lastModified", n => { LastModified = n.GetDateTimeOffsetValue(); } },
-                { "likes", n => { Likes = n.GetIntValue(); } },
+                { "likes", n => { Likes = n.GetLongValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
                 { "resourceGroup", n => { ResourceGroup = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup.CreateFromDiscriminatorValue); } },
                 { "sha", n => { Sha = n.GetStringValue(); } },
@@ -242,14 +242,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemCardData>("cardData", CardData);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);
             writer.WriteBoolValue("disabled", Disabled);
-            writer.WriteIntValue("downloads", Downloads);
-            writer.WriteIntValue("downloadsAllTime", DownloadsAllTime);
+            writer.WriteLongValue("downloads", Downloads);
+            writer.WriteLongValue("downloadsAllTime", DownloadsAllTime);
             writer.WriteCollectionOfPrimitiveValues<string>("files", Files);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseItemGated>("gated", Gated);
             writer.WriteStringValue("id", GetApiKernels200ResponseSchemaItemId);
             writer.WriteStringValue("_id", Id);
             writer.WriteDateTimeOffsetValue("lastModified", LastModified);
-            writer.WriteIntValue("likes", Likes);
+            writer.WriteLongValue("likes", Likes);
             writer.WriteBoolValue("private", Private);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemResourceGroup>("resourceGroup", ResourceGroup);
             writer.WriteStringValue("sha", Sha);

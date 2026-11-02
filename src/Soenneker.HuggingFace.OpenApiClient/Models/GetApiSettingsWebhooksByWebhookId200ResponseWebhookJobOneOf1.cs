@@ -111,8 +111,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private string _explicitNullValueSpaceId = default!;
 #endif
         /// <summary>The timeoutSeconds property</summary>
-        public int? TimeoutSeconds { get => _explicitNullValueTimeoutSeconds; set { _explicitNullValueTimeoutSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutSeconds"); else _explicitNullProperties?.Remove("timeoutSeconds"); } }
-        private int? _explicitNullValueTimeoutSeconds = default!;
+        public long? TimeoutSeconds { get => _explicitNullValueTimeoutSeconds; set { _explicitNullValueTimeoutSeconds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("timeoutSeconds"); else _explicitNullProperties?.Remove("timeoutSeconds"); } }
+        private long? _explicitNullValueTimeoutSeconds = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -139,7 +139,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "labels", n => { Labels = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1Labels>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1Labels.CreateFromDiscriminatorValue); } },
                 { "secrets", n => { Secrets = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "spaceId", n => { SpaceId = n.GetStringValue(); } },
-                { "timeoutSeconds", n => { TimeoutSeconds = n.GetIntValue(); } },
+                { "timeoutSeconds", n => { TimeoutSeconds = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -157,7 +157,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooksByWebhookId200ResponseWebhookJobOneOf1Labels>("labels", Labels);
             writer.WriteCollectionOfPrimitiveValues<string>("secrets", Secrets);
             writer.WriteStringValue("spaceId", SpaceId);
-            writer.WriteIntValue("timeoutSeconds", TimeoutSeconds);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("timeoutSeconds", TimeoutSeconds);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

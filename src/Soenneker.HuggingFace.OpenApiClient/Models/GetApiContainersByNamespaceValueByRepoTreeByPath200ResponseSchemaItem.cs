@@ -49,8 +49,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public DateTimeOffset? Mtime { get => _explicitNullValueMtime; set { _explicitNullValueMtime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mtime"); else _explicitNullProperties?.Remove("mtime"); } }
         private DateTimeOffset? _explicitNullValueMtime = default!;
         /// <summary>Sub-millisecond remainder of mtime, in nanoseconds (0–999_999)</summary>
-        public int? MtimeNanos { get => _explicitNullValueMtimeNanos; set { _explicitNullValueMtimeNanos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mtimeNanos"); else _explicitNullProperties?.Remove("mtimeNanos"); } }
-        private int? _explicitNullValueMtimeNanos = default!;
+        public long? MtimeNanos { get => _explicitNullValueMtimeNanos; set { _explicitNullValueMtimeNanos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mtimeNanos"); else _explicitNullProperties?.Remove("mtimeNanos"); } }
+        private long? _explicitNullValueMtimeNanos = default!;
         /// <summary>The path property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -62,8 +62,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private string _explicitNullValuePath = default!;
 #endif
         /// <summary>The size property</summary>
-        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
-        private int? _explicitNullValueSize = default!;
+        public long? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private long? _explicitNullValueSize = default!;
         /// <summary>The type property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValueByRepoTreeByPath200ResponseItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValueByRepoTreeByPath200ResponseItemType? _explicitNullValueType = default!;
@@ -100,9 +100,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "contentType", n => { ContentType = n.GetStringValue(); } },
                 { "mtime", n => { Mtime = n.GetDateTimeOffsetValue(); } },
-                { "mtimeNanos", n => { MtimeNanos = n.GetIntValue(); } },
+                { "mtimeNanos", n => { MtimeNanos = n.GetLongValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
-                { "size", n => { Size = n.GetIntValue(); } },
+                { "size", n => { Size = n.GetLongValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValueByRepoTreeByPath200ResponseItemType>(); } },
                 { "uploadedAt", n => { UploadedAt = n.GetDateTimeOffsetValue(); } },
                 { "xetHash", n => { XetHash = n.GetStringValue(); } },
@@ -117,9 +117,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("contentType", ContentType);
             writer.WriteDateTimeOffsetValue("mtime", Mtime);
-            writer.WriteIntValue("mtimeNanos", MtimeNanos);
+            writer.WriteLongValue("mtimeNanos", MtimeNanos);
             writer.WriteStringValue("path", Path);
-            writer.WriteIntValue("size", Size);
+            writer.WriteLongValue("size", Size);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValueByRepoTreeByPath200ResponseItemType>("type", Type);
             writer.WriteDateTimeOffsetValue("uploadedAt", UploadedAt);
             writer.WriteStringValue("xetHash", XetHash);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);

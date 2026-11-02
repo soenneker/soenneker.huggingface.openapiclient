@@ -26,11 +26,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         }
 
         /// <summary>Number of files copied so far</summary>
-        public int? FilesCopied { get => _explicitNullValueFilesCopied; set { _explicitNullValueFilesCopied = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesCopied"); else _explicitNullProperties?.Remove("filesCopied"); } }
-        private int? _explicitNullValueFilesCopied = default!;
+        public long? FilesCopied { get => _explicitNullValueFilesCopied; set { _explicitNullValueFilesCopied = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesCopied"); else _explicitNullProperties?.Remove("filesCopied"); } }
+        private long? _explicitNullValueFilesCopied = default!;
         /// <summary>Number of LFS/Xet files the duplicate references</summary>
-        public int? FilesTotal { get => _explicitNullValueFilesTotal; set { _explicitNullValueFilesTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesTotal"); else _explicitNullProperties?.Remove("filesTotal"); } }
-        private int? _explicitNullValueFilesTotal = default!;
+        public long? FilesTotal { get => _explicitNullValueFilesTotal; set { _explicitNullValueFilesTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("filesTotal"); else _explicitNullProperties?.Remove("filesTotal"); } }
+        private long? _explicitNullValueFilesTotal = default!;
         /// <summary>True while the LFS/Xet files are still being copied</summary>
         public bool? Pending { get => _explicitNullValuePending; set { _explicitNullValuePending = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pending"); else _explicitNullProperties?.Remove("pending"); } }
         private bool? _explicitNullValuePending = default!;
@@ -52,8 +52,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "filesCopied", n => { FilesCopied = n.GetIntValue(); } },
-                { "filesTotal", n => { FilesTotal = n.GetIntValue(); } },
+                { "filesCopied", n => { FilesCopied = n.GetLongValue(); } },
+                { "filesTotal", n => { FilesTotal = n.GetLongValue(); } },
                 { "pending", n => { Pending = n.GetBoolValue(); } },
             };
         }
@@ -64,8 +64,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("filesCopied", FilesCopied);
-            writer.WriteIntValue("filesTotal", FilesTotal);
+            writer.WriteLongValue("filesCopied", FilesCopied);
+            writer.WriteLongValue("filesTotal", FilesTotal);
             writer.WriteBoolValue("pending", Pending);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

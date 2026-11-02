@@ -48,8 +48,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoJwt200ResponseEncryptedToken _explicitNullValueEncryptedToken = default!;
 #endif
         /// <summary>Token expiration timestamp in seconds (JWT standard)</summary>
-        public int? Exp { get => _explicitNullValueExp; set { _explicitNullValueExp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp"); else _explicitNullProperties?.Remove("exp"); } }
-        private int? _explicitNullValueExp = default!;
+        public long? Exp { get => _explicitNullValueExp; set { _explicitNullValueExp = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("exp"); else _explicitNullProperties?.Remove("exp"); } }
+        private long? _explicitNullValueExp = default!;
         /// <summary>The JWT token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -80,7 +80,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "accessToken", n => { AccessToken = n.GetStringValue(); } },
                 { "encryptedToken", n => { EncryptedToken = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoJwt200ResponseEncryptedToken>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoJwt200ResponseEncryptedToken.CreateFromDiscriminatorValue); } },
-                { "exp", n => { Exp = n.GetIntValue(); } },
+                { "exp", n => { Exp = n.GetLongValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
         }
@@ -93,7 +93,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("accessToken", AccessToken);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoJwt200ResponseEncryptedToken>("encryptedToken", EncryptedToken);
-            writer.WriteIntValue("exp", Exp);
+            writer.WriteLongValue("exp", Exp);
             writer.WriteStringValue("token", Token);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

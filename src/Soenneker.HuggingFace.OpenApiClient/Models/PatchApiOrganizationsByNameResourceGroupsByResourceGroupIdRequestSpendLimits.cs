@@ -32,20 +32,20 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
         /// <summary>The endpoints property</summary>
-        public int? Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; AdditionalData?.Remove("endpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
-        private int? _explicitNullValueEndpoints = default!;
+        public long? Endpoints { get => _explicitNullValueEndpoints; set { _explicitNullValueEndpoints = value; AdditionalData?.Remove("endpoints"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("endpoints"); else _explicitNullProperties?.Remove("endpoints"); } }
+        private long? _explicitNullValueEndpoints = default!;
         /// <summary>The inferenceProviders property</summary>
-        public int? InferenceProviders { get => _explicitNullValueInferenceProviders; set { _explicitNullValueInferenceProviders = value; AdditionalData?.Remove("inferenceProviders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inferenceProviders"); else _explicitNullProperties?.Remove("inferenceProviders"); } }
-        private int? _explicitNullValueInferenceProviders = default!;
+        public long? InferenceProviders { get => _explicitNullValueInferenceProviders; set { _explicitNullValueInferenceProviders = value; AdditionalData?.Remove("inferenceProviders"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("inferenceProviders"); else _explicitNullProperties?.Remove("inferenceProviders"); } }
+        private long? _explicitNullValueInferenceProviders = default!;
         /// <summary>The jobs property</summary>
-        public int? Jobs { get => _explicitNullValueJobs; set { _explicitNullValueJobs = value; AdditionalData?.Remove("jobs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobs"); else _explicitNullProperties?.Remove("jobs"); } }
-        private int? _explicitNullValueJobs = default!;
+        public long? Jobs { get => _explicitNullValueJobs; set { _explicitNullValueJobs = value; AdditionalData?.Remove("jobs"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("jobs"); else _explicitNullProperties?.Remove("jobs"); } }
+        private long? _explicitNullValueJobs = default!;
         /// <summary>The spaces property</summary>
-        public int? Spaces { get => _explicitNullValueSpaces; set { _explicitNullValueSpaces = value; AdditionalData?.Remove("spaces"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaces"); else _explicitNullProperties?.Remove("spaces"); } }
-        private int? _explicitNullValueSpaces = default!;
+        public long? Spaces { get => _explicitNullValueSpaces; set { _explicitNullValueSpaces = value; AdditionalData?.Remove("spaces"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("spaces"); else _explicitNullProperties?.Remove("spaces"); } }
+        private long? _explicitNullValueSpaces = default!;
         /// <summary>The total property</summary>
-        public int? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
-        private int? _explicitNullValueTotal = default!;
+        public long? Total { get => _explicitNullValueTotal; set { _explicitNullValueTotal = value; AdditionalData?.Remove("total"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("total"); else _explicitNullProperties?.Remove("total"); } }
+        private long? _explicitNullValueTotal = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdRequestSpendLimits"/> and sets the default values.
         /// </summary>
@@ -71,11 +71,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
-                { "endpoints", n => { Endpoints = n.GetIntValue(); } },
-                { "inferenceProviders", n => { InferenceProviders = n.GetIntValue(); } },
-                { "jobs", n => { Jobs = n.GetIntValue(); } },
-                { "spaces", n => { Spaces = n.GetIntValue(); } },
-                { "total", n => { Total = n.GetIntValue(); } },
+                { "endpoints", n => { Endpoints = n.GetLongValue(); } },
+                { "inferenceProviders", n => { InferenceProviders = n.GetLongValue(); } },
+                { "jobs", n => { Jobs = n.GetLongValue(); } },
+                { "spaces", n => { Spaces = n.GetLongValue(); } },
+                { "total", n => { Total = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -85,11 +85,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteIntValue("endpoints", Endpoints);
-            writer.WriteIntValue("inferenceProviders", InferenceProviders);
-            writer.WriteIntValue("jobs", Jobs);
-            writer.WriteIntValue("spaces", Spaces);
-            writer.WriteIntValue("total", Total);
+            writer.WriteLongValue("endpoints", Endpoints);
+            writer.WriteLongValue("inferenceProviders", InferenceProviders);
+            writer.WriteLongValue("jobs", Jobs);
+            writer.WriteLongValue("spaces", Spaces);
+            writer.WriteLongValue("total", Total);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

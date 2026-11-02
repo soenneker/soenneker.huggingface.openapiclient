@@ -38,8 +38,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private string _explicitNullValueAccessToken = default!;
 #endif
         /// <summary>JWT lifetime in seconds.</summary>
-        public int? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in"); else _explicitNullProperties?.Remove("expires_in"); } }
-        private int? _explicitNullValueExpiresIn = default!;
+        public long? ExpiresIn { get => _explicitNullValueExpiresIn; set { _explicitNullValueExpiresIn = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("expires_in"); else _explicitNullProperties?.Remove("expires_in"); } }
+        private long? _explicitNullValueExpiresIn = default!;
         /// <summary>ISO-8601 timestamp at which the JWT was minted.</summary>
         public DateTimeOffset? IssuedAt { get => _explicitNullValueIssuedAt; set { _explicitNullValueIssuedAt = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("issued_at"); else _explicitNullProperties?.Remove("issued_at"); } }
         private DateTimeOffset? _explicitNullValueIssuedAt = default!;
@@ -72,7 +72,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "access_token", n => { AccessToken = n.GetStringValue(); } },
-                { "expires_in", n => { ExpiresIn = n.GetIntValue(); } },
+                { "expires_in", n => { ExpiresIn = n.GetLongValue(); } },
                 { "issued_at", n => { IssuedAt = n.GetDateTimeOffsetValue(); } },
                 { "token", n => { Token = n.GetStringValue(); } },
             };
@@ -85,7 +85,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("access_token", AccessToken);
-            writer.WriteIntValue("expires_in", ExpiresIn);
+            writer.WriteLongValue("expires_in", ExpiresIn);
             writer.WriteDateTimeOffsetValue("issued_at", IssuedAt);
             writer.WriteStringValue("token", Token);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             

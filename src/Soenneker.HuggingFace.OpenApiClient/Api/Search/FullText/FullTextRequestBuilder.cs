@@ -116,7 +116,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Search.FullText
 #endif
             #pragma warning disable CS1591
             [QueryParameter("skip")]
-            public int? Skip { get; set; }
+            public long? Skip { get; set; }
             #pragma warning restore CS1591
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable

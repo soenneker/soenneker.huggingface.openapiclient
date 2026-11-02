@@ -74,8 +74,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus _explicitNullValueSecurityFileStatus = default!;
 #endif
         /// <summary>If the file is a LFS pointer, it&apos;ll return the size of the remote file</summary>
-        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
-        private int? _explicitNullValueSize = default!;
+        public long? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private long? _explicitNullValueSize = default!;
         /// <summary>The type property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseItemType? Type { get => _explicitNullValueType; set { _explicitNullValueType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("type"); else _explicitNullProperties?.Remove("type"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseItemType? _explicitNullValueType = default!;
@@ -111,7 +111,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "lfs", n => { Lfs = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs.CreateFromDiscriminatorValue); } },
                 { "oid", n => { Oid = n.GetStringValue(); } },
                 { "securityFileStatus", n => { SecurityFileStatus = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus.CreateFromDiscriminatorValue); } },
-                { "size", n => { Size = n.GetIntValue(); } },
+                { "size", n => { Size = n.GetLongValue(); } },
                 { "type", n => { Type = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseItemType>(); } },
                 { "xetHash", n => { XetHash = n.GetStringValue(); } },
             };
@@ -127,7 +127,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs>("lfs", Lfs);
             writer.WriteStringValue("oid", Oid);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemSecurityFileStatus>("securityFileStatus", SecurityFileStatus);
-            writer.WriteIntValue("size", Size);
+            writer.WriteLongValue("size", Size);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseItemType>("type", Type);
             writer.WriteStringValue("xetHash", XetHash);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             

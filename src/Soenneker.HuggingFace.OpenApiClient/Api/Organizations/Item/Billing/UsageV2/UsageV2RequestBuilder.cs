@@ -86,11 +86,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.Usa
         {
             #pragma warning disable CS1591
             [QueryParameter("endDate")]
-            public int? EndDate { get; set; }
+            public long? EndDate { get; set; }
             #pragma warning restore CS1591
             #pragma warning disable CS1591
             [QueryParameter("startDate")]
-            public int? StartDate { get; set; }
+            public long? StartDate { get; set; }
             #pragma warning restore CS1591
         }
     }

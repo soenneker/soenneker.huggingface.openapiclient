@@ -72,8 +72,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount _explicitNullValueParameterCount = default!;
 #endif
         /// <summary>The parameterTotal property</summary>
-        public int? ParameterTotal { get => _explicitNullValueParameterTotal; set { _explicitNullValueParameterTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameterTotal"); else _explicitNullProperties?.Remove("parameterTotal"); } }
-        private int? _explicitNullValueParameterTotal = default!;
+        public long? ParameterTotal { get => _explicitNullValueParameterTotal; set { _explicitNullValueParameterTotal = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("parameterTotal"); else _explicitNullProperties?.Remove("parameterTotal"); } }
+        private long? _explicitNullValueParameterTotal = default!;
         /// <summary>The sharded property</summary>
         public bool? Sharded { get => _explicitNullValueSharded; set { _explicitNullValueSharded = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("sharded"); else _explicitNullProperties?.Remove("sharded"); } }
         private bool? _explicitNullValueSharded = default!;
@@ -106,7 +106,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "headers", n => { Headers = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders.CreateFromDiscriminatorValue); } },
                 { "index", n => { Index = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex.CreateFromDiscriminatorValue); } },
                 { "parameterCount", n => { ParameterCount = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount.CreateFromDiscriminatorValue); } },
-                { "parameterTotal", n => { ParameterTotal = n.GetIntValue(); } },
+                { "parameterTotal", n => { ParameterTotal = n.GetLongValue(); } },
                 { "sharded", n => { Sharded = n.GetBoolValue(); } },
             };
         }
@@ -121,7 +121,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseHeaders>("headers", Headers);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseIndex>("index", Index);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoSafetensorsMetadataByPath200ResponseParameterCount>("parameterCount", ParameterCount);
-            writer.WriteIntValue("parameterTotal", ParameterTotal);
+            writer.WriteLongValue("parameterTotal", ParameterTotal);
             writer.WriteBoolValue("sharded", Sharded);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }

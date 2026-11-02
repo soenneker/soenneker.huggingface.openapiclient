@@ -36,11 +36,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private string _explicitNullValueOid = default!;
 #endif
         /// <summary>The pointerSize property</summary>
-        public int? PointerSize { get => _explicitNullValuePointerSize; set { _explicitNullValuePointerSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pointerSize"); else _explicitNullProperties?.Remove("pointerSize"); } }
-        private int? _explicitNullValuePointerSize = default!;
+        public long? PointerSize { get => _explicitNullValuePointerSize; set { _explicitNullValuePointerSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("pointerSize"); else _explicitNullProperties?.Remove("pointerSize"); } }
+        private long? _explicitNullValuePointerSize = default!;
         /// <summary>The size property</summary>
-        public int? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
-        private int? _explicitNullValueSize = default!;
+        public long? Size { get => _explicitNullValueSize; set { _explicitNullValueSize = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("size"); else _explicitNullProperties?.Remove("size"); } }
+        private long? _explicitNullValueSize = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -60,8 +60,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             return new Dictionary<string, Action<IParseNode>>
             {
                 { "oid", n => { Oid = n.GetStringValue(); } },
-                { "pointerSize", n => { PointerSize = n.GetIntValue(); } },
-                { "size", n => { Size = n.GetIntValue(); } },
+                { "pointerSize", n => { PointerSize = n.GetLongValue(); } },
+                { "size", n => { Size = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -72,8 +72,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("oid", Oid);
-            writer.WriteIntValue("pointerSize", PointerSize);
-            writer.WriteIntValue("size", Size);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteLongValue("pointerSize", PointerSize);
+            writer.WriteLongValue("size", Size);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

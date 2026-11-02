@@ -48,8 +48,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private string _explicitNullValueNote = default!;
 #endif
         /// <summary>The position property</summary>
-        public int? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
-        private int? _explicitNullValuePosition = default!;
+        public long? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        private long? _explicitNullValuePosition = default!;
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItemsBatchRequestRequestBodyItemData"/> and sets the default values.
         /// </summary>
@@ -77,7 +77,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "gallery", n => { Gallery = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "note", n => { Note = n.GetStringValue(); } },
-                { "position", n => { Position = n.GetIntValue(); } },
+                { "position", n => { Position = n.GetLongValue(); } },
             };
         }
         /// <summary>
@@ -89,7 +89,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteCollectionOfPrimitiveValues<string>("gallery", Gallery);
             writer.WriteStringValue("note", Note);
-            writer.WriteIntValue("position", Position);
+            writer.WriteLongValue("position", Position);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }

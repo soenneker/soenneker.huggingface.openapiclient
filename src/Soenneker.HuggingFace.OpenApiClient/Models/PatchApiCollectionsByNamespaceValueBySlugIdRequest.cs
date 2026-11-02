@@ -54,8 +54,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         private global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGating _explicitNullValueGating = default!;
 #endif
         /// <summary>The position property</summary>
-        public int? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
-        private int? _explicitNullValuePosition = default!;
+        public long? Position { get => _explicitNullValuePosition; set { _explicitNullValuePosition = value; AdditionalData?.Remove("position"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("position"); else _explicitNullProperties?.Remove("position"); } }
+        private long? _explicitNullValuePosition = default!;
         /// <summary>The private property</summary>
         public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; AdditionalData?.Remove("private"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
         private bool? _explicitNullValuePrivate = default!;
@@ -99,7 +99,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             {
                 { "description", n => { Description = n.GetStringValue(); } },
                 { "gating", n => { Gating = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGating>(global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGating.CreateFromDiscriminatorValue); } },
-                { "position", n => { Position = n.GetIntValue(); } },
+                { "position", n => { Position = n.GetLongValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
                 { "theme", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestTheme>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueTheme = default; _explicitNullProperties?.Remove("theme"); AdditionalData["theme"] = unknown; } else { Theme = parsed; AdditionalData.Remove("theme"); } } },
                 { "title", n => { Title = n.GetStringValue(); } },
@@ -114,7 +114,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("description", Description);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestGating>("gating", Gating);
-            writer.WriteIntValue("position", Position);
+            writer.WriteLongValue("position", Position);
             writer.WriteBoolValue("private", Private);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugIdRequestTheme>("theme", Theme);
             writer.WriteStringValue("title", Title);

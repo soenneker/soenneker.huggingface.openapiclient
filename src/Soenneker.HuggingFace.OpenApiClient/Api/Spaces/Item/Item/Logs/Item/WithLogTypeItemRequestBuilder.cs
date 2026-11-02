@@ -86,7 +86,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Spaces.Item.Item.Logs.Item
         {
             #pragma warning disable CS1591
             [QueryParameter("tail")]
-            public int? Tail { get; set; }
+            public long? Tail { get; set; }
             #pragma warning restore CS1591
         }
     }
