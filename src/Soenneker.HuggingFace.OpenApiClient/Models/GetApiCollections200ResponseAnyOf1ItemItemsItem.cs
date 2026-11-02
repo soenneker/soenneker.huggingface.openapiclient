@@ -51,12 +51,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemGetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf6(),
-                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemGetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf5(),
-                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemGetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf1(),
-                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemGetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2(),
-                "paper" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemGetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf4(),
-                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemGetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3(),
+                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf6Variant(),
+                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf5Variant(),
+                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf1Variant(),
+                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2Variant(),
+                "paper" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf4Variant(),
+                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf3Variant(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollections200ResponseAnyOf1ItemItemsItem(),
             };
         }

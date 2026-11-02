@@ -51,16 +51,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "blog" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf3(),
-                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1(),
-                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf2(),
-                "container" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1(),
-                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1(),
-                "job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf4(),
-                "kernel" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1(),
-                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1(),
-                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf5(),
-                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemGetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1(),
+                "blog" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf3Variant(),
+                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1Variant(),
+                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf2Variant(),
+                "container" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1Variant(),
+                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1Variant(),
+                "job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf4Variant(),
+                "kernel" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1Variant(),
+                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1Variant(),
+                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf5Variant(),
+                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItemOneOf1Variant(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameResourceGroups200ResponseItemResourcesItem(),
             };
         }

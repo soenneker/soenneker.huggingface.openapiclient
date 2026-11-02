@@ -51,11 +51,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "duplicated-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorPostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf3(),
-                "org" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorPostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf1(),
-                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorPostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf2(),
-                "user" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorPostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf1(),
-                "webhook" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorPostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf4(),
+                "duplicated-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf3Variant(),
+                "org" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf1Variant(),
+                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf2Variant(),
+                "user" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf1Variant(),
+                "webhook" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiatorOneOf4Variant(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiScheduledJobsByNamespaceValueByJobIdRun200ResponseInitiator(),
             };
         }

@@ -51,16 +51,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "blog" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf3(),
-                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1(),
-                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf2(),
-                "container" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1(),
-                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1(),
-                "job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf4(),
-                "kernel" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1(),
-                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1(),
-                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf5(),
-                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemPatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItemOneOf1(),
+                "blog" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBlogVariantED1120D4CD16F354(),
+                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant08B723B0DE5B0ACB(),
+                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedCollectionVariant43BF1D519A46050C(),
+                "container" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant08B723B0DE5B0ACB(),
+                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant08B723B0DE5B0ACB(),
+                "job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedJobVariant6D45795B7963A9FB(),
+                "kernel" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant08B723B0DE5B0ACB(),
+                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant08B723B0DE5B0ACB(),
+                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedScheduledJobVariantAA683AB4F2E8FD4F(),
+                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant08B723B0DE5B0ACB(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupIdUsersByUsername200ResponseResourcesItem(),
             };
         }

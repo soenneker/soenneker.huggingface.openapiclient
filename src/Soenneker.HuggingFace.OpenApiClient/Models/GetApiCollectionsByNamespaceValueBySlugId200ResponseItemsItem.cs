@@ -51,12 +51,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemGetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf6(),
-                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemGetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf5(),
-                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemGetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1(),
-                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemGetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2(),
-                "paper" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemGetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf4(),
-                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemGetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf3(),
+                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf6Variant(),
+                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf5Variant(),
+                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf1Variant(),
+                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2Variant(),
+                "paper" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf4Variant(),
+                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf3Variant(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItem(),
             };
         }

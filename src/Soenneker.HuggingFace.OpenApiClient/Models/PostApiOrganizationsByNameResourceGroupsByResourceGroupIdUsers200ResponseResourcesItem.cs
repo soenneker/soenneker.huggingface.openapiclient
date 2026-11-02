@@ -51,16 +51,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "blog" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf3(),
-                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf1(),
-                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf2(),
-                "container" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf1(),
-                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf1(),
-                "job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf4(),
-                "kernel" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf1(),
-                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf1(),
-                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf5(),
-                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemPostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItemOneOf1(),
+                "blog" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBlogVariantB5ED493C863B9CDA(),
+                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant2CB3472C54214B7D(),
+                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedCollectionVariantEE3C826F6D1E1E13(),
+                "container" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant2CB3472C54214B7D(),
+                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant2CB3472C54214B7D(),
+                "job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedJobVariant60C46EB92BD1CB7D(),
+                "kernel" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant2CB3472C54214B7D(),
+                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant2CB3472C54214B7D(),
+                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedScheduledJobVariantF16C63A56DB92105(),
+                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedBucketVariant2CB3472C54214B7D(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameResourceGroupsByResourceGroupIdUsers200ResponseResourcesItem(),
             };
         }

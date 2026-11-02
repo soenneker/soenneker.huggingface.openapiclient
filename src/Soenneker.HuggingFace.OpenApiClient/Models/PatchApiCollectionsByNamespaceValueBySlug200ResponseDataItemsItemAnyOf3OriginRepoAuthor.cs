@@ -51,8 +51,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "org" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf3OriginRepoAuthorPatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf3OriginRepoAuthorOneOf1(),
-                "user" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf3OriginRepoAuthorPatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf3OriginRepoAuthorOneOf2(),
+                "org" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedOrgVariant3485A68B50CE080C(),
+                "user" => new global::Soenneker.HuggingFace.OpenApiClient.Models.TaggedUserVariantF878695CE8833C7D(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf3OriginRepoAuthor(),
             };
         }

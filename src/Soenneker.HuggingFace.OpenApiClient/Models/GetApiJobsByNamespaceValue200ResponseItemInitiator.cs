@@ -51,11 +51,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "duplicated-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorGetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf3(),
-                "org" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorGetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf1(),
-                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorGetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf2(),
-                "user" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorGetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf1(),
-                "webhook" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorGetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf4(),
+                "duplicated-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf3Variant(),
+                "org" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf1Variant(),
+                "scheduled-job" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf2Variant(),
+                "user" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf1Variant(),
+                "webhook" => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiatorOneOf4Variant(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiJobsByNamespaceValue200ResponseItemInitiator(),
             };
         }

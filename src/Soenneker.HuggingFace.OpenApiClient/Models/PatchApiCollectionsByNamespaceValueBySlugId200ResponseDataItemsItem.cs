@@ -51,12 +51,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             var mappingValue = parseNode.GetChildNode("type")?.GetStringValue();
             return mappingValue switch
             {
-                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemPatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf6(),
-                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemPatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf5(),
-                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemPatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf1(),
-                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemPatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2(),
-                "paper" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemPatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf4(),
-                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemPatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf3(),
+                "bucket" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf6Variant(),
+                "collection" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf5Variant(),
+                "dataset" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf1Variant(),
+                "model" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2Variant(),
+                "paper" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf4Variant(),
+                "space" => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf3Variant(),
                 _ => new global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItem(),
             };
         }
