@@ -5963,7 +5963,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-03T22:18:31.490Z"
+              "default": "2026-11-05T13:29:43.086Z"
             }
           }
         ],
@@ -6015,7 +6015,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-03T22:18:31.491Z"
+              "default": "2026-11-05T13:29:43.087Z"
             }
           }
         ],
@@ -6067,7 +6067,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-03T22:18:31.492Z"
+              "default": "2026-11-05T13:29:43.088Z"
             }
           },
           {
@@ -6227,7 +6227,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-03T22:18:31.491Z"
+              "default": "2026-11-05T13:29:43.087Z"
             }
           }
         ],
@@ -20839,6 +20839,14 @@
             }
           },
           {
+            "name": "startAfter",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "description": "Start the listing right after this path, in the requested \u0060sort\u0060 and \u0060direction\u0060 (exclusive). With \u0060sort=path\u0060 it does not need to exist; with \u0060sort=uploadedAt\u0060 it must be an existing entry of the listed folder. Cannot be combined with \u0060cursor\u0060."
+            }
+          },
+          {
             "name": "recursive",
             "in": "query",
             "schema": {
@@ -20935,6 +20943,14 @@
               "contentMediaType": "application/json",
               "type": "string",
               "description": "Pagination cursor"
+            }
+          },
+          {
+            "name": "startAfter",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "description": "Start the listing right after this path, in the requested \u0060sort\u0060 and \u0060direction\u0060 (exclusive). With \u0060sort=path\u0060 it does not need to exist; with \u0060sort=uploadedAt\u0060 it must be an existing entry of the listed folder. Cannot be combined with \u0060cursor\u0060."
             }
           },
           {
@@ -33470,7 +33486,29 @@
             "scaleway",
             "together",
             "wavespeed",
-            "zai-org"
+            "zai-org",
+            "featherless",
+            "fireworks",
+            "z-ai",
+            "digitalocean",
+            "coreweave",
+            "nebius",
+            "parasail",
+            "primeintellect",
+            "alibaba",
+            "arcee-ai",
+            "deepseek",
+            "liquid",
+            "minimax",
+            "mistral",
+            "moonshotai",
+            "nvidia",
+            "poolside",
+            "reka",
+            "stepfun",
+            "tencent",
+            "thinkingmachines",
+            "xiaomi"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -33552,6 +33590,94 @@
               {
                 "value": "zai-org",
                 "name": "ZaiOrg"
+              },
+              {
+                "value": "featherless",
+                "name": "Featherless"
+              },
+              {
+                "value": "fireworks",
+                "name": "Fireworks"
+              },
+              {
+                "value": "z-ai",
+                "name": "ZAi"
+              },
+              {
+                "value": "digitalocean",
+                "name": "Digitalocean"
+              },
+              {
+                "value": "coreweave",
+                "name": "Coreweave"
+              },
+              {
+                "value": "nebius",
+                "name": "Nebius"
+              },
+              {
+                "value": "parasail",
+                "name": "Parasail"
+              },
+              {
+                "value": "primeintellect",
+                "name": "Primeintellect"
+              },
+              {
+                "value": "alibaba",
+                "name": "Alibaba"
+              },
+              {
+                "value": "arcee-ai",
+                "name": "ArceeAi"
+              },
+              {
+                "value": "deepseek",
+                "name": "Deepseek"
+              },
+              {
+                "value": "liquid",
+                "name": "Liquid"
+              },
+              {
+                "value": "minimax",
+                "name": "Minimax"
+              },
+              {
+                "value": "mistral",
+                "name": "Mistral"
+              },
+              {
+                "value": "moonshotai",
+                "name": "Moonshotai"
+              },
+              {
+                "value": "nvidia",
+                "name": "Nvidia"
+              },
+              {
+                "value": "poolside",
+                "name": "Poolside"
+              },
+              {
+                "value": "reka",
+                "name": "Reka"
+              },
+              {
+                "value": "stepfun",
+                "name": "Stepfun"
+              },
+              {
+                "value": "tencent",
+                "name": "Tencent"
+              },
+              {
+                "value": "thinkingmachines",
+                "name": "Thinkingmachines"
+              },
+              {
+                "value": "xiaomi",
+                "name": "Xiaomi"
               }
             ]
           }
@@ -102544,6 +102670,8 @@
           "org.rotate_token",
           "org.sso_login",
           "org.sso_join",
+          "org.sso_credential.authorize",
+          "org.sso_credential.deauthorize",
           "org.update_join_settings",
           "org.update_settings",
           "org.settings.regions",
@@ -102781,6 +102909,14 @@
             {
               "value": "org.sso_join",
               "name": "OrgSsoJoin"
+            },
+            {
+              "value": "org.sso_credential.authorize",
+              "name": "OrgSsoCredentialAuthorize"
+            },
+            {
+              "value": "org.sso_credential.deauthorize",
+              "name": "OrgSsoCredentialDeauthorize"
             },
             {
               "value": "org.update_join_settings",
@@ -159348,7 +159484,29 @@
           "scaleway",
           "together",
           "wavespeed",
-          "zai-org"
+          "zai-org",
+          "featherless",
+          "fireworks",
+          "z-ai",
+          "digitalocean",
+          "coreweave",
+          "nebius",
+          "parasail",
+          "primeintellect",
+          "alibaba",
+          "arcee-ai",
+          "deepseek",
+          "liquid",
+          "minimax",
+          "mistral",
+          "moonshotai",
+          "nvidia",
+          "poolside",
+          "reka",
+          "stepfun",
+          "tencent",
+          "thinkingmachines",
+          "xiaomi"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -159430,6 +159588,94 @@
             {
               "value": "zai-org",
               "name": "ZaiOrg"
+            },
+            {
+              "value": "featherless",
+              "name": "Featherless"
+            },
+            {
+              "value": "fireworks",
+              "name": "Fireworks"
+            },
+            {
+              "value": "z-ai",
+              "name": "ZAi"
+            },
+            {
+              "value": "digitalocean",
+              "name": "Digitalocean"
+            },
+            {
+              "value": "coreweave",
+              "name": "Coreweave"
+            },
+            {
+              "value": "nebius",
+              "name": "Nebius"
+            },
+            {
+              "value": "parasail",
+              "name": "Parasail"
+            },
+            {
+              "value": "primeintellect",
+              "name": "Primeintellect"
+            },
+            {
+              "value": "alibaba",
+              "name": "Alibaba"
+            },
+            {
+              "value": "arcee-ai",
+              "name": "ArceeAi"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
+            },
+            {
+              "value": "liquid",
+              "name": "Liquid"
+            },
+            {
+              "value": "minimax",
+              "name": "Minimax"
+            },
+            {
+              "value": "mistral",
+              "name": "Mistral"
+            },
+            {
+              "value": "moonshotai",
+              "name": "Moonshotai"
+            },
+            {
+              "value": "nvidia",
+              "name": "Nvidia"
+            },
+            {
+              "value": "poolside",
+              "name": "Poolside"
+            },
+            {
+              "value": "reka",
+              "name": "Reka"
+            },
+            {
+              "value": "stepfun",
+              "name": "Stepfun"
+            },
+            {
+              "value": "tencent",
+              "name": "Tencent"
+            },
+            {
+              "value": "thinkingmachines",
+              "name": "Thinkingmachines"
+            },
+            {
+              "value": "xiaomi",
+              "name": "Xiaomi"
             }
           ]
         }

@@ -22,7 +22,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tree.Item
         /// </summary>
         /// <param name="pathParameters">Path parameters for the request</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPathItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/containers/{namespaceValue}/{repo}/tree/{path}{?cursor*,direction*,limit*,recursive*,sort*}", pathParameters)
+        public WithPathItemRequestBuilder(Dictionary<string, object> pathParameters, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/containers/{namespaceValue}/{repo}/tree/{path}{?cursor*,direction*,limit*,recursive*,sort*,startAfter*}", pathParameters)
         {
         }
         /// <summary>
@@ -30,7 +30,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tree.Item
         /// </summary>
         /// <param name="rawUrl">The raw URL to use for the request builder.</param>
         /// <param name="requestAdapter">The request adapter to use to execute the requests.</param>
-        public WithPathItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/containers/{namespaceValue}/{repo}/tree/{path}{?cursor*,direction*,limit*,recursive*,sort*}", rawUrl)
+        public WithPathItemRequestBuilder(string rawUrl, IRequestAdapter requestAdapter) : base(requestAdapter, "{+baseurl}/api/containers/{namespaceValue}/{repo}/tree/{path}{?cursor*,direction*,limit*,recursive*,sort*,startAfter*}", rawUrl)
         {
         }
         /// <summary>
@@ -124,6 +124,19 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tree.Item
             [QueryParameter("sort")]
             public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiContainersByNamespaceValueByRepoTreeByPathSortParameter? Sort { get; set; }
             #pragma warning restore CS1591
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+            #pragma warning disable CS1591
+            [QueryParameter("startAfter")]
+            public string? StartAfter { get; set; }
+            #pragma warning restore CS1591
+#nullable restore
+#else
+            #pragma warning disable CS1591
+            [QueryParameter("startAfter")]
+            public string StartAfter { get; set; }
+            #pragma warning restore CS1591
+#endif
         }
     }
 }

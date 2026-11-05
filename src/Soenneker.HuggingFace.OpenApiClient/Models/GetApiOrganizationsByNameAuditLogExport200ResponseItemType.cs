@@ -144,6 +144,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         OrgSsoJoin,
         #pragma warning restore CS1591
+        [EnumMember(Value = "org.sso_credential.authorize")]
+        #pragma warning disable CS1591
+        OrgSsoCredentialAuthorize,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "org.sso_credential.deauthorize")]
+        #pragma warning disable CS1591
+        OrgSsoCredentialDeauthorize,
+        #pragma warning restore CS1591
         [EnumMember(Value = "org.update_join_settings")]
         #pragma warning disable CS1591
         OrgUpdateJoinSettings,
