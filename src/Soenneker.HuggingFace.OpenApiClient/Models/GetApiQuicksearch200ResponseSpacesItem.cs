@@ -17,6 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("authorType") is null) { _explicitNullValueAuthorType = default!; _explicitNullProperties?.Remove("authorType"); }
+            else if (parseNode.GetChildNode("authorType") is { } nullNodeAuthorType && nullNodeAuthorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorType = null;
             if (parseNode.GetChildNode("emoji") is null) { _explicitNullValueEmoji = default!; _explicitNullProperties?.Remove("emoji"); }
             else if (parseNode.GetChildNode("emoji") is { } nullNodeEmoji && nullNodeEmoji.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Emoji = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueGetApiQuicksearch200ResponseSpacesItemId = default!; _explicitNullProperties?.Remove("id"); }
@@ -29,6 +31,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("trendingWeight") is { } nullNodeTrendingWeight && nullNodeTrendingWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrendingWeight = null;
         }
 
+        /// <summary>Whether the repo is owned by a user or an organization</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItemAuthorType? AuthorType { get => _explicitNullValueAuthorType; set { _explicitNullValueAuthorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorType"); else _explicitNullProperties?.Remove("authorType"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItemAuthorType? _explicitNullValueAuthorType = default!;
         /// <summary>The emoji property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -83,6 +88,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "authorType", n => { AuthorType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItemAuthorType>(); } },
                 { "emoji", n => { Emoji = n.GetStringValue(); } },
                 { "id", n => { GetApiQuicksearch200ResponseSpacesItemId = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
@@ -97,6 +103,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseSpacesItemAuthorType>("authorType", AuthorType);
             writer.WriteStringValue("emoji", Emoji);
             writer.WriteStringValue("id", GetApiQuicksearch200ResponseSpacesItemId);
             writer.WriteStringValue("_id", Id);

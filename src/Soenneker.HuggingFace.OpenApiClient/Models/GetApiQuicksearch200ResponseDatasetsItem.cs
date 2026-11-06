@@ -17,6 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("authorType") is null) { _explicitNullValueAuthorType = default!; _explicitNullProperties?.Remove("authorType"); }
+            else if (parseNode.GetChildNode("authorType") is { } nullNodeAuthorType && nullNodeAuthorType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) AuthorType = null;
             if (parseNode.GetChildNode("id") is null) { _explicitNullValueGetApiQuicksearch200ResponseDatasetsItemId = default!; _explicitNullProperties?.Remove("id"); }
             else if (parseNode.GetChildNode("id") is { } nullNodeGetApiQuicksearch200ResponseDatasetsItemId && nullNodeGetApiQuicksearch200ResponseDatasetsItemId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) GetApiQuicksearch200ResponseDatasetsItemId = null;
             if (parseNode.GetChildNode("_id") is null) { _explicitNullValueId = default!; _explicitNullProperties?.Remove("_id"); }
@@ -27,6 +29,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("trendingWeight") is { } nullNodeTrendingWeight && nullNodeTrendingWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrendingWeight = null;
         }
 
+        /// <summary>Whether the repo is owned by a user or an organization</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItemAuthorType? AuthorType { get => _explicitNullValueAuthorType; set { _explicitNullValueAuthorType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("authorType"); else _explicitNullProperties?.Remove("authorType"); } }
+        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItemAuthorType? _explicitNullValueAuthorType = default!;
         /// <summary>The id property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -71,6 +76,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "authorType", n => { AuthorType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItemAuthorType>(); } },
                 { "id", n => { GetApiQuicksearch200ResponseDatasetsItemId = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
@@ -84,6 +90,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseDatasetsItemAuthorType>("authorType", AuthorType);
             writer.WriteStringValue("id", GetApiQuicksearch200ResponseDatasetsItemId);
             writer.WriteStringValue("_id", Id);
             writer.WriteBoolValue("private", Private);

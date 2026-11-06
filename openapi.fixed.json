@@ -5963,7 +5963,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-05T13:29:43.086Z"
+              "default": "2026-11-06T16:58:18.537Z"
             }
           }
         ],
@@ -6015,7 +6015,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-05T13:29:43.087Z"
+              "default": "2026-11-06T16:58:18.537Z"
             }
           }
         ],
@@ -6067,7 +6067,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-05T13:29:43.088Z"
+              "default": "2026-11-06T16:58:18.538Z"
             }
           },
           {
@@ -6227,7 +6227,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-05T13:29:43.087Z"
+              "default": "2026-11-06T16:58:18.537Z"
             }
           }
         ],
@@ -11419,6 +11419,92 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/GetApiBucketsByNamespaceValueByRepoResourceGroup200Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/containers/{namespaceValue}/{repo}/resource-group": {
+      "post": {
+        "tags": [
+          "containers"
+        ],
+        "summary": "Add resource group",
+        "description": "Add the repository to a resource group",
+        "operationId": "PostApiContainersByNamespaceValueByRepoResourceGroup",
+        "parameters": [
+          {
+            "name": "namespaceValue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiContainersByNamespaceValueByRepoResourceGroupRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Minimal information about the repository",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiContainersByNamespaceValueByRepoResourceGroup200Response"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "containers"
+        ],
+        "summary": "Get resource group",
+        "operationId": "GetApiContainersByNamespaceValueByRepoResourceGroup",
+        "parameters": [
+          {
+            "name": "namespaceValue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The resource group of the repository",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiContainersByNamespaceValueByRepoResourceGroup200Response"
                 }
               }
             }
@@ -28227,6 +28313,74 @@
         "additionalProperties": false
       },
       "GetApiBucketsByNamespaceValueByRepoResourceGroup200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "id",
+          "name"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "A hex string of 24 characters representing an ObjectId."
+          },
+          "name": {
+            "type": "string"
+          },
+          "numUsers": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostApiContainersByNamespaceValueByRepoResourceGroupRequest": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "resourceGroupId"
+        ],
+        "type": "object",
+        "properties": {
+          "resourceGroupId": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-fA-F]{24}$",
+            "type": [
+              "null",
+              "string"
+            ],
+            "description": "The resource group to add the repository to, if null, the repository will be removed from the resource group"
+          }
+        }
+      },
+      "PostApiContainersByNamespaceValueByRepoResourceGroup200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "name",
+          "type",
+          "private",
+          "addedBy"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PostApiContainersByNamespaceValueByRepoResourceGroup200ResponseType"
+          },
+          "private": {
+            "type": "boolean"
+          },
+          "addedBy": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetApiContainersByNamespaceValueByRepoResourceGroup200Response": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "required": [
           "id",
@@ -50519,6 +50673,9 @@
           "private": {
             "type": "boolean"
           },
+          "authorType": {
+            "$ref": "#/components/schemas/GetApiQuicksearch200ResponseDatasetsItemAuthorType"
+          },
           "trendingWeight": {
             "type": "number"
           }
@@ -50541,6 +50698,9 @@
           },
           "private": {
             "type": "boolean"
+          },
+          "authorType": {
+            "$ref": "#/components/schemas/GetApiQuicksearch200ResponseModelsItemAuthorType"
           },
           "trendingWeight": {
             "type": "number"
@@ -50589,6 +50749,9 @@
           },
           "private": {
             "type": "boolean"
+          },
+          "authorType": {
+            "$ref": "#/components/schemas/GetApiQuicksearch200ResponseSpacesItemAuthorType"
           },
           "emoji": {
             "type": "string"
@@ -50676,6 +50839,9 @@
           },
           "private": {
             "type": "boolean"
+          },
+          "authorType": {
+            "$ref": "#/components/schemas/GetApiQuicksearch200ResponseBucketsItemAuthorType"
           }
         },
         "additionalProperties": false
@@ -50695,6 +50861,9 @@
           },
           "private": {
             "type": "boolean"
+          },
+          "authorType": {
+            "$ref": "#/components/schemas/GetApiQuicksearch200ResponseContainersItemAuthorType"
           }
         },
         "additionalProperties": false
@@ -50759,6 +50928,9 @@
           "private": {
             "type": "boolean"
           },
+          "authorType": {
+            "$ref": "#/components/schemas/PostApiQuicksearch200ResponseDatasetsItemAuthorType"
+          },
           "trendingWeight": {
             "type": "number"
           }
@@ -50781,6 +50953,9 @@
           },
           "private": {
             "type": "boolean"
+          },
+          "authorType": {
+            "$ref": "#/components/schemas/PostApiQuicksearch200ResponseModelsItemAuthorType"
           },
           "trendingWeight": {
             "type": "number"
@@ -50829,6 +51004,9 @@
           },
           "private": {
             "type": "boolean"
+          },
+          "authorType": {
+            "$ref": "#/components/schemas/PostApiQuicksearch200ResponseSpacesItemAuthorType"
           },
           "emoji": {
             "type": "string"
@@ -50916,6 +51094,9 @@
           },
           "private": {
             "type": "boolean"
+          },
+          "authorType": {
+            "$ref": "#/components/schemas/PostApiQuicksearch200ResponseBucketsItemAuthorType"
           }
         },
         "additionalProperties": false
@@ -50935,6 +51116,9 @@
           },
           "private": {
             "type": "boolean"
+          },
+          "authorType": {
+            "$ref": "#/components/schemas/PostApiQuicksearch200ResponseContainersItemAuthorType"
           }
         },
         "additionalProperties": false
@@ -80314,6 +80498,47 @@
           ]
         }
       },
+      "PostApiContainersByNamespaceValueByRepoResourceGroup200ResponseType": {
+        "enum": [
+          "dataset",
+          "model",
+          "space",
+          "bucket",
+          "kernel",
+          "container"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiContainersByNamespaceValueByRepoResourceGroup200ResponseType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "dataset",
+              "name": "Dataset"
+            },
+            {
+              "value": "model",
+              "name": "Model"
+            },
+            {
+              "value": "space",
+              "name": "Space"
+            },
+            {
+              "value": "bucket",
+              "name": "Bucket"
+            },
+            {
+              "value": "kernel",
+              "name": "Kernel"
+            },
+            {
+              "value": "container",
+              "name": "Container"
+            }
+          ]
+        }
+      },
       "PutApiModelsByNamespaceValueByRepoSettingsRequestVisibility": {
         "enum": [
           "private",
@@ -105849,6 +106074,226 @@
             {
               "value": "webgpu",
               "name": "Webgpu"
+            }
+          ]
+        }
+      },
+      "GetApiQuicksearch200ResponseDatasetsItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "GetApiQuicksearch200ResponseDatasetsItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "GetApiQuicksearch200ResponseModelsItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "GetApiQuicksearch200ResponseModelsItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "GetApiQuicksearch200ResponseSpacesItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "GetApiQuicksearch200ResponseSpacesItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "GetApiQuicksearch200ResponseBucketsItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "GetApiQuicksearch200ResponseBucketsItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "GetApiQuicksearch200ResponseContainersItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "GetApiQuicksearch200ResponseContainersItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiQuicksearch200ResponseDatasetsItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "PostApiQuicksearch200ResponseDatasetsItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiQuicksearch200ResponseModelsItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "PostApiQuicksearch200ResponseModelsItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiQuicksearch200ResponseSpacesItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "PostApiQuicksearch200ResponseSpacesItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiQuicksearch200ResponseBucketsItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "PostApiQuicksearch200ResponseBucketsItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiQuicksearch200ResponseContainersItemAuthorType": {
+        "enum": [
+          "user",
+          "org"
+        ],
+        "type": "string",
+        "description": "Whether the repo is owned by a user or an organization",
+        "x-ms-enum": {
+          "name": "PostApiQuicksearch200ResponseContainersItemAuthorType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            },
+            {
+              "value": "org",
+              "name": "Org"
             }
           ]
         }

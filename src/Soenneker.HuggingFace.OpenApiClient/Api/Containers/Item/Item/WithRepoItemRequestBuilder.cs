@@ -5,6 +5,7 @@ using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Batch;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.PathsInfo;
+using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.ResourceGroup;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Settings;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tags;
 using Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Tree;
@@ -33,6 +34,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.PathsInfo.PathsInfoRequestBuilder PathsInfo
         {
             get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.PathsInfo.PathsInfoRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The resourceGroup property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.ResourceGroup.ResourceGroupRequestBuilder ResourceGroup
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.ResourceGroup.ResourceGroupRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The settings property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Containers.Item.Item.Settings.SettingsRequestBuilder Settings
