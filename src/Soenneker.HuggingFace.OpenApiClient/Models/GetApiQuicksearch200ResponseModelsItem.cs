@@ -25,8 +25,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("_id") is { } nullNodeId && nullNodeId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Id = null;
             if (parseNode.GetChildNode("private") is null) { _explicitNullValuePrivate = default!; _explicitNullProperties?.Remove("private"); }
             else if (parseNode.GetChildNode("private") is { } nullNodePrivate && nullNodePrivate.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Private = null;
-            if (parseNode.GetChildNode("trendingWeight") is null) { _explicitNullValueTrendingWeight = default!; _explicitNullProperties?.Remove("trendingWeight"); }
-            else if (parseNode.GetChildNode("trendingWeight") is { } nullNodeTrendingWeight && nullNodeTrendingWeight.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) TrendingWeight = null;
         }
 
         /// <summary>Whether the repo is owned by a user or an organization</summary>
@@ -55,9 +53,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The private property</summary>
         public bool? Private { get => _explicitNullValuePrivate; set { _explicitNullValuePrivate = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("private"); else _explicitNullProperties?.Remove("private"); } }
         private bool? _explicitNullValuePrivate = default!;
-        /// <summary>The trendingWeight property</summary>
-        public double? TrendingWeight { get => _explicitNullValueTrendingWeight; set { _explicitNullValueTrendingWeight = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("trendingWeight"); else _explicitNullProperties?.Remove("trendingWeight"); } }
-        private double? _explicitNullValueTrendingWeight = default!;
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -80,7 +75,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "id", n => { GetApiQuicksearch200ResponseModelsItemId = n.GetStringValue(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
                 { "private", n => { Private = n.GetBoolValue(); } },
-                { "trendingWeight", n => { TrendingWeight = n.GetDoubleValue(); } },
             };
         }
         /// <summary>
@@ -93,8 +87,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiQuicksearch200ResponseModelsItemAuthorType>("authorType", AuthorType);
             writer.WriteStringValue("id", GetApiQuicksearch200ResponseModelsItemId);
             writer.WriteStringValue("_id", Id);
-            writer.WriteBoolValue("private", Private);
-            writer.WriteDoubleValue("trendingWeight", TrendingWeight);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteBoolValue("private", Private);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.Discussions;
 using Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.Duplicate;
+using Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.Settings;
 using Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.SqlConsole;
 using System.Collections.Generic;
 using System.IO;
@@ -26,6 +27,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.Duplicate.DuplicateRequestBuilder Duplicate
         {
             get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.Duplicate.DuplicateRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The settings property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.Settings.SettingsRequestBuilder Settings
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.Settings.SettingsRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>The sqlConsole property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Item.Item.Item.SqlConsole.SqlConsoleRequestBuilder SqlConsole

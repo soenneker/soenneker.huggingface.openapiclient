@@ -5963,7 +5963,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-09T05:12:55.240Z"
+              "default": "2026-11-10T16:34:57.484Z"
             }
           }
         ],
@@ -6015,7 +6015,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-09T05:12:55.241Z"
+              "default": "2026-11-10T16:34:57.485Z"
             }
           }
         ],
@@ -6067,7 +6067,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-09T05:12:55.241Z"
+              "default": "2026-11-10T16:34:57.485Z"
             }
           },
           {
@@ -6227,7 +6227,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-09T05:12:55.241Z"
+              "default": "2026-11-10T16:34:57.485Z"
             }
           }
         ],
@@ -11826,6 +11826,179 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/{repoType}/{namespaceValue}/{repo}/settings/trusted-publishers": {
+      "get": {
+        "tags": [
+          "repos"
+        ],
+        "summary": "Repo trusted publishers",
+        "description": "List the [trusted publishers](https://huggingface.co/docs/hub/trusted-publishers) of a repo.",
+        "operationId": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers",
+        "parameters": [
+          {
+            "name": "repoType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRepoTypeParameter"
+            }
+          },
+          {
+            "name": "namespaceValue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Trusted publishers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseSchema"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "repos"
+        ],
+        "summary": "Repo trusted publisher",
+        "description": "Let OIDC tokens matching the issuer and claims exchange for a short-lived token on the repo. Requires write access to the repo.",
+        "operationId": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers",
+        "parameters": [
+          {
+            "name": "repoType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRepoTypeParameter"
+            }
+          },
+          {
+            "name": "namespaceValue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Trusted publisher",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/{repoType}/{namespaceValue}/{repo}/settings/trusted-publishers/{publisherId}": {
+      "delete": {
+        "tags": [
+          "repos"
+        ],
+        "summary": "Repo trusted publisher",
+        "operationId": "DeleteApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersByPublisherId",
+        "parameters": [
+          {
+            "name": "repoType",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "$ref": "#/components/schemas/DeleteApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersByPublisherIdRepoTypeParameter"
+            }
+          },
+          {
+            "name": "namespaceValue",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "repo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "publisherId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
           }
         }
       }
@@ -23727,6 +23900,14 @@
             "description": "Permissions granted on the selected \u0060repoIds\u0060.",
             "default": []
           },
+          "userPermissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserGatedReposRequestsWriteItem"
+            },
+            "description": "Permissions on the service account itself.",
+            "default": []
+          },
           "endpointPatterns": {
             "maxItems": 20,
             "type": "array",
@@ -23741,6 +23922,11 @@
           "skipNetworkSecurity": {
             "type": "boolean",
             "description": "Exempt this token from the org\u0027s Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the \u0060org.networkSecurity.write\u0060 permission.",
+            "default": false
+          },
+          "canReadGatedRepos": {
+            "type": "boolean",
+            "description": "Read contents of gated repos the service account has access to.",
             "default": false
           }
         }
@@ -23797,6 +23983,13 @@
             },
             "description": "Permissions granted on the selected \u0060repoIds\u0060."
           },
+          "userPermissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserGatedReposRequestsWriteItem"
+            },
+            "description": "Permissions on the service account itself."
+          },
           "endpointPatterns": {
             "maxItems": 20,
             "type": "array",
@@ -23810,6 +24003,10 @@
           "skipNetworkSecurity": {
             "type": "boolean",
             "description": "Exempt this token from the org\u0027s Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the \u0060org.networkSecurity.write\u0060 permission."
+          },
+          "canReadGatedRepos": {
+            "type": "boolean",
+            "description": "Read contents of gated repos the service account has access to."
           }
         }
       },
@@ -23821,8 +24018,10 @@
           "permissions",
           "repoIds",
           "repoPermissions",
+          "userPermissions",
           "endpointPatterns",
-          "skipNetworkSecurity"
+          "skipNetworkSecurity",
+          "canReadGatedRepos"
         ],
         "type": "object",
         "properties": {
@@ -23850,6 +24049,12 @@
               "type": "string"
             }
           },
+          "userPermissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "endpointPatterns": {
             "type": "array",
             "items": {
@@ -23857,6 +24062,9 @@
             }
           },
           "skipNetworkSecurity": {
+            "type": "boolean"
+          },
+          "canReadGatedRepos": {
             "type": "boolean"
           }
         },
@@ -28691,6 +28899,83 @@
           },
           "gatedNotificationsMode": {
             "$ref": "#/components/schemas/PutApiDatasetsByNamespaceValueByRepoSettings200ResponseGatedNotificationsMode"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequest": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "issuerUrl",
+          "claims"
+        ],
+        "type": "object",
+        "properties": {
+          "issuerUrl": {
+            "type": "string",
+            "description": "URL of the OIDC issuer, e.g. \u0060https://token.actions.githubusercontent.com\u0060.",
+            "x-client-original-format": "uri"
+          },
+          "claims": {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaims"
+          },
+          "permissions": {
+            "minItems": 1,
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestPermissionsItem"
+            },
+            "description": "Permissions granted on the repo to matching tokens. Defaults to \u0060[\u0022repo.content.write\u0022]\u0060."
+          }
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "_id",
+          "issuerUrl",
+          "claims",
+          "createdAt"
+        ],
+        "type": "object",
+        "properties": {
+          "_id": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "A hex string of 24 characters representing an ObjectId."
+          },
+          "issuerUrl": {
+            "type": "string"
+          },
+          "claims": {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaims"
+          },
+          "configuredBy": {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredBy"
+          },
+          "createdAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUsedAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InferenceApiItem"
+            }
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponsePermissionsItem"
+            }
           }
         },
         "additionalProperties": false
@@ -34086,6 +34371,13 @@
       "PostApiDatasetsByNamespaceValueByRepoPreuploadByRev422ResponseSchema": {
         "$schema": "https://json-schema.org/draft/2020-12/schema"
       },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseSchema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseSchemaItem"
+        }
+      },
       "GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchema": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "array",
@@ -36228,6 +36520,187 @@
           }
         ],
         "description": "What Hugging Face shares with the repo authors when a user requests access. Defaults to the username and email."
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalProperties": {
+        "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+        "discriminator": {
+          "propertyName": "kind",
+          "mapping": {
+            "eq": "#/components/schemas/TaggedEqVariantCBE7CCDBF54EE873",
+            "prefix": "#/components/schemas/TaggedPrefixVariantFB93829905D72D48"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1"
+            },
+            {
+              "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "kind",
+            "mapping": {
+              "eq": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1",
+              "prefix": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredBy": {
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "org": "#/components/schemas/TaggedOrgVariant0B4D9D2C6F2673A4",
+            "user": "#/components/schemas/TaggedUserVariant142E1BF4DC640DC8"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1"
+            },
+            {
+              "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "type",
+            "mapping": {
+              "org": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1",
+              "user": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalProperties": {
+        "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+        "discriminator": {
+          "propertyName": "kind",
+          "mapping": {
+            "eq": "#/components/schemas/TaggedEqVariantF1D03599187E0E9B",
+            "prefix": "#/components/schemas/TaggedPrefixVariantB90C0AC644001FB2"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1"
+            },
+            {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "kind",
+            "mapping": {
+              "eq": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1",
+              "prefix": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalProperties": {
+        "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+        "discriminator": {
+          "propertyName": "kind",
+          "mapping": {
+            "eq": "#/components/schemas/TaggedEqVariant16F906E61EAA5F8E",
+            "prefix": "#/components/schemas/TaggedPrefixVariant352821F498710596"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1"
+            },
+            {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "kind",
+            "mapping": {
+              "eq": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1",
+              "prefix": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredBy": {
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "org": "#/components/schemas/TaggedOrgVariantC5EEF580746756DB",
+            "user": "#/components/schemas/TaggedUserVariantF9D957AD7F6F13CE"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1"
+            },
+            {
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "type",
+            "mapping": {
+              "org": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1",
+              "user": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ]
       },
       "GetApiModelsByNamespaceValueByRepoNotebookByRevByPath200ResponseAnyOf1": {
         "required": [
@@ -47077,6 +47550,7 @@
           "permissions",
           "repoIds",
           "repoPermissions",
+          "userPermissions",
           "endpointPatterns"
         ],
         "type": "object",
@@ -47131,6 +47605,12 @@
               "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem"
             }
           },
+          "userPermissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UserGatedReposRequestsWriteItem"
+            }
+          },
           "endpointPatterns": {
             "type": "array",
             "items": {
@@ -47141,6 +47621,9 @@
             "type": "string"
           },
           "skipNetworkSecurity": {
+            "type": "boolean"
+          },
+          "canReadGatedRepos": {
             "type": "boolean"
           },
           "s3AccessKey": {
@@ -47156,8 +47639,10 @@
           "createdAt",
           "repoIds",
           "repoPermissions",
+          "userPermissions",
           "endpointPatterns",
-          "skipNetworkSecurity"
+          "skipNetworkSecurity",
+          "canReadGatedRepos"
         ],
         "type": "object",
         "properties": {
@@ -47188,6 +47673,12 @@
               "type": "string"
             }
           },
+          "userPermissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "endpointPatterns": {
             "type": "array",
             "items": {
@@ -47195,6 +47686,9 @@
             }
           },
           "skipNetworkSecurity": {
+            "type": "boolean"
+          },
+          "canReadGatedRepos": {
             "type": "boolean"
           }
         },
@@ -50317,6 +50811,25 @@
         },
         "additionalProperties": false
       },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaims": {
+        "propertyNames": {
+          "type": "string"
+        },
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalProperties"
+        },
+        "description": "Claims the OIDC token must match, by claim name. At least one is required."
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaims": {
+        "propertyNames": {
+          "type": "string"
+        },
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalProperties"
+        }
+      },
       "GetApiModelsByNamespaceValueByRepoScan200ResponseFilesWithIssuesItem": {
         "required": [
           "path",
@@ -50659,8 +51172,7 @@
       "GetApiQuicksearch200ResponseDatasetsItem": {
         "required": [
           "_id",
-          "id",
-          "trendingWeight"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -50675,9 +51187,6 @@
           },
           "authorType": {
             "$ref": "#/components/schemas/GetApiQuicksearch200ResponseDatasetsItemAuthorType"
-          },
-          "trendingWeight": {
-            "type": "number"
           }
         },
         "additionalProperties": false
@@ -50685,8 +51194,7 @@
       "GetApiQuicksearch200ResponseModelsItem": {
         "required": [
           "_id",
-          "id",
-          "trendingWeight"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -50701,9 +51209,6 @@
           },
           "authorType": {
             "$ref": "#/components/schemas/GetApiQuicksearch200ResponseModelsItemAuthorType"
-          },
-          "trendingWeight": {
-            "type": "number"
           }
         },
         "additionalProperties": false
@@ -50736,8 +51241,7 @@
         "required": [
           "_id",
           "id",
-          "emoji",
-          "trendingWeight"
+          "emoji"
         ],
         "type": "object",
         "properties": {
@@ -50755,9 +51259,6 @@
           },
           "emoji": {
             "type": "string"
-          },
-          "trendingWeight": {
-            "type": "number"
           }
         },
         "additionalProperties": false
@@ -50914,8 +51415,7 @@
       "PostApiQuicksearch200ResponseDatasetsItem": {
         "required": [
           "_id",
-          "id",
-          "trendingWeight"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -50930,9 +51430,6 @@
           },
           "authorType": {
             "$ref": "#/components/schemas/PostApiQuicksearch200ResponseDatasetsItemAuthorType"
-          },
-          "trendingWeight": {
-            "type": "number"
           }
         },
         "additionalProperties": false
@@ -50940,8 +51437,7 @@
       "PostApiQuicksearch200ResponseModelsItem": {
         "required": [
           "_id",
-          "id",
-          "trendingWeight"
+          "id"
         ],
         "type": "object",
         "properties": {
@@ -50956,9 +51452,6 @@
           },
           "authorType": {
             "$ref": "#/components/schemas/PostApiQuicksearch200ResponseModelsItemAuthorType"
-          },
-          "trendingWeight": {
-            "type": "number"
           }
         },
         "additionalProperties": false
@@ -50991,8 +51484,7 @@
         "required": [
           "_id",
           "id",
-          "emoji",
-          "trendingWeight"
+          "emoji"
         ],
         "type": "object",
         "properties": {
@@ -51010,9 +51502,6 @@
           },
           "emoji": {
             "type": "string"
-          },
-          "trendingWeight": {
-            "type": "number"
           }
         },
         "additionalProperties": false
@@ -55866,6 +56355,57 @@
         },
         "additionalProperties": false
       },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseSchemaItem": {
+        "required": [
+          "_id",
+          "issuerUrl",
+          "claims",
+          "createdAt"
+        ],
+        "type": "object",
+        "properties": {
+          "_id": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "A hex string of 24 characters representing an ObjectId."
+          },
+          "issuerUrl": {
+            "type": "string"
+          },
+          "claims": {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseSchemaItemClaims"
+          },
+          "configuredBy": {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredBy"
+          },
+          "createdAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUsedAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InferenceApiItem"
+            }
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemPermissionsItem"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "Trusted publisher"
+      },
       "GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItem": {
         "required": [
           "type",
@@ -59273,6 +59813,98 @@
         },
         "additionalProperties": false,
         "description": "Set when the user is a service account"
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrg": {
+        "required": [
+          "avatarUrl",
+          "fullname",
+          "name",
+          "type",
+          "isHf"
+        ],
+        "type": "object",
+        "properties": {
+          "avatarUrl": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgType"
+          },
+          "isHf": {
+            "type": "boolean"
+          },
+          "isFollowing": {
+            "type": "boolean"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgPlan"
+          },
+          "details": {
+            "type": "string"
+          },
+          "hasPrivateMembersList": {
+            "type": "boolean"
+          },
+          "userRole": {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgUserRole"
+          },
+          "numUsers": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrg": {
+        "required": [
+          "avatarUrl",
+          "fullname",
+          "name",
+          "type",
+          "isHf"
+        ],
+        "type": "object",
+        "properties": {
+          "avatarUrl": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgType"
+          },
+          "isHf": {
+            "type": "boolean"
+          },
+          "isFollowing": {
+            "type": "boolean"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgPlan"
+          },
+          "details": {
+            "type": "string"
+          },
+          "hasPrivateMembersList": {
+            "type": "boolean"
+          },
+          "userRole": {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgUserRole"
+          },
+          "numUsers": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
       },
       "GetApiByRepoTypeByNamespaceValueByRepoDiscussions200ResponseDiscussionsItemAuthorOneOf2PrimaryOrg": {
         "required": [
@@ -72072,6 +72704,15 @@
         },
         "additionalProperties": false
       },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseSchemaItemClaims": {
+        "propertyNames": {
+          "type": "string"
+        },
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalProperties"
+        }
+      },
       "GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseSchemaItemLfs": {
         "required": [
           "oid",
@@ -79634,6 +80275,22 @@
           ]
         }
       },
+      "UserGatedReposRequestsWriteItem": {
+        "enum": [
+          "user.gated-repos-requests.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "UserGatedReposRequestsWriteItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user.gated-repos-requests.write",
+              "name": "UserGatedReposRequestsWrite"
+            }
+          ]
+        }
+      },
       "PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem": {
         "enum": [
           "repo.content.read",
@@ -80979,6 +81636,64 @@
             {
               "value": "real-time",
               "name": "RealTime"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestPermissionsItem": {
+        "enum": [
+          "repo.content.read",
+          "repo.content.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestPermissionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "repo.content.read",
+              "name": "RepoContentRead"
+            },
+            {
+              "value": "repo.content.write",
+              "name": "RepoContentWrite"
+            }
+          ]
+        }
+      },
+      "InferenceApiItem": {
+        "enum": [
+          "inference-api"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "InferenceApiItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "inference-api",
+              "name": "InferenceApi"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponsePermissionsItem": {
+        "enum": [
+          "repo.content.read",
+          "repo.content.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponsePermissionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "repo.content.read",
+              "name": "RepoContentRead"
+            },
+            {
+              "value": "repo.content.write",
+              "name": "RepoContentWrite"
             }
           ]
         }
@@ -92367,6 +93082,238 @@
         "x-client-original-const": "user",
         "x-ms-enum": {
           "name": "GetApiUsersByUsernameFollowers200ResponseItemAnyOf1Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            }
+          ]
+        }
+      },
+      "EqKind": {
+        "enum": [
+          "eq"
+        ],
+        "type": "string",
+        "x-client-original-const": "eq",
+        "x-ms-enum": {
+          "name": "EqKind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "eq",
+              "name": "Eq"
+            }
+          ]
+        }
+      },
+      "PrefixKind": {
+        "enum": [
+          "prefix"
+        ],
+        "type": "string",
+        "x-client-original-const": "prefix",
+        "x-ms-enum": {
+          "name": "PrefixKind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "prefix",
+              "name": "Prefix"
+            }
+          ]
+        }
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1Type": {
+        "enum": [
+          "org"
+        ],
+        "type": "string",
+        "x-client-original-const": "org",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1Plan": {
+        "enum": [
+          "team",
+          "enterprise",
+          "plus",
+          "academia"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1Plan",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "enterprise",
+              "name": "Enterprise"
+            },
+            {
+              "value": "plus",
+              "name": "Plus"
+            },
+            {
+              "value": "academia",
+              "name": "Academia"
+            }
+          ]
+        }
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2Type": {
+        "enum": [
+          "user"
+        ],
+        "type": "string",
+        "x-client-original-const": "user",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1Kind": {
+        "enum": [
+          "eq"
+        ],
+        "type": "string",
+        "x-client-original-const": "eq",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1Kind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "eq",
+              "name": "Eq"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2Kind": {
+        "enum": [
+          "prefix"
+        ],
+        "type": "string",
+        "x-client-original-const": "prefix",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2Kind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "prefix",
+              "name": "Prefix"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1Kind": {
+        "enum": [
+          "eq"
+        ],
+        "type": "string",
+        "x-client-original-const": "eq",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1Kind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "eq",
+              "name": "Eq"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2Kind": {
+        "enum": [
+          "prefix"
+        ],
+        "type": "string",
+        "x-client-original-const": "prefix",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2Kind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "prefix",
+              "name": "Prefix"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1Type": {
+        "enum": [
+          "org"
+        ],
+        "type": "string",
+        "x-client-original-const": "org",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1Plan": {
+        "enum": [
+          "team",
+          "enterprise",
+          "plus",
+          "academia"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1Plan",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "enterprise",
+              "name": "Enterprise"
+            },
+            {
+              "value": "plus",
+              "name": "Plus"
+            },
+            {
+              "value": "academia",
+              "name": "Academia"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2Type": {
+        "enum": [
+          "user"
+        ],
+        "type": "string",
+        "x-client-original-const": "user",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2Type",
           "modelAsString": false,
           "values": [
             {
@@ -105693,6 +106640,27 @@
           ]
         }
       },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemPermissionsItem": {
+        "enum": [
+          "repo.content.read",
+          "repo.content.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemPermissionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "repo.content.read",
+              "name": "RepoContentRead"
+            },
+            {
+              "value": "repo.content.write",
+              "name": "RepoContentWrite"
+            }
+          ]
+        }
+      },
       "GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseItemType": {
         "enum": [
           "file",
@@ -110252,6 +111220,174 @@
         "type": "string",
         "x-ms-enum": {
           "name": "PostApiBlogBySlugBySlug2CommentByCommentIdReply201ResponseNewMessageDataLatestAuthorOneOf2PrimaryOrgUserRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgType": {
+        "enum": [
+          "org"
+        ],
+        "type": "string",
+        "x-client-original-const": "org",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgPlan": {
+        "enum": [
+          "team",
+          "enterprise",
+          "plus",
+          "academia"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgPlan",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "enterprise",
+              "name": "Enterprise"
+            },
+            {
+              "value": "plus",
+              "name": "Plus"
+            },
+            {
+              "value": "academia",
+              "name": "Academia"
+            }
+          ]
+        }
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgUserRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgUserRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgType": {
+        "enum": [
+          "org"
+        ],
+        "type": "string",
+        "x-client-original-const": "org",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgPlan": {
+        "enum": [
+          "team",
+          "enterprise",
+          "plus",
+          "academia"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgPlan",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "enterprise",
+              "name": "Enterprise"
+            },
+            {
+              "value": "plus",
+              "name": "Plus"
+            },
+            {
+              "value": "academia",
+              "name": "Academia"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgUserRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgUserRole",
           "modelAsString": false,
           "values": [
             {
@@ -137161,6 +138297,129 @@
           ]
         }
       },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRepoTypeParameter": {
+        "enum": [
+          "models",
+          "spaces",
+          "datasets",
+          "kernels",
+          "buckets",
+          "containers"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRepoTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "models",
+              "name": "Models"
+            },
+            {
+              "value": "spaces",
+              "name": "Spaces"
+            },
+            {
+              "value": "datasets",
+              "name": "Datasets"
+            },
+            {
+              "value": "kernels",
+              "name": "Kernels"
+            },
+            {
+              "value": "buckets",
+              "name": "Buckets"
+            },
+            {
+              "value": "containers",
+              "name": "Containers"
+            }
+          ]
+        }
+      },
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRepoTypeParameter": {
+        "enum": [
+          "models",
+          "spaces",
+          "datasets",
+          "kernels",
+          "buckets",
+          "containers"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRepoTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "models",
+              "name": "Models"
+            },
+            {
+              "value": "spaces",
+              "name": "Spaces"
+            },
+            {
+              "value": "datasets",
+              "name": "Datasets"
+            },
+            {
+              "value": "kernels",
+              "name": "Kernels"
+            },
+            {
+              "value": "buckets",
+              "name": "Buckets"
+            },
+            {
+              "value": "containers",
+              "name": "Containers"
+            }
+          ]
+        }
+      },
+      "DeleteApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersByPublisherIdRepoTypeParameter": {
+        "enum": [
+          "models",
+          "spaces",
+          "datasets",
+          "kernels",
+          "buckets",
+          "containers"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "DeleteApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersByPublisherIdRepoTypeParameter",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "models",
+              "name": "Models"
+            },
+            {
+              "value": "spaces",
+              "name": "Spaces"
+            },
+            {
+              "value": "datasets",
+              "name": "Datasets"
+            },
+            {
+              "value": "kernels",
+              "name": "Kernels"
+            },
+            {
+              "value": "buckets",
+              "name": "Buckets"
+            },
+            {
+              "value": "containers",
+              "name": "Containers"
+            }
+          ]
+        }
+      },
       "GetApiByRepoTypeByNamespaceValueByRepoDiscussionsRepoTypeParameter": {
         "enum": [
           "models",
@@ -142063,6 +143322,393 @@
               },
               "primaryOrg": {
                 "$ref": "#/components/schemas/PostApiBlogBySlugBySlug2CommentByCommentIdReply201ResponseNewMessageDataLatestAuthorOneOf2PrimaryOrg"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedEqVariantCBE7CCDBF54EE873": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/EqKind"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedPrefixVariantFB93829905D72D48": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PrefixKind"
+              },
+              "value": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedOrgVariant0B4D9D2C6F2673A4": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredBy"
+          },
+          {
+            "required": [
+              "_id",
+              "avatarUrl",
+              "fullname",
+              "name",
+              "isHf",
+              "isHfAdmin",
+              "isMod",
+              "type"
+            ],
+            "type": "object",
+            "properties": {
+              "_id": {
+                "maxLength": 24,
+                "minLength": 24,
+                "pattern": "^[0-9a-f]{24}$",
+                "type": "string",
+                "description": "A hex string of 24 characters representing an ObjectId."
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isHf": {
+                "type": "boolean"
+              },
+              "isHfAdmin": {
+                "type": "boolean"
+              },
+              "isMod": {
+                "type": "boolean"
+              },
+              "followerCount": {
+                "type": "number"
+              },
+              "type": {
+                "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1Type"
+              },
+              "plan": {
+                "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1Plan"
+              },
+              "isUserFollowing": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedUserVariant142E1BF4DC640DC8": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredBy"
+          },
+          {
+            "required": [
+              "_id",
+              "avatarUrl",
+              "fullname",
+              "name",
+              "isHf",
+              "isHfAdmin",
+              "isMod",
+              "type",
+              "isPro"
+            ],
+            "type": "object",
+            "properties": {
+              "_id": {
+                "maxLength": 24,
+                "minLength": 24,
+                "pattern": "^[0-9a-f]{24}$",
+                "type": "string",
+                "description": "A hex string of 24 characters representing an ObjectId."
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isHf": {
+                "type": "boolean"
+              },
+              "isHfAdmin": {
+                "type": "boolean"
+              },
+              "isMod": {
+                "type": "boolean"
+              },
+              "followerCount": {
+                "type": "number"
+              },
+              "type": {
+                "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2Type"
+              },
+              "isPro": {
+                "type": "boolean"
+              },
+              "isUserFollowing": {
+                "type": "boolean"
+              },
+              "primaryOrg": {
+                "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrg"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedEqVariantF1D03599187E0E9B": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1Kind"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "TaggedPrefixVariantB90C0AC644001FB2": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2Kind"
+              },
+              "value": {
+                "minLength": 1,
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "TaggedEqVariant16F906E61EAA5F8E": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1Kind"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedPrefixVariant352821F498710596": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2Kind"
+              },
+              "value": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedOrgVariantC5EEF580746756DB": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredBy"
+          },
+          {
+            "required": [
+              "_id",
+              "avatarUrl",
+              "fullname",
+              "name",
+              "isHf",
+              "isHfAdmin",
+              "isMod",
+              "type"
+            ],
+            "type": "object",
+            "properties": {
+              "_id": {
+                "maxLength": 24,
+                "minLength": 24,
+                "pattern": "^[0-9a-f]{24}$",
+                "type": "string",
+                "description": "A hex string of 24 characters representing an ObjectId."
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isHf": {
+                "type": "boolean"
+              },
+              "isHfAdmin": {
+                "type": "boolean"
+              },
+              "isMod": {
+                "type": "boolean"
+              },
+              "followerCount": {
+                "type": "number"
+              },
+              "type": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1Type"
+              },
+              "plan": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1Plan"
+              },
+              "isUserFollowing": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedUserVariantF9D957AD7F6F13CE": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredBy"
+          },
+          {
+            "required": [
+              "_id",
+              "avatarUrl",
+              "fullname",
+              "name",
+              "isHf",
+              "isHfAdmin",
+              "isMod",
+              "type",
+              "isPro"
+            ],
+            "type": "object",
+            "properties": {
+              "_id": {
+                "maxLength": 24,
+                "minLength": 24,
+                "pattern": "^[0-9a-f]{24}$",
+                "type": "string",
+                "description": "A hex string of 24 characters representing an ObjectId."
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isHf": {
+                "type": "boolean"
+              },
+              "isHfAdmin": {
+                "type": "boolean"
+              },
+              "isMod": {
+                "type": "boolean"
+              },
+              "followerCount": {
+                "type": "number"
+              },
+              "type": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2Type"
+              },
+              "isPro": {
+                "type": "boolean"
+              },
+              "isUserFollowing": {
+                "type": "boolean"
+              },
+              "primaryOrg": {
+                "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrg"
               }
             },
             "additionalProperties": false
@@ -160375,6 +162021,13 @@
     "PostApiDatasetsByNamespaceValueByRepoPreuploadByRev422Response": {
       "$schema": "https://json-schema.org/draft/2020-12/schema"
     },
+    "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200Response": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItem"
+      }
+    },
     "GetApiModelsByNamespaceValueByRepoTreeByRevByPath200Response": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "array",
@@ -163206,6 +164859,323 @@
         },
         "primaryOrg": {
           "$ref": "#/components/schemas/PostApiBlogBySlugBySlug2CommentByCommentIdReply201ResponseNewMessageDataLatestAuthorOneOf2PrimaryOrg"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/EqKind"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PrefixKind"
+        },
+        "value": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1": {
+      "required": [
+        "_id",
+        "avatarUrl",
+        "fullname",
+        "name",
+        "isHf",
+        "isHfAdmin",
+        "isMod",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isHf": {
+          "type": "boolean"
+        },
+        "isHfAdmin": {
+          "type": "boolean"
+        },
+        "isMod": {
+          "type": "boolean"
+        },
+        "followerCount": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1Type"
+        },
+        "plan": {
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf1Plan"
+        },
+        "isUserFollowing": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2": {
+      "required": [
+        "_id",
+        "avatarUrl",
+        "fullname",
+        "name",
+        "isHf",
+        "isHfAdmin",
+        "isMod",
+        "type",
+        "isPro"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isHf": {
+          "type": "boolean"
+        },
+        "isHfAdmin": {
+          "type": "boolean"
+        },
+        "isMod": {
+          "type": "boolean"
+        },
+        "followerCount": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2Type"
+        },
+        "isPro": {
+          "type": "boolean"
+        },
+        "isUserFollowing": {
+          "type": "boolean"
+        },
+        "primaryOrg": {
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrg"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1Kind"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2Kind"
+        },
+        "value": {
+          "minLength": 1,
+          "type": "string"
+        }
+      }
+    },
+    "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1Kind"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2Kind"
+        },
+        "value": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1": {
+      "required": [
+        "_id",
+        "avatarUrl",
+        "fullname",
+        "name",
+        "isHf",
+        "isHfAdmin",
+        "isMod",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isHf": {
+          "type": "boolean"
+        },
+        "isHfAdmin": {
+          "type": "boolean"
+        },
+        "isMod": {
+          "type": "boolean"
+        },
+        "followerCount": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1Type"
+        },
+        "plan": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf1Plan"
+        },
+        "isUserFollowing": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2": {
+      "required": [
+        "_id",
+        "avatarUrl",
+        "fullname",
+        "name",
+        "isHf",
+        "isHfAdmin",
+        "isMod",
+        "type",
+        "isPro"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isHf": {
+          "type": "boolean"
+        },
+        "isHfAdmin": {
+          "type": "boolean"
+        },
+        "isMod": {
+          "type": "boolean"
+        },
+        "followerCount": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2Type"
+        },
+        "isPro": {
+          "type": "boolean"
+        },
+        "isUserFollowing": {
+          "type": "boolean"
+        },
+        "primaryOrg": {
+          "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrg"
         }
       },
       "additionalProperties": false
@@ -179807,6 +181777,57 @@
       },
       "additionalProperties": false
     },
+    "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItem": {
+      "required": [
+        "_id",
+        "issuerUrl",
+        "claims",
+        "createdAt"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "issuerUrl": {
+          "type": "string"
+        },
+        "claims": {
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaims"
+        },
+        "configuredBy": {
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemConfiguredBy"
+        },
+        "createdAt": {
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastUsedAt": {
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+          "type": "string",
+          "format": "date-time"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/InferenceApiItem"
+          }
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemPermissionsItem"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "description": "Trusted publisher"
+    },
     "GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseItem": {
       "required": [
         "type",
@@ -181887,6 +183908,15 @@
         }
       },
       "additionalProperties": false
+    },
+    "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaims": {
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalProperties"
+      }
     },
     "GetApiModelsByNamespaceValueByRepoTreeByRevByPath200ResponseItemLfs": {
       "required": [
@@ -184670,6 +186700,7 @@
         "aadya-neural",
         "acestep",
         "adapter-transformers",
+        "alkove",
         "allennlp",
         "aneforge",
         "anemoi",
@@ -184680,6 +186711,7 @@
         "audiocraft",
         "audioseal",
         "bagel-mot",
+        "basedecision",
         "bboxmaskpose",
         "ben2",
         "bertopic",
@@ -184700,6 +186732,7 @@
         "chat_tts",
         "chexmix",
         "chronos-forecasting",
+        "circuit-tracer",
         "clara",
         "clipscope",
         "cloud-agents",
@@ -184717,6 +186750,7 @@
         "depth-pro",
         "derm-foundation",
         "describe-anything",
+        "dewml",
         "dia-tts",
         "dia2",
         "diff-interpretation-tuning",
@@ -184733,6 +186767,7 @@
         "ensomi",
         "espnet",
         "eupe",
+        "fahr-face",
         "fairseq",
         "fastai",
         "fastprint",
@@ -184742,6 +186777,7 @@
         "flexray",
         "flextab",
         "fme",
+        "fse",
         "gaussianformer",
         "gemma.cpp",
         "geometry-crafter",
@@ -184749,6 +186785,7 @@
         "gliner",
         "gliner2",
         "glm-tts",
+        "glyd",
         "glyph-byt5",
         "granite-library",
         "grok",
@@ -184780,6 +186817,7 @@
         "kernels",
         "kimi-audio",
         "kittentts",
+        "konfai",
         "kronos",
         "k2",
         "lyra-2.0",
@@ -184790,9 +186828,13 @@
         "litert",
         "litert-lm",
         "lerobot",
+        "libreyolo",
         "lightglue",
+        "limx-dynamics",
+        "lingbot-map",
         "liveportrait",
         "longcat-video-avatar-1.5",
+        "linnet-tts",
         "llama-cpp-python",
         "mini-omni2",
         "mindspore",
@@ -184809,7 +186851,9 @@
         "medvae",
         "mflux",
         "microduck",
+        "minicpm-ocr",
         "mitie",
+        "mjlab",
         "ml-agents",
         "ml-sharp",
         "mlx",
@@ -184829,6 +186873,7 @@
         "open_clip",
         "openasr",
         "opendde",
+        "opendecision",
         "openpeerllm",
         "open-sora",
         "outetts",
@@ -184837,8 +186882,12 @@
         "peft",
         "perception-encoder",
         "phantom-wan",
+        "pika-h3-flex",
         "piper",
+        "pixeldense",
         "pocket-tts",
+        "pqgan",
+        "protomotions",
         "pruna-ai",
         "pxia",
         "pyannote-audio",
@@ -184864,6 +186913,7 @@
         "sam-3d-objects",
         "same",
         "sample-factory",
+        "sap-case",
         "sap-rpt-1-oss",
         "sapiens",
         "sapiens2",
@@ -184888,6 +186938,7 @@
         "stable-baselines3",
         "stanza",
         "supertonic",
+        "svdtrunc",
         "swarmformer",
         "synthefy-migas",
         "f5-tts",
@@ -184904,6 +186955,7 @@
         "tirex",
         "tirex-2",
         "torchgeo",
+        "torch-pointcloud",
         "transformers",
         "transformers.js",
         "trellis",
@@ -184927,8 +186979,10 @@
         "wan2.2",
         "wham",
         "whisperkit",
+        "wilddet3d",
         "yolov10",
         "yolov26",
+        "zipsplat",
         "zonos",
         "3dtopia-xl"
       ],
@@ -184948,6 +187002,10 @@
           {
             "value": "adapter-transformers",
             "name": "AdapterTransformers"
+          },
+          {
+            "value": "alkove",
+            "name": "Alkove"
           },
           {
             "value": "allennlp",
@@ -184988,6 +187046,10 @@
           {
             "value": "bagel-mot",
             "name": "BagelMot"
+          },
+          {
+            "value": "basedecision",
+            "name": "Basedecision"
           },
           {
             "value": "bboxmaskpose",
@@ -185070,6 +187132,10 @@
             "name": "ChronosForecasting"
           },
           {
+            "value": "circuit-tracer",
+            "name": "CircuitTracer"
+          },
+          {
             "value": "clara",
             "name": "Clara"
           },
@@ -185138,6 +187204,10 @@
             "name": "DescribeAnything"
           },
           {
+            "value": "dewml",
+            "name": "Dewml"
+          },
+          {
             "value": "dia-tts",
             "name": "DiaTts"
           },
@@ -185202,6 +187272,10 @@
             "name": "Eupe"
           },
           {
+            "value": "fahr-face",
+            "name": "FahrFace"
+          },
+          {
             "value": "fairseq",
             "name": "Fairseq"
           },
@@ -185238,6 +187312,10 @@
             "name": "Fme"
           },
           {
+            "value": "fse",
+            "name": "Fse"
+          },
+          {
             "value": "gaussianformer",
             "name": "Gaussianformer"
           },
@@ -185264,6 +187342,10 @@
           {
             "value": "glm-tts",
             "name": "GlmTts"
+          },
+          {
+            "value": "glyd",
+            "name": "Glyd"
           },
           {
             "value": "glyph-byt5",
@@ -185390,6 +187472,10 @@
             "name": "Kittentts"
           },
           {
+            "value": "konfai",
+            "name": "Konfai"
+          },
+          {
             "value": "kronos",
             "name": "Kronos"
           },
@@ -185430,8 +187516,20 @@
             "name": "Lerobot"
           },
           {
+            "value": "libreyolo",
+            "name": "Libreyolo"
+          },
+          {
             "value": "lightglue",
             "name": "Lightglue"
+          },
+          {
+            "value": "limx-dynamics",
+            "name": "LimxDynamics"
+          },
+          {
+            "value": "lingbot-map",
+            "name": "LingbotMap"
           },
           {
             "value": "liveportrait",
@@ -185440,6 +187538,10 @@
           {
             "value": "longcat-video-avatar-1.5",
             "name": "LongcatVideoAvatar15"
+          },
+          {
+            "value": "linnet-tts",
+            "name": "LinnetTts"
           },
           {
             "value": "llama-cpp-python",
@@ -185506,8 +187608,16 @@
             "name": "Microduck"
           },
           {
+            "value": "minicpm-ocr",
+            "name": "MinicpmOcr"
+          },
+          {
             "value": "mitie",
             "name": "Mitie"
+          },
+          {
+            "value": "mjlab",
+            "name": "Mjlab"
           },
           {
             "value": "ml-agents",
@@ -185586,6 +187696,10 @@
             "name": "Opendde"
           },
           {
+            "value": "opendecision",
+            "name": "Opendecision"
+          },
+          {
             "value": "openpeerllm",
             "name": "Openpeerllm"
           },
@@ -185618,12 +187732,28 @@
             "name": "PhantomWan"
           },
           {
+            "value": "pika-h3-flex",
+            "name": "PikaH3Flex"
+          },
+          {
             "value": "piper",
             "name": "Piper"
           },
           {
+            "value": "pixeldense",
+            "name": "Pixeldense"
+          },
+          {
             "value": "pocket-tts",
             "name": "PocketTts"
+          },
+          {
+            "value": "pqgan",
+            "name": "Pqgan"
+          },
+          {
+            "value": "protomotions",
+            "name": "Protomotions"
           },
           {
             "value": "pruna-ai",
@@ -185726,6 +187856,10 @@
             "name": "SampleFactory"
           },
           {
+            "value": "sap-case",
+            "name": "SapCase"
+          },
+          {
             "value": "sap-rpt-1-oss",
             "name": "SapRpt1Oss"
           },
@@ -185822,6 +187956,10 @@
             "name": "Supertonic"
           },
           {
+            "value": "svdtrunc",
+            "name": "Svdtrunc"
+          },
+          {
             "value": "swarmformer",
             "name": "Swarmformer"
           },
@@ -185884,6 +188022,10 @@
           {
             "value": "torchgeo",
             "name": "Torchgeo"
+          },
+          {
+            "value": "torch-pointcloud",
+            "name": "TorchPointcloud"
           },
           {
             "value": "transformers",
@@ -185978,12 +188120,20 @@
             "name": "Whisperkit"
           },
           {
+            "value": "wilddet3d",
+            "name": "Wilddet3D"
+          },
+          {
             "value": "yolov10",
             "name": "Yolov10"
           },
           {
             "value": "yolov26",
             "name": "Yolov26"
+          },
+          {
+            "value": "zipsplat",
+            "name": "Zipsplat"
           },
           {
             "value": "zonos",
@@ -187741,6 +189891,7 @@
         "aadya-neural",
         "acestep",
         "adapter-transformers",
+        "alkove",
         "allennlp",
         "aneforge",
         "anemoi",
@@ -187751,6 +189902,7 @@
         "audiocraft",
         "audioseal",
         "bagel-mot",
+        "basedecision",
         "bboxmaskpose",
         "ben2",
         "bertopic",
@@ -187771,6 +189923,7 @@
         "chat_tts",
         "chexmix",
         "chronos-forecasting",
+        "circuit-tracer",
         "clara",
         "clipscope",
         "cloud-agents",
@@ -187788,6 +189941,7 @@
         "depth-pro",
         "derm-foundation",
         "describe-anything",
+        "dewml",
         "dia-tts",
         "dia2",
         "diff-interpretation-tuning",
@@ -187804,6 +189958,7 @@
         "ensomi",
         "espnet",
         "eupe",
+        "fahr-face",
         "fairseq",
         "fastai",
         "fastprint",
@@ -187813,6 +189968,7 @@
         "flexray",
         "flextab",
         "fme",
+        "fse",
         "gaussianformer",
         "gemma.cpp",
         "geometry-crafter",
@@ -187820,6 +189976,7 @@
         "gliner",
         "gliner2",
         "glm-tts",
+        "glyd",
         "glyph-byt5",
         "granite-library",
         "grok",
@@ -187851,6 +190008,7 @@
         "kernels",
         "kimi-audio",
         "kittentts",
+        "konfai",
         "kronos",
         "k2",
         "lyra-2.0",
@@ -187861,9 +190019,13 @@
         "litert",
         "litert-lm",
         "lerobot",
+        "libreyolo",
         "lightglue",
+        "limx-dynamics",
+        "lingbot-map",
         "liveportrait",
         "longcat-video-avatar-1.5",
+        "linnet-tts",
         "llama-cpp-python",
         "mini-omni2",
         "mindspore",
@@ -187880,7 +190042,9 @@
         "medvae",
         "mflux",
         "microduck",
+        "minicpm-ocr",
         "mitie",
+        "mjlab",
         "ml-agents",
         "ml-sharp",
         "mlx",
@@ -187900,6 +190064,7 @@
         "open_clip",
         "openasr",
         "opendde",
+        "opendecision",
         "openpeerllm",
         "open-sora",
         "outetts",
@@ -187908,8 +190073,12 @@
         "peft",
         "perception-encoder",
         "phantom-wan",
+        "pika-h3-flex",
         "piper",
+        "pixeldense",
         "pocket-tts",
+        "pqgan",
+        "protomotions",
         "pruna-ai",
         "pxia",
         "pyannote-audio",
@@ -187935,6 +190104,7 @@
         "sam-3d-objects",
         "same",
         "sample-factory",
+        "sap-case",
         "sap-rpt-1-oss",
         "sapiens",
         "sapiens2",
@@ -187959,6 +190129,7 @@
         "stable-baselines3",
         "stanza",
         "supertonic",
+        "svdtrunc",
         "swarmformer",
         "synthefy-migas",
         "f5-tts",
@@ -187975,6 +190146,7 @@
         "tirex",
         "tirex-2",
         "torchgeo",
+        "torch-pointcloud",
         "transformers",
         "transformers.js",
         "trellis",
@@ -187998,8 +190170,10 @@
         "wan2.2",
         "wham",
         "whisperkit",
+        "wilddet3d",
         "yolov10",
         "yolov26",
+        "zipsplat",
         "zonos",
         "3dtopia-xl"
       ],
@@ -188019,6 +190193,10 @@
           {
             "value": "adapter-transformers",
             "name": "AdapterTransformers"
+          },
+          {
+            "value": "alkove",
+            "name": "Alkove"
           },
           {
             "value": "allennlp",
@@ -188059,6 +190237,10 @@
           {
             "value": "bagel-mot",
             "name": "BagelMot"
+          },
+          {
+            "value": "basedecision",
+            "name": "Basedecision"
           },
           {
             "value": "bboxmaskpose",
@@ -188141,6 +190323,10 @@
             "name": "ChronosForecasting"
           },
           {
+            "value": "circuit-tracer",
+            "name": "CircuitTracer"
+          },
+          {
             "value": "clara",
             "name": "Clara"
           },
@@ -188209,6 +190395,10 @@
             "name": "DescribeAnything"
           },
           {
+            "value": "dewml",
+            "name": "Dewml"
+          },
+          {
             "value": "dia-tts",
             "name": "DiaTts"
           },
@@ -188273,6 +190463,10 @@
             "name": "Eupe"
           },
           {
+            "value": "fahr-face",
+            "name": "FahrFace"
+          },
+          {
             "value": "fairseq",
             "name": "Fairseq"
           },
@@ -188309,6 +190503,10 @@
             "name": "Fme"
           },
           {
+            "value": "fse",
+            "name": "Fse"
+          },
+          {
             "value": "gaussianformer",
             "name": "Gaussianformer"
           },
@@ -188335,6 +190533,10 @@
           {
             "value": "glm-tts",
             "name": "GlmTts"
+          },
+          {
+            "value": "glyd",
+            "name": "Glyd"
           },
           {
             "value": "glyph-byt5",
@@ -188461,6 +190663,10 @@
             "name": "Kittentts"
           },
           {
+            "value": "konfai",
+            "name": "Konfai"
+          },
+          {
             "value": "kronos",
             "name": "Kronos"
           },
@@ -188501,8 +190707,20 @@
             "name": "Lerobot"
           },
           {
+            "value": "libreyolo",
+            "name": "Libreyolo"
+          },
+          {
             "value": "lightglue",
             "name": "Lightglue"
+          },
+          {
+            "value": "limx-dynamics",
+            "name": "LimxDynamics"
+          },
+          {
+            "value": "lingbot-map",
+            "name": "LingbotMap"
           },
           {
             "value": "liveportrait",
@@ -188511,6 +190729,10 @@
           {
             "value": "longcat-video-avatar-1.5",
             "name": "LongcatVideoAvatar15"
+          },
+          {
+            "value": "linnet-tts",
+            "name": "LinnetTts"
           },
           {
             "value": "llama-cpp-python",
@@ -188577,8 +190799,16 @@
             "name": "Microduck"
           },
           {
+            "value": "minicpm-ocr",
+            "name": "MinicpmOcr"
+          },
+          {
             "value": "mitie",
             "name": "Mitie"
+          },
+          {
+            "value": "mjlab",
+            "name": "Mjlab"
           },
           {
             "value": "ml-agents",
@@ -188657,6 +190887,10 @@
             "name": "Opendde"
           },
           {
+            "value": "opendecision",
+            "name": "Opendecision"
+          },
+          {
             "value": "openpeerllm",
             "name": "Openpeerllm"
           },
@@ -188689,12 +190923,28 @@
             "name": "PhantomWan"
           },
           {
+            "value": "pika-h3-flex",
+            "name": "PikaH3Flex"
+          },
+          {
             "value": "piper",
             "name": "Piper"
           },
           {
+            "value": "pixeldense",
+            "name": "Pixeldense"
+          },
+          {
             "value": "pocket-tts",
             "name": "PocketTts"
+          },
+          {
+            "value": "pqgan",
+            "name": "Pqgan"
+          },
+          {
+            "value": "protomotions",
+            "name": "Protomotions"
           },
           {
             "value": "pruna-ai",
@@ -188797,6 +191047,10 @@
             "name": "SampleFactory"
           },
           {
+            "value": "sap-case",
+            "name": "SapCase"
+          },
+          {
             "value": "sap-rpt-1-oss",
             "name": "SapRpt1Oss"
           },
@@ -188893,6 +191147,10 @@
             "name": "Supertonic"
           },
           {
+            "value": "svdtrunc",
+            "name": "Svdtrunc"
+          },
+          {
             "value": "swarmformer",
             "name": "Swarmformer"
           },
@@ -188955,6 +191213,10 @@
           {
             "value": "torchgeo",
             "name": "Torchgeo"
+          },
+          {
+            "value": "torch-pointcloud",
+            "name": "TorchPointcloud"
           },
           {
             "value": "transformers",
@@ -189049,12 +191311,20 @@
             "name": "Whisperkit"
           },
           {
+            "value": "wilddet3d",
+            "name": "Wilddet3D"
+          },
+          {
             "value": "yolov10",
             "name": "Yolov10"
           },
           {
             "value": "yolov26",
             "name": "Yolov26"
+          },
+          {
+            "value": "zipsplat",
+            "name": "Zipsplat"
           },
           {
             "value": "zonos",
@@ -190463,6 +192733,7 @@
         "aadya-neural",
         "acestep",
         "adapter-transformers",
+        "alkove",
         "allennlp",
         "aneforge",
         "anemoi",
@@ -190473,6 +192744,7 @@
         "audiocraft",
         "audioseal",
         "bagel-mot",
+        "basedecision",
         "bboxmaskpose",
         "ben2",
         "bertopic",
@@ -190493,6 +192765,7 @@
         "chat_tts",
         "chexmix",
         "chronos-forecasting",
+        "circuit-tracer",
         "clara",
         "clipscope",
         "cloud-agents",
@@ -190510,6 +192783,7 @@
         "depth-pro",
         "derm-foundation",
         "describe-anything",
+        "dewml",
         "dia-tts",
         "dia2",
         "diff-interpretation-tuning",
@@ -190526,6 +192800,7 @@
         "ensomi",
         "espnet",
         "eupe",
+        "fahr-face",
         "fairseq",
         "fastai",
         "fastprint",
@@ -190535,6 +192810,7 @@
         "flexray",
         "flextab",
         "fme",
+        "fse",
         "gaussianformer",
         "gemma.cpp",
         "geometry-crafter",
@@ -190542,6 +192818,7 @@
         "gliner",
         "gliner2",
         "glm-tts",
+        "glyd",
         "glyph-byt5",
         "granite-library",
         "grok",
@@ -190573,6 +192850,7 @@
         "kernels",
         "kimi-audio",
         "kittentts",
+        "konfai",
         "kronos",
         "k2",
         "lyra-2.0",
@@ -190583,9 +192861,13 @@
         "litert",
         "litert-lm",
         "lerobot",
+        "libreyolo",
         "lightglue",
+        "limx-dynamics",
+        "lingbot-map",
         "liveportrait",
         "longcat-video-avatar-1.5",
+        "linnet-tts",
         "llama-cpp-python",
         "mini-omni2",
         "mindspore",
@@ -190602,7 +192884,9 @@
         "medvae",
         "mflux",
         "microduck",
+        "minicpm-ocr",
         "mitie",
+        "mjlab",
         "ml-agents",
         "ml-sharp",
         "mlx",
@@ -190622,6 +192906,7 @@
         "open_clip",
         "openasr",
         "opendde",
+        "opendecision",
         "openpeerllm",
         "open-sora",
         "outetts",
@@ -190630,8 +192915,12 @@
         "peft",
         "perception-encoder",
         "phantom-wan",
+        "pika-h3-flex",
         "piper",
+        "pixeldense",
         "pocket-tts",
+        "pqgan",
+        "protomotions",
         "pruna-ai",
         "pxia",
         "pyannote-audio",
@@ -190657,6 +192946,7 @@
         "sam-3d-objects",
         "same",
         "sample-factory",
+        "sap-case",
         "sap-rpt-1-oss",
         "sapiens",
         "sapiens2",
@@ -190681,6 +192971,7 @@
         "stable-baselines3",
         "stanza",
         "supertonic",
+        "svdtrunc",
         "swarmformer",
         "synthefy-migas",
         "f5-tts",
@@ -190697,6 +192988,7 @@
         "tirex",
         "tirex-2",
         "torchgeo",
+        "torch-pointcloud",
         "transformers",
         "transformers.js",
         "trellis",
@@ -190720,8 +193012,10 @@
         "wan2.2",
         "wham",
         "whisperkit",
+        "wilddet3d",
         "yolov10",
         "yolov26",
+        "zipsplat",
         "zonos",
         "3dtopia-xl"
       ],
@@ -190741,6 +193035,10 @@
           {
             "value": "adapter-transformers",
             "name": "AdapterTransformers"
+          },
+          {
+            "value": "alkove",
+            "name": "Alkove"
           },
           {
             "value": "allennlp",
@@ -190781,6 +193079,10 @@
           {
             "value": "bagel-mot",
             "name": "BagelMot"
+          },
+          {
+            "value": "basedecision",
+            "name": "Basedecision"
           },
           {
             "value": "bboxmaskpose",
@@ -190863,6 +193165,10 @@
             "name": "ChronosForecasting"
           },
           {
+            "value": "circuit-tracer",
+            "name": "CircuitTracer"
+          },
+          {
             "value": "clara",
             "name": "Clara"
           },
@@ -190931,6 +193237,10 @@
             "name": "DescribeAnything"
           },
           {
+            "value": "dewml",
+            "name": "Dewml"
+          },
+          {
             "value": "dia-tts",
             "name": "DiaTts"
           },
@@ -190995,6 +193305,10 @@
             "name": "Eupe"
           },
           {
+            "value": "fahr-face",
+            "name": "FahrFace"
+          },
+          {
             "value": "fairseq",
             "name": "Fairseq"
           },
@@ -191031,6 +193345,10 @@
             "name": "Fme"
           },
           {
+            "value": "fse",
+            "name": "Fse"
+          },
+          {
             "value": "gaussianformer",
             "name": "Gaussianformer"
           },
@@ -191057,6 +193375,10 @@
           {
             "value": "glm-tts",
             "name": "GlmTts"
+          },
+          {
+            "value": "glyd",
+            "name": "Glyd"
           },
           {
             "value": "glyph-byt5",
@@ -191183,6 +193505,10 @@
             "name": "Kittentts"
           },
           {
+            "value": "konfai",
+            "name": "Konfai"
+          },
+          {
             "value": "kronos",
             "name": "Kronos"
           },
@@ -191223,8 +193549,20 @@
             "name": "Lerobot"
           },
           {
+            "value": "libreyolo",
+            "name": "Libreyolo"
+          },
+          {
             "value": "lightglue",
             "name": "Lightglue"
+          },
+          {
+            "value": "limx-dynamics",
+            "name": "LimxDynamics"
+          },
+          {
+            "value": "lingbot-map",
+            "name": "LingbotMap"
           },
           {
             "value": "liveportrait",
@@ -191233,6 +193571,10 @@
           {
             "value": "longcat-video-avatar-1.5",
             "name": "LongcatVideoAvatar15"
+          },
+          {
+            "value": "linnet-tts",
+            "name": "LinnetTts"
           },
           {
             "value": "llama-cpp-python",
@@ -191299,8 +193641,16 @@
             "name": "Microduck"
           },
           {
+            "value": "minicpm-ocr",
+            "name": "MinicpmOcr"
+          },
+          {
             "value": "mitie",
             "name": "Mitie"
+          },
+          {
+            "value": "mjlab",
+            "name": "Mjlab"
           },
           {
             "value": "ml-agents",
@@ -191379,6 +193729,10 @@
             "name": "Opendde"
           },
           {
+            "value": "opendecision",
+            "name": "Opendecision"
+          },
+          {
             "value": "openpeerllm",
             "name": "Openpeerllm"
           },
@@ -191411,12 +193765,28 @@
             "name": "PhantomWan"
           },
           {
+            "value": "pika-h3-flex",
+            "name": "PikaH3Flex"
+          },
+          {
             "value": "piper",
             "name": "Piper"
           },
           {
+            "value": "pixeldense",
+            "name": "Pixeldense"
+          },
+          {
             "value": "pocket-tts",
             "name": "PocketTts"
+          },
+          {
+            "value": "pqgan",
+            "name": "Pqgan"
+          },
+          {
+            "value": "protomotions",
+            "name": "Protomotions"
           },
           {
             "value": "pruna-ai",
@@ -191519,6 +193889,10 @@
             "name": "SampleFactory"
           },
           {
+            "value": "sap-case",
+            "name": "SapCase"
+          },
+          {
             "value": "sap-rpt-1-oss",
             "name": "SapRpt1Oss"
           },
@@ -191615,6 +193989,10 @@
             "name": "Supertonic"
           },
           {
+            "value": "svdtrunc",
+            "name": "Svdtrunc"
+          },
+          {
             "value": "swarmformer",
             "name": "Swarmformer"
           },
@@ -191677,6 +194055,10 @@
           {
             "value": "torchgeo",
             "name": "Torchgeo"
+          },
+          {
+            "value": "torch-pointcloud",
+            "name": "TorchPointcloud"
           },
           {
             "value": "transformers",
@@ -191771,12 +194153,20 @@
             "name": "Whisperkit"
           },
           {
+            "value": "wilddet3d",
+            "name": "Wilddet3D"
+          },
+          {
             "value": "yolov10",
             "name": "Yolov10"
           },
           {
             "value": "yolov26",
             "name": "Yolov26"
+          },
+          {
+            "value": "zipsplat",
+            "name": "Zipsplat"
           },
           {
             "value": "zonos",

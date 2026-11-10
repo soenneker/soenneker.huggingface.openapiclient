@@ -17,6 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("canReadGatedRepos") is null) { _explicitNullValueCanReadGatedRepos = default!; _explicitNullProperties?.Remove("canReadGatedRepos"); }
+            else if (parseNode.GetChildNode("canReadGatedRepos") is { } nullNodeCanReadGatedRepos && nullNodeCanReadGatedRepos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanReadGatedRepos = null;
             if (parseNode.GetChildNode("displayName") is null) { _explicitNullValueDisplayName = default!; _explicitNullProperties?.Remove("displayName"); }
             else if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
             if (parseNode.GetChildNode("endpointPatterns") is null) { _explicitNullValueEndpointPatterns = default!; _explicitNullProperties?.Remove("endpointPatterns"); }
@@ -31,8 +33,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("repoPermissions") is { } nullNodeRepoPermissions && nullNodeRepoPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPermissions = null;
             if (parseNode.GetChildNode("skipNetworkSecurity") is null) { _explicitNullValueSkipNetworkSecurity = default!; _explicitNullProperties?.Remove("skipNetworkSecurity"); }
             else if (parseNode.GetChildNode("skipNetworkSecurity") is { } nullNodeSkipNetworkSecurity && nullNodeSkipNetworkSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipNetworkSecurity = null;
+            if (parseNode.GetChildNode("userPermissions") is null) { _explicitNullValueUserPermissions = default!; _explicitNullProperties?.Remove("userPermissions"); }
+            else if (parseNode.GetChildNode("userPermissions") is { } nullNodeUserPermissions && nullNodeUserPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserPermissions = null;
         }
 
+        /// <summary>The canReadGatedRepos property</summary>
+        public bool? CanReadGatedRepos { get => _explicitNullValueCanReadGatedRepos; set { _explicitNullValueCanReadGatedRepos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canReadGatedRepos"); else _explicitNullProperties?.Remove("canReadGatedRepos"); } }
+        private bool? _explicitNullValueCanReadGatedRepos = default!;
         /// <summary>The displayName property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -96,6 +103,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The skipNetworkSecurity property</summary>
         public bool? SkipNetworkSecurity { get => _explicitNullValueSkipNetworkSecurity; set { _explicitNullValueSkipNetworkSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipNetworkSecurity"); else _explicitNullProperties?.Remove("skipNetworkSecurity"); } }
         private bool? _explicitNullValueSkipNetworkSecurity = default!;
+        /// <summary>The userPermissions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? UserPermissions { get => _explicitNullValueUserPermissions; set { _explicitNullValueUserPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userPermissions"); else _explicitNullProperties?.Remove("userPermissions"); } }
+        private List<string>? _explicitNullValueUserPermissions = default!;
+#nullable restore
+#else
+        public List<string> UserPermissions { get => _explicitNullValueUserPermissions; set { _explicitNullValueUserPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userPermissions"); else _explicitNullProperties?.Remove("userPermissions"); } }
+        private List<string> _explicitNullValueUserPermissions = default!;
+#endif
         /// <summary>
         /// Creates a new instance of the appropriate class based on discriminator value
         /// </summary>
@@ -114,6 +131,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "canReadGatedRepos", n => { CanReadGatedRepos = n.GetBoolValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "endpointPatterns", n => { EndpointPatterns = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "_id", n => { Id = n.GetStringValue(); } },
@@ -121,6 +139,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "repoIds", n => { RepoIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "repoPermissions", n => { RepoPermissions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "skipNetworkSecurity", n => { SkipNetworkSecurity = n.GetBoolValue(); } },
+                { "userPermissions", n => { UserPermissions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -130,13 +149,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteBoolValue("canReadGatedRepos", CanReadGatedRepos);
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteCollectionOfPrimitiveValues<string>("endpointPatterns", EndpointPatterns);
             writer.WriteStringValue("_id", Id);
             writer.WriteCollectionOfPrimitiveValues<string>("permissions", Permissions);
             writer.WriteCollectionOfPrimitiveValues<string>("repoIds", RepoIds);
             writer.WriteCollectionOfPrimitiveValues<string>("repoPermissions", RepoPermissions);
-            writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
+            writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);
+            writer.WriteCollectionOfPrimitiveValues<string>("userPermissions", UserPermissions);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             
         }
     }

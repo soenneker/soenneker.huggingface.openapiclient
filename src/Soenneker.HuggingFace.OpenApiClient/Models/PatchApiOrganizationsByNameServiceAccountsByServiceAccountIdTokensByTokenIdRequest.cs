@@ -17,6 +17,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         public virtual void CaptureExplicitNulls(global::Microsoft.Kiota.Abstractions.Serialization.IParseNode parseNode)
         {
+            if (parseNode.GetChildNode("canReadGatedRepos") is null) { _explicitNullValueCanReadGatedRepos = default!; _explicitNullProperties?.Remove("canReadGatedRepos"); }
+            else if (parseNode.GetChildNode("canReadGatedRepos") is { } nullNodeCanReadGatedRepos && nullNodeCanReadGatedRepos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) CanReadGatedRepos = null;
             if (parseNode.GetChildNode("displayName") is null) { _explicitNullValueDisplayName = default!; _explicitNullProperties?.Remove("displayName"); }
             else if (parseNode.GetChildNode("displayName") is { } nullNodeDisplayName && nullNodeDisplayName.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) DisplayName = null;
             if (parseNode.GetChildNode("endpointPatterns") is null) { _explicitNullValueEndpointPatterns = default!; _explicitNullProperties?.Remove("endpointPatterns"); }
@@ -29,10 +31,15 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("repoPermissions") is { } nullNodeRepoPermissions && nullNodeRepoPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPermissions = null;
             if (parseNode.GetChildNode("skipNetworkSecurity") is null) { _explicitNullValueSkipNetworkSecurity = default!; _explicitNullProperties?.Remove("skipNetworkSecurity"); }
             else if (parseNode.GetChildNode("skipNetworkSecurity") is { } nullNodeSkipNetworkSecurity && nullNodeSkipNetworkSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipNetworkSecurity = null;
+            if (parseNode.GetChildNode("userPermissions") is null) { _explicitNullValueUserPermissions = default!; _explicitNullProperties?.Remove("userPermissions"); }
+            else if (parseNode.GetChildNode("userPermissions") is { } nullNodeUserPermissions && nullNodeUserPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) UserPermissions = null;
         }
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
+        /// <summary>Read contents of gated repos the service account has access to.</summary>
+        public bool? CanReadGatedRepos { get => _explicitNullValueCanReadGatedRepos; set { _explicitNullValueCanReadGatedRepos = value; AdditionalData?.Remove("canReadGatedRepos"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("canReadGatedRepos"); else _explicitNullProperties?.Remove("canReadGatedRepos"); } }
+        private bool? _explicitNullValueCanReadGatedRepos = default!;
         /// <summary>New display name for the token</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -86,6 +93,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>Exempt this token from the org&apos;s Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.</summary>
         public bool? SkipNetworkSecurity { get => _explicitNullValueSkipNetworkSecurity; set { _explicitNullValueSkipNetworkSecurity = value; AdditionalData?.Remove("skipNetworkSecurity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipNetworkSecurity"); else _explicitNullProperties?.Remove("skipNetworkSecurity"); } }
         private bool? _explicitNullValueSkipNetworkSecurity = default!;
+        /// <summary>Permissions on the service account itself.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UserGatedReposRequestsWriteItem?>? UserPermissions { get => _explicitNullValueUserPermissions; set { _explicitNullValueUserPermissions = value; AdditionalData?.Remove("userPermissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userPermissions"); else _explicitNullProperties?.Remove("userPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.UserGatedReposRequestsWriteItem?>? _explicitNullValueUserPermissions = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.UserGatedReposRequestsWriteItem?> UserPermissions { get => _explicitNullValueUserPermissions; set { _explicitNullValueUserPermissions = value; AdditionalData?.Remove("userPermissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("userPermissions"); else _explicitNullProperties?.Remove("userPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.UserGatedReposRequestsWriteItem?> _explicitNullValueUserPermissions = default!;
+#endif
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequest"/> and sets the default values.
         /// </summary>
@@ -111,12 +128,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             return new Dictionary<string, Action<IParseNode>>
             {
+                { "canReadGatedRepos", n => { CanReadGatedRepos = n.GetBoolValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
                 { "endpointPatterns", n => { EndpointPatterns = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem>()?.AsList(); } },
                 { "repoIds", n => { RepoIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "repoPermissions", n => { RepoPermissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem>()?.AsList(); } },
                 { "skipNetworkSecurity", n => { SkipNetworkSecurity = n.GetBoolValue(); } },
+                { "userPermissions", n => { UserPermissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UserGatedReposRequestsWriteItem>()?.AsList(); } },
             };
         }
         /// <summary>
@@ -126,12 +145,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
+            writer.WriteBoolValue("canReadGatedRepos", CanReadGatedRepos);
             writer.WriteStringValue("displayName", DisplayName);
             writer.WriteCollectionOfPrimitiveValues<string>("endpointPatterns", EndpointPatterns);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestPermissionsItem>("permissions", Permissions);
             writer.WriteCollectionOfPrimitiveValues<string>("repoIds", RepoIds);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem>("repoPermissions", RepoPermissions);
             writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UserGatedReposRequestsWriteItem>("userPermissions", UserPermissions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             writer.WriteAdditionalData(AdditionalData);
         }
