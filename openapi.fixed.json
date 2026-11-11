@@ -5963,7 +5963,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-10T16:34:57.484Z"
+              "default": "2026-11-11T21:37:19.014Z"
             }
           }
         ],
@@ -6015,7 +6015,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-10T16:34:57.485Z"
+              "default": "2026-11-11T21:37:19.015Z"
             }
           }
         ],
@@ -6067,7 +6067,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-10T16:34:57.485Z"
+              "default": "2026-11-11T21:37:19.015Z"
             }
           },
           {
@@ -6227,7 +6227,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-10T16:34:57.485Z"
+              "default": "2026-11-11T21:37:19.015Z"
             }
           }
         ],
@@ -33934,20 +33934,11 @@
             "nebius",
             "parasail",
             "primeintellect",
-            "alibaba",
-            "arcee-ai",
-            "deepseek",
             "liquid",
-            "minimax",
             "mistral",
             "moonshotai",
-            "nvidia",
-            "poolside",
             "reka",
-            "stepfun",
-            "tencent",
-            "thinkingmachines",
-            "xiaomi"
+            "tencent"
           ],
           "type": "string",
           "x-ms-enum": {
@@ -34063,24 +34054,8 @@
                 "name": "Primeintellect"
               },
               {
-                "value": "alibaba",
-                "name": "Alibaba"
-              },
-              {
-                "value": "arcee-ai",
-                "name": "ArceeAi"
-              },
-              {
-                "value": "deepseek",
-                "name": "Deepseek"
-              },
-              {
                 "value": "liquid",
                 "name": "Liquid"
-              },
-              {
-                "value": "minimax",
-                "name": "Minimax"
               },
               {
                 "value": "mistral",
@@ -34091,32 +34066,12 @@
                 "name": "Moonshotai"
               },
               {
-                "value": "nvidia",
-                "name": "Nvidia"
-              },
-              {
-                "value": "poolside",
-                "name": "Poolside"
-              },
-              {
                 "value": "reka",
                 "name": "Reka"
               },
               {
-                "value": "stepfun",
-                "name": "Stepfun"
-              },
-              {
                 "value": "tencent",
                 "name": "Tencent"
-              },
-              {
-                "value": "thinkingmachines",
-                "name": "Thinkingmachines"
-              },
-              {
-                "value": "xiaomi",
-                "name": "Xiaomi"
               }
             ]
           }
@@ -161584,20 +161539,11 @@
           "nebius",
           "parasail",
           "primeintellect",
-          "alibaba",
-          "arcee-ai",
-          "deepseek",
           "liquid",
-          "minimax",
           "mistral",
           "moonshotai",
-          "nvidia",
-          "poolside",
           "reka",
-          "stepfun",
-          "tencent",
-          "thinkingmachines",
-          "xiaomi"
+          "tencent"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -161713,24 +161659,8 @@
               "name": "Primeintellect"
             },
             {
-              "value": "alibaba",
-              "name": "Alibaba"
-            },
-            {
-              "value": "arcee-ai",
-              "name": "ArceeAi"
-            },
-            {
-              "value": "deepseek",
-              "name": "Deepseek"
-            },
-            {
               "value": "liquid",
               "name": "Liquid"
-            },
-            {
-              "value": "minimax",
-              "name": "Minimax"
             },
             {
               "value": "mistral",
@@ -161741,32 +161671,12 @@
               "name": "Moonshotai"
             },
             {
-              "value": "nvidia",
-              "name": "Nvidia"
-            },
-            {
-              "value": "poolside",
-              "name": "Poolside"
-            },
-            {
               "value": "reka",
               "name": "Reka"
             },
             {
-              "value": "stepfun",
-              "name": "Stepfun"
-            },
-            {
               "value": "tencent",
               "name": "Tencent"
-            },
-            {
-              "value": "thinkingmachines",
-              "name": "Thinkingmachines"
-            },
-            {
-              "value": "xiaomi",
-              "name": "Xiaomi"
             }
           ]
         }
