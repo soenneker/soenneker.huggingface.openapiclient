@@ -44,6 +44,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("note") is { } nullNodeNote && nullNodeNote.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Note = null;
             if (parseNode.GetChildNode("numParameters") is null) { _explicitNullValueNumParameters = default!; _explicitNullProperties?.Remove("numParameters"); }
             else if (parseNode.GetChildNode("numParameters") is { } nullNodeNumParameters && nullNodeNumParameters.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) NumParameters = null;
+            if (parseNode.GetChildNode("openRouterProviders") is null) { _explicitNullValueOpenRouterProviders = default!; _explicitNullProperties?.Remove("openRouterProviders"); }
+            else if (parseNode.GetChildNode("openRouterProviders") is { } nullNodeOpenRouterProviders && nullNodeOpenRouterProviders.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) OpenRouterProviders = null;
             if (parseNode.GetChildNode("pipeline_tag") is null) { _explicitNullValuePipelineTag = default!; _explicitNullProperties?.Remove("pipeline_tag"); }
             else if (parseNode.GetChildNode("pipeline_tag") is { } nullNodePipelineTag && nullNodePipelineTag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) PipelineTag = null;
             if (parseNode.GetChildNode("position") is null) { _explicitNullValuePosition = default!; _explicitNullProperties?.Remove("position"); }
@@ -148,6 +150,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The numParameters property</summary>
         public double? NumParameters { get => _explicitNullValueNumParameters; set { _explicitNullValueNumParameters = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("numParameters"); else _explicitNullProperties?.Remove("numParameters"); } }
         private double? _explicitNullValueNumParameters = default!;
+        /// <summary>The openRouterProviders property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? OpenRouterProviders { get => _explicitNullValueOpenRouterProviders; set { _explicitNullValueOpenRouterProviders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("openRouterProviders"); else _explicitNullProperties?.Remove("openRouterProviders"); } }
+        private List<string>? _explicitNullValueOpenRouterProviders = default!;
+#nullable restore
+#else
+        public List<string> OpenRouterProviders { get => _explicitNullValueOpenRouterProviders; set { _explicitNullValueOpenRouterProviders = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("openRouterProviders"); else _explicitNullProperties?.Remove("openRouterProviders"); } }
+        private List<string> _explicitNullValueOpenRouterProviders = default!;
+#endif
         /// <summary>The pipeline_tag property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -235,6 +247,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "likes", n => { Likes = n.GetDoubleValue(); } },
                 { "note", n => { Note = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2Note>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2Note.CreateFromDiscriminatorValue); } },
                 { "numParameters", n => { NumParameters = n.GetDoubleValue(); } },
+                { "openRouterProviders", n => { OpenRouterProviders = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "pipeline_tag", n => { PipelineTag = n.GetStringValue(); } },
                 { "position", n => { Position = n.GetDoubleValue(); } },
                 { "id", n => { PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2VariantId = n.GetStringValue(); } },
@@ -265,6 +278,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDoubleValue("likes", Likes);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2Note>("note", Note);
             writer.WriteDoubleValue("numParameters", NumParameters);
+            writer.WriteCollectionOfPrimitiveValues<string>("openRouterProviders", OpenRouterProviders);
             writer.WriteStringValue("pipeline_tag", PipelineTag);
             writer.WriteDoubleValue("position", Position);
             writer.WriteStringValue("id", PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2VariantId);
