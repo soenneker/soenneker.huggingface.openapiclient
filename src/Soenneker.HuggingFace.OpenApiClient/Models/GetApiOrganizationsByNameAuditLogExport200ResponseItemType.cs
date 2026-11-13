@@ -488,6 +488,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         OrgServiceAccountTokenDelete,
         #pragma warning restore CS1591
+        [EnumMember(Value = "org.service_account.token.invalidate")]
+        #pragma warning disable CS1591
+        OrgServiceAccountTokenInvalidate,
+        #pragma warning restore CS1591
         [EnumMember(Value = "org.service_account.token.rotate")]
         #pragma warning disable CS1591
         OrgServiceAccountTokenRotate,

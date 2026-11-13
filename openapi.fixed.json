@@ -357,7 +357,7 @@
           "tokens"
         ],
         "summary": "Revoke leaked tokens",
-        "description": "Publicly invalidate leaked Hugging Face access tokens. Possession of the raw token value is the only proof required: no authentication is needed, and no rights over the owning account or org are necessary. Each raw token is fully invalidated, the owning user is notified by email. Always returns 202, whether or not any of the provided tokens existed, so the response cannot be used to probe token validity.",
+        "description": "Publicly invalidate leaked Hugging Face access tokens or S3 credentials. Possession of the raw token value, or of the S3 access key ID and secret, is the only proof required: no authentication is needed, and no rights over the owning account or org are necessary. Each raw token is fully invalidated. A leaked S3 credential is deleted and its paired token invalidated. The owning user is notified by email. Always returns 202, whether or not any of the provided tokens existed, so the response cannot be used to probe token validity.",
         "operationId": "PostApiCredentialsRevoke",
         "requestBody": {
           "content": {
@@ -5963,7 +5963,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-12T15:10:02.180Z"
+              "default": "2026-11-13T11:09:45.571Z"
             }
           }
         ],
@@ -6015,7 +6015,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-12T15:10:02.181Z"
+              "default": "2026-11-13T11:09:45.571Z"
             }
           }
         ],
@@ -6067,7 +6067,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-12T15:10:02.182Z"
+              "default": "2026-11-13T11:09:45.573Z"
             }
           },
           {
@@ -6227,7 +6227,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-12T15:10:02.181Z"
+              "default": "2026-11-13T11:09:45.572Z"
             }
           }
         ],
@@ -22702,18 +22702,20 @@
           "credentials": {
             "examples": [
               [
-                "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                {
+                  "accessKeyId": "HFAKXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                  "secretAccessKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+                }
               ]
             ],
             "maxItems": 1000,
             "minItems": 1,
             "type": "array",
             "items": {
-              "maxLength": 200,
-              "minLength": 1,
-              "type": "string"
+              "$ref": "#/components/schemas/PostApiCredentialsRevokeRequestCredentialsItem"
             },
-            "description": "Raw access token values to invalidate, at most 1000."
+            "description": "Raw access token values or S3 credentials (access key ID and secret) to invalidate, at most 1000."
           }
         }
       },
@@ -34879,6 +34881,18 @@
           "type"
         ]
       },
+      "PostApiCredentialsRevokeRequestCredentialsItem": {
+        "anyOf": [
+          {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          {
+            "$ref": "#/components/schemas/PostApiCredentialsRevokeRequestCredentialsItemAnyOf2"
+          }
+        ]
+      },
       "GetApiSettingsWebhooks200ResponseItemJob": {
         "oneOf": [
           {
@@ -39676,6 +39690,25 @@
           },
           "adapterType": {
             "$ref": "#/components/schemas/LoraAdapterType"
+          }
+        }
+      },
+      "PostApiCredentialsRevokeRequestCredentialsItemAnyOf2": {
+        "required": [
+          "accessKeyId",
+          "secretAccessKey"
+        ],
+        "type": "object",
+        "properties": {
+          "accessKeyId": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
+          },
+          "secretAccessKey": {
+            "maxLength": 200,
+            "minLength": 1,
+            "type": "string"
           }
         }
       },
@@ -103895,6 +103928,7 @@
           "org.service_account.delete",
           "org.service_account.token.create",
           "org.service_account.token.delete",
+          "org.service_account.token.invalidate",
           "org.service_account.token.rotate",
           "org.service_account.token.update",
           "org.service_account.token.s3_credential.create",
@@ -104392,6 +104426,10 @@
             {
               "value": "org.service_account.token.delete",
               "name": "OrgServiceAccountTokenDelete"
+            },
+            {
+              "value": "org.service_account.token.invalidate",
+              "name": "OrgServiceAccountTokenInvalidate"
             },
             {
               "value": "org.service_account.token.rotate",
