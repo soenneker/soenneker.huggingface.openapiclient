@@ -284,6 +284,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         OrgRepoAnalyticsExport,
         #pragma warning restore CS1591
+        [EnumMember(Value = "org.blog_analytics.export")]
+        #pragma warning disable CS1591
+        OrgBlogAnalyticsExport,
+        #pragma warning restore CS1591
         [EnumMember(Value = "repo.add_secrets")]
         #pragma warning disable CS1591
         RepoAddSecrets,

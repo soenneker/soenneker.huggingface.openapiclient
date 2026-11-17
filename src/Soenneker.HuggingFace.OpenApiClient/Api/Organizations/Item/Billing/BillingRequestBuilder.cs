@@ -2,6 +2,8 @@
 #pragma warning disable CS0618
 using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions;
+using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.Credits;
+using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.PrepaidCredits;
 using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.Usage;
 using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.UsageByInferenceSession;
 using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.UsageByResourceGroup;
@@ -18,6 +20,16 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing
     [global::System.CodeDom.Compiler.GeneratedCode("Kiota", "1.0.0")]
     public partial class BillingRequestBuilder : BaseRequestBuilder
     {
+        /// <summary>The credits property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.Credits.CreditsRequestBuilder Credits
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.Credits.CreditsRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The prepaidCredits property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.PrepaidCredits.PrepaidCreditsRequestBuilder PrepaidCredits
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.PrepaidCredits.PrepaidCreditsRequestBuilder(PathParameters, RequestAdapter);
+        }
         /// <summary>The usage property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.Billing.Usage.UsageRequestBuilder Usage
         {

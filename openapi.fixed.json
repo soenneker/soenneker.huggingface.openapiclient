@@ -5963,7 +5963,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-15T20:32:43.432Z"
+              "default": "2026-11-16T17:19:45.475Z"
             }
           }
         ],
@@ -6015,7 +6015,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-15T20:32:43.433Z"
+              "default": "2026-11-16T17:19:45.475Z"
             }
           }
         ],
@@ -6067,7 +6067,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-15T20:32:43.434Z"
+              "default": "2026-11-16T17:19:45.476Z"
             }
           },
           {
@@ -6153,6 +6153,132 @@
         }
       }
     },
+    "/api/organizations/{name}/billing/credits": {
+      "get": {
+        "tags": [
+          "orgs"
+        ],
+        "summary": "Get org credits",
+        "description": "Get the org\u0027s credits balance, with each purchased, granted and monthly included balance and its expiry date",
+        "operationId": "GetApiOrganizationsByNameBillingCredits",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Credits balance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiOrganizationsByNameBillingCredits200Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/organizations/{name}/billing/prepaid-credits/purchase-link": {
+      "post": {
+        "tags": [
+          "orgs"
+        ],
+        "summary": "Credits purchase link",
+        "description": "Get a link to the org billing page with a credits purchase prefilled, also sent to the requesting user by email. Nothing is charged until they confirm the purchase on that page.",
+        "operationId": "PostApiOrganizationsByNameBillingPrepaidCreditsPurchaseLink",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameBillingPrepaidCreditsPurchaseLinkRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Credits purchase link",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiOrganizationsByNameBillingPrepaidCreditsPurchaseLink200Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/billing/credits": {
+      "get": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Get credits",
+        "description": "Get the user\u0027s credits balance, with each purchased, granted and monthly included balance and its expiry date",
+        "operationId": "GetApiSettingsBillingCredits",
+        "responses": {
+          "200": {
+            "description": "Credits balance",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiSettingsBillingCredits200Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/settings/billing/prepaid-credits/purchase-link": {
+      "post": {
+        "tags": [
+          "users"
+        ],
+        "summary": "Credits purchase link",
+        "description": "Get a link to the billing page with a credits purchase prefilled, also sent to the user by email. Nothing is charged until the user confirms the purchase on that page.",
+        "operationId": "PostApiSettingsBillingPrepaidCreditsPurchaseLink",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiSettingsBillingPrepaidCreditsPurchaseLinkRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Credits purchase link",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiSettingsBillingPrepaidCreditsPurchaseLink200Response"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/settings/billing/usage-v2": {
       "get": {
         "tags": [
@@ -6227,7 +6353,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-15T20:32:43.433Z"
+              "default": "2026-11-16T17:19:45.475Z"
             }
           }
         ],
@@ -26615,6 +26741,114 @@
             "items": {
               "$ref": "#/components/schemas/GetApiOrganizationsByNameBillingUsageByInferenceSession200ResponsePeriodsItem"
             }
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetApiOrganizationsByNameBillingCredits200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "balanceUsd",
+          "billingMode",
+          "balances"
+        ],
+        "type": "object",
+        "properties": {
+          "balanceUsd": {
+            "type": "number",
+            "description": "Total credits balance, in USD"
+          },
+          "billingMode": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameBillingCredits200ResponseBillingMode"
+          },
+          "balances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetApiOrganizationsByNameBillingCredits200ResponseBalancesItem"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostApiOrganizationsByNameBillingPrepaidCreditsPurchaseLinkRequest": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "amountUsd"
+        ],
+        "type": "object",
+        "properties": {
+          "amountUsd": {
+            "maximum": 5000,
+            "minimum": 5,
+            "type": "integer"
+          }
+        }
+      },
+      "PostApiOrganizationsByNameBillingPrepaidCreditsPurchaseLink200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Billing page link that opens the prefilled purchase, to share with the user",
+            "x-client-original-format": "uri"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetApiSettingsBillingCredits200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "balanceUsd",
+          "billingMode",
+          "balances"
+        ],
+        "type": "object",
+        "properties": {
+          "balanceUsd": {
+            "type": "number",
+            "description": "Total credits balance, in USD"
+          },
+          "billingMode": {
+            "$ref": "#/components/schemas/GetApiSettingsBillingCredits200ResponseBillingMode"
+          },
+          "balances": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetApiSettingsBillingCredits200ResponseBalancesItem"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostApiSettingsBillingPrepaidCreditsPurchaseLinkRequest": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "amountUsd"
+        ],
+        "type": "object",
+        "properties": {
+          "amountUsd": {
+            "maximum": 5000,
+            "minimum": 5,
+            "type": "integer"
+          }
+        }
+      },
+      "PostApiSettingsBillingPrepaidCreditsPurchaseLink200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "url"
+        ],
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "Billing page link that opens the prefilled purchase, to share with the user",
+            "x-client-original-format": "uri"
           }
         },
         "additionalProperties": false
@@ -49509,6 +49743,54 @@
             "items": {
               "$ref": "#/components/schemas/GetApiOrganizationsByNameBillingUsageByInferenceSession200ResponsePeriodsItemSessionsItem"
             }
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetApiOrganizationsByNameBillingCredits200ResponseBalancesItem": {
+        "required": [
+          "type",
+          "balanceUsd"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameBillingCredits200ResponseBalancesItemType"
+          },
+          "balanceUsd": {
+            "type": "number"
+          },
+          "expiresAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetApiSettingsBillingCredits200ResponseBalancesItem": {
+        "required": [
+          "type",
+          "balanceUsd"
+        ],
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/GetApiSettingsBillingCredits200ResponseBalancesItemType"
+          },
+          "balanceUsd": {
+            "type": "number"
+          },
+          "expiresAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
           }
         },
         "additionalProperties": false
@@ -80974,6 +81256,50 @@
           ]
         }
       },
+      "GetApiOrganizationsByNameBillingCredits200ResponseBillingMode": {
+        "enum": [
+          "postpaid",
+          "prepaid"
+        ],
+        "type": "string",
+        "description": "\u0060prepaid\u0060 accounts can only use their credits, \u0060postpaid\u0060 ones are billed for usage beyond them",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameBillingCredits200ResponseBillingMode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "postpaid",
+              "name": "Postpaid"
+            },
+            {
+              "value": "prepaid",
+              "name": "Prepaid"
+            }
+          ]
+        }
+      },
+      "GetApiSettingsBillingCredits200ResponseBillingMode": {
+        "enum": [
+          "postpaid",
+          "prepaid"
+        ],
+        "type": "string",
+        "description": "\u0060prepaid\u0060 accounts can only use their credits, \u0060postpaid\u0060 ones are billed for usage beyond them",
+        "x-ms-enum": {
+          "name": "GetApiSettingsBillingCredits200ResponseBillingMode",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "postpaid",
+              "name": "Postpaid"
+            },
+            {
+              "value": "prepaid",
+              "name": "Prepaid"
+            }
+          ]
+        }
+      },
       "UserType": {
         "enum": [
           "user"
@@ -103877,6 +104203,7 @@
           "org.token_approval.authorization_request.denied",
           "org.audit_log.export",
           "org.repo_analytics.export",
+          "org.blog_analytics.export",
           "repo.add_secrets",
           "repo.remove_secrets",
           "repo.add_secret",
@@ -104222,6 +104549,10 @@
             {
               "value": "org.repo_analytics.export",
               "name": "OrgRepoAnalyticsExport"
+            },
+            {
+              "value": "org.blog_analytics.export",
+              "name": "OrgBlogAnalyticsExport"
             },
             {
               "value": "repo.add_secrets",
@@ -106239,6 +106570,58 @@
             {
               "value": "comment",
               "name": "Comment"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameBillingCredits200ResponseBalancesItemType": {
+        "enum": [
+          "included",
+          "purchased",
+          "granted"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameBillingCredits200ResponseBalancesItemType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "included",
+              "name": "Included"
+            },
+            {
+              "value": "purchased",
+              "name": "Purchased"
+            },
+            {
+              "value": "granted",
+              "name": "Granted"
+            }
+          ]
+        }
+      },
+      "GetApiSettingsBillingCredits200ResponseBalancesItemType": {
+        "enum": [
+          "included",
+          "purchased",
+          "granted"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiSettingsBillingCredits200ResponseBalancesItemType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "included",
+              "name": "Included"
+            },
+            {
+              "value": "purchased",
+              "name": "Purchased"
+            },
+            {
+              "value": "granted",
+              "name": "Granted"
             }
           ]
         }
@@ -186786,6 +187169,7 @@
         "chatterbox",
         "chaossim",
         "chat_tts",
+        "chessqueries",
         "chexmix",
         "chronos-forecasting",
         "circuit-tracer",
@@ -186794,6 +187178,7 @@
         "cloud-agents",
         "collectorvision",
         "colipri",
+        "cooperscene",
         "cosyvoice",
         "cotracker",
         "colpali",
@@ -186925,6 +187310,7 @@
         "ninfer",
         "nobg",
         "nv-medtech",
+        "onnxruntime-genai",
         "open-oasis",
         "open_clip",
         "openasr",
@@ -186993,6 +187379,7 @@
         "songbloom",
         "stable-baselines3",
         "stanza",
+        "strands-decider",
         "supertonic",
         "svdtrunc",
         "swarmformer",
@@ -187018,11 +187405,13 @@
         "trellis2",
         "tunejury",
         "ultralytics",
+        "unitree-rl",
         "univa",
         "uni-3dar",
         "unity-sentis",
         "sana",
         "videoprism",
+        "verto-asr",
         "vfi-mamba",
         "vismatch",
         "lvface",
@@ -187033,11 +187422,13 @@
         "vibevoice",
         "videox_fun",
         "wan2.2",
+        "wavegen",
         "wham",
         "whisperkit",
         "wilddet3d",
         "yolov10",
         "yolov26",
+        "zao-lib",
         "zipsplat",
         "zonos",
         "3dtopia-xl"
@@ -187180,6 +187571,10 @@
             "name": "ChatTts"
           },
           {
+            "value": "chessqueries",
+            "name": "Chessqueries"
+          },
+          {
             "value": "chexmix",
             "name": "Chexmix"
           },
@@ -187210,6 +187605,10 @@
           {
             "value": "colipri",
             "name": "Colipri"
+          },
+          {
+            "value": "cooperscene",
+            "name": "Cooperscene"
           },
           {
             "value": "cosyvoice",
@@ -187736,6 +188135,10 @@
             "name": "NvMedtech"
           },
           {
+            "value": "onnxruntime-genai",
+            "name": "OnnxruntimeGenai"
+          },
+          {
             "value": "open-oasis",
             "name": "OpenOasis"
           },
@@ -188008,6 +188411,10 @@
             "name": "Stanza"
           },
           {
+            "value": "strands-decider",
+            "name": "StrandsDecider"
+          },
+          {
             "value": "supertonic",
             "name": "Supertonic"
           },
@@ -188108,6 +188515,10 @@
             "name": "Ultralytics"
           },
           {
+            "value": "unitree-rl",
+            "name": "UnitreeRl"
+          },
+          {
             "value": "univa",
             "name": "Univa"
           },
@@ -188126,6 +188537,10 @@
           {
             "value": "videoprism",
             "name": "Videoprism"
+          },
+          {
+            "value": "verto-asr",
+            "name": "VertoAsr"
           },
           {
             "value": "vfi-mamba",
@@ -188168,6 +188583,10 @@
             "name": "Wan22"
           },
           {
+            "value": "wavegen",
+            "name": "Wavegen"
+          },
+          {
             "value": "wham",
             "name": "Wham"
           },
@@ -188186,6 +188605,10 @@
           {
             "value": "yolov26",
             "name": "Yolov26"
+          },
+          {
+            "value": "zao-lib",
+            "name": "ZaoLib"
           },
           {
             "value": "zipsplat",
@@ -189977,6 +190400,7 @@
         "chatterbox",
         "chaossim",
         "chat_tts",
+        "chessqueries",
         "chexmix",
         "chronos-forecasting",
         "circuit-tracer",
@@ -189985,6 +190409,7 @@
         "cloud-agents",
         "collectorvision",
         "colipri",
+        "cooperscene",
         "cosyvoice",
         "cotracker",
         "colpali",
@@ -190116,6 +190541,7 @@
         "ninfer",
         "nobg",
         "nv-medtech",
+        "onnxruntime-genai",
         "open-oasis",
         "open_clip",
         "openasr",
@@ -190184,6 +190610,7 @@
         "songbloom",
         "stable-baselines3",
         "stanza",
+        "strands-decider",
         "supertonic",
         "svdtrunc",
         "swarmformer",
@@ -190209,11 +190636,13 @@
         "trellis2",
         "tunejury",
         "ultralytics",
+        "unitree-rl",
         "univa",
         "uni-3dar",
         "unity-sentis",
         "sana",
         "videoprism",
+        "verto-asr",
         "vfi-mamba",
         "vismatch",
         "lvface",
@@ -190224,11 +190653,13 @@
         "vibevoice",
         "videox_fun",
         "wan2.2",
+        "wavegen",
         "wham",
         "whisperkit",
         "wilddet3d",
         "yolov10",
         "yolov26",
+        "zao-lib",
         "zipsplat",
         "zonos",
         "3dtopia-xl"
@@ -190371,6 +190802,10 @@
             "name": "ChatTts"
           },
           {
+            "value": "chessqueries",
+            "name": "Chessqueries"
+          },
+          {
             "value": "chexmix",
             "name": "Chexmix"
           },
@@ -190401,6 +190836,10 @@
           {
             "value": "colipri",
             "name": "Colipri"
+          },
+          {
+            "value": "cooperscene",
+            "name": "Cooperscene"
           },
           {
             "value": "cosyvoice",
@@ -190927,6 +191366,10 @@
             "name": "NvMedtech"
           },
           {
+            "value": "onnxruntime-genai",
+            "name": "OnnxruntimeGenai"
+          },
+          {
             "value": "open-oasis",
             "name": "OpenOasis"
           },
@@ -191199,6 +191642,10 @@
             "name": "Stanza"
           },
           {
+            "value": "strands-decider",
+            "name": "StrandsDecider"
+          },
+          {
             "value": "supertonic",
             "name": "Supertonic"
           },
@@ -191299,6 +191746,10 @@
             "name": "Ultralytics"
           },
           {
+            "value": "unitree-rl",
+            "name": "UnitreeRl"
+          },
+          {
             "value": "univa",
             "name": "Univa"
           },
@@ -191317,6 +191768,10 @@
           {
             "value": "videoprism",
             "name": "Videoprism"
+          },
+          {
+            "value": "verto-asr",
+            "name": "VertoAsr"
           },
           {
             "value": "vfi-mamba",
@@ -191359,6 +191814,10 @@
             "name": "Wan22"
           },
           {
+            "value": "wavegen",
+            "name": "Wavegen"
+          },
+          {
             "value": "wham",
             "name": "Wham"
           },
@@ -191377,6 +191836,10 @@
           {
             "value": "yolov26",
             "name": "Yolov26"
+          },
+          {
+            "value": "zao-lib",
+            "name": "ZaoLib"
           },
           {
             "value": "zipsplat",
@@ -192819,6 +193282,7 @@
         "chatterbox",
         "chaossim",
         "chat_tts",
+        "chessqueries",
         "chexmix",
         "chronos-forecasting",
         "circuit-tracer",
@@ -192827,6 +193291,7 @@
         "cloud-agents",
         "collectorvision",
         "colipri",
+        "cooperscene",
         "cosyvoice",
         "cotracker",
         "colpali",
@@ -192958,6 +193423,7 @@
         "ninfer",
         "nobg",
         "nv-medtech",
+        "onnxruntime-genai",
         "open-oasis",
         "open_clip",
         "openasr",
@@ -193026,6 +193492,7 @@
         "songbloom",
         "stable-baselines3",
         "stanza",
+        "strands-decider",
         "supertonic",
         "svdtrunc",
         "swarmformer",
@@ -193051,11 +193518,13 @@
         "trellis2",
         "tunejury",
         "ultralytics",
+        "unitree-rl",
         "univa",
         "uni-3dar",
         "unity-sentis",
         "sana",
         "videoprism",
+        "verto-asr",
         "vfi-mamba",
         "vismatch",
         "lvface",
@@ -193066,11 +193535,13 @@
         "vibevoice",
         "videox_fun",
         "wan2.2",
+        "wavegen",
         "wham",
         "whisperkit",
         "wilddet3d",
         "yolov10",
         "yolov26",
+        "zao-lib",
         "zipsplat",
         "zonos",
         "3dtopia-xl"
@@ -193213,6 +193684,10 @@
             "name": "ChatTts"
           },
           {
+            "value": "chessqueries",
+            "name": "Chessqueries"
+          },
+          {
             "value": "chexmix",
             "name": "Chexmix"
           },
@@ -193243,6 +193718,10 @@
           {
             "value": "colipri",
             "name": "Colipri"
+          },
+          {
+            "value": "cooperscene",
+            "name": "Cooperscene"
           },
           {
             "value": "cosyvoice",
@@ -193769,6 +194248,10 @@
             "name": "NvMedtech"
           },
           {
+            "value": "onnxruntime-genai",
+            "name": "OnnxruntimeGenai"
+          },
+          {
             "value": "open-oasis",
             "name": "OpenOasis"
           },
@@ -194041,6 +194524,10 @@
             "name": "Stanza"
           },
           {
+            "value": "strands-decider",
+            "name": "StrandsDecider"
+          },
+          {
             "value": "supertonic",
             "name": "Supertonic"
           },
@@ -194141,6 +194628,10 @@
             "name": "Ultralytics"
           },
           {
+            "value": "unitree-rl",
+            "name": "UnitreeRl"
+          },
+          {
             "value": "univa",
             "name": "Univa"
           },
@@ -194159,6 +194650,10 @@
           {
             "value": "videoprism",
             "name": "Videoprism"
+          },
+          {
+            "value": "verto-asr",
+            "name": "VertoAsr"
           },
           {
             "value": "vfi-mamba",
@@ -194201,6 +194696,10 @@
             "name": "Wan22"
           },
           {
+            "value": "wavegen",
+            "name": "Wavegen"
+          },
+          {
             "value": "wham",
             "name": "Wham"
           },
@@ -194219,6 +194718,10 @@
           {
             "value": "yolov26",
             "name": "Yolov26"
+          },
+          {
+            "value": "zao-lib",
+            "name": "ZaoLib"
           },
           {
             "value": "zipsplat",
