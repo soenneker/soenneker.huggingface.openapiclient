@@ -126,7 +126,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "hardware", n => { var parsed = (n.GetStringValue() == "" ? global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestHardware.EmptyString : n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoDuplicateRequestHardware>()); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueHardware = default; _explicitNullProperties?.Remove("hardware"); AdditionalData["hardware"] = unknown; } else { Hardware = parsed; AdditionalData.Remove("hardware"); } } },
                 { "private", n => { Private = n.GetBoolValue(); } },

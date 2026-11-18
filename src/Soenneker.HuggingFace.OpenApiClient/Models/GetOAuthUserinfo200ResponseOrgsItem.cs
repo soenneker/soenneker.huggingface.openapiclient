@@ -127,7 +127,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "billingMode", n => { BillingMode = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetOAuthUserinfo200ResponseOrgsItemBillingMode>(); } },
                 { "canPay", n => { CanPay = n.GetBoolValue(); } },

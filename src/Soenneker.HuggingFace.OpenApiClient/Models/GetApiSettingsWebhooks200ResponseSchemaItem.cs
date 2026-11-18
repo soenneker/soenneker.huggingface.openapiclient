@@ -129,7 +129,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "disabled", n => { Disabled = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooks200ResponseItemDisabled>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooks200ResponseItemDisabled.CreateFromDiscriminatorValue); } },
                 { "domains", n => { Domains = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSettingsWebhooks200ResponseItemDomainsItem>()?.AsList(); } },

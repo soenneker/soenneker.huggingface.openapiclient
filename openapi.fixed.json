@@ -2864,6 +2864,197 @@
         ]
       }
     },
+    "/api/organizations/{name}/service-accounts/{serviceAccountId}/trusted-publishers": {
+      "get": {
+        "tags": [
+          "service-accounts"
+        ],
+        "summary": "Trusted publishers",
+        "description": "List the [trusted publishers](https://huggingface.co/docs/hub/trusted-publishers) of a service account.",
+        "operationId": "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "serviceAccountId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Trusted publishers",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseSchema"
+                }
+              }
+            }
+          }
+        },
+        "x-badges": [
+          {
+            "name": "Enterprise",
+            "position": "before"
+          },
+          {
+            "name": "Enterprise Plus",
+            "position": "before"
+          },
+          {
+            "name": "Academia Hub",
+            "position": "before"
+          }
+        ]
+      },
+      "post": {
+        "tags": [
+          "service-accounts"
+        ],
+        "summary": "Trusted publisher",
+        "description": "Let OIDC tokens matching the issuer and claims exchange for a short-lived token of the service account, with \u0060resource\u0060 set to the service account name.",
+        "operationId": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "serviceAccountId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Trusted publisher",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200Response"
+                }
+              }
+            }
+          }
+        },
+        "x-badges": [
+          {
+            "name": "Enterprise",
+            "position": "before"
+          },
+          {
+            "name": "Enterprise Plus",
+            "position": "before"
+          },
+          {
+            "name": "Academia Hub",
+            "position": "before"
+          }
+        ]
+      }
+    },
+    "/api/organizations/{name}/service-accounts/{serviceAccountId}/trusted-publishers/{publisherId}": {
+      "delete": {
+        "tags": [
+          "service-accounts"
+        ],
+        "summary": "Trusted publisher",
+        "operationId": "DeleteApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersByPublisherId",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "serviceAccountId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "publisherId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "DefaultResponse",
+                  "type": "object",
+                  "description": "Default response schema"
+                }
+              }
+            },
+            "x-client-success-response-status": "204"
+          }
+        },
+        "x-badges": [
+          {
+            "name": "Enterprise",
+            "position": "before"
+          },
+          {
+            "name": "Enterprise Plus",
+            "position": "before"
+          },
+          {
+            "name": "Academia Hub",
+            "position": "before"
+          }
+        ]
+      }
+    },
     "/api/organizations/{name}/avatar": {
       "get": {
         "tags": [
@@ -5963,7 +6154,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-17T23:03:32.458Z"
+              "default": "2026-11-18T22:00:35.047Z"
             }
           }
         ],
@@ -6015,7 +6206,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-17T23:03:32.459Z"
+              "default": "2026-11-18T22:00:35.047Z"
             }
           }
         ],
@@ -6067,7 +6258,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-17T23:03:32.460Z"
+              "default": "2026-11-18T22:00:35.048Z"
             }
           },
           {
@@ -6353,7 +6544,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-17T23:03:32.459Z"
+              "default": "2026-11-18T22:00:35.047Z"
             }
           }
         ],
@@ -24216,6 +24407,82 @@
         },
         "additionalProperties": false
       },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequest": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "issuerUrl",
+          "claims"
+        ],
+        "type": "object",
+        "properties": {
+          "issuerUrl": {
+            "type": "string",
+            "description": "URL of the OIDC issuer, e.g. \u0060https://token.actions.githubusercontent.com\u0060.",
+            "x-client-original-format": "uri"
+          },
+          "claims": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaims"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestCapabilitiesItem"
+            },
+            "description": "Scopes granted to matching tokens on top of \u0060gated-repos\u0060 (read the gated repos the account has access to)."
+          }
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200Response": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "required": [
+          "_id",
+          "issuerUrl",
+          "claims",
+          "createdAt"
+        ],
+        "type": "object",
+        "properties": {
+          "_id": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "A hex string of 24 characters representing an ObjectId."
+          },
+          "issuerUrl": {
+            "type": "string"
+          },
+          "claims": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaims"
+          },
+          "configuredBy": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredBy"
+          },
+          "createdAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUsedAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseCapabilitiesItem"
+            }
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponsePermissionsItem"
+            }
+          }
+        },
+        "additionalProperties": false
+      },
       "GetApiOrganizationsByNameAvatar200Response": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "required": [
@@ -29204,7 +29471,7 @@
           "capabilities": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/InferenceApiItem"
+              "$ref": "#/components/schemas/PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem"
             }
           },
           "permissions": {
@@ -34375,6 +34642,13 @@
       "DeleteApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenId204ResponseSchema": {
         "$schema": "https://json-schema.org/draft/2020-12/schema"
       },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseSchema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseSchemaItem"
+        }
+      },
       "GetApiOrganizationsByNameMembers200ResponseSchema": {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "type": "array",
@@ -36189,6 +36463,187 @@
             }
           ]
         }
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalProperties": {
+        "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+        "discriminator": {
+          "propertyName": "kind",
+          "mapping": {
+            "eq": "#/components/schemas/TaggedEqVariant5A046121E8A6C0E4",
+            "prefix": "#/components/schemas/TaggedPrefixVariantDBBFDA8D35C529D7"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1"
+            },
+            {
+              "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "kind",
+            "mapping": {
+              "eq": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1",
+              "prefix": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredBy": {
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "org": "#/components/schemas/TaggedOrgVariantEEA48DAE0C5C05B0",
+            "user": "#/components/schemas/TaggedUserVariant37F43C7F9D314D33"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf1"
+            },
+            {
+              "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "type",
+            "mapping": {
+              "org": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf1",
+              "user": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalProperties": {
+        "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+        "discriminator": {
+          "propertyName": "kind",
+          "mapping": {
+            "eq": "#/components/schemas/TaggedEqVariant9757BC57296FEC64",
+            "prefix": "#/components/schemas/TaggedPrefixVariant59FE32BD18714889"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1"
+            },
+            {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "kind",
+            "mapping": {
+              "eq": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1",
+              "prefix": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalProperties": {
+        "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+        "discriminator": {
+          "propertyName": "kind",
+          "mapping": {
+            "eq": "#/components/schemas/TaggedEqVariant53B1A0AA15791042",
+            "prefix": "#/components/schemas/TaggedPrefixVariant001FBC33E4794F10"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "description": "The claim must equal \u0060value\u0060 (\u0060eq\u0060) or start with it (\u0060prefix\u0060).",
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1"
+            },
+            {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "kind",
+            "mapping": {
+              "eq": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1",
+              "prefix": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "kind"
+        ]
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredBy": {
+        "discriminator": {
+          "propertyName": "type",
+          "mapping": {
+            "org": "#/components/schemas/TaggedOrgVariant09229C9392CF623A",
+            "user": "#/components/schemas/TaggedUserVariant6F795DBEA9F9AC12"
+          }
+        },
+        "x-client-original-tagged-union": {
+          "oneOf": [
+            {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1"
+            },
+            {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2"
+            }
+          ],
+          "discriminator": {
+            "propertyName": "type",
+            "mapping": {
+              "org": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1",
+              "user": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2"
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
+        ]
       },
       "PatchApiOrganizationsByNameScimV2GroupsByGroupIdRequestOperationsItem": {
         "anyOf": [
@@ -47939,6 +48394,25 @@
         },
         "additionalProperties": false
       },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaims": {
+        "propertyNames": {
+          "type": "string"
+        },
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalProperties"
+        },
+        "description": "Claims the OIDC token must match, by claim name. At least one is required."
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaims": {
+        "propertyNames": {
+          "type": "string"
+        },
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalProperties"
+        }
+      },
       "PutApiOrganizationsByNameMembersByUsernameRoleRequestResourceGroupsItem": {
         "required": [
           "id",
@@ -55899,6 +56373,57 @@
         },
         "additionalProperties": false
       },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseSchemaItem": {
+        "required": [
+          "_id",
+          "issuerUrl",
+          "claims",
+          "createdAt"
+        ],
+        "type": "object",
+        "properties": {
+          "_id": {
+            "maxLength": 24,
+            "minLength": 24,
+            "pattern": "^[0-9a-f]{24}$",
+            "type": "string",
+            "description": "A hex string of 24 characters representing an ObjectId."
+          },
+          "issuerUrl": {
+            "type": "string"
+          },
+          "claims": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseSchemaItemClaims"
+          },
+          "configuredBy": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredBy"
+          },
+          "createdAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          },
+          "lastUsedAt": {
+            "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+            "type": "string",
+            "format": "date-time"
+          },
+          "capabilities": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemCapabilitiesItem"
+            }
+          },
+          "permissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemPermissionsItem"
+            }
+          }
+        },
+        "additionalProperties": false,
+        "description": "Trusted publisher"
+      },
       "GetApiOrganizationsByNameMembers200ResponseSchemaItem": {
         "required": [
           "avatarUrl",
@@ -56669,7 +57194,7 @@
           "capabilities": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/InferenceApiItem"
+              "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemCapabilitiesItem"
             }
           },
           "permissions": {
@@ -59479,6 +60004,98 @@
           "type": "string"
         },
         "description": "Labels for the job as key-value pairs. Both keys and values must be max 100 characters and contain only alphanumeric characters, dashes, and underscores."
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrg": {
+        "required": [
+          "avatarUrl",
+          "fullname",
+          "name",
+          "type",
+          "isHf"
+        ],
+        "type": "object",
+        "properties": {
+          "avatarUrl": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgType"
+          },
+          "isHf": {
+            "type": "boolean"
+          },
+          "isFollowing": {
+            "type": "boolean"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgPlan"
+          },
+          "details": {
+            "type": "string"
+          },
+          "hasPrivateMembersList": {
+            "type": "boolean"
+          },
+          "userRole": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgUserRole"
+          },
+          "numUsers": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrg": {
+        "required": [
+          "avatarUrl",
+          "fullname",
+          "name",
+          "type",
+          "isHf"
+        ],
+        "type": "object",
+        "properties": {
+          "avatarUrl": {
+            "type": "string"
+          },
+          "fullname": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgType"
+          },
+          "isHf": {
+            "type": "boolean"
+          },
+          "isFollowing": {
+            "type": "boolean"
+          },
+          "plan": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgPlan"
+          },
+          "details": {
+            "type": "string"
+          },
+          "hasPrivateMembersList": {
+            "type": "boolean"
+          },
+          "userRole": {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgUserRole"
+          },
+          "numUsers": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
       },
       "PatchApiOrganizationsByNameScimV2GroupsByGroupIdRequestOperationsItemAnyOf1ValueItem": {
         "required": [
@@ -72493,6 +73110,15 @@
         },
         "additionalProperties": false
       },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseSchemaItemClaims": {
+        "propertyNames": {
+          "type": "string"
+        },
+        "type": "object",
+        "additionalProperties": {
+          "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalProperties"
+        }
+      },
       "GetApiOrganizationsByNameScimV2ResourceTypes200ResponseSchemaItemMeta": {
         "required": [
           "resourceType",
@@ -80680,6 +81306,69 @@
           ]
         }
       },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestCapabilitiesItem": {
+        "enum": [
+          "inference-api",
+          "request-gated-repos"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestCapabilitiesItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "inference-api",
+              "name": "InferenceApi"
+            },
+            {
+              "value": "request-gated-repos",
+              "name": "RequestGatedRepos"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseCapabilitiesItem": {
+        "enum": [
+          "inference-api",
+          "request-gated-repos"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseCapabilitiesItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "inference-api",
+              "name": "InferenceApi"
+            },
+            {
+              "value": "request-gated-repos",
+              "name": "RequestGatedRepos"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponsePermissionsItem": {
+        "enum": [
+          "repo.content.read",
+          "repo.content.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponsePermissionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "repo.content.read",
+              "name": "RepoContentRead"
+            },
+            {
+              "value": "repo.content.write",
+              "name": "RepoContentWrite"
+            }
+          ]
+        }
+      },
       "PutApiOrganizationsByNameMembersByUsernameRoleRequestRole": {
         "enum": [
           "admin",
@@ -81987,18 +82676,23 @@
           ]
         }
       },
-      "InferenceApiItem": {
+      "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem": {
         "enum": [
-          "inference-api"
+          "inference-api",
+          "request-gated-repos"
         ],
         "type": "string",
         "x-ms-enum": {
-          "name": "InferenceApiItem",
+          "name": "PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem",
           "modelAsString": false,
           "values": [
             {
               "value": "inference-api",
               "name": "InferenceApi"
+            },
+            {
+              "value": "request-gated-repos",
+              "name": "RequestGatedRepos"
             }
           ]
         }
@@ -92880,6 +93574,40 @@
           ]
         }
       },
+      "EqKind": {
+        "enum": [
+          "eq"
+        ],
+        "type": "string",
+        "x-client-original-const": "eq",
+        "x-ms-enum": {
+          "name": "EqKind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "eq",
+              "name": "Eq"
+            }
+          ]
+        }
+      },
+      "PrefixKind": {
+        "enum": [
+          "prefix"
+        ],
+        "type": "string",
+        "x-client-original-const": "prefix",
+        "x-ms-enum": {
+          "name": "PrefixKind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "prefix",
+              "name": "Prefix"
+            }
+          ]
+        }
+      },
       "OrgType": {
         "enum": [
           "org"
@@ -92888,6 +93616,204 @@
         "x-client-original-const": "org",
         "x-ms-enum": {
           "name": "OrgType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf1Plan": {
+        "enum": [
+          "team",
+          "enterprise",
+          "plus",
+          "academia"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf1Plan",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "enterprise",
+              "name": "Enterprise"
+            },
+            {
+              "value": "plus",
+              "name": "Plus"
+            },
+            {
+              "value": "academia",
+              "name": "Academia"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2Type": {
+        "enum": [
+          "user"
+        ],
+        "type": "string",
+        "x-client-original-const": "user",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1Kind": {
+        "enum": [
+          "eq"
+        ],
+        "type": "string",
+        "x-client-original-const": "eq",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1Kind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "eq",
+              "name": "Eq"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2Kind": {
+        "enum": [
+          "prefix"
+        ],
+        "type": "string",
+        "x-client-original-const": "prefix",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2Kind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "prefix",
+              "name": "Prefix"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1Kind": {
+        "enum": [
+          "eq"
+        ],
+        "type": "string",
+        "x-client-original-const": "eq",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1Kind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "eq",
+              "name": "Eq"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2Kind": {
+        "enum": [
+          "prefix"
+        ],
+        "type": "string",
+        "x-client-original-const": "prefix",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2Kind",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "prefix",
+              "name": "Prefix"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1Type": {
+        "enum": [
+          "org"
+        ],
+        "type": "string",
+        "x-client-original-const": "org",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1Plan": {
+        "enum": [
+          "team",
+          "enterprise",
+          "plus",
+          "academia"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1Plan",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "enterprise",
+              "name": "Enterprise"
+            },
+            {
+              "value": "plus",
+              "name": "Plus"
+            },
+            {
+              "value": "academia",
+              "name": "Academia"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2Type": {
+        "enum": [
+          "user"
+        ],
+        "type": "string",
+        "x-client-original-const": "user",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2Type",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "user",
+              "name": "User"
+            }
+          ]
+        }
+      },
+      "PostApiBlogBySlugComment201ResponseNewMessageAuthorOneOf1Type": {
+        "enum": [
+          "org"
+        ],
+        "type": "string",
+        "x-client-original-const": "org",
+        "x-ms-enum": {
+          "name": "PostApiBlogBySlugComment201ResponseNewMessageAuthorOneOf1Type",
           "modelAsString": false,
           "values": [
             {
@@ -93417,14 +94343,14 @@
           ]
         }
       },
-      "EqKind": {
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1Kind": {
         "enum": [
           "eq"
         ],
         "type": "string",
         "x-client-original-const": "eq",
         "x-ms-enum": {
-          "name": "EqKind",
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1Kind",
           "modelAsString": false,
           "values": [
             {
@@ -93434,14 +94360,14 @@
           ]
         }
       },
-      "PrefixKind": {
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2Kind": {
         "enum": [
           "prefix"
         ],
         "type": "string",
         "x-client-original-const": "prefix",
         "x-ms-enum": {
-          "name": "PrefixKind",
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2Kind",
           "modelAsString": false,
           "values": [
             {
@@ -104143,6 +105069,7 @@
           "billing.gcp_remove",
           "billing.marketplace_approve",
           "billing.cancel_subscription",
+          "billing.end_subscription",
           "billing.renew_subscription",
           "billing.start_subscription",
           "billing.un_cancel_subscription",
@@ -104260,6 +105187,8 @@
           "org.service_account.token.update",
           "org.service_account.token.s3_credential.create",
           "org.service_account.token.s3_credential.delete",
+          "org.service_account.trusted_publisher.create",
+          "org.service_account.trusted_publisher.delete",
           "oauth.token",
           "oauth.app.create",
           "oauth.app.update",
@@ -104309,6 +105238,10 @@
             {
               "value": "billing.cancel_subscription",
               "name": "BillingCancelSubscription"
+            },
+            {
+              "value": "billing.end_subscription",
+              "name": "BillingEndSubscription"
             },
             {
               "value": "billing.renew_subscription",
@@ -104777,6 +105710,14 @@
             {
               "value": "org.service_account.token.s3_credential.delete",
               "name": "OrgServiceAccountTokenS3CredentialDelete"
+            },
+            {
+              "value": "org.service_account.trusted_publisher.create",
+              "name": "OrgServiceAccountTrustedPublisherCreate"
+            },
+            {
+              "value": "org.service_account.trusted_publisher.delete",
+              "name": "OrgServiceAccountTrustedPublisherDelete"
             },
             {
               "value": "oauth.token",
@@ -106044,6 +106985,48 @@
           ]
         }
       },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemCapabilitiesItem": {
+        "enum": [
+          "inference-api",
+          "request-gated-repos"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemCapabilitiesItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "inference-api",
+              "name": "InferenceApi"
+            },
+            {
+              "value": "request-gated-repos",
+              "name": "RequestGatedRepos"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemPermissionsItem": {
+        "enum": [
+          "repo.content.read",
+          "repo.content.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemPermissionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "repo.content.read",
+              "name": "RepoContentRead"
+            },
+            {
+              "value": "repo.content.write",
+              "name": "RepoContentWrite"
+            }
+          ]
+        }
+      },
       "GetApiOrganizationsByNameMembers200ResponseItemType": {
         "enum": [
           "user"
@@ -107024,6 +108007,27 @@
             {
               "value": "regular",
               "name": "Regular"
+            }
+          ]
+        }
+      },
+      "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemCapabilitiesItem": {
+        "enum": [
+          "inference-api",
+          "request-gated-repos"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemCapabilitiesItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "inference-api",
+              "name": "InferenceApi"
+            },
+            {
+              "value": "request-gated-repos",
+              "name": "RequestGatedRepos"
             }
           ]
         }
@@ -110957,6 +111961,174 @@
             {
               "value": "space",
               "name": "Space"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgType": {
+        "enum": [
+          "org"
+        ],
+        "type": "string",
+        "x-client-original-const": "org",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgPlan": {
+        "enum": [
+          "team",
+          "enterprise",
+          "plus",
+          "academia"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgPlan",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "enterprise",
+              "name": "Enterprise"
+            },
+            {
+              "value": "plus",
+              "name": "Plus"
+            },
+            {
+              "value": "academia",
+              "name": "Academia"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgUserRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrgUserRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgType": {
+        "enum": [
+          "org"
+        ],
+        "type": "string",
+        "x-client-original-const": "org",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgType",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "org",
+              "name": "Org"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgPlan": {
+        "enum": [
+          "team",
+          "enterprise",
+          "plus",
+          "academia"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgPlan",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "team",
+              "name": "Team"
+            },
+            {
+              "value": "enterprise",
+              "name": "Enterprise"
+            },
+            {
+              "value": "plus",
+              "name": "Plus"
+            },
+            {
+              "value": "academia",
+              "name": "Academia"
+            }
+          ]
+        }
+      },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgUserRole": {
+        "enum": [
+          "admin",
+          "write",
+          "contributor",
+          "read",
+          "no_access"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrgUserRole",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "admin",
+              "name": "Admin"
+            },
+            {
+              "value": "write",
+              "name": "Write"
+            },
+            {
+              "value": "contributor",
+              "name": "Contributor"
+            },
+            {
+              "value": "read",
+              "name": "Read"
+            },
+            {
+              "value": "no_access",
+              "name": "NoAccess"
             }
           ]
         }
@@ -142628,6 +143800,393 @@
           }
         ]
       },
+      "TaggedEqVariant5A046121E8A6C0E4": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/EqKind"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedPrefixVariantDBBFDA8D35C529D7": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PrefixKind"
+              },
+              "value": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedOrgVariantEEA48DAE0C5C05B0": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredBy"
+          },
+          {
+            "required": [
+              "_id",
+              "avatarUrl",
+              "fullname",
+              "name",
+              "isHf",
+              "isHfAdmin",
+              "isMod",
+              "type"
+            ],
+            "type": "object",
+            "properties": {
+              "_id": {
+                "maxLength": 24,
+                "minLength": 24,
+                "pattern": "^[0-9a-f]{24}$",
+                "type": "string",
+                "description": "A hex string of 24 characters representing an ObjectId."
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isHf": {
+                "type": "boolean"
+              },
+              "isHfAdmin": {
+                "type": "boolean"
+              },
+              "isMod": {
+                "type": "boolean"
+              },
+              "followerCount": {
+                "type": "number"
+              },
+              "type": {
+                "$ref": "#/components/schemas/OrgType"
+              },
+              "plan": {
+                "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf1Plan"
+              },
+              "isUserFollowing": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedUserVariant37F43C7F9D314D33": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredBy"
+          },
+          {
+            "required": [
+              "_id",
+              "avatarUrl",
+              "fullname",
+              "name",
+              "isHf",
+              "isHfAdmin",
+              "isMod",
+              "type",
+              "isPro"
+            ],
+            "type": "object",
+            "properties": {
+              "_id": {
+                "maxLength": 24,
+                "minLength": 24,
+                "pattern": "^[0-9a-f]{24}$",
+                "type": "string",
+                "description": "A hex string of 24 characters representing an ObjectId."
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isHf": {
+                "type": "boolean"
+              },
+              "isHfAdmin": {
+                "type": "boolean"
+              },
+              "isMod": {
+                "type": "boolean"
+              },
+              "followerCount": {
+                "type": "number"
+              },
+              "type": {
+                "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2Type"
+              },
+              "isPro": {
+                "type": "boolean"
+              },
+              "isUserFollowing": {
+                "type": "boolean"
+              },
+              "primaryOrg": {
+                "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrg"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedEqVariant9757BC57296FEC64": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1Kind"
+              },
+              "value": {
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "TaggedPrefixVariant59FE32BD18714889": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2Kind"
+              },
+              "value": {
+                "minLength": 1,
+                "type": "string"
+              }
+            }
+          }
+        ]
+      },
+      "TaggedEqVariant53B1A0AA15791042": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1Kind"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedPrefixVariant001FBC33E4794F10": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalProperties"
+          },
+          {
+            "required": [
+              "kind",
+              "value"
+            ],
+            "type": "object",
+            "properties": {
+              "kind": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2Kind"
+              },
+              "value": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedOrgVariant09229C9392CF623A": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredBy"
+          },
+          {
+            "required": [
+              "_id",
+              "avatarUrl",
+              "fullname",
+              "name",
+              "isHf",
+              "isHfAdmin",
+              "isMod",
+              "type"
+            ],
+            "type": "object",
+            "properties": {
+              "_id": {
+                "maxLength": 24,
+                "minLength": 24,
+                "pattern": "^[0-9a-f]{24}$",
+                "type": "string",
+                "description": "A hex string of 24 characters representing an ObjectId."
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isHf": {
+                "type": "boolean"
+              },
+              "isHfAdmin": {
+                "type": "boolean"
+              },
+              "isMod": {
+                "type": "boolean"
+              },
+              "followerCount": {
+                "type": "number"
+              },
+              "type": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1Type"
+              },
+              "plan": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1Plan"
+              },
+              "isUserFollowing": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "TaggedUserVariant6F795DBEA9F9AC12": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredBy"
+          },
+          {
+            "required": [
+              "_id",
+              "avatarUrl",
+              "fullname",
+              "name",
+              "isHf",
+              "isHfAdmin",
+              "isMod",
+              "type",
+              "isPro"
+            ],
+            "type": "object",
+            "properties": {
+              "_id": {
+                "maxLength": 24,
+                "minLength": 24,
+                "pattern": "^[0-9a-f]{24}$",
+                "type": "string",
+                "description": "A hex string of 24 characters representing an ObjectId."
+              },
+              "avatarUrl": {
+                "type": "string"
+              },
+              "fullname": {
+                "type": "string"
+              },
+              "name": {
+                "type": "string"
+              },
+              "isHf": {
+                "type": "boolean"
+              },
+              "isHfAdmin": {
+                "type": "boolean"
+              },
+              "isMod": {
+                "type": "boolean"
+              },
+              "followerCount": {
+                "type": "number"
+              },
+              "type": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2Type"
+              },
+              "isPro": {
+                "type": "boolean"
+              },
+              "isUserFollowing": {
+                "type": "boolean"
+              },
+              "primaryOrg": {
+                "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrg"
+              }
+            },
+            "additionalProperties": false
+          }
+        ]
+      },
       "PostApiBlogBySlugComment201ResponseNewMessageAuthorOneOf1Variant": {
         "allOf": [
           {
@@ -142687,7 +144246,7 @@
                 "type": "number"
               },
               "type": {
-                "$ref": "#/components/schemas/OrgType"
+                "$ref": "#/components/schemas/PostApiBlogBySlugComment201ResponseNewMessageAuthorOneOf1Type"
               },
               "plan": {
                 "$ref": "#/components/schemas/PostApiBlogBySlugComment201ResponseNewMessageAuthorOneOf1Plan"
@@ -143729,7 +145288,7 @@
             "type": "object",
             "properties": {
               "kind": {
-                "$ref": "#/components/schemas/EqKind"
+                "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1Kind"
               },
               "value": {
                 "type": "string"
@@ -143752,7 +145311,7 @@
             "type": "object",
             "properties": {
               "kind": {
-                "$ref": "#/components/schemas/PrefixKind"
+                "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2Kind"
               },
               "value": {
                 "minLength": 1,
@@ -162225,6 +163784,13 @@
     "DeleteApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenId204Response": {
       "$schema": "https://json-schema.org/draft/2020-12/schema"
     },
+    "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200Response": {
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "type": "array",
+      "items": {
+        "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItem"
+      }
+    },
     "GetApiOrganizationsByNameMembers200Response": {
       "$schema": "https://json-schema.org/draft/2020-12/schema",
       "type": "array",
@@ -164278,6 +165844,323 @@
       },
       "additionalProperties": false
     },
+    "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/EqKind"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PrefixKind"
+        },
+        "value": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf1": {
+      "required": [
+        "_id",
+        "avatarUrl",
+        "fullname",
+        "name",
+        "isHf",
+        "isHfAdmin",
+        "isMod",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isHf": {
+          "type": "boolean"
+        },
+        "isHfAdmin": {
+          "type": "boolean"
+        },
+        "isMod": {
+          "type": "boolean"
+        },
+        "followerCount": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/components/schemas/OrgType"
+        },
+        "plan": {
+          "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf1Plan"
+        },
+        "isUserFollowing": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2": {
+      "required": [
+        "_id",
+        "avatarUrl",
+        "fullname",
+        "name",
+        "isHf",
+        "isHfAdmin",
+        "isMod",
+        "type",
+        "isPro"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isHf": {
+          "type": "boolean"
+        },
+        "isHfAdmin": {
+          "type": "boolean"
+        },
+        "isMod": {
+          "type": "boolean"
+        },
+        "followerCount": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2Type"
+        },
+        "isPro": {
+          "type": "boolean"
+        },
+        "isUserFollowing": {
+          "type": "boolean"
+        },
+        "primaryOrg": {
+          "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredByOneOf2PrimaryOrg"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf1Kind"
+        },
+        "value": {
+          "type": "string"
+        }
+      }
+    },
+    "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishersRequestClaimsAdditionalPropertiesAnyOf2Kind"
+        },
+        "value": {
+          "minLength": 1,
+          "type": "string"
+        }
+      }
+    },
+    "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf1Kind"
+        },
+        "value": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2": {
+      "required": [
+        "kind",
+        "value"
+      ],
+      "type": "object",
+      "properties": {
+        "kind": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseClaimsAdditionalPropertiesAnyOf2Kind"
+        },
+        "value": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1": {
+      "required": [
+        "_id",
+        "avatarUrl",
+        "fullname",
+        "name",
+        "isHf",
+        "isHfAdmin",
+        "isMod",
+        "type"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isHf": {
+          "type": "boolean"
+        },
+        "isHfAdmin": {
+          "type": "boolean"
+        },
+        "isMod": {
+          "type": "boolean"
+        },
+        "followerCount": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1Type"
+        },
+        "plan": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf1Plan"
+        },
+        "isUserFollowing": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2": {
+      "required": [
+        "_id",
+        "avatarUrl",
+        "fullname",
+        "name",
+        "isHf",
+        "isHfAdmin",
+        "isMod",
+        "type",
+        "isPro"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "avatarUrl": {
+          "type": "string"
+        },
+        "fullname": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "isHf": {
+          "type": "boolean"
+        },
+        "isHfAdmin": {
+          "type": "boolean"
+        },
+        "isMod": {
+          "type": "boolean"
+        },
+        "followerCount": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2Type"
+        },
+        "isPro": {
+          "type": "boolean"
+        },
+        "isUserFollowing": {
+          "type": "boolean"
+        },
+        "primaryOrg": {
+          "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseConfiguredByOneOf2PrimaryOrg"
+        }
+      },
+      "additionalProperties": false
+    },
     "PostApiBlogBySlugComment201ResponseNewMessageAuthorOneOf1": {
       "required": [
         "_id",
@@ -164332,7 +166215,7 @@
           "type": "number"
         },
         "type": {
-          "$ref": "#/components/schemas/OrgType"
+          "$ref": "#/components/schemas/PostApiBlogBySlugComment201ResponseNewMessageAuthorOneOf1Type"
         },
         "plan": {
           "$ref": "#/components/schemas/PostApiBlogBySlugComment201ResponseNewMessageAuthorOneOf1Plan"
@@ -165262,7 +167145,7 @@
       "type": "object",
       "properties": {
         "kind": {
-          "$ref": "#/components/schemas/EqKind"
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf1Kind"
         },
         "value": {
           "type": "string"
@@ -165278,7 +167161,7 @@
       "type": "object",
       "properties": {
         "kind": {
-          "$ref": "#/components/schemas/PrefixKind"
+          "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemClaimsAdditionalPropertiesAnyOf2Kind"
         },
         "value": {
           "minLength": 1,
@@ -181484,6 +183367,57 @@
       },
       "additionalProperties": false
     },
+    "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItem": {
+      "required": [
+        "_id",
+        "issuerUrl",
+        "claims",
+        "createdAt"
+      ],
+      "type": "object",
+      "properties": {
+        "_id": {
+          "maxLength": 24,
+          "minLength": 24,
+          "pattern": "^[0-9a-f]{24}$",
+          "type": "string",
+          "description": "A hex string of 24 characters representing an ObjectId."
+        },
+        "issuerUrl": {
+          "type": "string"
+        },
+        "claims": {
+          "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaims"
+        },
+        "configuredBy": {
+          "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemConfiguredBy"
+        },
+        "createdAt": {
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastUsedAt": {
+          "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
+          "type": "string",
+          "format": "date-time"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemCapabilitiesItem"
+          }
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemPermissionsItem"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "description": "Trusted publisher"
+    },
     "GetApiOrganizationsByNameMembers200ResponseItem": {
       "required": [
         "avatarUrl",
@@ -182254,7 +184188,7 @@
         "capabilities": {
           "type": "array",
           "items": {
-            "$ref": "#/components/schemas/InferenceApiItem"
+            "$ref": "#/components/schemas/GetApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseItemCapabilitiesItem"
           }
         },
         "permissions": {
@@ -183854,6 +185788,15 @@
         }
       },
       "additionalProperties": false
+    },
+    "GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaims": {
+      "propertyNames": {
+        "type": "string"
+      },
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountIdTrustedPublishers200ResponseItemClaimsAdditionalProperties"
+      }
     },
     "GetApiOrganizationsByNameScimV2ResourceTypes200ResponseItemMeta": {
       "required": [

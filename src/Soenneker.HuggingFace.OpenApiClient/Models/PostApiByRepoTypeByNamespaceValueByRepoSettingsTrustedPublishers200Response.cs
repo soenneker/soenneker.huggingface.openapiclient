@@ -38,12 +38,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <summary>The capabilities property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.InferenceApiItem?>? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
-        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.InferenceApiItem?>? _explicitNullValueCapabilities = default!;
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem?>? Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem?>? _explicitNullValueCapabilities = default!;
 #nullable restore
 #else
-        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.InferenceApiItem?> Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
-        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.InferenceApiItem?> _explicitNullValueCapabilities = default!;
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem?> Capabilities { get => _explicitNullValueCapabilities; set { _explicitNullValueCapabilities = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("capabilities"); else _explicitNullProperties?.Remove("capabilities"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem?> _explicitNullValueCapabilities = default!;
 #endif
         /// <summary>The claims property</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
@@ -117,9 +117,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(8)
             {
-                { "capabilities", n => { Capabilities = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.InferenceApiItem>()?.AsList(); } },
+                { "capabilities", n => { Capabilities = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem>()?.AsList(); } },
                 { "claims", n => { Claims = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaims>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaims.CreateFromDiscriminatorValue); } },
                 { "configuredBy", n => { ConfiguredBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredBy>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredBy.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
@@ -136,7 +136,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public virtual void Serialize(ISerializationWriter writer)
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
-            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.InferenceApiItem>("capabilities", Capabilities);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseCapabilitiesItem>("capabilities", Capabilities);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseClaims>("claims", Claims);
             writer.WriteObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiByRepoTypeByNamespaceValueByRepoSettingsTrustedPublishers200ResponseConfiguredBy>("configuredBy", ConfiguredBy);
             writer.WriteDateTimeOffsetValue("createdAt", CreatedAt);

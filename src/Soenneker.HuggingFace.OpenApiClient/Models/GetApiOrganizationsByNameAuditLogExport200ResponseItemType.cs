@@ -44,6 +44,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         BillingCancelSubscription,
         #pragma warning restore CS1591
+        [EnumMember(Value = "billing.end_subscription")]
+        #pragma warning disable CS1591
+        BillingEndSubscription,
+        #pragma warning restore CS1591
         [EnumMember(Value = "billing.renew_subscription")]
         #pragma warning disable CS1591
         BillingRenewSubscription,
@@ -511,6 +515,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         [EnumMember(Value = "org.service_account.token.s3_credential.delete")]
         #pragma warning disable CS1591
         OrgServiceAccountTokenS3CredentialDelete,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "org.service_account.trusted_publisher.create")]
+        #pragma warning disable CS1591
+        OrgServiceAccountTrustedPublisherCreate,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "org.service_account.trusted_publisher.delete")]
+        #pragma warning disable CS1591
+        OrgServiceAccountTrustedPublisherDelete,
         #pragma warning restore CS1591
         [EnumMember(Value = "oauth.token")]
         #pragma warning disable CS1591

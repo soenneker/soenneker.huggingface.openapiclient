@@ -83,7 +83,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "imageData", n => { ImageData = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2Comment201ResponseNewMessageAuthorOneOf2OAuthAppImageData>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiBlogBySlugBySlug2Comment201ResponseNewMessageAuthorOneOf2OAuthAppImageData.CreateFromDiscriminatorValue); } },
                 { "imageUrl", n => { ImageUrl = n.GetStringValue(); } },

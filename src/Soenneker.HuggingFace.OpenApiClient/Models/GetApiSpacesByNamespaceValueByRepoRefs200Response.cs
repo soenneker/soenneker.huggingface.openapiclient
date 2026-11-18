@@ -83,7 +83,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "branches", n => { Branches = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoRefs200ResponseBranchesItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoRefs200ResponseBranchesItem.CreateFromDiscriminatorValue)?.AsList(); } },
                 { "converts", n => { Converts = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoRefs200ResponseConvertsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoRefs200ResponseConvertsItem.CreateFromDiscriminatorValue)?.AsList(); } },

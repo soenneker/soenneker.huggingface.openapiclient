@@ -83,7 +83,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "namespace", n => { Namespace = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueAuthCheckByPerms207ResponseNamespace>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiInferenceEndpointsByNamespaceValueAuthCheckByPerms207ResponseNamespace.CreateFromDiscriminatorValue); } },
                 { "patternRestrictions", n => { PatternRestrictions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },

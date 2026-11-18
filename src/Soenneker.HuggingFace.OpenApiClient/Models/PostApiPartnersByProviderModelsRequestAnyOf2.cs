@@ -88,7 +88,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "adapterType", n => { var parsed = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.LoraAdapterType>(); if (parsed == null && n.GetStringValue() is string unknown) { _explicitNullValueAdapterType = default; _explicitNullProperties?.Remove("adapterType"); AdditionalData["adapterType"] = unknown; } else { AdapterType = parsed; AdditionalData.Remove("adapterType"); } } },
                 { "providerModel", n => { ProviderModel = n.GetStringValue(); } },

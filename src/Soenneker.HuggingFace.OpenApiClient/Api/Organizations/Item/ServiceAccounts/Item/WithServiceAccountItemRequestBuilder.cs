@@ -4,6 +4,7 @@ using Microsoft.Kiota.Abstractions.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
 using Microsoft.Kiota.Abstractions;
 using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAccounts.Item.Tokens;
+using Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAccounts.Item.TrustedPublishers;
 using Soenneker.HuggingFace.OpenApiClient.Models;
 using System.Collections.Generic;
 using System.IO;
@@ -22,6 +23,11 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAcco
         public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAccounts.Item.Tokens.TokensRequestBuilder Tokens
         {
             get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAccounts.Item.Tokens.TokensRequestBuilder(PathParameters, RequestAdapter);
+        }
+        /// <summary>The trustedPublishers property</summary>
+        public global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAccounts.Item.TrustedPublishers.TrustedPublishersRequestBuilder TrustedPublishers
+        {
+            get => new global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAccounts.Item.TrustedPublishers.TrustedPublishersRequestBuilder(PathParameters, RequestAdapter);
         }
         /// <summary>
         /// Instantiates a new <see cref="global::Soenneker.HuggingFace.OpenApiClient.Api.Organizations.Item.ServiceAccounts.Item.WithServiceAccountItemRequestBuilder"/> and sets the default values.

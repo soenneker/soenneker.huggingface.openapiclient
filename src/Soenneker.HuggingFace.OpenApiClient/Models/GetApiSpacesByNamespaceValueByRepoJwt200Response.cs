@@ -76,7 +76,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "accessToken", n => { AccessToken = n.GetStringValue(); } },
                 { "encryptedToken", n => { EncryptedToken = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoJwt200ResponseEncryptedToken>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiSpacesByNamespaceValueByRepoJwt200ResponseEncryptedToken.CreateFromDiscriminatorValue); } },

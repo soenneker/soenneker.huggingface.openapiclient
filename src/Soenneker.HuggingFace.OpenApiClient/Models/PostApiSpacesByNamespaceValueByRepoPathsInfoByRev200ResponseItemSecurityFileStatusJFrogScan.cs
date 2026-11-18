@@ -100,7 +100,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "message", n => { Message = n.GetStringValue(); } },
                 { "pickleImports", n => { PickleImports = n.GetCollectionOfObjectValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusJFrogScanPickleImportsItem>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiSpacesByNamespaceValueByRepoPathsInfoByRev200ResponseItemSecurityFileStatusJFrogScanPickleImportsItem.CreateFromDiscriminatorValue)?.AsList(); } },

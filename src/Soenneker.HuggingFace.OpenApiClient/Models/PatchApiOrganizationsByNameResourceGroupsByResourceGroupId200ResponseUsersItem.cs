@@ -132,7 +132,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "addedBy", n => { AddedBy = n.GetStringValue(); } },
                 { "assignedRole", n => { AssignedRole = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PatchApiOrganizationsByNameResourceGroupsByResourceGroupId200ResponseUsersItemAssignedRole>(); } },

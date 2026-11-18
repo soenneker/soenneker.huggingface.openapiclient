@@ -63,7 +63,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(4)
             {
                 { "authorizedAt", n => { AuthorizedAt = n.GetDateTimeOffsetValue(); } },
                 { "authorizer", n => { Authorizer = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameSettingsTokens200ResponseItemAuthorizationAuthorizer.CreateFromDiscriminatorValue); } },

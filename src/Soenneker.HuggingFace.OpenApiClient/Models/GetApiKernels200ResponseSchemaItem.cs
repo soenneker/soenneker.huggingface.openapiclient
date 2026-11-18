@@ -207,7 +207,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(19)
             {
                 { "author", n => { Author = n.GetStringValue(); } },
                 { "buildMetadata", n => { BuildMetadata = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiKernels200ResponseSchemaItemBuildMetadata.CreateFromDiscriminatorValue); } },

@@ -98,7 +98,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(7)
             {
                 { "fields", n => { Fields = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemFields>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseSchemaItemFields.CreateFromDiscriminatorValue); } },
                 { "grantedBy", n => { GrantedBy = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedByAnyOf1>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoUserAccessRequestByStatus200ResponseItemGrantedByAnyOf1.CreateFromDiscriminatorValue); } },

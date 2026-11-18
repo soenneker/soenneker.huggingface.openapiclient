@@ -100,7 +100,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(6)
             {
                 { "avScan", n => { AvScan = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatusAvScan>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatusAvScan.CreateFromDiscriminatorValue); } },
                 { "jFrogScan", n => { JFrogScan = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatusJFrogScan>(global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiDatasetsByNamespaceValueByRepoTreeByRevByPath200ResponseItemSecurityFileStatusJFrogScan.CreateFromDiscriminatorValue); } },

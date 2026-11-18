@@ -81,7 +81,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>
+            return new Dictionary<string, Action<IParseNode>>(5)
             {
                 { "author", n => { Author = n.GetObjectValue<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdCommentByCommentIdReply201ResponseNewMessageAuthor>(global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiPapersByPaperIdCommentByCommentIdReply201ResponseNewMessageAuthor.CreateFromDiscriminatorValue); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
