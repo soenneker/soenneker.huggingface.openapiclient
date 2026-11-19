@@ -6154,7 +6154,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-18T22:00:35.047Z"
+              "default": "2026-11-19T13:33:51.079Z"
             }
           }
         ],
@@ -6206,7 +6206,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-18T22:00:35.047Z"
+              "default": "2026-11-19T13:33:51.079Z"
             }
           }
         ],
@@ -6258,7 +6258,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-18T22:00:35.048Z"
+              "default": "2026-11-19T13:33:51.080Z"
             }
           },
           {
@@ -6544,7 +6544,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-18T22:00:35.047Z"
+              "default": "2026-11-19T13:33:51.080Z"
             }
           }
         ],
@@ -80787,24 +80787,9 @@
       },
       "PostApiSettingsInferenceProvidersApiKeyRequestProvider": {
         "enum": [
-          "baseten",
-          "cohere",
-          "cerebras",
-          "deepinfra",
           "fal-ai",
-          "featherless-ai",
-          "fireworks-ai",
-          "groq",
-          "novita",
-          "nscale",
-          "openrouter",
-          "ovhcloud",
-          "publicai",
           "replicate",
-          "scaleway",
-          "together",
-          "wavespeed",
-          "zai-org"
+          "wavespeed"
         ],
         "type": "string",
         "x-ms-enum": {
@@ -80812,76 +80797,16 @@
           "modelAsString": false,
           "values": [
             {
-              "value": "baseten",
-              "name": "Baseten"
-            },
-            {
-              "value": "cohere",
-              "name": "Cohere"
-            },
-            {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
-              "value": "deepinfra",
-              "name": "Deepinfra"
-            },
-            {
               "value": "fal-ai",
               "name": "FalAi"
-            },
-            {
-              "value": "featherless-ai",
-              "name": "FeatherlessAi"
-            },
-            {
-              "value": "fireworks-ai",
-              "name": "FireworksAi"
-            },
-            {
-              "value": "groq",
-              "name": "Groq"
-            },
-            {
-              "value": "novita",
-              "name": "Novita"
-            },
-            {
-              "value": "nscale",
-              "name": "Nscale"
-            },
-            {
-              "value": "openrouter",
-              "name": "Openrouter"
-            },
-            {
-              "value": "ovhcloud",
-              "name": "Ovhcloud"
-            },
-            {
-              "value": "publicai",
-              "name": "Publicai"
             },
             {
               "value": "replicate",
               "name": "Replicate"
             },
             {
-              "value": "scaleway",
-              "name": "Scaleway"
-            },
-            {
-              "value": "together",
-              "name": "Together"
-            },
-            {
               "value": "wavespeed",
               "name": "Wavespeed"
-            },
-            {
-              "value": "zai-org",
-              "name": "ZaiOrg"
             }
           ]
         }
