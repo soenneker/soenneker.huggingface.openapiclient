@@ -31,6 +31,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("repoIds") is { } nullNodeRepoIds && nullNodeRepoIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoIds = null;
             if (parseNode.GetChildNode("repoPermissions") is null) { _explicitNullValueRepoPermissions = default!; _explicitNullProperties?.Remove("repoPermissions"); }
             else if (parseNode.GetChildNode("repoPermissions") is { } nullNodeRepoPermissions && nullNodeRepoPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPermissions = null;
+            if (parseNode.GetChildNode("resourceGroupIds") is null) { _explicitNullValueResourceGroupIds = default!; _explicitNullProperties?.Remove("resourceGroupIds"); }
+            else if (parseNode.GetChildNode("resourceGroupIds") is { } nullNodeResourceGroupIds && nullNodeResourceGroupIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupIds = null;
+            if (parseNode.GetChildNode("resourceGroupPermissions") is null) { _explicitNullValueResourceGroupPermissions = default!; _explicitNullProperties?.Remove("resourceGroupPermissions"); }
+            else if (parseNode.GetChildNode("resourceGroupPermissions") is { } nullNodeResourceGroupPermissions && nullNodeResourceGroupPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupPermissions = null;
             if (parseNode.GetChildNode("skipNetworkSecurity") is null) { _explicitNullValueSkipNetworkSecurity = default!; _explicitNullProperties?.Remove("skipNetworkSecurity"); }
             else if (parseNode.GetChildNode("skipNetworkSecurity") is { } nullNodeSkipNetworkSecurity && nullNodeSkipNetworkSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipNetworkSecurity = null;
             if (parseNode.GetChildNode("userPermissions") is null) { _explicitNullValueUserPermissions = default!; _explicitNullProperties?.Remove("userPermissions"); }
@@ -100,6 +104,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public List<string> RepoPermissions { get => _explicitNullValueRepoPermissions; set { _explicitNullValueRepoPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoPermissions"); else _explicitNullProperties?.Remove("repoPermissions"); } }
         private List<string> _explicitNullValueRepoPermissions = default!;
 #endif
+        /// <summary>The resourceGroupIds property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ResourceGroupIds { get => _explicitNullValueResourceGroupIds; set { _explicitNullValueResourceGroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupIds"); else _explicitNullProperties?.Remove("resourceGroupIds"); } }
+        private List<string>? _explicitNullValueResourceGroupIds = default!;
+#nullable restore
+#else
+        public List<string> ResourceGroupIds { get => _explicitNullValueResourceGroupIds; set { _explicitNullValueResourceGroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupIds"); else _explicitNullProperties?.Remove("resourceGroupIds"); } }
+        private List<string> _explicitNullValueResourceGroupIds = default!;
+#endif
+        /// <summary>The resourceGroupPermissions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ResourceGroupPermissions { get => _explicitNullValueResourceGroupPermissions; set { _explicitNullValueResourceGroupPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupPermissions"); else _explicitNullProperties?.Remove("resourceGroupPermissions"); } }
+        private List<string>? _explicitNullValueResourceGroupPermissions = default!;
+#nullable restore
+#else
+        public List<string> ResourceGroupPermissions { get => _explicitNullValueResourceGroupPermissions; set { _explicitNullValueResourceGroupPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupPermissions"); else _explicitNullProperties?.Remove("resourceGroupPermissions"); } }
+        private List<string> _explicitNullValueResourceGroupPermissions = default!;
+#endif
         /// <summary>The skipNetworkSecurity property</summary>
         public bool? SkipNetworkSecurity { get => _explicitNullValueSkipNetworkSecurity; set { _explicitNullValueSkipNetworkSecurity = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipNetworkSecurity"); else _explicitNullProperties?.Remove("skipNetworkSecurity"); } }
         private bool? _explicitNullValueSkipNetworkSecurity = default!;
@@ -129,7 +153,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(9)
+            return new Dictionary<string, Action<IParseNode>>(11)
             {
                 { "canReadGatedRepos", n => { CanReadGatedRepos = n.GetBoolValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
@@ -138,6 +162,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "permissions", n => { Permissions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "repoIds", n => { RepoIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "repoPermissions", n => { RepoPermissions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "resourceGroupIds", n => { ResourceGroupIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "resourceGroupPermissions", n => { ResourceGroupPermissions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "skipNetworkSecurity", n => { SkipNetworkSecurity = n.GetBoolValue(); } },
                 { "userPermissions", n => { UserPermissions = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
             };
@@ -156,6 +182,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfPrimitiveValues<string>("permissions", Permissions);
             writer.WriteCollectionOfPrimitiveValues<string>("repoIds", RepoIds);
             writer.WriteCollectionOfPrimitiveValues<string>("repoPermissions", RepoPermissions);
+            writer.WriteCollectionOfPrimitiveValues<string>("resourceGroupIds", ResourceGroupIds);
+            writer.WriteCollectionOfPrimitiveValues<string>("resourceGroupPermissions", ResourceGroupPermissions);
             writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);
             writer.WriteCollectionOfPrimitiveValues<string>("userPermissions", UserPermissions);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             

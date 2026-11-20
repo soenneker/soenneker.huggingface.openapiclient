@@ -1,8 +1,8 @@
 {
-  "descriptionHash": "6DCF41BA427FF74E9A7D31243CB2238353B0EA70AE61F732AA8A1723E0B9CBF38733E37DD493383EC8807E52DBC0B7283DF398EA359F315726C9C55A1A3DE586",
+  "descriptionHash": "177ED3522D0351C7AF6BC3C082D278DBBCED6040C8F76F73CDBE6EF870C8DA858DECE21454E9133827F227A5818ED93D892A41A1422D03C1DDA7D18B6217B97B",
   "descriptionLocation": "../../openapi.fixed.json",
   "lockFileVersion": "1.0.0",
-  "kiotaVersion": "1.38.0",
+  "kiotaVersion": "1.39.0",
   "clientClassName": "HuggingFaceOpenApiClient",
   "typeAccessModifier": "Public",
   "clientNamespaceName": "Soenneker.HuggingFace.OpenApiClient",

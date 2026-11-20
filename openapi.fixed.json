@@ -6154,7 +6154,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-19T13:33:51.079Z"
+              "default": "2026-11-20T22:54:11.880Z"
             }
           }
         ],
@@ -6206,7 +6206,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-19T13:33:51.079Z"
+              "default": "2026-11-20T22:54:11.881Z"
             }
           }
         ],
@@ -6258,7 +6258,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-19T13:33:51.080Z"
+              "default": "2026-11-20T22:54:11.881Z"
             }
           },
           {
@@ -6544,7 +6544,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-19T13:33:51.080Z"
+              "default": "2026-11-20T22:54:11.881Z"
             }
           }
         ],
@@ -24209,7 +24209,7 @@
               "pattern": "^[0-9a-fA-F]{24}$",
               "type": "string"
             },
-            "description": "Repositories to grant \u0060repoPermissions\u0060 on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions."
+            "description": "Repositories to grant \u0060repoPermissions\u0060 on. Can be repositories owned by the organization or any public repository. These override the org-wide and resource-group permissions."
           },
           "repoPermissions": {
             "type": "array",
@@ -24217,6 +24217,24 @@
               "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestRepoPermissionsItem"
             },
             "description": "Permissions granted on the selected \u0060repoIds\u0060.",
+            "default": []
+          },
+          "resourceGroupIds": {
+            "type": "array",
+            "items": {
+              "maxLength": 24,
+              "minLength": 24,
+              "pattern": "^[0-9a-fA-F]{24}$",
+              "type": "string"
+            },
+            "description": "Resource groups of the organization to grant \u0060resourceGroupPermissions\u0060 on. Applies to every repository currently or later in those resource groups, and overrides the org-wide permissions."
+          },
+          "resourceGroupPermissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem"
+            },
+            "description": "Permissions granted on the repositories of the selected \u0060resourceGroupIds\u0060.",
             "default": []
           },
           "userPermissions": {
@@ -24293,7 +24311,7 @@
               "pattern": "^[0-9a-fA-F]{24}$",
               "type": "string"
             },
-            "description": "Repositories to grant \u0060repoPermissions\u0060 on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions."
+            "description": "Repositories to grant \u0060repoPermissions\u0060 on. Can be repositories owned by the organization or any public repository. These override the org-wide and resource-group permissions."
           },
           "repoPermissions": {
             "type": "array",
@@ -24301,6 +24319,23 @@
               "$ref": "#/components/schemas/PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem"
             },
             "description": "Permissions granted on the selected \u0060repoIds\u0060."
+          },
+          "resourceGroupIds": {
+            "type": "array",
+            "items": {
+              "maxLength": 24,
+              "minLength": 24,
+              "pattern": "^[0-9a-fA-F]{24}$",
+              "type": "string"
+            },
+            "description": "Resource groups of the organization to grant \u0060resourceGroupPermissions\u0060 on. Applies to every repository currently or later in those resource groups, and overrides the org-wide permissions."
+          },
+          "resourceGroupPermissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestResourceGroupPermissionsItem"
+            },
+            "description": "Permissions granted on the repositories of the selected \u0060resourceGroupIds\u0060."
           },
           "userPermissions": {
             "type": "array",
@@ -24337,6 +24372,8 @@
           "permissions",
           "repoIds",
           "repoPermissions",
+          "resourceGroupIds",
+          "resourceGroupPermissions",
           "userPermissions",
           "endpointPatterns",
           "skipNetworkSecurity",
@@ -24363,6 +24400,18 @@
             }
           },
           "repoPermissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "resourceGroupIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "resourceGroupPermissions": {
             "type": "array",
             "items": {
               "type": "string"
@@ -48227,6 +48276,8 @@
           "permissions",
           "repoIds",
           "repoPermissions",
+          "resourceGroupIds",
+          "resourceGroupPermissions",
           "userPermissions",
           "endpointPatterns"
         ],
@@ -48282,6 +48333,22 @@
               "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem"
             }
           },
+          "resourceGroupIds": {
+            "type": "array",
+            "items": {
+              "maxLength": 24,
+              "minLength": 24,
+              "pattern": "^[0-9a-f]{24}$",
+              "type": "string",
+              "description": "A hex string of 24 characters representing an ObjectId."
+            }
+          },
+          "resourceGroupPermissions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem"
+            }
+          },
           "userPermissions": {
             "type": "array",
             "items": {
@@ -48316,6 +48383,8 @@
           "createdAt",
           "repoIds",
           "repoPermissions",
+          "resourceGroupIds",
+          "resourceGroupPermissions",
           "userPermissions",
           "endpointPatterns",
           "skipNetworkSecurity",
@@ -48345,6 +48414,18 @@
             }
           },
           "repoPermissions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "resourceGroupIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "resourceGroupPermissions": {
             "type": "array",
             "items": {
               "type": "string"
@@ -81108,6 +81189,27 @@
           ]
         }
       },
+      "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem": {
+        "enum": [
+          "repo.content.read",
+          "repo.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "repo.content.read",
+              "name": "RepoContentRead"
+            },
+            {
+              "value": "repo.write",
+              "name": "RepoWrite"
+            }
+          ]
+        }
+      },
       "UserGatedReposRequestsWriteItem": {
         "enum": [
           "user.gated-repos-requests.write"
@@ -81218,6 +81320,27 @@
         "type": "string",
         "x-ms-enum": {
           "name": "PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestRepoPermissionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "repo.content.read",
+              "name": "RepoContentRead"
+            },
+            {
+              "value": "repo.write",
+              "name": "RepoWrite"
+            }
+          ]
+        }
+      },
+      "PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestResourceGroupPermissionsItem": {
+        "enum": [
+          "repo.content.read",
+          "repo.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "PatchApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensByTokenIdRequestResourceGroupPermissionsItem",
           "modelAsString": false,
           "values": [
             {
@@ -106897,6 +107020,27 @@
         "type": "string",
         "x-ms-enum": {
           "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem",
+          "modelAsString": false,
+          "values": [
+            {
+              "value": "repo.content.read",
+              "name": "RepoContentRead"
+            },
+            {
+              "value": "repo.write",
+              "name": "RepoWrite"
+            }
+          ]
+        }
+      },
+      "GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem": {
+        "enum": [
+          "repo.content.read",
+          "repo.write"
+        ],
+        "type": "string",
+        "x-ms-enum": {
+          "name": "GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem",
           "modelAsString": false,
           "values": [
             {

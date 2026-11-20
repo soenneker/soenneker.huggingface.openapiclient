@@ -39,6 +39,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("repoIds") is { } nullNodeRepoIds && nullNodeRepoIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoIds = null;
             if (parseNode.GetChildNode("repoPermissions") is null) { _explicitNullValueRepoPermissions = default!; _explicitNullProperties?.Remove("repoPermissions"); }
             else if (parseNode.GetChildNode("repoPermissions") is { } nullNodeRepoPermissions && nullNodeRepoPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPermissions = null;
+            if (parseNode.GetChildNode("resourceGroupIds") is null) { _explicitNullValueResourceGroupIds = default!; _explicitNullProperties?.Remove("resourceGroupIds"); }
+            else if (parseNode.GetChildNode("resourceGroupIds") is { } nullNodeResourceGroupIds && nullNodeResourceGroupIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupIds = null;
+            if (parseNode.GetChildNode("resourceGroupPermissions") is null) { _explicitNullValueResourceGroupPermissions = default!; _explicitNullProperties?.Remove("resourceGroupPermissions"); }
+            else if (parseNode.GetChildNode("resourceGroupPermissions") is { } nullNodeResourceGroupPermissions && nullNodeResourceGroupPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupPermissions = null;
             if (parseNode.GetChildNode("role") is null) { _explicitNullValueRole = default!; _explicitNullProperties?.Remove("role"); }
             else if (parseNode.GetChildNode("role") is { } nullNodeRole && nullNodeRole.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Role = null;
             if (parseNode.GetChildNode("s3AccessKey") is null) { _explicitNullValueS3AccessKey = default!; _explicitNullProperties?.Remove("s3AccessKey"); }
@@ -131,6 +135,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem?> RepoPermissions { get => _explicitNullValueRepoPermissions; set { _explicitNullValueRepoPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoPermissions"); else _explicitNullProperties?.Remove("repoPermissions"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem?> _explicitNullValueRepoPermissions = default!;
 #endif
+        /// <summary>The resourceGroupIds property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ResourceGroupIds { get => _explicitNullValueResourceGroupIds; set { _explicitNullValueResourceGroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupIds"); else _explicitNullProperties?.Remove("resourceGroupIds"); } }
+        private List<string>? _explicitNullValueResourceGroupIds = default!;
+#nullable restore
+#else
+        public List<string> ResourceGroupIds { get => _explicitNullValueResourceGroupIds; set { _explicitNullValueResourceGroupIds = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupIds"); else _explicitNullProperties?.Remove("resourceGroupIds"); } }
+        private List<string> _explicitNullValueResourceGroupIds = default!;
+#endif
+        /// <summary>The resourceGroupPermissions property</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem?>? ResourceGroupPermissions { get => _explicitNullValueResourceGroupPermissions; set { _explicitNullValueResourceGroupPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupPermissions"); else _explicitNullProperties?.Remove("resourceGroupPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem?>? _explicitNullValueResourceGroupPermissions = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem?> ResourceGroupPermissions { get => _explicitNullValueResourceGroupPermissions; set { _explicitNullValueResourceGroupPermissions = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupPermissions"); else _explicitNullProperties?.Remove("resourceGroupPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem?> _explicitNullValueResourceGroupPermissions = default!;
+#endif
         /// <summary>The role property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole? Role { get => _explicitNullValueRole; set { _explicitNullValueRole = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("role"); else _explicitNullProperties?.Remove("role"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole? _explicitNullValueRole = default!;
@@ -173,7 +197,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(15)
+            return new Dictionary<string, Action<IParseNode>>(17)
             {
                 { "canReadGatedRepos", n => { CanReadGatedRepos = n.GetBoolValue(); } },
                 { "createdAt", n => { CreatedAt = n.GetDateTimeOffsetValue(); } },
@@ -186,6 +210,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemPermissionsItem>()?.AsList(); } },
                 { "repoIds", n => { RepoIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "repoPermissions", n => { RepoPermissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem>()?.AsList(); } },
+                { "resourceGroupIds", n => { ResourceGroupIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "resourceGroupPermissions", n => { ResourceGroupPermissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem>()?.AsList(); } },
                 { "role", n => { Role = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole>(); } },
                 { "s3AccessKey", n => { S3AccessKey = n.GetStringValue(); } },
                 { "skipNetworkSecurity", n => { SkipNetworkSecurity = n.GetBoolValue(); } },
@@ -210,6 +236,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemPermissionsItem>("permissions", Permissions);
             writer.WriteCollectionOfPrimitiveValues<string>("repoIds", RepoIds);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRepoPermissionsItem>("repoPermissions", RepoPermissions);
+            writer.WriteCollectionOfPrimitiveValues<string>("resourceGroupIds", ResourceGroupIds);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemResourceGroupPermissionsItem>("resourceGroupPermissions", ResourceGroupPermissions);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiOrganizationsByNameServiceAccountsByServiceAccountId200ResponseAccessTokensItemRole>("role", Role);
             writer.WriteStringValue("s3AccessKey", S3AccessKey);
             writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);

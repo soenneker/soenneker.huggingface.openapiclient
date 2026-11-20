@@ -29,6 +29,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("repoIds") is { } nullNodeRepoIds && nullNodeRepoIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoIds = null;
             if (parseNode.GetChildNode("repoPermissions") is null) { _explicitNullValueRepoPermissions = default!; _explicitNullProperties?.Remove("repoPermissions"); }
             else if (parseNode.GetChildNode("repoPermissions") is { } nullNodeRepoPermissions && nullNodeRepoPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) RepoPermissions = null;
+            if (parseNode.GetChildNode("resourceGroupIds") is null) { _explicitNullValueResourceGroupIds = default!; _explicitNullProperties?.Remove("resourceGroupIds"); }
+            else if (parseNode.GetChildNode("resourceGroupIds") is { } nullNodeResourceGroupIds && nullNodeResourceGroupIds.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupIds = null;
+            if (parseNode.GetChildNode("resourceGroupPermissions") is null) { _explicitNullValueResourceGroupPermissions = default!; _explicitNullProperties?.Remove("resourceGroupPermissions"); }
+            else if (parseNode.GetChildNode("resourceGroupPermissions") is { } nullNodeResourceGroupPermissions && nullNodeResourceGroupPermissions.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ResourceGroupPermissions = null;
             if (parseNode.GetChildNode("skipNetworkSecurity") is null) { _explicitNullValueSkipNetworkSecurity = default!; _explicitNullProperties?.Remove("skipNetworkSecurity"); }
             else if (parseNode.GetChildNode("skipNetworkSecurity") is { } nullNodeSkipNetworkSecurity && nullNodeSkipNetworkSecurity.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) SkipNetworkSecurity = null;
             if (parseNode.GetChildNode("userPermissions") is null) { _explicitNullValueUserPermissions = default!; _explicitNullProperties?.Remove("userPermissions"); }
@@ -70,7 +74,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestPermissionsItem?> Permissions { get => _explicitNullValuePermissions; set { _explicitNullValuePermissions = value; AdditionalData?.Remove("permissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("permissions"); else _explicitNullProperties?.Remove("permissions"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestPermissionsItem?> _explicitNullValuePermissions = default!;
 #endif
-        /// <summary>Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide permissions.</summary>
+        /// <summary>Repositories to grant `repoPermissions` on. Can be repositories owned by the organization or any public repository. These override the org-wide and resource-group permissions.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<string>? RepoIds { get => _explicitNullValueRepoIds; set { _explicitNullValueRepoIds = value; AdditionalData?.Remove("repoIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoIds"); else _explicitNullProperties?.Remove("repoIds"); } }
@@ -89,6 +93,26 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 #else
         public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestRepoPermissionsItem?> RepoPermissions { get => _explicitNullValueRepoPermissions; set { _explicitNullValueRepoPermissions = value; AdditionalData?.Remove("repoPermissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("repoPermissions"); else _explicitNullProperties?.Remove("repoPermissions"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestRepoPermissionsItem?> _explicitNullValueRepoPermissions = default!;
+#endif
+        /// <summary>Resource groups of the organization to grant `resourceGroupPermissions` on. Applies to every repository currently or later in those resource groups, and overrides the org-wide permissions.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<string>? ResourceGroupIds { get => _explicitNullValueResourceGroupIds; set { _explicitNullValueResourceGroupIds = value; AdditionalData?.Remove("resourceGroupIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupIds"); else _explicitNullProperties?.Remove("resourceGroupIds"); } }
+        private List<string>? _explicitNullValueResourceGroupIds = default!;
+#nullable restore
+#else
+        public List<string> ResourceGroupIds { get => _explicitNullValueResourceGroupIds; set { _explicitNullValueResourceGroupIds = value; AdditionalData?.Remove("resourceGroupIds"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupIds"); else _explicitNullProperties?.Remove("resourceGroupIds"); } }
+        private List<string> _explicitNullValueResourceGroupIds = default!;
+#endif
+        /// <summary>Permissions granted on the repositories of the selected `resourceGroupIds`.</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem?>? ResourceGroupPermissions { get => _explicitNullValueResourceGroupPermissions; set { _explicitNullValueResourceGroupPermissions = value; AdditionalData?.Remove("resourceGroupPermissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupPermissions"); else _explicitNullProperties?.Remove("resourceGroupPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem?>? _explicitNullValueResourceGroupPermissions = default!;
+#nullable restore
+#else
+        public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem?> ResourceGroupPermissions { get => _explicitNullValueResourceGroupPermissions; set { _explicitNullValueResourceGroupPermissions = value; AdditionalData?.Remove("resourceGroupPermissions"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupPermissions"); else _explicitNullProperties?.Remove("resourceGroupPermissions"); } }
+        private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem?> _explicitNullValueResourceGroupPermissions = default!;
 #endif
         /// <summary>Exempt this token from the org&apos;s Network Security enforcement (IP allowlist and content access policy). Enterprise Plus only, and requires the `org.networkSecurity.write` permission.</summary>
         public bool? SkipNetworkSecurity { get => _explicitNullValueSkipNetworkSecurity; set { _explicitNullValueSkipNetworkSecurity = value; AdditionalData?.Remove("skipNetworkSecurity"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("skipNetworkSecurity"); else _explicitNullProperties?.Remove("skipNetworkSecurity"); } }
@@ -129,7 +153,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(8)
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "canReadGatedRepos", n => { CanReadGatedRepos = n.GetBoolValue(); } },
                 { "displayName", n => { DisplayName = n.GetStringValue(); } },
@@ -137,6 +161,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "permissions", n => { Permissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestPermissionsItem>()?.AsList(); } },
                 { "repoIds", n => { RepoIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
                 { "repoPermissions", n => { RepoPermissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestRepoPermissionsItem>()?.AsList(); } },
+                { "resourceGroupIds", n => { ResourceGroupIds = n.GetCollectionOfPrimitiveValues<string>()?.AsList(); } },
+                { "resourceGroupPermissions", n => { ResourceGroupPermissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem>()?.AsList(); } },
                 { "skipNetworkSecurity", n => { SkipNetworkSecurity = n.GetBoolValue(); } },
                 { "userPermissions", n => { UserPermissions = n.GetCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UserGatedReposRequestsWriteItem>()?.AsList(); } },
             };
@@ -154,6 +180,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestPermissionsItem>("permissions", Permissions);
             writer.WriteCollectionOfPrimitiveValues<string>("repoIds", RepoIds);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestRepoPermissionsItem>("repoPermissions", RepoPermissions);
+            writer.WriteCollectionOfPrimitiveValues<string>("resourceGroupIds", ResourceGroupIds);
+            writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameServiceAccountsByServiceAccountIdTokensRequestResourceGroupPermissionsItem>("resourceGroupPermissions", ResourceGroupPermissions);
             writer.WriteBoolValue("skipNetworkSecurity", SkipNetworkSecurity);
             writer.WriteCollectionOfEnumValues<global::Soenneker.HuggingFace.OpenApiClient.Models.UserGatedReposRequestsWriteItem>("userPermissions", UserPermissions);
             if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
