@@ -23,7 +23,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>Raw access token values or S3 credentials (access key ID and secret) to invalidate, at most 1000.</summary>
+        /// <summary>Raw access token values, OAuth access or refresh tokens, or S3 credentials (access key ID and secret) to invalidate, at most 1000.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public List<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>? Credentials { get => _explicitNullValueCredentials; set { _explicitNullValueCredentials = value; AdditionalData?.Remove("credentials"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("credentials"); else _explicitNullProperties?.Remove("credentials"); } }

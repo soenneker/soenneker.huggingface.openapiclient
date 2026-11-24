@@ -528,6 +528,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         OAuthToken,
         #pragma warning restore CS1591
+        [EnumMember(Value = "oauth.token.revoke")]
+        #pragma warning disable CS1591
+        OAuthTokenRevoke,
+        #pragma warning restore CS1591
         [EnumMember(Value = "oauth.app.create")]
         #pragma warning disable CS1591
         OAuthAppCreate,

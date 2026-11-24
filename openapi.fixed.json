@@ -71,6 +71,9 @@
             "name": "articleId",
             "in": "query",
             "schema": {
+              "maxLength": 24,
+              "minLength": 24,
+              "pattern": "^[0-9a-fA-F]{24}$",
               "type": "string"
             }
           },
@@ -162,6 +165,9 @@
             "name": "articleId",
             "in": "query",
             "schema": {
+              "maxLength": 24,
+              "minLength": 24,
+              "pattern": "^[0-9a-fA-F]{24}$",
               "type": "string"
             }
           },
@@ -286,6 +292,9 @@
             "name": "articleId",
             "in": "query",
             "schema": {
+              "maxLength": 24,
+              "minLength": 24,
+              "pattern": "^[0-9a-fA-F]{24}$",
               "type": "string"
             }
           },
@@ -357,7 +366,7 @@
           "tokens"
         ],
         "summary": "Revoke leaked tokens",
-        "description": "Publicly invalidate leaked Hugging Face access tokens or S3 credentials. Possession of the raw token value, or of the S3 access key ID and secret, is the only proof required: no authentication is needed, and no rights over the owning account or org are necessary. Each raw token is fully invalidated. A leaked S3 credential is deleted and its paired token invalidated. The owning user is notified by email. Always returns 202, whether or not any of the provided tokens existed, so the response cannot be used to probe token validity.",
+        "description": "Publicly invalidate leaked Hugging Face access tokens, OAuth access or refresh tokens, or S3 credentials. Possession of the raw token value, or of the S3 access key ID and secret, is the only proof required: no authentication is needed, and no rights over the owning account or org are necessary. Each raw token is fully invalidated. A leaked S3 credential is deleted and its paired token invalidated. The owning user is notified by email. Always returns 202, whether or not any of the provided tokens existed, so the response cannot be used to probe token validity.",
         "operationId": "PostApiCredentialsRevoke",
         "requestBody": {
           "content": {
@@ -6154,7 +6163,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-20T14:16:26.828Z"
+              "default": "2026-11-23T15:26:43.547Z"
             }
           }
         ],
@@ -6206,7 +6215,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-20T14:16:26.829Z"
+              "default": "2026-11-23T15:26:43.548Z"
             }
           }
         ],
@@ -6258,7 +6267,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-20T14:16:26.833Z"
+              "default": "2026-11-23T15:26:43.548Z"
             }
           },
           {
@@ -6544,7 +6553,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-20T14:16:26.829Z"
+              "default": "2026-11-23T15:26:43.548Z"
             }
           }
         ],
@@ -22999,9 +23008,11 @@
           "discussionIds": {
             "type": "array",
             "items": {
+              "maxLength": 24,
+              "minLength": 24,
+              "pattern": "^[0-9a-fA-F]{24}$",
               "type": "string"
-            },
-            "default": []
+            }
           },
           "read": {
             "type": "boolean",
@@ -23020,6 +23031,8 @@
             "examples": [
               [
                 "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "hf_oauth_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "hf_oauth__refresh_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
                 {
                   "accessKeyId": "HFAKXXXXXXXXXXXXXXXXXXXXXXXXXXX",
                   "secretAccessKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
@@ -23032,7 +23045,7 @@
             "items": {
               "$ref": "#/components/schemas/PostApiCredentialsRevokeRequestCredentialsItem"
             },
-            "description": "Raw access token values or S3 credentials (access key ID and secret) to invalidate, at most 1000."
+            "description": "Raw access token values, OAuth access or refresh tokens, or S3 credentials (access key ID and secret) to invalidate, at most 1000."
           }
         }
       },
@@ -35441,7 +35454,7 @@
       "PostApiCredentialsRevokeRequestCredentialsItem": {
         "anyOf": [
           {
-            "maxLength": 200,
+            "maxLength": 4000,
             "minLength": 1,
             "type": "string"
           },
@@ -105238,6 +105251,7 @@
           "org.service_account.trusted_publisher.create",
           "org.service_account.trusted_publisher.delete",
           "oauth.token",
+          "oauth.token.revoke",
           "oauth.app.create",
           "oauth.app.update",
           "oauth.app.secret.rotate",
@@ -105770,6 +105784,10 @@
             {
               "value": "oauth.token",
               "name": "OAuthToken"
+            },
+            {
+              "value": "oauth.token.revoke",
+              "name": "OAuthTokenRevoke"
             },
             {
               "value": "oauth.app.create",
@@ -189151,6 +189169,7 @@
         "aadya-neural",
         "acestep",
         "adapter-transformers",
+        "akeratos",
         "alkove",
         "allennlp",
         "aneforge",
@@ -189162,6 +189181,7 @@
         "audiocraft",
         "audioseal",
         "bagel-mot",
+        "basalt",
         "basedecision",
         "bboxmaskpose",
         "ben2",
@@ -189213,6 +189233,7 @@
         "docking-at-home",
         "doctr",
         "drinkme",
+        "duo-world-model",
         "edsnlp",
         "egohand",
         "elm",
@@ -189261,6 +189282,8 @@
         "infinitetalk",
         "infinite-you",
         "intellifold",
+        "inworld-sava",
+        "inworld-voice-isolation",
         "ising-decoding",
         "jev-style",
         "keras",
@@ -189298,6 +189321,7 @@
         "manas-1",
         "mars5-tts",
         "matanyone",
+        "mediapipe",
         "memra",
         "mesh-anything",
         "merlin",
@@ -189319,6 +189343,7 @@
         "mtvcraft",
         "multimolecule",
         "nemo",
+        "neurobrix",
         "ninfer",
         "nobg",
         "nv-medtech",
@@ -189350,6 +189375,7 @@
         "quantumpeer",
         "qwen3_tts",
         "recurrentgemma",
+        "redefiner",
         "relik",
         "refiners",
         "renderformer",
@@ -189359,6 +189385,7 @@
         "routee-powertrain",
         "rt-detr-hand-detector-v1",
         "rwkv",
+        "s1s2",
         "saelens",
         "sage-music",
         "scail-2",
@@ -189463,6 +189490,10 @@
             "name": "AdapterTransformers"
           },
           {
+            "value": "akeratos",
+            "name": "Akeratos"
+          },
+          {
             "value": "alkove",
             "name": "Alkove"
           },
@@ -189505,6 +189536,10 @@
           {
             "value": "bagel-mot",
             "name": "BagelMot"
+          },
+          {
+            "value": "basalt",
+            "name": "Basalt"
           },
           {
             "value": "basedecision",
@@ -189711,6 +189746,10 @@
             "name": "Drinkme"
           },
           {
+            "value": "duo-world-model",
+            "name": "DuoWorldModel"
+          },
+          {
             "value": "edsnlp",
             "name": "Edsnlp"
           },
@@ -189903,6 +189942,14 @@
             "name": "Intellifold"
           },
           {
+            "value": "inworld-sava",
+            "name": "InworldSava"
+          },
+          {
+            "value": "inworld-voice-isolation",
+            "name": "InworldVoiceIsolation"
+          },
+          {
             "value": "ising-decoding",
             "name": "IsingDecoding"
           },
@@ -190051,6 +190098,10 @@
             "name": "Matanyone"
           },
           {
+            "value": "mediapipe",
+            "name": "Mediapipe"
+          },
+          {
             "value": "memra",
             "name": "Memra"
           },
@@ -190133,6 +190184,10 @@
           {
             "value": "nemo",
             "name": "Nemo"
+          },
+          {
+            "value": "neurobrix",
+            "name": "Neurobrix"
           },
           {
             "value": "ninfer",
@@ -190259,6 +190314,10 @@
             "name": "Recurrentgemma"
           },
           {
+            "value": "redefiner",
+            "name": "Redefiner"
+          },
+          {
             "value": "relik",
             "name": "Relik"
           },
@@ -190293,6 +190352,10 @@
           {
             "value": "rwkv",
             "name": "Rwkv"
+          },
+          {
+            "value": "s1s2",
+            "name": "S1S2"
           },
           {
             "value": "saelens",
@@ -192382,6 +192445,7 @@
         "aadya-neural",
         "acestep",
         "adapter-transformers",
+        "akeratos",
         "alkove",
         "allennlp",
         "aneforge",
@@ -192393,6 +192457,7 @@
         "audiocraft",
         "audioseal",
         "bagel-mot",
+        "basalt",
         "basedecision",
         "bboxmaskpose",
         "ben2",
@@ -192444,6 +192509,7 @@
         "docking-at-home",
         "doctr",
         "drinkme",
+        "duo-world-model",
         "edsnlp",
         "egohand",
         "elm",
@@ -192492,6 +192558,8 @@
         "infinitetalk",
         "infinite-you",
         "intellifold",
+        "inworld-sava",
+        "inworld-voice-isolation",
         "ising-decoding",
         "jev-style",
         "keras",
@@ -192529,6 +192597,7 @@
         "manas-1",
         "mars5-tts",
         "matanyone",
+        "mediapipe",
         "memra",
         "mesh-anything",
         "merlin",
@@ -192550,6 +192619,7 @@
         "mtvcraft",
         "multimolecule",
         "nemo",
+        "neurobrix",
         "ninfer",
         "nobg",
         "nv-medtech",
@@ -192581,6 +192651,7 @@
         "quantumpeer",
         "qwen3_tts",
         "recurrentgemma",
+        "redefiner",
         "relik",
         "refiners",
         "renderformer",
@@ -192590,6 +192661,7 @@
         "routee-powertrain",
         "rt-detr-hand-detector-v1",
         "rwkv",
+        "s1s2",
         "saelens",
         "sage-music",
         "scail-2",
@@ -192694,6 +192766,10 @@
             "name": "AdapterTransformers"
           },
           {
+            "value": "akeratos",
+            "name": "Akeratos"
+          },
+          {
             "value": "alkove",
             "name": "Alkove"
           },
@@ -192736,6 +192812,10 @@
           {
             "value": "bagel-mot",
             "name": "BagelMot"
+          },
+          {
+            "value": "basalt",
+            "name": "Basalt"
           },
           {
             "value": "basedecision",
@@ -192942,6 +193022,10 @@
             "name": "Drinkme"
           },
           {
+            "value": "duo-world-model",
+            "name": "DuoWorldModel"
+          },
+          {
             "value": "edsnlp",
             "name": "Edsnlp"
           },
@@ -193134,6 +193218,14 @@
             "name": "Intellifold"
           },
           {
+            "value": "inworld-sava",
+            "name": "InworldSava"
+          },
+          {
+            "value": "inworld-voice-isolation",
+            "name": "InworldVoiceIsolation"
+          },
+          {
             "value": "ising-decoding",
             "name": "IsingDecoding"
           },
@@ -193282,6 +193374,10 @@
             "name": "Matanyone"
           },
           {
+            "value": "mediapipe",
+            "name": "Mediapipe"
+          },
+          {
             "value": "memra",
             "name": "Memra"
           },
@@ -193364,6 +193460,10 @@
           {
             "value": "nemo",
             "name": "Nemo"
+          },
+          {
+            "value": "neurobrix",
+            "name": "Neurobrix"
           },
           {
             "value": "ninfer",
@@ -193490,6 +193590,10 @@
             "name": "Recurrentgemma"
           },
           {
+            "value": "redefiner",
+            "name": "Redefiner"
+          },
+          {
             "value": "relik",
             "name": "Relik"
           },
@@ -193524,6 +193628,10 @@
           {
             "value": "rwkv",
             "name": "Rwkv"
+          },
+          {
+            "value": "s1s2",
+            "name": "S1S2"
           },
           {
             "value": "saelens",
@@ -195264,6 +195372,7 @@
         "aadya-neural",
         "acestep",
         "adapter-transformers",
+        "akeratos",
         "alkove",
         "allennlp",
         "aneforge",
@@ -195275,6 +195384,7 @@
         "audiocraft",
         "audioseal",
         "bagel-mot",
+        "basalt",
         "basedecision",
         "bboxmaskpose",
         "ben2",
@@ -195326,6 +195436,7 @@
         "docking-at-home",
         "doctr",
         "drinkme",
+        "duo-world-model",
         "edsnlp",
         "egohand",
         "elm",
@@ -195374,6 +195485,8 @@
         "infinitetalk",
         "infinite-you",
         "intellifold",
+        "inworld-sava",
+        "inworld-voice-isolation",
         "ising-decoding",
         "jev-style",
         "keras",
@@ -195411,6 +195524,7 @@
         "manas-1",
         "mars5-tts",
         "matanyone",
+        "mediapipe",
         "memra",
         "mesh-anything",
         "merlin",
@@ -195432,6 +195546,7 @@
         "mtvcraft",
         "multimolecule",
         "nemo",
+        "neurobrix",
         "ninfer",
         "nobg",
         "nv-medtech",
@@ -195463,6 +195578,7 @@
         "quantumpeer",
         "qwen3_tts",
         "recurrentgemma",
+        "redefiner",
         "relik",
         "refiners",
         "renderformer",
@@ -195472,6 +195588,7 @@
         "routee-powertrain",
         "rt-detr-hand-detector-v1",
         "rwkv",
+        "s1s2",
         "saelens",
         "sage-music",
         "scail-2",
@@ -195576,6 +195693,10 @@
             "name": "AdapterTransformers"
           },
           {
+            "value": "akeratos",
+            "name": "Akeratos"
+          },
+          {
             "value": "alkove",
             "name": "Alkove"
           },
@@ -195618,6 +195739,10 @@
           {
             "value": "bagel-mot",
             "name": "BagelMot"
+          },
+          {
+            "value": "basalt",
+            "name": "Basalt"
           },
           {
             "value": "basedecision",
@@ -195824,6 +195949,10 @@
             "name": "Drinkme"
           },
           {
+            "value": "duo-world-model",
+            "name": "DuoWorldModel"
+          },
+          {
             "value": "edsnlp",
             "name": "Edsnlp"
           },
@@ -196016,6 +196145,14 @@
             "name": "Intellifold"
           },
           {
+            "value": "inworld-sava",
+            "name": "InworldSava"
+          },
+          {
+            "value": "inworld-voice-isolation",
+            "name": "InworldVoiceIsolation"
+          },
+          {
             "value": "ising-decoding",
             "name": "IsingDecoding"
           },
@@ -196164,6 +196301,10 @@
             "name": "Matanyone"
           },
           {
+            "value": "mediapipe",
+            "name": "Mediapipe"
+          },
+          {
             "value": "memra",
             "name": "Memra"
           },
@@ -196246,6 +196387,10 @@
           {
             "value": "nemo",
             "name": "Nemo"
+          },
+          {
+            "value": "neurobrix",
+            "name": "Neurobrix"
           },
           {
             "value": "ninfer",
@@ -196372,6 +196517,10 @@
             "name": "Recurrentgemma"
           },
           {
+            "value": "redefiner",
+            "name": "Redefiner"
+          },
+          {
             "value": "relik",
             "name": "Relik"
           },
@@ -196406,6 +196555,10 @@
           {
             "value": "rwkv",
             "name": "Rwkv"
+          },
+          {
+            "value": "s1s2",
+            "name": "S1S2"
           },
           {
             "value": "saelens",
