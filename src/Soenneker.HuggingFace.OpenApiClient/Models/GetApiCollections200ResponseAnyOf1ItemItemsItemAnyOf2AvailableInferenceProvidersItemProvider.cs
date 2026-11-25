@@ -92,5 +92,57 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         ZaiOrg,
         #pragma warning restore CS1591
+        [EnumMember(Value = "featherless")]
+        #pragma warning disable CS1591
+        Featherless,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "fireworks")]
+        #pragma warning disable CS1591
+        Fireworks,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "z-ai")]
+        #pragma warning disable CS1591
+        ZAi,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "digitalocean")]
+        #pragma warning disable CS1591
+        Digitalocean,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "coreweave")]
+        #pragma warning disable CS1591
+        Coreweave,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "nebius")]
+        #pragma warning disable CS1591
+        Nebius,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "parasail")]
+        #pragma warning disable CS1591
+        Parasail,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "primeintellect")]
+        #pragma warning disable CS1591
+        Primeintellect,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "liquid")]
+        #pragma warning disable CS1591
+        Liquid,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "mistral")]
+        #pragma warning disable CS1591
+        Mistral,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "moonshotai")]
+        #pragma warning disable CS1591
+        Moonshotai,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "reka")]
+        #pragma warning disable CS1591
+        Reka,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "tencent")]
+        #pragma warning disable CS1591
+        Tencent,
+        #pragma warning restore CS1591
     }
 }

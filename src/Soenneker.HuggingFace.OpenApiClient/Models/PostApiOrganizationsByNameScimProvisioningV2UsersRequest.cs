@@ -44,7 +44,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimProvisioningV2UsersRequestEmailsItem> Emails { get => _explicitNullValueEmails; set { _explicitNullValueEmails = value; AdditionalData?.Remove("emails"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("emails"); else _explicitNullProperties?.Remove("emails"); } }
         private List<global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiOrganizationsByNameScimProvisioningV2UsersRequestEmailsItem> _explicitNullValueEmails = default!;
 #endif
-        /// <summary>SSO unique identifier (SAML nameid or OIDC sub claim) - required for SSO login</summary>
+        /// <summary>IdP SCIM identifier, used to look the user up. SSO login matches the SAML NameID or OIDC sub separately</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ExternalId { get => _explicitNullValueExternalId; set { _explicitNullValueExternalId = value; AdditionalData?.Remove("externalId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("externalId"); else _explicitNullProperties?.Remove("externalId"); } }
