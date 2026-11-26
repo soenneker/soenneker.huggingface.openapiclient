@@ -6163,7 +6163,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-24T20:11:29.216Z"
+              "default": "2026-11-25T23:10:17.855Z"
             }
           }
         ],
@@ -6215,7 +6215,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-24T20:11:29.217Z"
+              "default": "2026-11-25T23:10:17.855Z"
             }
           }
         ],
@@ -6267,7 +6267,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-24T20:11:29.222Z"
+              "default": "2026-11-25T23:10:17.856Z"
             }
           },
           {
@@ -6553,7 +6553,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-24T20:11:29.217Z"
+              "default": "2026-11-25T23:10:17.856Z"
             }
           }
         ],
@@ -106986,6 +106986,8 @@
           "org.token_approval.authorization_request.authorized",
           "org.token_approval.authorization_request.revoked",
           "org.token_approval.authorization_request.denied",
+          "org.token_repo_scope.enabled",
+          "org.token_repo_scope.disabled",
           "org.audit_log.export",
           "org.repo_analytics.export",
           "org.blog_analytics.export",
@@ -107333,6 +107335,14 @@
             {
               "value": "org.token_approval.authorization_request.denied",
               "name": "OrgTokenApprovalAuthorizationRequestDenied"
+            },
+            {
+              "value": "org.token_repo_scope.enabled",
+              "name": "OrgTokenRepoScopeEnabled"
+            },
+            {
+              "value": "org.token_repo_scope.disabled",
+              "name": "OrgTokenRepoScopeDisabled"
             },
             {
               "value": "org.audit_log.export",

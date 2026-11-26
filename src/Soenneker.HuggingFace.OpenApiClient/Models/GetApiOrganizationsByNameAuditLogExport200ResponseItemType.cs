@@ -280,6 +280,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         OrgTokenApprovalAuthorizationRequestDenied,
         #pragma warning restore CS1591
+        [EnumMember(Value = "org.token_repo_scope.enabled")]
+        #pragma warning disable CS1591
+        OrgTokenRepoScopeEnabled,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "org.token_repo_scope.disabled")]
+        #pragma warning disable CS1591
+        OrgTokenRepoScopeDisabled,
+        #pragma warning restore CS1591
         [EnumMember(Value = "org.audit_log.export")]
         #pragma warning disable CS1591
         OrgAuditLogExport,
