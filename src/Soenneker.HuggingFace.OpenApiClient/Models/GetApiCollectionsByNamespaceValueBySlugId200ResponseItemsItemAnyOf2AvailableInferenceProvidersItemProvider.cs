@@ -12,13 +12,13 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         Baseten,
         #pragma warning restore CS1591
-        [EnumMember(Value = "cerebras")]
-        #pragma warning disable CS1591
-        Cerebras,
-        #pragma warning restore CS1591
         [EnumMember(Value = "cohere")]
         #pragma warning disable CS1591
         Cohere,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "cerebras")]
+        #pragma warning disable CS1591
+        Cerebras,
         #pragma warning restore CS1591
         [EnumMember(Value = "deepinfra")]
         #pragma warning disable CS1591
@@ -44,10 +44,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         HfInference,
         #pragma warning restore CS1591
-        [EnumMember(Value = "humain-ai")]
-        #pragma warning disable CS1591
-        HumainAi,
-        #pragma warning restore CS1591
         [EnumMember(Value = "novita")]
         #pragma warning disable CS1591
         Novita,
@@ -55,10 +51,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         [EnumMember(Value = "nscale")]
         #pragma warning disable CS1591
         Nscale,
-        #pragma warning restore CS1591
-        [EnumMember(Value = "openai")]
-        #pragma warning disable CS1591
-        Openai,
         #pragma warning restore CS1591
         [EnumMember(Value = "openrouter")]
         #pragma warning disable CS1591
@@ -123,6 +115,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         [EnumMember(Value = "primeintellect")]
         #pragma warning disable CS1591
         Primeintellect,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "deepseek")]
+        #pragma warning disable CS1591
+        Deepseek,
         #pragma warning restore CS1591
         [EnumMember(Value = "liquid")]
         #pragma warning disable CS1591

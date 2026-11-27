@@ -39,8 +39,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("provider") is { } nullNodeProvider && nullNodeProvider.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Provider = null;
             if (parseNode.GetChildNode("providerId") is null) { _explicitNullValueProviderId = default!; _explicitNullProperties?.Remove("providerId"); }
             else if (parseNode.GetChildNode("providerId") is { } nullNodeProviderId && nullNodeProviderId.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderId = null;
-            if (parseNode.GetChildNode("providerStatus") is null) { _explicitNullValueProviderStatus = default!; _explicitNullProperties?.Remove("providerStatus"); }
-            else if (parseNode.GetChildNode("providerStatus") is { } nullNodeProviderStatus && nullNodeProviderStatus.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ProviderStatus = null;
             if (parseNode.GetChildNode("task") is null) { _explicitNullValueTask = default!; _explicitNullProperties?.Remove("task"); }
             else if (parseNode.GetChildNode("task") is { } nullNodeTask && nullNodeTask.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Task = null;
             if (parseNode.GetChildNode("tokensPerSecond") is null) { _explicitNullValueTokensPerSecond = default!; _explicitNullProperties?.Remove("tokensPerSecond"); }
@@ -101,9 +99,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string ProviderId { get => _explicitNullValueProviderId; set { _explicitNullValueProviderId = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerId"); else _explicitNullProperties?.Remove("providerId"); } }
         private string _explicitNullValueProviderId = default!;
 #endif
-        /// <summary>The providerStatus property</summary>
-        public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProviderStatus? ProviderStatus { get => _explicitNullValueProviderStatus; set { _explicitNullValueProviderStatus = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("providerStatus"); else _explicitNullProperties?.Remove("providerStatus"); } }
-        private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProviderStatus? _explicitNullValueProviderStatus = default!;
         /// <summary>The task property</summary>
         public global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemTask? Task { get => _explicitNullValueTask; set { _explicitNullValueTask = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("task"); else _explicitNullProperties?.Remove("task"); } }
         private global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemTask? _explicitNullValueTask = default!;
@@ -126,7 +121,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(14)
+            return new Dictionary<string, Action<IParseNode>>(13)
             {
                 { "adapterType", n => { AdapterType = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemAdapterType>(); } },
                 { "adapterWeightsPath", n => { AdapterWeightsPath = n.GetStringValue(); } },
@@ -139,7 +134,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
                 { "pricingOutput", n => { PricingOutput = n.GetDoubleValue(); } },
                 { "provider", n => { Provider = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProvider>(); } },
                 { "providerId", n => { ProviderId = n.GetStringValue(); } },
-                { "providerStatus", n => { ProviderStatus = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProviderStatus>(); } },
                 { "task", n => { Task = n.GetEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemTask>(); } },
                 { "tokensPerSecond", n => { TokensPerSecond = n.GetDoubleValue(); } },
             };
@@ -162,7 +156,6 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteDoubleValue("pricingOutput", PricingOutput);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProvider>("provider", Provider);
             writer.WriteStringValue("providerId", ProviderId);
-            writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProviderStatus>("providerStatus", ProviderStatus);
             writer.WriteEnumValue<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemTask>("task", Task);
             writer.WriteDoubleValue("tokensPerSecond", TokensPerSecond);if (_explicitNullProperties != null) foreach (string name in _explicitNullProperties) writer.WriteNullValue(name);
             

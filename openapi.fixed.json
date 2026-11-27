@@ -6163,7 +6163,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-25T23:10:17.855Z"
+              "default": "2026-11-26T17:15:49.601Z"
             }
           }
         ],
@@ -6215,7 +6215,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-25T23:10:17.855Z"
+              "default": "2026-11-26T17:15:49.601Z"
             }
           }
         ],
@@ -6267,7 +6267,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-25T23:10:17.856Z"
+              "default": "2026-11-26T17:15:49.601Z"
             }
           },
           {
@@ -6553,7 +6553,7 @@
               "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d:[0-5]\\d(?:\\.\\d\u002B)?(?:Z))$",
               "type": "string",
               "format": "date-time",
-              "default": "2026-11-25T23:10:17.856Z"
+              "default": "2026-11-26T17:15:49.601Z"
             }
           }
         ],
@@ -11413,8 +11413,8 @@
         "tags": [
           "models"
         ],
-        "summary": "Add resource group",
-        "description": "Add the repository to a resource group",
+        "summary": "Assign resource group",
+        "description": "Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.",
         "operationId": "PostApiModelsByNamespaceValueByRepoResourceGroup",
         "parameters": [
           {
@@ -11499,8 +11499,8 @@
         "tags": [
           "spaces"
         ],
-        "summary": "Add resource group",
-        "description": "Add the repository to a resource group",
+        "summary": "Assign resource group",
+        "description": "Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.",
         "operationId": "PostApiSpacesByNamespaceValueByRepoResourceGroup",
         "parameters": [
           {
@@ -11585,8 +11585,8 @@
         "tags": [
           "datasets"
         ],
-        "summary": "Add resource group",
-        "description": "Add the repository to a resource group",
+        "summary": "Assign resource group",
+        "description": "Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.",
         "operationId": "PostApiDatasetsByNamespaceValueByRepoResourceGroup",
         "parameters": [
           {
@@ -11671,8 +11671,8 @@
         "tags": [
           "buckets"
         ],
-        "summary": "Add resource group",
-        "description": "Add the repository to a resource group",
+        "summary": "Assign resource group",
+        "description": "Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.",
         "operationId": "PostApiBucketsByNamespaceValueByRepoResourceGroup",
         "parameters": [
           {
@@ -11757,8 +11757,8 @@
         "tags": [
           "containers"
         ],
-        "summary": "Add resource group",
-        "description": "Add the repository to a resource group",
+        "summary": "Assign resource group",
+        "description": "Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.",
         "operationId": "PostApiContainersByNamespaceValueByRepoResourceGroup",
         "parameters": [
           {
@@ -28851,7 +28851,7 @@
               "null",
               "string"
             ],
-            "description": "The resource group to add the repository to, if null, the repository will be removed from the resource group"
+            "description": "The resource group to assign the repository to. If null, the repository is removed from any resource group."
           }
         }
       },
@@ -28919,7 +28919,7 @@
               "null",
               "string"
             ],
-            "description": "The resource group to add the repository to, if null, the repository will be removed from the resource group"
+            "description": "The resource group to assign the repository to. If null, the repository is removed from any resource group."
           }
         }
       },
@@ -28987,7 +28987,7 @@
               "null",
               "string"
             ],
-            "description": "The resource group to add the repository to, if null, the repository will be removed from the resource group"
+            "description": "The resource group to assign the repository to. If null, the repository is removed from any resource group."
           }
         }
       },
@@ -29055,7 +29055,7 @@
               "null",
               "string"
             ],
-            "description": "The resource group to add the repository to, if null, the repository will be removed from the resource group"
+            "description": "The resource group to assign the repository to. If null, the repository is removed from any resource group."
           }
         }
       },
@@ -29123,7 +29123,7 @@
               "null",
               "string"
             ],
-            "description": "The resource group to add the repository to, if null, the repository will be removed from the resource group"
+            "description": "The resource group to assign the repository to. If null, the repository is removed from any resource group."
           }
         }
       },
@@ -34498,6 +34498,7 @@
             "nebius",
             "parasail",
             "primeintellect",
+            "deepseek",
             "liquid",
             "mistral",
             "moonshotai",
@@ -34616,6 +34617,10 @@
               {
                 "value": "primeintellect",
                 "name": "Primeintellect"
+              },
+              {
+                "value": "deepseek",
+                "name": "Deepseek"
               },
               {
                 "value": "liquid",
@@ -38624,18 +38629,16 @@
       "GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -38652,6 +38655,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -38668,12 +38672,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -38700,20 +38704,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -38778,6 +38774,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -43573,18 +43573,16 @@
       "GetApiTrending200ResponseRecentlyTrendingItemOneOf2RepoDataAvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -43601,6 +43599,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -43617,12 +43616,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -43649,20 +43648,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -43727,6 +43718,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -43915,18 +43910,16 @@
       "GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -43943,6 +43936,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -43959,12 +43953,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -43991,20 +43985,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -44069,6 +44055,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -44314,18 +44304,16 @@
       "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -44342,6 +44330,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -44358,12 +44347,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -44390,20 +44379,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -44468,6 +44449,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -44691,18 +44676,16 @@
       "GetApiCollectionsByNamespaceValueBySlug200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -44719,6 +44702,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -44735,12 +44719,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -44767,20 +44751,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -44845,6 +44821,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -45090,18 +45070,16 @@
       "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -45118,6 +45096,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -45134,12 +45113,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -45166,20 +45145,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -45244,6 +45215,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -45467,18 +45442,16 @@
       "PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -45495,6 +45468,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -45511,12 +45485,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -45543,20 +45517,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -45621,6 +45587,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -45844,18 +45814,16 @@
       "PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -45872,6 +45840,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -45888,12 +45857,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -45920,20 +45889,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -45998,6 +45959,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -46221,18 +46186,16 @@
       "PostApiCollections200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -46249,6 +46212,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -46265,12 +46229,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -46297,20 +46261,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -46375,6 +46331,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -48008,18 +47968,16 @@
       "GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2AvailableInferenceProvidersItemProvider": {
         "enum": [
           "baseten",
-          "cerebras",
           "cohere",
+          "cerebras",
           "deepinfra",
           "fal-ai",
           "featherless-ai",
           "fireworks-ai",
           "groq",
           "hf-inference",
-          "humain-ai",
           "novita",
           "nscale",
-          "openai",
           "openrouter",
           "ovhcloud",
           "publicai",
@@ -48036,6 +47994,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -48052,12 +48011,12 @@
               "name": "Baseten"
             },
             {
-              "value": "cerebras",
-              "name": "Cerebras"
-            },
-            {
               "value": "cohere",
               "name": "Cohere"
+            },
+            {
+              "value": "cerebras",
+              "name": "Cerebras"
             },
             {
               "value": "deepinfra",
@@ -48084,20 +48043,12 @@
               "name": "HfInference"
             },
             {
-              "value": "humain-ai",
-              "name": "HumainAi"
-            },
-            {
               "value": "novita",
               "name": "Novita"
             },
             {
               "value": "nscale",
               "name": "Nscale"
-            },
-            {
-              "value": "openai",
-              "name": "Openai"
             },
             {
               "value": "openrouter",
@@ -48162,6 +48113,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -64467,7 +64422,6 @@
       "GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -64479,9 +64433,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus"
@@ -64921,7 +64872,6 @@
       "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -64933,9 +64883,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus"
@@ -65361,7 +65308,6 @@
       "GetApiCollectionsByNamespaceValueBySlug200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -65373,9 +65319,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlug200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlug200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/GetApiCollectionsByNamespaceValueBySlug200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus"
@@ -65815,7 +65758,6 @@
       "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -65827,9 +65769,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus"
@@ -66255,7 +66194,6 @@
       "PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -66267,9 +66205,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus"
@@ -66695,7 +66630,6 @@
       "PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -66707,9 +66641,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus"
@@ -67135,7 +67066,6 @@
       "PostApiCollections200ResponseItemsItemAnyOf2AvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -67147,9 +67077,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/PostApiCollections200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/PostApiCollections200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/PostApiCollections200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus"
@@ -68265,7 +68192,6 @@
       "GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2AvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -68277,9 +68203,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2AvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus"
@@ -73262,7 +73185,6 @@
       "GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -73274,9 +73196,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemModelStatus"
@@ -77310,7 +77229,6 @@
       "GetApiTrending200ResponseRecentlyTrendingItemOneOf2RepoDataAvailableInferenceProvidersItem": {
         "required": [
           "provider",
-          "providerStatus",
           "modelStatus",
           "providerId",
           "task",
@@ -77322,9 +77240,6 @@
         "properties": {
           "provider": {
             "$ref": "#/components/schemas/GetApiTrending200ResponseRecentlyTrendingItemOneOf2RepoDataAvailableInferenceProvidersItemProvider"
-          },
-          "providerStatus": {
-            "$ref": "#/components/schemas/GetApiTrending200ResponseRecentlyTrendingItemOneOf2RepoDataAvailableInferenceProvidersItemProviderStatus"
           },
           "modelStatus": {
             "$ref": "#/components/schemas/GetApiTrending200ResponseRecentlyTrendingItemOneOf2RepoDataAvailableInferenceProvidersItemModelStatus"
@@ -117004,32 +116919,6 @@
           ]
         }
       },
-      "GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
-            }
-          ]
-        }
-      },
       "GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus": {
         "enum": [
           "live",
@@ -117862,32 +117751,6 @@
           ]
         }
       },
-      "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
-            }
-          ]
-        }
-      },
       "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus": {
         "enum": [
           "live",
@@ -118695,32 +118558,6 @@
             {
               "value": "video",
               "name": "Video"
-            }
-          ]
-        }
-      },
-      "GetApiCollectionsByNamespaceValueBySlug200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "GetApiCollectionsByNamespaceValueBySlug200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
             }
           ]
         }
@@ -119557,32 +119394,6 @@
           ]
         }
       },
-      "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
-            }
-          ]
-        }
-      },
       "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus": {
         "enum": [
           "live",
@@ -120390,32 +120201,6 @@
             {
               "value": "video",
               "name": "Video"
-            }
-          ]
-        }
-      },
-      "PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
             }
           ]
         }
@@ -121231,32 +121016,6 @@
           ]
         }
       },
-      "PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
-            }
-          ]
-        }
-      },
       "PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemModelStatus": {
         "enum": [
           "live",
@@ -122064,32 +121823,6 @@
             {
               "value": "video",
               "name": "Video"
-            }
-          ]
-        }
-      },
-      "PostApiCollections200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "PostApiCollections200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
             }
           ]
         }
@@ -123251,32 +122984,6 @@
             {
               "value": "video",
               "name": "Video"
-            }
-          ]
-        }
-      },
-      "GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2AvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
             }
           ]
         }
@@ -129756,32 +129463,6 @@
           ]
         }
       },
-      "GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
-            }
-          ]
-        }
-      },
       "GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemModelStatus": {
         "enum": [
           "live",
@@ -131355,32 +131036,6 @@
             {
               "value": "video",
               "name": "Video"
-            }
-          ]
-        }
-      },
-      "GetApiTrending200ResponseRecentlyTrendingItemOneOf2RepoDataAvailableInferenceProvidersItemProviderStatus": {
-        "enum": [
-          "live",
-          "staging",
-          "error"
-        ],
-        "type": "string",
-        "x-ms-enum": {
-          "name": "GetApiTrending200ResponseRecentlyTrendingItemOneOf2RepoDataAvailableInferenceProvidersItemProviderStatus",
-          "modelAsString": false,
-          "values": [
-            {
-              "value": "live",
-              "name": "Live"
-            },
-            {
-              "value": "staging",
-              "name": "Staging"
-            },
-            {
-              "value": "error",
-              "name": "Error"
             }
           ]
         }
@@ -164265,6 +163920,7 @@
           "nebius",
           "parasail",
           "primeintellect",
+          "deepseek",
           "liquid",
           "mistral",
           "moonshotai",
@@ -164383,6 +164039,10 @@
             {
               "value": "primeintellect",
               "name": "Primeintellect"
+            },
+            {
+              "value": "deepseek",
+              "name": "Deepseek"
             },
             {
               "value": "liquid",
@@ -191714,18 +191374,16 @@
     "GetApiPapersByPaperId200ResponseLinkedModelsItemAvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -191745,12 +191403,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -191777,20 +191435,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -191843,6 +191493,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -191909,6 +191560,10 @@
           {
             "value": "primeintellect",
             "name": "Primeintellect"
+          },
+          {
+            "value": "deepseek",
+            "name": "Deepseek"
           },
           {
             "value": "liquid",
@@ -192184,18 +191839,16 @@
     "GetApiTrending200ResponseRecentlyTrendingItemOneOf2RepoDataAvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -192215,12 +191868,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -192247,20 +191900,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -192313,6 +191958,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -192381,6 +192027,10 @@
             "name": "Primeintellect"
           },
           {
+            "value": "deepseek",
+            "name": "Deepseek"
+          },
+          {
             "value": "liquid",
             "name": "Liquid"
           },
@@ -192406,18 +192056,16 @@
     "GetApiCollectionsByNamespaceValueBySlugId200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -192437,12 +192085,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -192469,20 +192117,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -192535,6 +192175,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -192603,6 +192244,10 @@
             "name": "Primeintellect"
           },
           {
+            "value": "deepseek",
+            "name": "Deepseek"
+          },
+          {
             "value": "liquid",
             "name": "Liquid"
           },
@@ -192628,18 +192273,16 @@
     "PatchApiCollectionsByNamespaceValueBySlugId200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -192659,12 +192302,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -192691,20 +192334,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -192757,6 +192392,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -192825,6 +192461,10 @@
             "name": "Primeintellect"
           },
           {
+            "value": "deepseek",
+            "name": "Deepseek"
+          },
+          {
             "value": "liquid",
             "name": "Liquid"
           },
@@ -192850,18 +192490,16 @@
     "GetApiCollectionsByNamespaceValueBySlug200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -192881,12 +192519,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -192913,20 +192551,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -192979,6 +192609,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -193047,6 +192678,10 @@
             "name": "Primeintellect"
           },
           {
+            "value": "deepseek",
+            "name": "Deepseek"
+          },
+          {
             "value": "liquid",
             "name": "Liquid"
           },
@@ -193072,18 +192707,16 @@
     "PatchApiCollectionsByNamespaceValueBySlug200ResponseDataItemsItemAnyOf2AvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -193103,12 +192736,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -193135,20 +192768,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -193201,6 +192826,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -193269,6 +192895,10 @@
             "name": "Primeintellect"
           },
           {
+            "value": "deepseek",
+            "name": "Deepseek"
+          },
+          {
             "value": "liquid",
             "name": "Liquid"
           },
@@ -193294,18 +192924,16 @@
     "PostApiCollectionsByNamespaceValueBySlugIdItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -193325,12 +192953,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -193357,20 +192985,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -193423,6 +193043,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -193491,6 +193112,10 @@
             "name": "Primeintellect"
           },
           {
+            "value": "deepseek",
+            "name": "Deepseek"
+          },
+          {
             "value": "liquid",
             "name": "Liquid"
           },
@@ -193516,18 +193141,16 @@
     "PostApiCollectionsByNamespaceValueBySlugItems200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -193547,12 +193170,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -193579,20 +193202,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -193645,6 +193260,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -193713,6 +193329,10 @@
             "name": "Primeintellect"
           },
           {
+            "value": "deepseek",
+            "name": "Deepseek"
+          },
+          {
             "value": "liquid",
             "name": "Liquid"
           },
@@ -193738,18 +193358,16 @@
     "PostApiCollections200ResponseItemsItemAnyOf2AvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -193769,12 +193387,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -193801,20 +193419,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -193867,6 +193477,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -193935,6 +193546,10 @@
             "name": "Primeintellect"
           },
           {
+            "value": "deepseek",
+            "name": "Deepseek"
+          },
+          {
             "value": "liquid",
             "name": "Liquid"
           },
@@ -193960,18 +193575,16 @@
     "GetApiCollections200ResponseAnyOf1ItemItemsItemAnyOf2AvailableInferenceProvidersItemProviderAnyOf1": {
       "enum": [
         "baseten",
-        "cerebras",
         "cohere",
+        "cerebras",
         "deepinfra",
         "fal-ai",
         "featherless-ai",
         "fireworks-ai",
         "groq",
         "hf-inference",
-        "humain-ai",
         "novita",
         "nscale",
-        "openai",
         "openrouter",
         "ovhcloud",
         "publicai",
@@ -193991,12 +193604,12 @@
             "name": "Baseten"
           },
           {
-            "value": "cerebras",
-            "name": "Cerebras"
-          },
-          {
             "value": "cohere",
             "name": "Cohere"
+          },
+          {
+            "value": "cerebras",
+            "name": "Cerebras"
           },
           {
             "value": "deepinfra",
@@ -194023,20 +193636,12 @@
             "name": "HfInference"
           },
           {
-            "value": "humain-ai",
-            "name": "HumainAi"
-          },
-          {
             "value": "novita",
             "name": "Novita"
           },
           {
             "value": "nscale",
             "name": "Nscale"
-          },
-          {
-            "value": "openai",
-            "name": "Openai"
           },
           {
             "value": "openrouter",
@@ -194089,6 +193694,7 @@
         "nebius",
         "parasail",
         "primeintellect",
+        "deepseek",
         "liquid",
         "mistral",
         "moonshotai",
@@ -194155,6 +193761,10 @@
           {
             "value": "primeintellect",
             "name": "Primeintellect"
+          },
+          {
+            "value": "deepseek",
+            "name": "Deepseek"
           },
           {
             "value": "liquid",

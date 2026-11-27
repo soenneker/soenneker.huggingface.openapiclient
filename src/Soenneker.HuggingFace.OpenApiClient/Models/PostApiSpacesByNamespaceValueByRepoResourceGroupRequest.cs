@@ -23,7 +23,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
 
         /// <summary>Stores additional data not described in the OpenAPI description found when deserializing. Can be used for serialization as well.</summary>
         public IDictionary<string, object> AdditionalData { get; set; }
-        /// <summary>The resource group to add the repository to, if null, the repository will be removed from the resource group</summary>
+        /// <summary>The resource group to assign the repository to. If null, the repository is removed from any resource group.</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
         public string? ResourceGroupId { get => _explicitNullValueResourceGroupId; set { _explicitNullValueResourceGroupId = value; AdditionalData?.Remove("resourceGroupId"); if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("resourceGroupId"); else _explicitNullProperties?.Remove("resourceGroupId"); } }

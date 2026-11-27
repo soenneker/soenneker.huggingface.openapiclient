@@ -52,7 +52,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.Resou
             return await RequestAdapter.SendAsync<global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoResourceGroup200Response>(requestInfo, global::Soenneker.HuggingFace.OpenApiClient.Models.GetApiModelsByNamespaceValueByRepoResourceGroup200Response.CreateFromDiscriminatorValue, new global::System.Collections.Generic.Dictionary<string, global::Microsoft.Kiota.Abstractions.Serialization.ParsableFactory<global::Microsoft.Kiota.Abstractions.Serialization.IParsable>> { { "4XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue }, { "5XX", global::Soenneker.OpenApi.Generated.OpenApiRawError.CreateFromDiscriminatorValue } }, cancellationToken).ConfigureAwait(false);
         }
         /// <summary>
-        /// Add the repository to a resource group
+        /// Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.
         /// </summary>
         /// <returns>A <see cref="global::Soenneker.HuggingFace.OpenApiClient.Models.PostApiModelsByNamespaceValueByRepoResourceGroup200Response"/></returns>
         /// <param name="body">The request body</param>
@@ -91,7 +91,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Api.ModelsRequests.Item.Item.Resou
             return requestInfo;
         }
         /// <summary>
-        /// Add the repository to a resource group
+        /// Assign, move, or unassign an organization-owned repository to a resource group. Pass null to unassign. User-owned repositories are not eligible.
         /// </summary>
         /// <returns>A <see cref="RequestInformation"/></returns>
         /// <param name="body">The request body</param>
