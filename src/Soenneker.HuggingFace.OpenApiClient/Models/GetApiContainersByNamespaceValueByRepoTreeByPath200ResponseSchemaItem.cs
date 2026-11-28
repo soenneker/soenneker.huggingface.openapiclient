@@ -19,6 +19,8 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if (parseNode.GetChildNode("contentType") is null) { _explicitNullValueContentType = default!; _explicitNullProperties?.Remove("contentType"); }
             else if (parseNode.GetChildNode("contentType") is { } nullNodeContentType && nullNodeContentType.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ContentType = null;
+            if (parseNode.GetChildNode("mode") is null) { _explicitNullValueMode = default!; _explicitNullProperties?.Remove("mode"); }
+            else if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
             if (parseNode.GetChildNode("mtime") is null) { _explicitNullValueMtime = default!; _explicitNullProperties?.Remove("mtime"); }
             else if (parseNode.GetChildNode("mtime") is { } nullNodeMtime && nullNodeMtime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mtime = null;
             if (parseNode.GetChildNode("mtimeNanos") is null) { _explicitNullValueMtimeNanos = default!; _explicitNullProperties?.Remove("mtimeNanos"); }
@@ -45,6 +47,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string ContentType { get => _explicitNullValueContentType; set { _explicitNullValueContentType = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("contentType"); else _explicitNullProperties?.Remove("contentType"); } }
         private string _explicitNullValueContentType = default!;
 #endif
+        /// <summary>POSIX st_mode, when set by the uploader. With the S_IFLNK type bits (0o120000), the file is a symlink whose content is the target</summary>
+        public long? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        private long? _explicitNullValueMode = default!;
         /// <summary>The mtime property</summary>
         public DateTimeOffset? Mtime { get => _explicitNullValueMtime; set { _explicitNullValueMtime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mtime"); else _explicitNullProperties?.Remove("mtime"); } }
         private DateTimeOffset? _explicitNullValueMtime = default!;
@@ -96,9 +101,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(8)
+            return new Dictionary<string, Action<IParseNode>>(9)
             {
                 { "contentType", n => { ContentType = n.GetStringValue(); } },
+                { "mode", n => { Mode = n.GetLongValue(); } },
                 { "mtime", n => { Mtime = n.GetDateTimeOffsetValue(); } },
                 { "mtimeNanos", n => { MtimeNanos = n.GetLongValue(); } },
                 { "path", n => { Path = n.GetStringValue(); } },
@@ -116,6 +122,7 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         {
             if(ReferenceEquals(writer, null)) throw new ArgumentNullException(nameof(writer));
             writer.WriteStringValue("contentType", ContentType);
+            writer.WriteLongValue("mode", Mode);
             writer.WriteDateTimeOffsetValue("mtime", Mtime);
             writer.WriteLongValue("mtimeNanos", MtimeNanos);
             writer.WriteStringValue("path", Path);

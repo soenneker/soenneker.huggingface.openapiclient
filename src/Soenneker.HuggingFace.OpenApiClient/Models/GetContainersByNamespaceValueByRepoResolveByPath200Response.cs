@@ -23,6 +23,12 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             else if (parseNode.GetChildNode("etag") is { } nullNodeEtag && nullNodeEtag.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Etag = null;
             if (parseNode.GetChildNode("hash") is null) { _explicitNullValueHash = default!; _explicitNullProperties?.Remove("hash"); }
             else if (parseNode.GetChildNode("hash") is { } nullNodeHash && nullNodeHash.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Hash = null;
+            if (parseNode.GetChildNode("mode") is null) { _explicitNullValueMode = default!; _explicitNullProperties?.Remove("mode"); }
+            else if (parseNode.GetChildNode("mode") is { } nullNodeMode && nullNodeMode.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mode = null;
+            if (parseNode.GetChildNode("mtime") is null) { _explicitNullValueMtime = default!; _explicitNullProperties?.Remove("mtime"); }
+            else if (parseNode.GetChildNode("mtime") is { } nullNodeMtime && nullNodeMtime.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) Mtime = null;
+            if (parseNode.GetChildNode("mtimeNanos") is null) { _explicitNullValueMtimeNanos = default!; _explicitNullProperties?.Remove("mtimeNanos"); }
+            else if (parseNode.GetChildNode("mtimeNanos") is { } nullNodeMtimeNanos && nullNodeMtimeNanos.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) MtimeNanos = null;
             if (parseNode.GetChildNode("reconstructionUrl") is null) { _explicitNullValueReconstructionUrl = default!; _explicitNullProperties?.Remove("reconstructionUrl"); }
             else if (parseNode.GetChildNode("reconstructionUrl") is { } nullNodeReconstructionUrl && nullNodeReconstructionUrl.GetObjectValue<global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode>(global::Microsoft.Kiota.Abstractions.Serialization.UntypedNode.CreateFromDiscriminatorValue) is null or global::Microsoft.Kiota.Abstractions.Serialization.UntypedNull) ReconstructionUrl = null;
             if (parseNode.GetChildNode("refreshUrl") is null) { _explicitNullValueRefreshUrl = default!; _explicitNullProperties?.Remove("refreshUrl"); }
@@ -63,6 +69,22 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         public string Hash { get => _explicitNullValueHash; set { _explicitNullValueHash = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("hash"); else _explicitNullProperties?.Remove("hash"); } }
         private string _explicitNullValueHash = default!;
 #endif
+        /// <summary>POSIX st_mode of the file, when set by the uploader</summary>
+        public double? Mode { get => _explicitNullValueMode; set { _explicitNullValueMode = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mode"); else _explicitNullProperties?.Remove("mode"); } }
+        private double? _explicitNullValueMode = default!;
+        /// <summary>ISO 8601 original file modification time, when set by the uploader</summary>
+#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
+#nullable enable
+        public string? Mtime { get => _explicitNullValueMtime; set { _explicitNullValueMtime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mtime"); else _explicitNullProperties?.Remove("mtime"); } }
+        private string? _explicitNullValueMtime = default!;
+#nullable restore
+#else
+        public string Mtime { get => _explicitNullValueMtime; set { _explicitNullValueMtime = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mtime"); else _explicitNullProperties?.Remove("mtime"); } }
+        private string _explicitNullValueMtime = default!;
+#endif
+        /// <summary>Sub-millisecond remainder of mtime, in nanoseconds (0–999_999)</summary>
+        public double? MtimeNanos { get => _explicitNullValueMtimeNanos; set { _explicitNullValueMtimeNanos = value; if (value is null) (_explicitNullProperties ??= new global::System.Collections.Generic.HashSet<string>()).Add("mtimeNanos"); else _explicitNullProperties?.Remove("mtimeNanos"); } }
+        private double? _explicitNullValueMtimeNanos = default!;
         /// <summary>The XET reconstruction URL for the file</summary>
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_1_OR_GREATER
 #nullable enable
@@ -112,11 +134,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         /// <returns>A IDictionary&lt;string, Action&lt;IParseNode&gt;&gt;</returns>
         public virtual IDictionary<string, Action<IParseNode>> GetFieldDeserializers()
         {
-            return new Dictionary<string, Action<IParseNode>>(7)
+            return new Dictionary<string, Action<IParseNode>>(10)
             {
                 { "contentType", n => { ContentType = n.GetStringValue(); } },
                 { "etag", n => { Etag = n.GetStringValue(); } },
                 { "hash", n => { Hash = n.GetStringValue(); } },
+                { "mode", n => { Mode = n.GetDoubleValue(); } },
+                { "mtime", n => { Mtime = n.GetStringValue(); } },
+                { "mtimeNanos", n => { MtimeNanos = n.GetDoubleValue(); } },
                 { "reconstructionUrl", n => { ReconstructionUrl = n.GetStringValue(); } },
                 { "refreshUrl", n => { RefreshUrl = n.GetStringValue(); } },
                 { "size", n => { Size = n.GetDoubleValue(); } },
@@ -133,6 +158,9 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
             writer.WriteStringValue("contentType", ContentType);
             writer.WriteStringValue("etag", Etag);
             writer.WriteStringValue("hash", Hash);
+            writer.WriteDoubleValue("mode", Mode);
+            writer.WriteStringValue("mtime", Mtime);
+            writer.WriteDoubleValue("mtimeNanos", MtimeNanos);
             writer.WriteStringValue("reconstructionUrl", ReconstructionUrl);
             writer.WriteStringValue("refreshUrl", RefreshUrl);
             writer.WriteDoubleValue("size", Size);

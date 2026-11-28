@@ -404,6 +404,14 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         #pragma warning disable CS1591
         SpacesRemoveVolumes,
         #pragma warning restore CS1591
+        [EnumMember(Value = "spaces.update_dev_mode")]
+        #pragma warning disable CS1591
+        SpacesUpdateDevMode,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "spaces.ssh_access")]
+        #pragma warning disable CS1591
+        SpacesSshAccess,
+        #pragma warning restore CS1591
         [EnumMember(Value = "spaces.update_hardware")]
         #pragma warning disable CS1591
         SpacesUpdateHardware,
@@ -459,6 +467,10 @@ namespace Soenneker.HuggingFace.OpenApiClient.Models
         [EnumMember(Value = "jobs.update_expose")]
         #pragma warning disable CS1591
         JobsUpdateExpose,
+        #pragma warning restore CS1591
+        [EnumMember(Value = "jobs.ssh_access")]
+        #pragma warning disable CS1591
+        JobsSshAccess,
         #pragma warning restore CS1591
         [EnumMember(Value = "scheduled_job.create")]
         #pragma warning disable CS1591
